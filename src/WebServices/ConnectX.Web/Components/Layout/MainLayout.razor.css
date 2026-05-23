@@ -2,26 +2,36 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    background: #0f1720;
 }
 
 main {
     flex: 1;
+    background:
+        linear-gradient(180deg, rgba(217, 183, 111, .06) 0%, rgba(15, 23, 32, 0) 18rem),
+        #0f1720;
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background:
+        linear-gradient(180deg, rgba(217, 183, 111, .12) 0%, rgba(217, 183, 111, 0) 18rem),
+        #101820;
+    border-right: 1px solid #2c3a4a;
 }
 
 .top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-color: rgba(15, 23, 32, .92);
+    border-bottom: 1px solid #2c3a4a;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
+    backdrop-filter: blur(10px);
 }
 
     .top-row ::deep a, .top-row ::deep .btn-link {
+        color: #d9b76f;
         white-space: nowrap;
         margin-left: 1.5rem;
         text-decoration: none;
@@ -77,9 +87,10 @@ main {
 }
 
 #blazor-error-ui {
-    background: lightyellow;
+    background: #3a2613;
     bottom: 0;
     box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    color: #fff5df;
     display: none;
     left: 0;
     padding: 0.6rem 1.25rem 0.7rem 1.25rem;
