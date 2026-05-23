@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConnectX.Domain\ConnectX.Domain.csproj" />
     <ProjectReference Include="..\ConnectX.ServiceDefaults\ConnectX.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\ConnectX.Web.Services\ConnectX.Web.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

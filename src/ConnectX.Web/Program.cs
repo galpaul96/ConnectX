@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ConnectX.Web.Components;
 using ConnectX.Web.Components.Account;
 using ConnectX.Web.Data;
+using ConnectX.Web.Services;
 
 namespace ConnectX.Web;
 
@@ -13,6 +14,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.Services.ConfiugreServices();
         // Add services to the container.
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents();
