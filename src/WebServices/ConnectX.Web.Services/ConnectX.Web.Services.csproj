@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConnectX.Domain\ConnectX.Domain.csproj" />
-    <ProjectReference Include="..\ConnectX.Web.Gateway\ConnectX.Web.Gateway.csproj" />
+    <ProjectReference Include="..\..\Common\ConnectX.Domain\ConnectX.Domain.csproj" />
+    <ProjectReference Include="..\..\WebServices\ConnectX.Web.Gateway\ConnectX.Web.Gateway.csproj" />
   </ItemGroup>
 
 </Project>

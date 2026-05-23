@@ -11,8 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConnectX.Api\ConnectX.Api.csproj" />
-    <ProjectReference Include="..\ConnectX.Web\ConnectX.Web.csproj" />
+    <ProjectReference Include="..\ApiServices\ConnectX.Api\ConnectX.Api.csproj" />
+    <ProjectReference Include="..\WebServices\ConnectX.Web\ConnectX.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
