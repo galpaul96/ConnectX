@@ -10,6 +10,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__cache: cache:6379
+      WebDatabase: "Server=192.168.1.200:13001;Database=ConnectX.Web;User Id=Connect;Password=ConnectX;"
     ports:
       - "5078:8080"
     depends_on:
@@ -28,6 +29,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
+      ApiDatabase: "Server=192.168.1.200:13001;Database=ConnectX.Api;User Id=Connect;Password=ConnectX;"
     ports:
       - "5110:8080"
 
