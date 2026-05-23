@@ -13,6 +13,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["ApiServices/ConnectX.Api/ConnectX.Api.csproj", "ApiServices/ConnectX.Api/"]
+COPY ["ApiServices/ConnectX.Api.Services/ConnectX.Api.Services.csproj", "ApiServices/ConnectX.Api.Services/"]
+COPY ["ApiServices/ConnectX.Api.Ef/ConnectX.Api.Ef.csproj", "ApiServices/ConnectX.Api.Ef/"]
 COPY ["Common/ConnectX.Domain/ConnectX.Domain.csproj", "Common/ConnectX.Domain/"]
 COPY ["Common/ConnectX.ServiceDefaults/ConnectX.ServiceDefaults.csproj", "Common/ConnectX.ServiceDefaults/"]
 RUN dotnet restore "./ApiServices/ConnectX.Api/ConnectX.Api.csproj"
