@@ -11,6 +11,7 @@ namespace ConnectX.Web.Services
             services.ConfiugreGateway();
 
             services.TryAddScoped<IWeatherService, WeatherService>();
+            services.TryAddScoped<IModulesService, ModulesService>();
         }
     }
 }

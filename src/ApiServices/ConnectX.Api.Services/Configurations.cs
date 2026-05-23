@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Diagnostics;
 
 namespace ConnectX.Api.Services
@@ -13,6 +14,7 @@ namespace ConnectX.Api.Services
             IConfiguration configuration)
         {
             services.ConfigureRepository(configuration);
+            services.TryAddScoped<IMeetingService, MeetingService>();
 
             //services.AddHttpClient("foo"); // adding an HttpClient named "foo" with a default configuration
 

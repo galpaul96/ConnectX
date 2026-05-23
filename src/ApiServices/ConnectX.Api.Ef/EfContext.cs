@@ -75,8 +75,15 @@ namespace ConnectX.Api.Ef
         public EfContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<EfContext>();
-            string connectionString = "Host=localhost;Port=5432;Database=ConnectX.Api;Username=postgres;Password=postgres";
-
+            string connectionString;
+            if (args != null && args.Any())
+            {
+                connectionString = args[0];
+            }
+            else
+            {
+                connectionString = "Host=localhost;Port=5432;Database=ConnectX.Api;Username=postgres;Password=postgres";
+            }
             string applicationConnectionString = $"Application Name={ApplicationName};{connectionString}";
 
             optionsBuilder.UseNpgsql(applicationConnectionString, x =>
