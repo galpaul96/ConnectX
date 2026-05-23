@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Common\ConnectX.Domain\ConnectX.Domain.csproj" />
     <ProjectReference Include="..\..\Common\ConnectX.ServiceDefaults\ConnectX.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\ConnectX.Api.Services\ConnectX.Api.Services.csproj" />
   </ItemGroup>
 
 </Project>

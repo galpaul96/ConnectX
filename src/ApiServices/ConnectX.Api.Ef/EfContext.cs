@@ -25,7 +25,7 @@ namespace ConnectX.Api.Ef
         public EfContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<EfContext>();
-            string connectionString = args[0];
+            string connectionString = args[0] ?? "Host=localhost;Port=5432;Database=ConnectX.Web;Username=postgres;Password=postgres";
 
             string applicationConnectionString = $"Application Name={ApplicationName};{connectionString}";
 

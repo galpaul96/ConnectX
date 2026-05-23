@@ -1,10 +1,12 @@
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using ConnectX.Web.Components;
 using ConnectX.Web.Components.Account;
 using ConnectX.Web.Data;
 using ConnectX.Web.Services;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+using System.Diagnostics;
 
 namespace ConnectX.Web;
 
@@ -35,9 +37,26 @@ public class Program
             })
             .AddIdentityCookies();
 
-        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-        builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(connectionString));
+        //var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+        //builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        //options.UseSqlServer(connectionString));
+
+        var connectionString = Environment.GetEnvironmentVariable("WebDatabase") ?? throw new InvalidOperationException("Connection string 'WebDatabase' not found.");
+
+        builder.Services.AddDbContext<ApplicationDbContext>(
+        options =>
+            options.UseNpgsql(
+                connectionString,
+               x => x.MigrationsAssembly("ConnectX.Web"))
+            );
+
+        var sw = Stopwatch.StartNew();
+        Console.WriteLine("Deploying database...");
+        var dbContext = new EfContextFactory().CreateDbContext([connectionString]);
+        dbContext.Database.SetCommandTimeout(TimeSpan.FromMinutes(30));
+        dbContext.Database.Migrate();
+        Console.WriteLine($"Deployment done in {sw.Elapsed}");
+
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
         builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)

@@ -1,4 +1,4 @@
-
+using ConnectX.Api.Services;
 namespace ConnectX.Api;
 
 public class Program
@@ -9,6 +9,7 @@ public class Program
         builder.AddServiceDefaults();
 
         // Add services to the container.
+        builder.Services.ConfigureServices(builder.Configuration);
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -29,7 +30,6 @@ public class Program
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
-
 
         app.MapControllers();
 

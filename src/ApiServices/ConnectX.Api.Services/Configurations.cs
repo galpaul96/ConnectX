@@ -1,15 +1,19 @@
+using ConnectX.Api.Ef;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ConnectX.Api.Ef;
+using System.Diagnostics;
 
 namespace ConnectX.Api.Services
 {
     public static class Configurations
     {
-        public static void ConfiugreGateway(this IServiceCollection services,
+        public static void ConfigureServices(this IServiceCollection services,
             IConfiguration configuration)
         {
             services.ConfigureRepository(configuration);
+
             //services.AddHttpClient("foo"); // adding an HttpClient named "foo" with a default configuration
 
             //services.AddHttpClient("api", c => c.BaseAddress = new Uri("https://www.example.com")) // configuring HttpClient itself
