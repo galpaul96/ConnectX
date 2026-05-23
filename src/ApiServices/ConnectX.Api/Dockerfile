@@ -12,12 +12,12 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ConnectX.Api/ConnectX.Api.csproj", "ConnectX.Api/"]
-COPY ["ConnectX.Domain/ConnectX.Domain.csproj", "ConnectX.Domain/"]
-COPY ["ConnectX.ServiceDefaults/ConnectX.ServiceDefaults.csproj", "ConnectX.ServiceDefaults/"]
-RUN dotnet restore "./ConnectX.Api/ConnectX.Api.csproj"
+COPY ["ApiServices/ConnectX.Api/ConnectX.Api.csproj", "ApiServices/ConnectX.Api/"]
+COPY ["Common/ConnectX.Domain/ConnectX.Domain.csproj", "Common/ConnectX.Domain/"]
+COPY ["Common/ConnectX.ServiceDefaults/ConnectX.ServiceDefaults.csproj", "Common/ConnectX.ServiceDefaults/"]
+RUN dotnet restore "./ApiServices/ConnectX.Api/ConnectX.Api.csproj"
 COPY . .
-WORKDIR "/src/ConnectX.Api"
+WORKDIR "/src/ApiServices/ConnectX.Api"
 RUN dotnet build "./ConnectX.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage

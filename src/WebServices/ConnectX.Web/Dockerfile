@@ -11,14 +11,14 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ConnectX.Web/ConnectX.Web.csproj", "ConnectX.Web/"]
-COPY ["ConnectX.Domain/ConnectX.Domain.csproj", "ConnectX.Domain/"]
-COPY ["ConnectX.ServiceDefaults/ConnectX.ServiceDefaults.csproj", "ConnectX.ServiceDefaults/"]
-COPY ["ConnectX.Web.Services/ConnectX.Web.Services.csproj", "ConnectX.Web.Services/"]
-COPY ["ConnectX.Web.Gateway/ConnectX.Web.Gateway.csproj", "ConnectX.Web.Gateway/"]
-RUN dotnet restore "./ConnectX.Web/ConnectX.Web.csproj"
+COPY ["WebServices/ConnectX.Web/ConnectX.Web.csproj", "WebServices/ConnectX.Web/"]
+COPY ["Common/ConnectX.Domain/ConnectX.Domain.csproj", "Common/ConnectX.Domain/"]
+COPY ["Common/ConnectX.ServiceDefaults/ConnectX.ServiceDefaults.csproj", "Common/ConnectX.ServiceDefaults/"]
+COPY ["WebServices/ConnectX.Web.Services/ConnectX.Web.Services.csproj", "WebServices/ConnectX.Web.Services/"]
+COPY ["WebServices/ConnectX.Web.Gateway/ConnectX.Web.Gateway.csproj", "WebServices/ConnectX.Web.Gateway/"]
+RUN dotnet restore "./WebServices/ConnectX.Web/ConnectX.Web.csproj"
 COPY . .
-WORKDIR "/src/ConnectX.Web"
+WORKDIR "/src/WebServices/ConnectX.Web"
 RUN dotnet build "./ConnectX.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the web project to be copied to the final stage
