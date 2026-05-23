@@ -53,7 +53,9 @@ namespace ConnectX.Api.Ef
         public async Task DeleteAsync<T>(Guid id) where T : Audit
         {
             var entityToDelete = await _context.Set<T>().FirstAsync(x => x.Id == id);
-            _context.Set<T>().Remove(entityToDelete);
+            entityToDelete.IsDeleted = true;
+            entityToDelete.DeletedDate = DateTime.UtcNow;
+            entityToDelete.UpdatedDate = entityToDelete.DeletedDate.Value;
 
             await _context.SaveChangesAsync();
         }

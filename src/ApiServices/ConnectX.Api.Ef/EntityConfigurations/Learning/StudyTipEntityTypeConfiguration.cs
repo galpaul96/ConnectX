@@ -1,0 +1,36 @@
+﻿using ConnectX.Api.Ef.EntityConfigurations;
+using ConnectX.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace ConnectX.Api.Ef.EntityConfigurations.Learning
+{
+    internal class StudyTipEntityTypeConfiguration : IEntityTypeConfiguration<StudyTip>
+    {
+        public void Configure(EntityTypeBuilder<StudyTip> configuration)
+        {
+            configuration.ConfigureAuditedEntity("StudyTips");
+
+            configuration.Property(o => o.Title).HasMaxLength(256);
+
+            configuration.HasIndex(o => new { o.ProgramModuleId, o.Category });
+            configuration.HasIndex(o => new { o.MeetingId, o.SortOrder });
+            configuration.HasIndex(o => o.PublishedByTeacherId);
+
+            configuration.HasOne(o => o.ProgramModule)
+                .WithMany(o => o.StudyTips)
+                .HasForeignKey(o => o.ProgramModuleId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            configuration.HasOne(o => o.Meeting)
+                .WithMany(o => o.StudyTips)
+                .HasForeignKey(o => o.MeetingId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            configuration.HasOne(o => o.PublishedByTeacher)
+                .WithMany()
+                .HasForeignKey(o => o.PublishedByTeacherId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+    }
+}
