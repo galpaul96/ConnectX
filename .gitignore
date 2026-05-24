@@ -37,3 +37,4 @@ Thumbs.db
 .DS_Store
 
 /src/ApiServices/ConnectX.Api.Ef/Scripts/SeedMeetingServiceTestData.sql
+/scripts/identity/create-admin-role-for-user.sql
