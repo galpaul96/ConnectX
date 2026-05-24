@@ -2,10 +2,15 @@
 @page "/admin/users"
 @rendermode InteractiveServer
 @attribute [Authorize(Roles = "Admin")]
+@using System.ComponentModel.DataAnnotations
+@using System.Security.Claims
 @using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
 @using Microsoft.AspNetCore.Components.Web
+@using ConnectX.Domain.Entities
 @using ConnectX.Web.Components.Admin
 @inject IdentityAdminService IdentityAdmin
+@inject NotificationService Notifications
 
 <PageTitle>Admin users</PageTitle>
 
@@ -217,6 +222,86 @@ else
                                     <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="ResetSelectedUserAuthenticatorAsync" disabled="@isSaving">Reset authenticator and 2FA</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="RevokeSelectedUserSessionsAsync" disabled="@isSaving">Revoke active sessions</button>
                                 </div>
+                            </section>
+
+                            <section class="admin-modal-section mt-3">
+                                <h3 class="h6 text-uppercase text-body-secondary">System notification</h3>
+                                <EditForm Model="notificationDetail" OnValidSubmit="SendSelectedUserNotificationAsync">
+                                    <DataAnnotationsValidator />
+                                    <ValidationSummary class="text-danger small mb-2" />
+
+                                    <div class="vstack gap-2">
+                                        <label class="form-label small mb-0" for="notificationTitle">Title</label>
+                                        <InputText id="notificationTitle"
+                                                   class="form-control form-control-sm"
+                                                   @bind-Value="notificationDetail.Title"
+                                                   disabled="@IsNotificationFormDisabled" />
+
+                                        <label class="form-label small mb-0" for="notificationBody">Message</label>
+                                        <InputTextArea id="notificationBody"
+                                                       class="form-control form-control-sm"
+                                                       rows="4"
+                                                       @bind-Value="notificationDetail.Body"
+                                                       disabled="@IsNotificationFormDisabled" />
+
+                                        <div class="row g-2">
+                                            <div class="col-sm-6">
+                                                <label class="form-label small mb-0" for="notificationPriority">Priority</label>
+                                                <InputSelect id="notificationPriority"
+                                                             class="form-select form-select-sm"
+                                                             @bind-Value="notificationDetail.Priority"
+                                                             disabled="@IsNotificationFormDisabled">
+                                                    @foreach (var priority in Enum.GetValues<MessagePriority>())
+                                                    {
+                                                        <option value="@priority">@priority</option>
+                                                    }
+                                                </InputSelect>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="form-label small mb-0" for="notificationTopic">Topic</label>
+                                                <InputText id="notificationTopic"
+                                                           class="form-control form-control-sm"
+                                                           @bind-Value="notificationDetail.Topic"
+                                                           disabled="@IsNotificationFormDisabled" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row g-2">
+                                            <div class="col-sm-6">
+                                                <label class="form-label small mb-0" for="notificationEventStartsAt">Event starts</label>
+                                                <input id="notificationEventStartsAt"
+                                                       class="form-control form-control-sm"
+                                                       type="datetime-local"
+                                                       @bind="notificationDetail.EventStartsAt"
+                                                       disabled="@IsNotificationFormDisabled" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="form-label small mb-0" for="notificationEventEndsAt">Event ends</label>
+                                                <input id="notificationEventEndsAt"
+                                                       class="form-control form-control-sm"
+                                                       type="datetime-local"
+                                                       @bind="notificationDetail.EventEndsAt"
+                                                       disabled="@IsNotificationFormDisabled" />
+                                            </div>
+                                        </div>
+
+                                        <label class="form-label small mb-0" for="notificationActionUrl">Action URL</label>
+                                        <div class="input-group input-group-sm">
+                                            <InputText id="notificationActionUrl"
+                                                       class="form-control"
+                                                       placeholder="notifications, modules, or https://..."
+                                                       @bind-Value="notificationDetail.ActionUrl"
+                                                       disabled="@IsNotificationFormDisabled" />
+                                            <button type="submit" class="btn btn-outline-primary" disabled="@IsNotificationSendDisabled">
+                                                @if (isNotificationSaving)
+                                                {
+                                                    <span class="spinner-border spinner-border-sm me-1" aria-hidden="true"></span>
+                                                }
+                                                Send
+                                            </button>
+                                        </div>
+                                    </div>
+                                </EditForm>
                             </section>
                         </div>
 
@@ -497,17 +582,23 @@ else
 @code {
     private const int PageSize = 35;
 
+    [CascadingParameter]
+    private Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
     private PagedResult<UserCatalogItem>? userPage;
     private IReadOnlyList<RoleSummary> roleOptions = [];
     private List<UserCatalogItem> users = [];
     private UserCatalogItem? selectedUser;
     private UserDetailState? userDetail;
+    private NotificationFormState notificationDetail = new();
     private int currentPage = 1;
     private string? searchTerm;
     private string? selectedRoleFilter;
+    private string? currentAdminUserId;
     private UserCatalogStatusFilter selectedStatusFilter = UserCatalogStatusFilter.All;
     private bool isLoading;
     private bool isSaving;
+    private bool isNotificationSaving;
     private string? successMessage;
     private string? errorMessage;
 
@@ -537,8 +628,19 @@ else
         selectedUser is null ||
         string.IsNullOrWhiteSpace(userDetail.NewClaimType);
 
+    private bool IsNotificationFormDisabled =>
+        isSaving ||
+        isNotificationSaving ||
+        selectedUser is null;
+
+    private bool IsNotificationSendDisabled =>
+        IsNotificationFormDisabled ||
+        string.IsNullOrWhiteSpace(notificationDetail.Title) ||
+        string.IsNullOrWhiteSpace(notificationDetail.Body);
+
     protected override async Task OnInitializedAsync()
     {
+        currentAdminUserId = await GetCurrentUserIdAsync();
         await LoadAsync();
     }
 
@@ -618,6 +720,7 @@ else
     {
         selectedUser = await IdentityAdmin.GetUserAsync(user.Id) ?? user;
         userDetail = UserDetailState.FromUser(selectedUser);
+        notificationDetail = new NotificationFormState();
         successMessage = null;
         errorMessage = null;
     }
@@ -626,6 +729,18 @@ else
     {
         selectedUser = null;
         userDetail = null;
+        notificationDetail = new NotificationFormState();
+    }
+
+    private async Task<string?> GetCurrentUserIdAsync()
+    {
+        if (AuthenticationStateTask is null)
+        {
+            return null;
+        }
+
+        var authenticationState = await AuthenticationStateTask;
+        return authenticationState.User.FindFirstValue(ClaimTypes.NameIdentifier);
     }
 
     private async Task SaveSelectedUserProfileAsync()
@@ -775,6 +890,44 @@ else
         await CompleteUserOperationAsync(() => IdentityAdmin.RemoveUserClaimAsync(claim.Id));
     }
 
+    private async Task SendSelectedUserNotificationAsync()
+    {
+        if (selectedUser is null)
+        {
+            return;
+        }
+
+        isNotificationSaving = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var result = await Notifications.CreateForUserAsync(
+                selectedUser.Id,
+                notificationDetail.ToRequest(),
+                currentAdminUserId);
+
+            if (result.Succeeded)
+            {
+                successMessage = result.Message;
+                notificationDetail = new NotificationFormState();
+            }
+            else
+            {
+                errorMessage = result.Message;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+        finally
+        {
+            isNotificationSaving = false;
+        }
+    }
+
     private async Task CompleteUserOperationAsync(Func<Task<AdminOperationResult>> operation, bool keepFormValues = true)
     {
         isSaving = true;
@@ -903,6 +1056,53 @@ else
     private static string DisplayValue(string? value)
     {
         return string.IsNullOrWhiteSpace(value) ? "Not set" : value;
+    }
+
+    private sealed class NotificationFormState
+    {
+        [Required]
+        [StringLength(256)]
+        public string? Title { get; set; }
+
+        [Required]
+        public string? Body { get; set; }
+
+        public MessagePriority Priority { get; set; } = MessagePriority.Normal;
+
+        [StringLength(128)]
+        public string? Topic { get; set; }
+
+        public DateTime? EventStartsAt { get; set; }
+
+        public DateTime? EventEndsAt { get; set; }
+
+        [StringLength(1024)]
+        public string? ActionUrl { get; set; }
+
+        public NotificationCreateRequest ToRequest()
+        {
+            return new NotificationCreateRequest(
+                Title,
+                Body,
+                Priority,
+                Topic,
+                ToDateTimeOffset(EventStartsAt),
+                ToDateTimeOffset(EventEndsAt),
+                ActionUrl,
+                "AdminManual",
+                null);
+        }
+
+        private static DateTimeOffset? ToDateTimeOffset(DateTime? value)
+        {
+            if (!value.HasValue)
+            {
+                return null;
+            }
+
+            var localValue = DateTime.SpecifyKind(value.Value, DateTimeKind.Local);
+            return new DateTimeOffset(localValue).ToUniversalTime();
+        }
     }
 
     private sealed class UserDetailState

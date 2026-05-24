@@ -1,0 +1,334 @@
+@rendermode InteractiveServer
+@implements IDisposable
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inject NotificationService Notifications
+@inject NotificationUpdateDispatcher NotificationUpdates
+
+@if (!string.IsNullOrWhiteSpace(userId))
+{
+    <div class="notification-header-actions" aria-label="Notification shortcuts">
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-primary notification-icon-button"
+                    type="button"
+                    @onclick="MarkLatestReceivedViewedAsync"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false"
+                    aria-label="Show latest received notifications"
+                    title="Latest received notifications">
+                <i class="bi bi-bell-fill" aria-hidden="true"></i>
+                @if (unviewedCount > 0)
+                {
+                    <span class="notification-count-badge position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
+                        @FormatCount(unviewedCount)
+                    </span>
+                }
+            </button>
+            <div class="dropdown-menu dropdown-menu-end notification-dropdown shadow">
+                <div class="dropdown-header d-flex align-items-center justify-content-between gap-2">
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-bell-fill" aria-hidden="true"></i>
+                        <span>Latest received</span>
+                    </span>
+                    @if (isLoading)
+                    {
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                    }
+                </div>
+                @RenderNotificationList(latestReceived, "No received notifications.")
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item small text-center" href="notifications">View all notifications</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-primary notification-icon-button"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false"
+                    aria-label="Show upcoming notifications"
+                    title="Upcoming notifications for the next 14 days">
+                <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                @if (upcoming.Count > 0)
+                {
+                    <span class="notification-count-badge position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-primary">
+                        @upcoming.Count
+                    </span>
+                }
+            </button>
+            <div class="dropdown-menu dropdown-menu-end notification-dropdown shadow">
+                <div class="dropdown-header d-flex align-items-center justify-content-between gap-2">
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                        <span>Next 14 days</span>
+                    </span>
+                    @if (isLoading)
+                    {
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                    }
+                </div>
+                @RenderNotificationList(upcoming, "No upcoming notifications in the next 14 days.")
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item small text-center" href="notifications">View all notifications</a>
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    .notification-header-actions {
+        align-items: center;
+        display: inline-flex;
+        gap: .5rem;
+        margin-right: .25rem;
+    }
+
+    .notification-icon-button {
+        border-radius: 999px;
+        display: inline-grid;
+        place-items: center;
+        height: 2.25rem;
+        overflow: visible;
+        padding: 0;
+        position: relative;
+        width: 2.25rem;
+    }
+
+    .notification-icon-button .bi {
+        display: block;
+        font-size: 1.05rem;
+        line-height: 1;
+    }
+
+    .notification-count-badge {
+        font-size: .65rem;
+        line-height: 1;
+        min-width: 1.15rem;
+        padding: .22rem .35rem;
+        z-index: 2;
+    }
+
+    .notification-dropdown {
+        background-color: #17212d;
+        border-color: #2c3a4a;
+        color: #e8edf3;
+        max-width: calc(100vw - 1.5rem);
+        overflow: hidden;
+        padding-bottom: .25rem;
+        width: min(23rem, calc(100vw - 1.5rem));
+    }
+
+    .notification-dropdown .dropdown-header,
+    .notification-dropdown .dropdown-item {
+        color: #e8edf3;
+    }
+
+    .notification-dropdown .dropdown-item:hover,
+    .notification-dropdown .dropdown-item:focus {
+        background-color: rgba(255, 255, 255, .06);
+        color: #f3f6f8;
+    }
+
+    .notification-preview-item {
+        border-color: #2c3a4a !important;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: hidden;
+        padding: .75rem .85rem;
+        white-space: normal;
+        width: 100%;
+    }
+
+    .notification-preview-main {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .notification-preview-title,
+    .notification-preview-body {
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .notification-priority-badge {
+        flex: 0 0 auto;
+        max-width: 7rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    private readonly TimeSpan pollingInterval = TimeSpan.FromMinutes(5);
+    private IReadOnlyList<UserNotificationSummary> latestReceived = [];
+    private IReadOnlyList<UserNotificationSummary> upcoming = [];
+    private CancellationTokenSource? pollingCancellation;
+    private string? userId;
+    private int unviewedCount;
+    private bool isLoading;
+
+    protected override async Task OnInitializedAsync()
+    {
+        userId = await GetCurrentUserIdAsync();
+
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            return;
+        }
+
+        NotificationUpdates.NotificationCreated += HandleNotificationCreated;
+        await RefreshAsync();
+
+        pollingCancellation = new CancellationTokenSource();
+        _ = PollAsync(pollingCancellation.Token);
+    }
+
+    private async Task PollAsync(CancellationToken cancellationToken)
+    {
+        using var timer = new PeriodicTimer(pollingInterval);
+
+        try
+        {
+            while (await timer.WaitForNextTickAsync(cancellationToken))
+            {
+                await InvokeAsync(RefreshAsync);
+            }
+        }
+        catch (OperationCanceledException)
+        {
+        }
+    }
+
+    private async Task RefreshAsync()
+    {
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            return;
+        }
+
+        isLoading = true;
+
+        try
+        {
+            latestReceived = await Notifications.GetLatestReceivedForUserAsync(userId);
+            upcoming = await Notifications.GetClosestUpcomingForUserAsync(userId, DateTimeOffset.UtcNow);
+            unviewedCount = await Notifications.GetUnviewedCountForUserAsync(userId);
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task MarkLatestReceivedViewedAsync()
+    {
+        if (string.IsNullOrWhiteSpace(userId) || latestReceived.Count == 0)
+        {
+            return;
+        }
+
+        var displayedNotificationIds = latestReceived
+            .Where(notification => !notification.UserViewed)
+            .Select(notification => notification.Id)
+            .ToArray();
+
+        if (displayedNotificationIds.Length == 0)
+        {
+            return;
+        }
+
+        await Notifications.MarkViewedAsync(userId, displayedNotificationIds);
+        await RefreshAsync();
+    }
+
+    private void HandleNotificationCreated(object? sender, NotificationCreatedEventArgs args)
+    {
+        if (string.Equals(args.RecipientUserId, userId, StringComparison.Ordinal))
+        {
+            _ = InvokeAsync(async () =>
+            {
+                await RefreshAsync();
+                StateHasChanged();
+            });
+        }
+    }
+
+    private async Task<string?> GetCurrentUserIdAsync()
+    {
+        if (AuthenticationStateTask is null)
+        {
+            return null;
+        }
+
+        var authenticationState = await AuthenticationStateTask;
+        return authenticationState.User.Identity?.IsAuthenticated == true
+            ? authenticationState.User.FindFirstValue(ClaimTypes.NameIdentifier)
+            : null;
+    }
+
+    private static RenderFragment RenderNotificationList(
+        IReadOnlyList<UserNotificationSummary> notifications,
+        string emptyMessage) => @<div class="list-group list-group-flush">
+            @if (notifications.Count == 0)
+            {
+                <div class="list-group-item notification-preview-item text-body-secondary small">
+                    @emptyMessage
+                </div>
+            }
+            else
+            {
+                @foreach (var notification in notifications)
+                {
+                    <a class="list-group-item list-group-item-action notification-preview-item"
+                       href="@(string.IsNullOrWhiteSpace(notification.ActionUrl) ? "notifications" : notification.ActionUrl)"
+                       @key="notification.Id">
+                        <div class="d-flex align-items-start justify-content-between gap-2">
+                            <div class="notification-preview-main">
+                                <span class="notification-preview-title fw-semibold">@notification.Title</span>
+                                <span class="notification-preview-body small text-body-secondary">@notification.Body</span>
+                            </div>
+                            <span class="notification-priority-badge badge @GetPriorityBadgeClass(notification.Priority)">@notification.Priority</span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 small text-body-secondary mt-1">
+                            <span>@notification.CreatedAt.ToLocalTime().ToString("MMM d, HH:mm")</span>
+                            @if (notification.EventStartsAt.HasValue)
+                            {
+                                <span>Event @notification.EventStartsAt.Value.ToLocalTime().ToString("MMM d, HH:mm")</span>
+                            }
+                        </div>
+                    </a>
+                }
+            }
+        </div>;
+
+    private static string GetPriorityBadgeClass(ConnectX.Domain.Entities.MessagePriority priority)
+    {
+        return priority switch
+        {
+            ConnectX.Domain.Entities.MessagePriority.Urgent => "text-bg-danger",
+            ConnectX.Domain.Entities.MessagePriority.High => "text-bg-warning",
+            ConnectX.Domain.Entities.MessagePriority.Low => "text-bg-secondary",
+            _ => "text-bg-primary"
+        };
+    }
+
+    private static string FormatCount(int count)
+    {
+        return count > 99 ? "99+" : count.ToString();
+    }
+
+    public void Dispose()
+    {
+        NotificationUpdates.NotificationCreated -= HandleNotificationCreated;
+        pollingCancellation?.Cancel();
+        pollingCancellation?.Dispose();
+    }
+}

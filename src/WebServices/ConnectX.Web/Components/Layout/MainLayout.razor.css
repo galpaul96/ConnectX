@@ -33,7 +33,7 @@ main {
     .top-row ::deep a, .top-row ::deep .btn-link {
         color: #d9b76f;
         white-space: nowrap;
-        margin-left: 1.5rem;
+        margin-left: 1rem;
         text-decoration: none;
     }
 

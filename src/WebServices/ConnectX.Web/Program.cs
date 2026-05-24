@@ -1,6 +1,7 @@
 using ConnectX.Web.Components;
 using ConnectX.Web.Components.Account;
 using ConnectX.Web.Components.Admin;
+using ConnectX.Web.Components.User;
 using ConnectX.Web.Data;
 using ConnectX.Web.Services;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -29,6 +30,8 @@ public class Program
         builder.Services.AddScoped<IdentityUserAccessor>();
         builder.Services.AddScoped<IdentityRedirectManager>();
         builder.Services.AddScoped<IdentityAdminService>();
+        builder.Services.AddScoped<NotificationService>();
+        builder.Services.AddSingleton<NotificationUpdateDispatcher>();
         builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
         builder.Services.AddBlazorBootstrap();
 

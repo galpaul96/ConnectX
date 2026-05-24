@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Identity;
+using ConnectX.Domain.Entities;
 
 namespace ConnectX.Web.Data;
 
 // Add profile data for application users by adding properties to the ApplicationUser class
 public class ApplicationUser : IdentityUser
 {
+    public ICollection<UserNotification> Notifications { get; set; } = [];
 }
 

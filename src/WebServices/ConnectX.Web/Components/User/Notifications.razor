@@ -1,0 +1,208 @@
+@page "/notifications"
+@rendermode InteractiveServer
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@using ConnectX.Domain.Entities
+@inject NotificationService NotificationService
+
+<PageTitle>Notifications</PageTitle>
+
+<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+    <div>
+        <h1 class="mb-1">Notifications</h1>
+        <div class="text-body-secondary">Latest system messages and academic reminders</div>
+    </div>
+    <button type="button" class="btn btn-outline-primary" @onclick="LoadAsync" disabled="@isLoading">
+        @if (isLoading)
+        {
+            <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
+        }
+        Refresh
+    </button>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <div class="alert alert-danger" role="alert">@errorMessage</div>
+}
+
+@if (isLoading && notifications is null)
+{
+    <div class="d-flex align-items-center gap-2 text-body-secondary">
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span>Loading notifications...</span>
+    </div>
+}
+else if (notifications is null || notifications.Count == 0)
+{
+    <div class="alert alert-info" role="alert">No notifications were found.</div>
+}
+else
+{
+    <div class="list-group notification-list">
+        @foreach (var notification in notifications)
+        {
+            <div class="list-group-item notification-list-item" @key="notification.Id">
+                <div class="d-flex flex-wrap align-items-start justify-content-between gap-3">
+                    <div class="min-w-0">
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                            <h2 class="h5 mb-0">@notification.Title</h2>
+                            <span class="badge @GetPriorityBadgeClass(notification.Priority)">@notification.Priority</span>
+                            @if (!string.IsNullOrWhiteSpace(notification.Topic))
+                            {
+                                <span class="badge text-bg-light">@notification.Topic</span>
+                            }
+                        </div>
+                        <div class="text-body-secondary small">
+                            Received @notification.CreatedAt.ToLocalTime().ToString("MMM d, yyyy HH:mm")
+                        </div>
+                    </div>
+
+                    @if (notification.EventStartsAt.HasValue)
+                    {
+                        <div class="text-sm-end">
+                            <div class="small text-body-secondary">Event time</div>
+                            <div class="fw-semibold">@FormatEventTime(notification)</div>
+                        </div>
+                    }
+                </div>
+
+                <div class="notification-description mt-3">
+                    @notification.Body
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(notification.ActionUrl))
+                {
+                    <a class="btn btn-sm btn-outline-primary mt-3" href="@notification.ActionUrl">Open details</a>
+                }
+            </div>
+        }
+    </div>
+}
+
+<style>
+    .notification-list {
+        gap: .75rem;
+    }
+
+    .notification-list-item {
+        border: 1px solid #2c3a4a !important;
+        border-radius: 8px !important;
+        padding: 1.1rem;
+    }
+
+    .notification-description {
+        background-color: rgba(15, 23, 32, .42);
+        border-left: 3px solid rgba(217, 183, 111, .55);
+        border-radius: 6px;
+        line-height: 1.6;
+        max-width: 72rem;
+        overflow-wrap: anywhere;
+        padding: .85rem 1rem;
+        white-space: pre-line;
+        word-break: normal;
+    }
+
+    .min-w-0 {
+        min-width: 0;
+    }
+
+    @@media (max-width: 640px) {
+        .text-sm-end {
+            text-align: left !important;
+            width: 100%;
+        }
+    }
+</style>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    private string? userId;
+    private IReadOnlyList<UserNotificationSummary>? notifications;
+    private bool isLoading;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        userId = await GetCurrentUserIdAsync();
+
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            errorMessage = "Unable to determine the current signed-in user.";
+            notifications = [];
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            return;
+        }
+
+        isLoading = true;
+        errorMessage = null;
+
+        try
+        {
+            notifications = await NotificationService.GetLatestForUserAsync(userId);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+            notifications = [];
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task<string?> GetCurrentUserIdAsync()
+    {
+        if (AuthenticationStateTask is null)
+        {
+            return null;
+        }
+
+        var authenticationState = await AuthenticationStateTask;
+        return authenticationState.User.FindFirstValue(ClaimTypes.NameIdentifier);
+    }
+
+    private static string FormatEventTime(UserNotificationSummary notification)
+    {
+        if (!notification.EventStartsAt.HasValue)
+        {
+            return "No event time";
+        }
+
+        var startsAt = notification.EventStartsAt.Value.ToLocalTime();
+        if (!notification.EventEndsAt.HasValue)
+        {
+            return startsAt.ToString("MMM d, yyyy HH:mm");
+        }
+
+        var endsAt = notification.EventEndsAt.Value.ToLocalTime();
+        return startsAt.Date == endsAt.Date
+            ? $"{startsAt:MMM d, yyyy HH:mm} - {endsAt:HH:mm}"
+            : $"{startsAt:MMM d, yyyy HH:mm} - {endsAt:MMM d, yyyy HH:mm}";
+    }
+
+    private static string GetPriorityBadgeClass(MessagePriority priority)
+    {
+        return priority switch
+        {
+            MessagePriority.Urgent => "text-bg-danger",
+            MessagePriority.High => "text-bg-warning",
+            MessagePriority.Low => "text-bg-secondary",
+            _ => "text-bg-primary"
+        };
+    }
+}
