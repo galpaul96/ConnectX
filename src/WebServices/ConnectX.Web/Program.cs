@@ -1,5 +1,6 @@
 using ConnectX.Web.Components;
 using ConnectX.Web.Components.Account;
+using ConnectX.Web.Components.Admin;
 using ConnectX.Web.Data;
 using ConnectX.Web.Services;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -27,6 +28,7 @@ public class Program
         builder.Services.AddCascadingAuthenticationState();
         builder.Services.AddScoped<IdentityUserAccessor>();
         builder.Services.AddScoped<IdentityRedirectManager>();
+        builder.Services.AddScoped<IdentityAdminService>();
         builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
         builder.Services.AddBlazorBootstrap();
 
@@ -60,6 +62,7 @@ public class Program
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
         builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddSignInManager()
             .AddDefaultTokenProviders();

@@ -1,0 +1,198 @@
+@page "/admin/roles"
+@rendermode InteractiveServer
+@attribute [Authorize(Roles = "Admin")]
+@using Microsoft.AspNetCore.Authorization
+@using ConnectX.Web.Components.Admin
+@inject IdentityAdminService IdentityAdmin
+
+<PageTitle>Admin roles</PageTitle>
+
+<div class="d-flex flex-wrap align-items-start justify-content-between gap-3 mb-4">
+    <div>
+        <p class="text-uppercase text-body-secondary small fw-semibold mb-1">Identity admin</p>
+        <h1 class="mb-1">Roles</h1>
+        <div class="text-body-secondary">Create, rename, or remove application roles.</div>
+    </div>
+    <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-sm btn-outline-primary" href="admin/users">Users</a>
+        <a class="btn btn-sm btn-outline-primary" href="admin/claims">Claims</a>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="LoadAsync" disabled="@isLoading">Refresh</button>
+    </div>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(successMessage))
+{
+    <div class="alert alert-success" role="alert">@successMessage</div>
+}
+
+@if (!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <div class="alert alert-danger" role="alert">@errorMessage</div>
+}
+
+<section class="border rounded p-3 mb-4">
+    <h2 class="h5 mb-3">Create role</h2>
+    <div class="input-group">
+        <input class="form-control" placeholder="Role name" @bind="newRoleName" @bind:event="oninput" disabled="@isSaving" />
+        <button type="button" class="btn btn-primary" @onclick="CreateRoleAsync" disabled="@IsCreateDisabled">Create</button>
+    </div>
+</section>
+
+@if (isLoading && roleRows.Count == 0)
+{
+    <div class="d-flex align-items-center gap-2 text-body-secondary">
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span>Loading roles...</span>
+    </div>
+}
+else if (roleRows.Count == 0)
+{
+    <div class="alert alert-info" role="alert">No roles have been created yet.</div>
+}
+else
+{
+    <div class="table-responsive border rounded">
+        <table class="table table-dark table-hover align-middle mb-0">
+            <thead>
+                <tr>
+                    <th scope="col">Role</th>
+                    <th scope="col">Assignments</th>
+                    <th scope="col">Claims</th>
+                    <th scope="col" class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in roleRows)
+                {
+                    <tr @key="row.Role.Id">
+                        <td class="admin-role-name-cell">
+                            <input class="form-control form-control-sm" @bind="row.EditName" @bind:event="oninput" disabled="@isSaving" aria-label="Role name for @row.Role.Name" />
+                        </td>
+                        <td>@row.Role.UserCount user@(row.Role.UserCount == 1 ? string.Empty : "s")</td>
+                        <td>@row.Role.ClaimCount claim@(row.Role.ClaimCount == 1 ? string.Empty : "s")</td>
+                        <td>
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="button" class="btn btn-sm btn-outline-primary" @onclick="() => UpdateRoleAsync(row)" disabled="@IsUpdateDisabled(row)">
+                                    Update
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-danger" @onclick="() => DeleteRoleAsync(row)" disabled="@isSaving">
+                                    Remove
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<style>
+    .admin-role-name-cell {
+        min-width: 16rem;
+    }
+</style>
+
+@code {
+    private List<RoleRowState> roleRows = [];
+    private string? newRoleName;
+    private bool isLoading;
+    private bool isSaving;
+    private string? successMessage;
+    private string? errorMessage;
+
+    private bool IsCreateDisabled => isSaving || string.IsNullOrWhiteSpace(newRoleName);
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        isLoading = true;
+        errorMessage = null;
+
+        try
+        {
+            var roles = await IdentityAdmin.GetRolesAsync();
+            roleRows = roles
+                .Select(role => new RoleRowState
+                {
+                    Role = role,
+                    EditName = role.Name
+                })
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+            roleRows = [];
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task CreateRoleAsync()
+    {
+        await CompleteOperationAsync(
+            () => IdentityAdmin.CreateRoleAsync(newRoleName),
+            () => newRoleName = null);
+    }
+
+    private async Task UpdateRoleAsync(RoleRowState row)
+    {
+        await CompleteOperationAsync(() => IdentityAdmin.UpdateRoleAsync(row.Role.Id, row.EditName));
+    }
+
+    private async Task DeleteRoleAsync(RoleRowState row)
+    {
+        await CompleteOperationAsync(() => IdentityAdmin.DeleteRoleAsync(row.Role.Id));
+    }
+
+    private async Task CompleteOperationAsync(Func<Task<AdminOperationResult>> operation, Action? afterSuccess = null)
+    {
+        isSaving = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var result = await operation();
+            if (result.Succeeded)
+            {
+                successMessage = result.Message;
+                afterSuccess?.Invoke();
+                await LoadAsync();
+            }
+            else
+            {
+                errorMessage = result.Message;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private bool IsUpdateDisabled(RoleRowState row)
+    {
+        return isSaving ||
+            string.IsNullOrWhiteSpace(row.EditName) ||
+            string.Equals(row.EditName.Trim(), row.Role.Name, StringComparison.Ordinal);
+    }
+
+    private sealed class RoleRowState
+    {
+        public required RoleSummary Role { get; init; }
+
+        public string? EditName { get; set; }
+    }
+}
