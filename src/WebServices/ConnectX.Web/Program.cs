@@ -5,6 +5,7 @@ using ConnectX.Web.Components.User;
 using ConnectX.Web.Data;
 using ConnectX.Web.Services;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -21,7 +22,15 @@ public class Program
         builder.Services.ConfiugreServices();
         // Add services to the container.
         builder.Services.AddRazorComponents()
-            .AddInteractiveServerComponents();
+            .AddInteractiveServerComponents(options =>
+            {
+                options.DetailedErrors = builder.Environment.IsDevelopment();
+            });
+
+        builder.Services.Configure<CircuitOptions>(options =>
+        {
+            options.DetailedErrors = builder.Environment.IsDevelopment();
+        });
 
         builder.AddServiceDefaults();
         builder.AddRedisOutputCache("cache");
@@ -48,12 +57,15 @@ public class Program
 
         var connectionString = Environment.GetEnvironmentVariable("WebDatabase") ?? throw new InvalidOperationException("Connection string 'WebDatabase' not found.");
 
-        builder.Services.AddDbContext<ApplicationDbContext>(
-        options =>
+        static void ConfigureWebDbContext(DbContextOptionsBuilder options, string connectionString)
+        {
             options.UseNpgsql(
                 connectionString,
-               x => x.MigrationsAssembly("ConnectX.Web"))
-            );
+                x => x.MigrationsAssembly("ConnectX.Web"));
+        }
+
+        builder.Services.AddDbContext<ApplicationDbContext>(
+            options => ConfigureWebDbContext(options, connectionString));
 
         var sw = Stopwatch.StartNew();
         Console.WriteLine("Deploying database...");
@@ -62,7 +74,10 @@ public class Program
         dbContext.Database.Migrate();
         Console.WriteLine($"Deployment done in {sw.Elapsed}");
 
-        builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+        if (builder.Environment.IsDevelopment())
+        {
+            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+        }
 
         builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
             .AddRoles<IdentityRole>()

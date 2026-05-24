@@ -5,16 +5,83 @@ using Microsoft.EntityFrameworkCore;
 namespace ConnectX.Web.Components.User;
 
 public sealed class NotificationService(
-    ApplicationDbContext dbContext,
+    IServiceScopeFactory serviceScopeFactory,
     NotificationUpdateDispatcher updateDispatcher)
 {
     private const int MaxPageSize = 50;
     private const int MaxPreviewSize = 5;
     private const int UpcomingWindowDays = 14;
 
+    public async Task<NotificationHeaderSnapshot> GetHeaderSnapshotForUserAsync(string userId, DateTimeOffset now)
+    {
+        var startsAtLowerBound = now.ToUniversalTime();
+        var startsAtUpperBound = startsAtLowerBound.AddDays(UpcomingWindowDays);
+        await using var scope = serviceScopeFactory.CreateAsyncScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+        var latestReceived = await dbContext.UserNotifications
+            .AsNoTracking()
+            .Where(notification => notification.RecipientUserId == userId)
+            .OrderByDescending(notification => notification.CreatedAt)
+            .Take(MaxPreviewSize)
+            .Select(notification => new UserNotificationSummary(
+                notification.Id,
+                notification.ExternalId,
+                notification.RecipientUserId,
+                notification.Title,
+                notification.Body,
+                notification.Priority,
+                notification.Topic,
+                notification.CreatedAt,
+                notification.UserViewed,
+                notification.EventStartsAt,
+                notification.EventEndsAt,
+                notification.ActionUrl,
+                notification.SourceType,
+                notification.SourceId))
+            .ToListAsync();
+
+        var upcoming = await dbContext.UserNotifications
+            .AsNoTracking()
+            .Where(notification =>
+                notification.RecipientUserId == userId &&
+                notification.EventStartsAt.HasValue &&
+                notification.EventStartsAt >= startsAtLowerBound &&
+                notification.EventStartsAt <= startsAtUpperBound)
+            .OrderBy(notification => notification.EventStartsAt)
+            .ThenByDescending(notification => notification.CreatedAt)
+            .Take(MaxPreviewSize)
+            .Select(notification => new UserNotificationSummary(
+                notification.Id,
+                notification.ExternalId,
+                notification.RecipientUserId,
+                notification.Title,
+                notification.Body,
+                notification.Priority,
+                notification.Topic,
+                notification.CreatedAt,
+                notification.UserViewed,
+                notification.EventStartsAt,
+                notification.EventEndsAt,
+                notification.ActionUrl,
+                notification.SourceType,
+                notification.SourceId))
+            .ToListAsync();
+
+        var unviewedCount = await dbContext.UserNotifications
+            .AsNoTracking()
+            .CountAsync(notification =>
+                notification.RecipientUserId == userId &&
+                !notification.UserViewed);
+
+        return new NotificationHeaderSnapshot(latestReceived, upcoming, unviewedCount);
+    }
+
     public async Task<IReadOnlyList<UserNotificationSummary>> GetLatestForUserAsync(string userId, int max = MaxPageSize)
     {
         var safeMax = Math.Clamp(max, 1, MaxPageSize);
+        await using var scope = serviceScopeFactory.CreateAsyncScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
         return await dbContext.UserNotifications
             .AsNoTracking()
@@ -42,6 +109,8 @@ public sealed class NotificationService(
     public async Task<IReadOnlyList<UserNotificationSummary>> GetLatestReceivedForUserAsync(string userId, int max = MaxPreviewSize)
     {
         var safeMax = Math.Clamp(max, 1, MaxPreviewSize);
+        await using var scope = serviceScopeFactory.CreateAsyncScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
         return await dbContext.UserNotifications
             .AsNoTracking()
@@ -74,6 +143,8 @@ public sealed class NotificationService(
         var safeMax = Math.Clamp(max, 1, MaxPreviewSize);
         var startsAtLowerBound = now.ToUniversalTime();
         var startsAtUpperBound = startsAtLowerBound.AddDays(UpcomingWindowDays);
+        await using var scope = serviceScopeFactory.CreateAsyncScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
         return await dbContext.UserNotifications
             .AsNoTracking()
@@ -105,6 +176,9 @@ public sealed class NotificationService(
 
     public async Task<int> GetUnviewedCountForUserAsync(string userId)
     {
+        await using var scope = serviceScopeFactory.CreateAsyncScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
         return await dbContext.UserNotifications
             .AsNoTracking()
             .CountAsync(notification =>
@@ -118,6 +192,9 @@ public sealed class NotificationService(
         {
             return;
         }
+
+        await using var scope = serviceScopeFactory.CreateAsyncScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
         var notifications = await dbContext.UserNotifications
             .Where(notification =>
@@ -150,6 +227,9 @@ public sealed class NotificationService(
         {
             return NotificationOperationResult.Failure("Select a user before sending a notification.");
         }
+
+        await using var scope = serviceScopeFactory.CreateAsyncScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
         var recipientExists = await dbContext.Users
             .AsNoTracking()
@@ -291,6 +371,11 @@ public sealed record UserNotificationSummary(
     string? ActionUrl,
     string? SourceType,
     string? SourceId);
+
+public sealed record NotificationHeaderSnapshot(
+    IReadOnlyList<UserNotificationSummary> LatestReceived,
+    IReadOnlyList<UserNotificationSummary> Upcoming,
+    int UnviewedCount);
 
 public sealed record NotificationOperationResult(
     bool Succeeded,

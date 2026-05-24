@@ -168,6 +168,7 @@
     private Task<AuthenticationState>? AuthenticationStateTask { get; set; }
 
     private readonly TimeSpan pollingInterval = TimeSpan.FromMinutes(5);
+    private readonly SemaphoreSlim notificationOperationLock = new(1, 1);
     private IReadOnlyList<UserNotificationSummary> latestReceived = [];
     private IReadOnlyList<UserNotificationSummary> upcoming = [];
     private CancellationTokenSource? pollingCancellation;
@@ -199,7 +200,7 @@
         {
             while (await timer.WaitForNextTickAsync(cancellationToken))
             {
-                await InvokeAsync(RefreshAsync);
+                await InvokeAsync(() => RefreshAsync(cancellationToken));
             }
         }
         catch (OperationCanceledException)
@@ -207,24 +208,27 @@
         }
     }
 
-    private async Task RefreshAsync()
+    private async Task RefreshAsync(CancellationToken cancellationToken = default)
     {
         if (string.IsNullOrWhiteSpace(userId))
         {
             return;
         }
 
+        await notificationOperationLock.WaitAsync(cancellationToken);
         isLoading = true;
 
         try
         {
-            latestReceived = await Notifications.GetLatestReceivedForUserAsync(userId);
-            upcoming = await Notifications.GetClosestUpcomingForUserAsync(userId, DateTimeOffset.UtcNow);
-            unviewedCount = await Notifications.GetUnviewedCountForUserAsync(userId);
+            var snapshot = await Notifications.GetHeaderSnapshotForUserAsync(userId, DateTimeOffset.UtcNow);
+            latestReceived = snapshot.LatestReceived;
+            upcoming = snapshot.Upcoming;
+            unviewedCount = snapshot.UnviewedCount;
         }
         finally
         {
             isLoading = false;
+            notificationOperationLock.Release();
         }
     }
 
@@ -245,8 +249,20 @@
             return;
         }
 
-        await Notifications.MarkViewedAsync(userId, displayedNotificationIds);
-        await RefreshAsync();
+        await notificationOperationLock.WaitAsync();
+
+        try
+        {
+            await Notifications.MarkViewedAsync(userId, displayedNotificationIds);
+            var snapshot = await Notifications.GetHeaderSnapshotForUserAsync(userId, DateTimeOffset.UtcNow);
+            latestReceived = snapshot.LatestReceived;
+            upcoming = snapshot.Upcoming;
+            unviewedCount = snapshot.UnviewedCount;
+        }
+        finally
+        {
+            notificationOperationLock.Release();
+        }
     }
 
     private void HandleNotificationCreated(object? sender, NotificationCreatedEventArgs args)
@@ -330,5 +346,6 @@
         NotificationUpdates.NotificationCreated -= HandleNotificationCreated;
         pollingCancellation?.Cancel();
         pollingCancellation?.Dispose();
+        notificationOperationLock.Dispose();
     }
 }
