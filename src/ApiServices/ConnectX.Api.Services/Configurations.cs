@@ -1,10 +1,10 @@
+using AutoMapper;
 using ConnectX.Api.Ef;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
+using ConnectX.Api.MongoDb;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace ConnectX.Api.Services
 {
@@ -14,7 +14,14 @@ namespace ConnectX.Api.Services
             IConfiguration configuration)
         {
             services.ConfigureRepository(configuration);
+            services.ConfigureMongoDb(configuration);
             services.TryAddScoped<IMeetingService, MeetingService>();
+            services.TryAddScoped<IStudentService, StudentService>();
+
+            services.AddAutoMapper(x =>
+            {
+                x.AddProfile(new ServiceMapperProfile());
+            });
 
             //services.AddHttpClient("foo"); // adding an HttpClient named "foo" with a default configuration
 

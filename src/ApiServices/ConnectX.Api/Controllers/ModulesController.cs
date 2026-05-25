@@ -1,4 +1,6 @@
+using AutoMapper;
 using ConnectX.Api.Services;
+using ConnectX.Domain.Api.Modules;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConnectX.Api.Controllers;
@@ -9,19 +11,22 @@ namespace ConnectX.Api.Controllers;
 public class ModulesController : ControllerBase
 {
     private readonly IMeetingService _meetingService;
+    private readonly IMapper _mapper;
     private readonly ILogger<ModulesController> _logger;
 
     public ModulesController(
         IMeetingService meetingService,
+        IMapper mapper,
         ILogger<ModulesController> logger)
     {
         _meetingService = meetingService;
+        _mapper = mapper;
         _logger = logger;
     }
 
     [HttpGet("students/{studentId:guid}/upcoming-events", Name = "GetStudentUpcomingModuleEvents")]
-    [ProducesResponseType(typeof(IReadOnlyList<StudentUpcomingEventModel>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IReadOnlyList<StudentUpcomingEventModel>>> GetUpcomingEventsAsync(
+    [ProducesResponseType(typeof(IReadOnlyList<StudentUpcomingEventResponse>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<IReadOnlyList<StudentUpcomingEventResponse>>> GetUpcomingEventsAsync(
         Guid studentId,
         CancellationToken cancellationToken)
     {
@@ -29,13 +34,13 @@ public class ModulesController : ControllerBase
 
         var events = await _meetingService.GetAsync(studentId, cancellationToken);
 
-        return Ok(events);
+        return Ok(_mapper.Map<IReadOnlyList<StudentUpcomingEventResponse>>(events));
     }
 
     [HttpGet("students/{studentId:guid}/upcoming-events/range", Name = "GetStudentUpcomingModuleEventsByRange")]
-    [ProducesResponseType(typeof(IReadOnlyList<StudentUpcomingEventModel>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(IReadOnlyList<StudentUpcomingEventResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IReadOnlyList<StudentUpcomingEventModel>>> GetUpcomingEventsAsync(
+    public async Task<ActionResult<IReadOnlyList<StudentUpcomingEventResponse>>> GetUpcomingEventsAsync(
         Guid studentId,
         [FromQuery] DateTimeOffset startsAt,
         [FromQuery] DateTimeOffset endsAt,
@@ -59,13 +64,13 @@ public class ModulesController : ControllerBase
 
         var events = await _meetingService.GetAsync(studentId, startsAt, endsAt, cancellationToken);
 
-        return Ok(events);
+        return Ok(_mapper.Map<IReadOnlyList<StudentUpcomingEventResponse>>(events));
     }
 
     [HttpGet("students/{studentId:guid}/meetings/{meetingId:guid}", Name = "GetStudentModuleMeeting")]
-    [ProducesResponseType(typeof(StudentMeetingDetailModel), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(StudentMeetingDetailResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<StudentMeetingDetailModel>> GetMeetingAsync(
+    public async Task<ActionResult<StudentMeetingDetailResponse>> GetMeetingAsync(
         Guid studentId,
         Guid meetingId,
         CancellationToken cancellationToken)
@@ -82,7 +87,7 @@ public class ModulesController : ControllerBase
             return NotFound();
         }
 
-        return Ok(meeting);
+        return Ok(_mapper.Map<StudentMeetingDetailResponse>(meeting));
     }
 }
 

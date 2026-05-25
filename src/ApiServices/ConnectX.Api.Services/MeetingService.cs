@@ -1,3 +1,4 @@
+using AutoMapper;
 using ConnectX.Api.Ef;
 using ConnectX.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -9,10 +10,14 @@ internal class MeetingService : IMeetingService
     private static readonly TimeSpan DefaultLookAhead = TimeSpan.FromDays(90);
 
     private readonly IRepository _repository;
+    private readonly IMapper _mapper;
 
-    public MeetingService(IRepository repository)
+    public MeetingService(
+        IRepository repository,
+        IMapper mapper)
     {
         _repository = repository;
+        _mapper = mapper;
     }
 
     public Task<IReadOnlyList<StudentUpcomingEventModel>> GetAsync(Guid studentId, CancellationToken cancellationToken = default)
@@ -77,7 +82,7 @@ internal class MeetingService : IMeetingService
             .Where(x => x.ModuleOffering != null && x.ModuleOffering.Enrollments.Any(y => y.StudentId == studentId && y.Status == EnrollmentStatus.Active))
             .FirstOrDefaultAsync(cancellationToken);
 
-        return meeting is null ? null : MapMeetingDetail(meeting);
+        return meeting is null ? null : _mapper.Map<StudentMeetingDetailModel>(meeting);
     }
 
     private async Task<List<ModuleEnrollment>> GetActiveEnrollmentsAsync(Guid studentId, CancellationToken cancellationToken)
@@ -111,7 +116,7 @@ internal class MeetingService : IMeetingService
             .Where(x => x.StartsAt >= startsAt && x.StartsAt <= endsAt)
             .ToListAsync(cancellationToken);
 
-        return meetings.Select(MapMeetingEvent).ToList();
+        return _mapper.Map<List<StudentUpcomingEventModel>>(meetings);
     }
 
     private async Task<List<StudentUpcomingEventModel>> GetAssignmentEventsAsync(
@@ -129,7 +134,7 @@ internal class MeetingService : IMeetingService
             .Where(x => x.DueAt.HasValue && x.DueAt.Value >= startsAt && x.DueAt.Value <= endsAt)
             .ToListAsync(cancellationToken);
 
-        return assignments.Select(MapAssignmentEvent).ToList();
+        return _mapper.Map<List<StudentUpcomingEventModel>>(assignments);
     }
 
     private async Task<List<StudentUpcomingEventModel>> GetExamEventsAsync(
@@ -148,164 +153,7 @@ internal class MeetingService : IMeetingService
             .Where(x => x.ScheduledAt.HasValue && x.ScheduledAt.Value >= startsAt && x.ScheduledAt.Value <= endsAt)
             .ToListAsync(cancellationToken);
 
-        return exams.Select(MapExamEvent).ToList();
-    }
-
-    private static StudentUpcomingEventModel MapMeetingEvent(Meeting meeting)
-    {
-        var offering = meeting.ModuleOffering;
-        var module = offering?.ProgramModule;
-        var teacher = offering?.Teacher;
-        var attendance = meeting.AttendanceRecords.FirstOrDefault();
-
-        return new StudentUpcomingEventModel
-        {
-            Id = meeting.Id,
-            ExternalId = meeting.ExternalId,
-            EventType = StudentUpcomingEventType.Meeting,
-            StartsAt = meeting.StartsAt,
-            EndsAt = meeting.EndsAt,
-            Title = meeting.Title,
-            Description = meeting.Description,
-            ModuleId = module?.Id,
-            ModuleCode = module?.Code,
-            ModuleName = module?.Name,
-            ModuleOfferingId = meeting.ModuleOfferingId,
-            TeacherId = teacher?.Id,
-            TeacherName = teacher?.DisplayName,
-            TeacherEmail = teacher?.Email,
-            LocationName = meeting.AcademicLocation?.Name ?? meeting.Location,
-            LocationAddress = FormatAddress(meeting.AcademicLocation),
-            OnlineUrl = meeting.OnlineMeetingUrl ?? offering?.OnlineClassroomUrl,
-            MeetingFormat = meeting.Format,
-            IsCancelled = meeting.IsCancelled,
-            AttendanceStatus = attendance?.Status,
-            RelatedItemCount = meeting.PreparationAssignments.Count
-        };
-    }
-
-    private static StudentUpcomingEventModel MapAssignmentEvent(Assignment assignment)
-    {
-        var dueAt = assignment.DueAt!.Value;
-
-        return new StudentUpcomingEventModel
-        {
-            Id = assignment.Id,
-            ExternalId = assignment.ExternalId,
-            EventType = StudentUpcomingEventType.Assignment,
-            StartsAt = dueAt,
-            EndsAt = dueAt,
-            Title = assignment.Title,
-            Description = assignment.Instructions,
-            ModuleId = assignment.ProgramModuleId,
-            ModuleCode = assignment.ProgramModule?.Code,
-            ModuleName = assignment.ProgramModule?.Name,
-            MeetingId = assignment.MeetingId,
-            MeetingTitle = assignment.Meeting?.Title,
-            AssignmentType = assignment.AssignmentType,
-            AssignmentStatus = assignment.Status,
-            MaximumScore = assignment.MaximumScore,
-            WeightPercentage = assignment.WeightPercentage,
-            IsRequired = assignment.IsPreparationRequired
-        };
-    }
-
-    private static StudentUpcomingEventModel MapExamEvent(Exam exam)
-    {
-        var scheduledAt = exam.ScheduledAt!.Value;
-        var result = exam.Results.FirstOrDefault();
-
-        return new StudentUpcomingEventModel
-        {
-            Id = exam.Id,
-            ExternalId = exam.ExternalId,
-            EventType = StudentUpcomingEventType.Exam,
-            StartsAt = scheduledAt,
-            EndsAt = exam.DurationMinutes.HasValue ? scheduledAt.AddMinutes(exam.DurationMinutes.Value) : scheduledAt,
-            Title = exam.Title,
-            Description = exam.Instructions,
-            ModuleId = exam.ProgramModuleId,
-            ModuleCode = exam.ProgramModule?.Code,
-            ModuleName = exam.ProgramModule?.Name,
-            LocationName = exam.Location,
-            OnlineUrl = exam.OnlineExamUrl,
-            AssessmentType = exam.AssessmentType,
-            MaximumScore = exam.PassingScore,
-            WeightPercentage = exam.WeightPercentage,
-            ResultGrade = result?.Grade,
-            ResultScore = result?.Score,
-            ResultPassed = result?.Passed
-        };
-    }
-
-    private static StudentMeetingDetailModel MapMeetingDetail(Meeting meeting)
-    {
-        var summary = MapMeetingEvent(meeting);
-
-        return new StudentMeetingDetailModel
-        {
-            Summary = summary,
-            PreparationInstructions = meeting.PreparationInstructions,
-            CancellationReason = meeting.CancellationReason,
-            LearningObjectives = meeting.LearningObjectives
-                .OrderBy(x => x.SortOrder)
-                .Select(x => new LearningObjectiveModel(x.Id, x.ExternalId, x.Title, x.Description, x.BloomLevel, x.IsAssessed))
-                .ToList(),
-            LearningActivities = meeting.LearningActivities
-                .OrderBy(x => x.SortOrder)
-                .Select(x => new LearningActivityModel(x.Id, x.ExternalId, x.Title, x.Description, x.ActivityType, x.DurationMinutes, x.Instructions, x.IsRequired))
-                .ToList(),
-            PreparationAssignments = meeting.PreparationAssignments
-                .OrderBy(x => x.DueAt)
-                .Select(x => new AssignmentSummaryModel(x.Id, x.ExternalId, x.Title, x.AssignmentType, x.Status, x.DueAt, x.MaximumScore, x.WeightPercentage))
-                .ToList(),
-            Resources = meeting.Resources
-                .OrderBy(x => x.SortOrder)
-                .Select(x => new ResourceSummaryModel(
-                    x.Id,
-                    x.ExternalId,
-                    x.Title,
-                    x.Description,
-                    x.ResourceType,
-                    x.Url,
-                    x.FileName,
-                    x.IsRequired,
-                    x.BibliographicReference?.CitationText))
-                .ToList(),
-            LessonContents = meeting.LessonContents
-                .OrderBy(x => x.SortOrder)
-                .Select(x => new LessonContentSummaryModel(x.Id, x.ExternalId, x.Title, x.Summary, x.EstimatedStudyMinutes, x.IsRequired))
-                .ToList(),
-            StudyTips = meeting.StudyTips
-                .OrderBy(x => x.SortOrder)
-                .Select(x => new StudyTipSummaryModel(x.Id, x.ExternalId, x.Title, x.Body, x.Category, x.IsHighlighted))
-                .ToList(),
-            Directions = meeting.AcademicLocation?.Directions
-                .OrderBy(x => x.SortOrder)
-                .Select(x => new LocationDirectionModel(x.TravelMode, x.Title, x.Instructions, x.PublicTransportStop, x.ParkingInstructions, x.ExternalNavigationUrl))
-                .ToList() ?? []
-        };
-    }
-
-    private static string? FormatAddress(AcademicLocation? location)
-    {
-        if (location is null)
-        {
-            return null;
-        }
-
-        var parts = new[]
-        {
-            location.AddressLine1,
-            location.AddressLine2,
-            location.PostalCode,
-            location.City,
-            location.Country
-        };
-
-        var address = string.Join(", ", parts.Where(x => !string.IsNullOrWhiteSpace(x)));
-
-        return string.IsNullOrWhiteSpace(address) ? null : address;
+        return _mapper.Map<List<StudentUpcomingEventModel>>(exams);
     }
 }
 

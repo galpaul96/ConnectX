@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37203.1
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11819.183 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectX.AppHost", "ConnectX.AppHost\ConnectX.AppHost.csproj", "{5B69C6BA-7E47-4ED6-A220-A43C67768558}"
 EndProject
@@ -27,6 +27,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectX.Api.Services", "ApiServices\ConnectX.Api.Services\ConnectX.Api.Services.csproj", "{1CCAA2A8-999D-CEA9-E712-0941BDBD980D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectX.Api.Ef", "ApiServices\ConnectX.Api.Ef\ConnectX.Api.Ef.csproj", "{749FF461-F6D9-41B7-947A-72A7027DEB9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectX.Api.MongoDb", "ApiServices\ConnectX.Api.MongoDb\ConnectX.Api.MongoDb.csproj", "{E31F7403-3734-431C-A09D-FB6579CFEC95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{749FF461-F6D9-41B7-947A-72A7027DEB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{749FF461-F6D9-41B7-947A-72A7027DEB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{749FF461-F6D9-41B7-947A-72A7027DEB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E31F7403-3734-431C-A09D-FB6579CFEC95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E31F7403-3734-431C-A09D-FB6579CFEC95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E31F7403-3734-431C-A09D-FB6579CFEC95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E31F7403-3734-431C-A09D-FB6579CFEC95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{AA183B58-1337-E59C-E52B-27A75435FB11} = {71EF1939-D64B-4AF5-8D2B-A3CFCF5653C1}
 		{1CCAA2A8-999D-CEA9-E712-0941BDBD980D} = {71EF1939-D64B-4AF5-8D2B-A3CFCF5653C1}
 		{749FF461-F6D9-41B7-947A-72A7027DEB9B} = {71EF1939-D64B-4AF5-8D2B-A3CFCF5653C1}
+		{E31F7403-3734-431C-A09D-FB6579CFEC95} = {71EF1939-D64B-4AF5-8D2B-A3CFCF5653C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F957AFAD-418C-4F5B-B134-D3096B8CED95}

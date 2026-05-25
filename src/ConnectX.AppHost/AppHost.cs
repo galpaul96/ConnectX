@@ -2,8 +2,11 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var cache = builder.AddRedis("cache");
 
+var db = builder.AddMongoDB("mongodb").AddDatabase("mydb");
+
 var apiService = builder.AddProject<Projects.ConnectX_Api>("api")
-    .WithHttpHealthCheck("/health");
+    .WithHttpHealthCheck("/health")
+    .WithReference(db);
 
 builder.AddProject<Projects.ConnectX_Web>("webfrontend")
     .WithExternalHttpEndpoints()
