@@ -7,22 +7,18 @@
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.Authorization
 @using Microsoft.AspNetCore.Components.Web
-@using ConnectX.Domain.Entities
 @using ConnectX.Web.Components.Admin
 @inject IdentityAdminService IdentityAdmin
-@inject NotificationService Notifications
 
 <PageTitle>Admin users</PageTitle>
 
-<div class="d-flex flex-wrap align-items-start justify-content-between gap-3 mb-4">
+<div class="page-heading d-flex flex-wrap align-items-start justify-content-between gap-3">
     <div>
         <h1 class="mb-1">Users</h1>
         <div class="text-body-secondary">Browse accounts, filter the catalog, and open a user for role, claim, and account controls.</div>
     </div>
     <div class="d-flex flex-wrap gap-2">
-        <a class="btn btn-sm btn-outline-primary" href="admin/roles">Roles</a>
-        <a class="btn btn-sm btn-outline-primary" href="admin/claims">Claims</a>
-        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="LoadAsync" disabled="@isLoading">Refresh</button>
+        <button type="button" class="btn btn-outline-secondary" @onclick="LoadAsync" disabled="@isLoading">Refresh</button>
     </div>
 </div>
 
@@ -102,13 +98,27 @@ else
     <div class="admin-user-grid" aria-label="Users catalog">
         @foreach (var user in users)
         {
-            <button type="button" class="admin-user-card" @onclick="() => OpenUserAsync(user)" @key="user.Id">
+            <button type="button" class="catalog-card admin-user-card" @onclick="() => OpenUserAsync(user)" @key="user.Id">
                 <span class="admin-avatar" aria-hidden="true">@GetInitials(user)</span>
                 <span class="admin-user-card-body">
                     <span class="admin-user-card-title">@GetDisplayName(user)</span>
                     <span class="admin-user-card-subtitle">@GetSecondaryName(user)</span>
                     <span class="admin-user-card-meta">
-                        <span>@user.Roles.Count role@(user.Roles.Count == 1 ? string.Empty : "s")</span>
+                        @if (user.Roles.Count == 0)
+                        {
+                            <span class="badge text-bg-warning">No role</span>
+                        }
+                        else
+                        {
+                            @foreach (var role in user.Roles.Take(2))
+                            {
+                                <span class="badge text-bg-light">@role</span>
+                            }
+                            @if (user.Roles.Count > 2)
+                            {
+                                <span class="badge text-bg-light">+@(user.Roles.Count - 2)</span>
+                            }
+                        }
                         <span>@user.Claims.Count claim@(user.Claims.Count == 1 ? string.Empty : "s")</span>
                     </span>
                     <span class="admin-user-card-badges">
@@ -222,86 +232,6 @@ else
                                     <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="ResetSelectedUserAuthenticatorAsync" disabled="@isSaving">Reset authenticator and 2FA</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="RevokeSelectedUserSessionsAsync" disabled="@isSaving">Revoke active sessions</button>
                                 </div>
-                            </section>
-
-                            <section class="admin-modal-section mt-3">
-                                <h3 class="h6 text-uppercase text-body-secondary">System notification</h3>
-                                <EditForm Model="notificationDetail" OnValidSubmit="SendSelectedUserNotificationAsync">
-                                    <DataAnnotationsValidator />
-                                    <ValidationSummary class="text-danger small mb-2" />
-
-                                    <div class="vstack gap-2">
-                                        <label class="form-label small mb-0" for="notificationTitle">Title</label>
-                                        <InputText id="notificationTitle"
-                                                   class="form-control form-control-sm"
-                                                   @bind-Value="notificationDetail.Title"
-                                                   disabled="@IsNotificationFormDisabled" />
-
-                                        <label class="form-label small mb-0" for="notificationBody">Message</label>
-                                        <InputTextArea id="notificationBody"
-                                                       class="form-control form-control-sm"
-                                                       rows="4"
-                                                       @bind-Value="notificationDetail.Body"
-                                                       disabled="@IsNotificationFormDisabled" />
-
-                                        <div class="row g-2">
-                                            <div class="col-sm-6">
-                                                <label class="form-label small mb-0" for="notificationPriority">Priority</label>
-                                                <InputSelect id="notificationPriority"
-                                                             class="form-select form-select-sm"
-                                                             @bind-Value="notificationDetail.Priority"
-                                                             disabled="@IsNotificationFormDisabled">
-                                                    @foreach (var priority in Enum.GetValues<MessagePriority>())
-                                                    {
-                                                        <option value="@priority">@priority</option>
-                                                    }
-                                                </InputSelect>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label class="form-label small mb-0" for="notificationTopic">Topic</label>
-                                                <InputText id="notificationTopic"
-                                                           class="form-control form-control-sm"
-                                                           @bind-Value="notificationDetail.Topic"
-                                                           disabled="@IsNotificationFormDisabled" />
-                                            </div>
-                                        </div>
-
-                                        <div class="row g-2">
-                                            <div class="col-sm-6">
-                                                <label class="form-label small mb-0" for="notificationEventStartsAt">Event starts</label>
-                                                <input id="notificationEventStartsAt"
-                                                       class="form-control form-control-sm"
-                                                       type="datetime-local"
-                                                       @bind="notificationDetail.EventStartsAt"
-                                                       disabled="@IsNotificationFormDisabled" />
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label class="form-label small mb-0" for="notificationEventEndsAt">Event ends</label>
-                                                <input id="notificationEventEndsAt"
-                                                       class="form-control form-control-sm"
-                                                       type="datetime-local"
-                                                       @bind="notificationDetail.EventEndsAt"
-                                                       disabled="@IsNotificationFormDisabled" />
-                                            </div>
-                                        </div>
-
-                                        <label class="form-label small mb-0" for="notificationActionUrl">Action URL</label>
-                                        <div class="input-group input-group-sm">
-                                            <InputText id="notificationActionUrl"
-                                                       class="form-control"
-                                                       placeholder="notifications, modules, or https://..."
-                                                       @bind-Value="notificationDetail.ActionUrl"
-                                                       disabled="@IsNotificationFormDisabled" />
-                                            <button type="submit" class="btn btn-outline-primary" disabled="@IsNotificationSendDisabled">
-                                                @if (isNotificationSaving)
-                                                {
-                                                    <span class="spinner-border spinner-border-sm me-1" aria-hidden="true"></span>
-                                                }
-                                                Send
-                                            </button>
-                                        </div>
-                                    </div>
-                                </EditForm>
                             </section>
                         </div>
 
@@ -434,21 +364,21 @@ else
 
 <style>
     .admin-users-filterbar {
-        background-color: rgba(23, 33, 45, .58);
+        background-color: var(--bs-tertiary-bg);
     }
 
     .admin-user-grid {
         display: grid;
         gap: .75rem;
-        grid-template-columns: repeat(7, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
     }
 
     .admin-user-card {
         align-items: stretch;
-        background: #17212d;
-        border: 1px solid #2c3a4a;
-        border-radius: 8px;
-        color: #e8edf3;
+        background: var(--bs-body-bg);
+        border: 1px solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        color: var(--bs-body-color);
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -461,18 +391,18 @@ else
 
     .admin-user-card:hover,
     .admin-user-card:focus {
-        border-color: #d9b76f;
-        box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .22);
+        border-color: var(--bs-primary);
+        box-shadow: 0 .5rem 1rem rgb(0 0 0 / 10%);
         outline: none;
         transform: translateY(-2px);
     }
 
     .admin-avatar {
         align-items: center;
-        background: #263545;
-        border: 1px solid #3a4c60;
+        background: var(--bs-secondary-bg);
+        border: 1px solid var(--bs-border-color);
         border-radius: 50%;
-        color: #f3f6f8;
+        color: var(--bs-emphasis-color);
         display: inline-flex;
         flex: 0 0 auto;
         font-size: .8rem;
@@ -512,7 +442,7 @@ else
 
     .admin-user-card-subtitle,
     .admin-user-card-meta {
-        color: #9fb0c3;
+        color: var(--bs-secondary-color);
         font-size: .76rem;
         line-height: 1.25;
     }
@@ -536,8 +466,8 @@ else
     }
 
     .admin-modal-section {
-        border: 1px solid #2c3a4a;
-        border-radius: 8px;
+        border: 1px solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
         padding: 1rem;
     }
 
@@ -548,35 +478,6 @@ else
         white-space: normal;
     }
 
-    @@media (max-width: 1500px) {
-        .admin-user-grid {
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-        }
-    }
-
-    @@media (max-width: 1200px) {
-        .admin-user-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-    }
-
-    @@media (max-width: 900px) {
-        .admin-user-grid {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-    }
-
-    @@media (max-width: 640px) {
-        .admin-user-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-
-    @@media (max-width: 430px) {
-        .admin-user-grid {
-            grid-template-columns: 1fr;
-        }
-    }
 </style>
 
 @code {
@@ -590,7 +491,6 @@ else
     private List<UserCatalogItem> users = [];
     private UserCatalogItem? selectedUser;
     private UserDetailState? userDetail;
-    private NotificationFormState notificationDetail = new();
     private int currentPage = 1;
     private string? searchTerm;
     private string? selectedRoleFilter;
@@ -598,7 +498,6 @@ else
     private UserCatalogStatusFilter selectedStatusFilter = UserCatalogStatusFilter.All;
     private bool isLoading;
     private bool isSaving;
-    private bool isNotificationSaving;
     private string? successMessage;
     private string? errorMessage;
 
@@ -627,16 +526,6 @@ else
         userDetail is null ||
         selectedUser is null ||
         string.IsNullOrWhiteSpace(userDetail.NewClaimType);
-
-    private bool IsNotificationFormDisabled =>
-        isSaving ||
-        isNotificationSaving ||
-        selectedUser is null;
-
-    private bool IsNotificationSendDisabled =>
-        IsNotificationFormDisabled ||
-        string.IsNullOrWhiteSpace(notificationDetail.Title) ||
-        string.IsNullOrWhiteSpace(notificationDetail.Body);
 
     protected override async Task OnInitializedAsync()
     {
@@ -720,7 +609,6 @@ else
     {
         selectedUser = await IdentityAdmin.GetUserAsync(user.Id) ?? user;
         userDetail = UserDetailState.FromUser(selectedUser);
-        notificationDetail = new NotificationFormState();
         successMessage = null;
         errorMessage = null;
     }
@@ -729,7 +617,6 @@ else
     {
         selectedUser = null;
         userDetail = null;
-        notificationDetail = new NotificationFormState();
     }
 
     private async Task<string?> GetCurrentUserIdAsync()
@@ -890,44 +777,6 @@ else
         await CompleteUserOperationAsync(() => IdentityAdmin.RemoveUserClaimAsync(claim.Id));
     }
 
-    private async Task SendSelectedUserNotificationAsync()
-    {
-        if (selectedUser is null)
-        {
-            return;
-        }
-
-        isNotificationSaving = true;
-        successMessage = null;
-        errorMessage = null;
-
-        try
-        {
-            var result = await Notifications.CreateForUserAsync(
-                selectedUser.Id,
-                notificationDetail.ToRequest(),
-                currentAdminUserId);
-
-            if (result.Succeeded)
-            {
-                successMessage = result.Message;
-                notificationDetail = new NotificationFormState();
-            }
-            else
-            {
-                errorMessage = result.Message;
-            }
-        }
-        catch (Exception ex)
-        {
-            errorMessage = ex.Message;
-        }
-        finally
-        {
-            isNotificationSaving = false;
-        }
-    }
-
     private async Task CompleteUserOperationAsync(Func<Task<AdminOperationResult>> operation, bool keepFormValues = true)
     {
         isSaving = true;
@@ -1056,53 +905,6 @@ else
     private static string DisplayValue(string? value)
     {
         return string.IsNullOrWhiteSpace(value) ? "Not set" : value;
-    }
-
-    private sealed class NotificationFormState
-    {
-        [Required]
-        [StringLength(256)]
-        public string? Title { get; set; }
-
-        [Required]
-        public string? Body { get; set; }
-
-        public MessagePriority Priority { get; set; } = MessagePriority.Normal;
-
-        [StringLength(128)]
-        public string? Topic { get; set; }
-
-        public DateTime? EventStartsAt { get; set; }
-
-        public DateTime? EventEndsAt { get; set; }
-
-        [StringLength(1024)]
-        public string? ActionUrl { get; set; }
-
-        public NotificationCreateRequest ToRequest()
-        {
-            return new NotificationCreateRequest(
-                Title,
-                Body,
-                Priority,
-                Topic,
-                ToDateTimeOffset(EventStartsAt),
-                ToDateTimeOffset(EventEndsAt),
-                ActionUrl,
-                "AdminManual",
-                null);
-        }
-
-        private static DateTimeOffset? ToDateTimeOffset(DateTime? value)
-        {
-            if (!value.HasValue)
-            {
-                return null;
-            }
-
-            var localValue = DateTime.SpecifyKind(value.Value, DateTimeKind.Local);
-            return new DateTimeOffset(localValue).ToUniversalTime();
-        }
     }
 
     private sealed class UserDetailState

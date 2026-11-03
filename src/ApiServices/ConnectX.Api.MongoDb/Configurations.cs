@@ -1,4 +1,3 @@
-using ConnectX.Api.MongoDb.Students;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -28,6 +27,6 @@ public static class Configurations
             return client.GetDatabase(options.DatabaseName);
         });
 
-        services.TryAddScoped<IStudentRepository, StudentRepository>();
     }
 }
+

@@ -10,7 +10,6 @@ public sealed class IdentityAdminService(
     ApplicationDbContext dbContext)
 {
     private const int MaxPageSize = 50;
-
     private static readonly TimeSpan DisabledLockoutDuration = TimeSpan.FromDays(36500);
 
     public async Task<PagedResult<UserCatalogItem>> GetUsersAsync(

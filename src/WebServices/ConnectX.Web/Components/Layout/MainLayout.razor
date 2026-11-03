@@ -1,21 +1,51 @@
-﻿@inherits LayoutComponentBase
-@using ConnectX.Web.Components.User
+@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
+<div class="app-shell">
+    <input id="sidebar-toggle" class="sidebar-toggle-state" type="checkbox" aria-label="Toggle navigation" />
+
+    <aside class="app-sidebar" aria-label="Application navigation">
+        <a class="brand-lockup" href="" aria-label="ConnectX home">
+            <span class="brand-name">Connect<span class="brand-accent">X</span></span>
+            <span class="brand-caption">D&amp;D reference workspace</span>
+        </a>
         <NavMenu />
-    </div>
+        <div class="sidebar-note">Rules reference and campaign codex</div>
+    </aside>
 
-    <main>
-        <div class="top-row px-4">
-            <NotificationHeaderActions />
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+    <label class="sidebar-scrim" for="sidebar-toggle" aria-hidden="true"></label>
 
-        <article class="content px-4">
+    <div class="app-main">
+        <header class="topbar">
+            <label class="menu-toggle" for="sidebar-toggle">
+                <span class="menu-toggle-text">Menu</span>
+            </label>
+            <div class="topbar-context">
+                <span class="topbar-eyebrow">ConnectX</span>
+                <span class="topbar-divider" aria-hidden="true"></span>
+                <span class="topbar-section">Rules &amp; campaign workspace</span>
+            </div>
+            <div class="topbar-actions">
+                <AuthorizeView>
+                    <Authorized>
+                        <a class="topbar-account" href="Account/Manage">My account</a>
+                    </Authorized>
+                    <NotAuthorized>
+                        <a class="topbar-signin" href="Account/Login">Sign in</a>
+                        <a class="topbar-register" href="Account/Register">Create account</a>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </div>
+        </header>
+
+        <main class="main-content">
             @Body
-        </article>
-    </main>
+        </main>
+
+        <footer class="app-footer">
+            <span>Connect<span class="brand-accent">X</span></span>
+            <span>Rules &amp; campaign codex</span>
+        </footer>
+    </div>
 </div>
 
 <div id="blazor-error-ui">

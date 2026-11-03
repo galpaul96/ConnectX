@@ -1,4 +1,3 @@
-using ConnectX.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
@@ -7,18 +6,15 @@ namespace ConnectX.Web.Data;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
-    public DbSet<UserNotification> UserNotifications => Set<UserNotification>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-
-        builder.ApplyConfiguration(new UserNotificationEntityTypeConfiguration());
     }
 }
 internal class EfContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
 {
-    private const string ApplicationName = "ConnectX.Ef";
+    private const string ApplicationName = "ConnectX";
 
     public ApplicationDbContext CreateDbContext(string[] args)
     {
@@ -37,3 +33,6 @@ internal class EfContextFactory : IDesignTimeDbContextFactory<ApplicationDbConte
         return new ApplicationDbContext(optionsBuilder.Options);
     }
 }
+
+
+

@@ -7,16 +7,14 @@
 
 <PageTitle>Admin claims</PageTitle>
 
-<div class="d-flex flex-wrap align-items-start justify-content-between gap-3 mb-4">
+<div class="page-heading d-flex flex-wrap align-items-start justify-content-between gap-3">
     <div>
         <p class="text-uppercase text-body-secondary small fw-semibold mb-1">Identity admin</p>
         <h1 class="mb-1">Claims</h1>
         <div class="text-body-secondary">Create, update, or remove user and role claims.</div>
     </div>
     <div class="d-flex flex-wrap gap-2">
-        <a class="btn btn-sm btn-outline-primary" href="admin/users">Users</a>
-        <a class="btn btn-sm btn-outline-primary" href="admin/roles">Roles</a>
-        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="LoadAsync" disabled="@isLoading">Refresh</button>
+        <button type="button" class="btn btn-outline-secondary" @onclick="LoadAsync" disabled="@isLoading">Refresh</button>
     </div>
 </div>
 
@@ -30,7 +28,7 @@
     <div class="alert alert-danger" role="alert">@errorMessage</div>
 }
 
-<section class="border rounded p-3 mb-4">
+<section class="admin-page-surface mb-4">
     <h2 class="h5 mb-3">Create claim</h2>
     <div class="row g-2">
         <div class="col-md-2">
@@ -87,7 +85,7 @@ else if (claimRows.Count == 0)
 else
 {
     <div class="table-responsive border rounded">
-        <table class="table table-dark table-hover align-middle mb-0">
+        <table class="table table-striped table-hover align-middle mb-0">
             <thead>
                 <tr>
                     <th scope="col">Scope</th>

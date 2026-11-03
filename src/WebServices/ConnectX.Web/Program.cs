@@ -1,7 +1,6 @@
 using ConnectX.Web.Components;
 using ConnectX.Web.Components.Account;
 using ConnectX.Web.Components.Admin;
-using ConnectX.Web.Components.User;
 using ConnectX.Web.Data;
 using ConnectX.Web.Services;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -39,8 +38,6 @@ public class Program
         builder.Services.AddScoped<IdentityUserAccessor>();
         builder.Services.AddScoped<IdentityRedirectManager>();
         builder.Services.AddScoped<IdentityAdminService>();
-        builder.Services.AddScoped<NotificationService>();
-        builder.Services.AddSingleton<NotificationUpdateDispatcher>();
         builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
         builder.Services.AddBlazorBootstrap();
 
@@ -55,7 +52,7 @@ public class Program
         //builder.Services.AddDbContext<ApplicationDbContext>(options =>
         //options.UseSqlServer(connectionString));
 
-        var connectionString = Environment.GetEnvironmentVariable("WebDatabase") ?? throw new InvalidOperationException("Connection string 'WebDatabase' not found.");
+        var connectionString = builder.Configuration.GetConnectionString("identityDb") ?? throw new InvalidOperationException("Connection string 'identityDb' not found.");
 
         static void ConfigureWebDbContext(DbContextOptionsBuilder options, string connectionString)
         {
@@ -116,3 +113,6 @@ public class Program
         app.Run();
     }
 }
+
+
+

@@ -10,7 +10,6 @@ namespace ConnectX.Web.Services
         {
             services.ConfiugreGateway();
 
-            services.TryAddScoped<IModulesService, ModulesService>();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace ConnectX.Api.Ef
         {
             services.TryAddScoped<IRepository, Repository>();
 
-            var connectionString = Environment.GetEnvironmentVariable("ApiDatabase") ?? throw new InvalidOperationException("Connection string 'WebDatabase' not found.");
+            var connectionString = configuration.GetConnectionString("apiDb") ?? throw new InvalidOperationException("Connection string 'WebDatabase' not found.");
 
             services.AddDbContext<EfContext>(
             options =>
