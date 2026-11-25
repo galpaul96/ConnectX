@@ -24,6 +24,7 @@ public class Program
             .AddInteractiveServerComponents();
 
         builder.Services.AddCascadingAuthenticationState();
+        builder.Services.AddAuthorization();
         builder.Services.AddScoped<IdentityRedirectManager>();
         builder.Services.AddScoped<IdentityUserAccessor>();
         builder.Services.AddScoped<IdentityAdminService>();
@@ -88,6 +89,8 @@ public class Program
         app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
         app.UseHttpsRedirection();
 
+        app.UseAuthentication();
+        app.UseAuthorization();
         app.UseAntiforgery();
 
         app.MapStaticAssets();
