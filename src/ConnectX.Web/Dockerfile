@@ -16,10 +16,13 @@ RUN dotnet publish "ConnectX.Web.csproj" \
     --configuration Release \
     --no-restore \
     --output /app/publish \
-    /p:UseAppHost=false
+    /p:UseAppHost=false \
+    && test -f /app/publish/wwwroot/_framework/blazor.web.js \
+    && grep -Fq '"Route":"_framework/blazor.web.js"' /app/publish/ConnectX.Web.staticwebassets.endpoints.json
 
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
+RUN test -f /app/wwwroot/_framework/blazor.web.js
 USER $APP_UID
 ENTRYPOINT ["dotnet", "ConnectX.Web.dll"]
