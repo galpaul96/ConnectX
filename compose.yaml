@@ -19,7 +19,7 @@ services:
         Host=postgres;Port=5432;Database=${POSTGRES_DB:-web-identity};Username=${POSTGRES_USER:-connectx};Password=${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
       ConnectionStrings__redis-cache: redis:6379
     ports:
-      - "127.0.0.1:${WEB_HTTP_PORT:-8080}:8080"
+      - "${WEB_HTTP_PORT:-8080}:8080"
 
   postgres:
     image: postgres:18-alpine
