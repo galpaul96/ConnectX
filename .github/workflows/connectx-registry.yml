@@ -44,7 +44,7 @@ jobs:
         id: version
         uses: actions/github-script@v9
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const timeZone = "Europe/Bucharest";
             const dateParts = new Intl.DateTimeFormat("en-GB", {

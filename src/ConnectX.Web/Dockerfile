@@ -16,13 +16,26 @@ RUN dotnet publish "ConnectX.Web.csproj" \
     --configuration Release \
     --no-restore \
     --output /app/publish \
-    /p:UseAppHost=false \
-    && test -f /app/publish/wwwroot/_framework/blazor.web.js \
-    && grep -Fq '"Route":"_framework/blazor.web.js"' /app/publish/ConnectX.Web.staticwebassets.endpoints.json
+    /p:UseAppHost=false
+
+RUN if [ ! -f /app/publish/wwwroot/_framework/blazor.web.js ]; then \
+    echo "Blazor framework script missing from dotnet publish output" >&2; \
+    find /app/publish -type f -iname 'blazor.web*' -print; \
+    exit 1; \
+fi
+
+RUN if ! grep -Fq 'blazor.web' /app/publish/ConnectX.Web.staticwebassets.endpoints.json; then \
+    echo "Blazor framework script missing from the static web assets manifest" >&2; \
+    grep -oE '.{0,80}blazor\.web.{0,120}' /app/publish/ConnectX.Web.staticwebassets.endpoints.json | head -n 10 || true; \
+    exit 1; \
+fi
 
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-RUN test -f /app/wwwroot/_framework/blazor.web.js
+RUN if [ ! -f /app/wwwroot/_framework/blazor.web.js ]; then \
+    echo "Blazor framework script missing after copying publish output into the runtime image" >&2; \
+    exit 1; \
+fi
 USER $APP_UID
 ENTRYPOINT ["dotnet", "ConnectX.Web.dll"]
