@@ -27,6 +27,11 @@ coverage.cobertura.xml
 *.nupkg
 packages/
 
+# Local Docker Compose secrets
+/.env
+/.env.*
+!/.env.example
+
 # Logs and temp files
 *.log
 *.tmp
