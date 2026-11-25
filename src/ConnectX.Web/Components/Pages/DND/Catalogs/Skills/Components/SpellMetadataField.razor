@@ -1,0 +1,15 @@
+@if (!string.IsNullOrWhiteSpace(Value))
+{
+    <div class="spell-metadata-field">
+        <dt>@Label</dt>
+        <dd>@Value</dd>
+    </div>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public string Label { get; set; } = string.Empty;
+
+    [Parameter]
+    public string? Value { get; set; }
+}

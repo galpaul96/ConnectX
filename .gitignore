@@ -38,3 +38,4 @@ Thumbs.db
 
 /src/ApiServices/ConnectX.Api.Ef/Scripts/SeedMeetingServiceTestData.sql
 /scripts/identity/create-admin-role-for-user.sql
+/src/ConnectX.Web/tmp-ui-smoke-keys/

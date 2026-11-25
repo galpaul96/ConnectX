@@ -1,0 +1,31 @@
+using AutoMapper;
+using ConnectX.Ef;
+using ConnectX.MongoDb;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace ConnectX.Services
+{
+    public static class Configurations
+    {
+        public static void ConfigureServices(this IServiceCollection services,
+            IConfiguration configuration)
+        {
+            services.ConfigureRepository(configuration);
+            services.ConfigureMongoDb(configuration);
+            services.AddScoped<CatalogsService>();
+
+            services.AddAutoMapper(x =>
+            {
+                x.AddProfile(new ServiceMapperProfile());
+            });
+
+            //services.AddHttpClient("foo"); // adding an HttpClient named "foo" with a default configuration
+
+            //services.AddHttpClient("api", c => c.BaseAddress = new Uri("https://www.example.com")) // configuring HttpClient itself
+            //    //.AddHttpMessageHandler<MyAuthHandler>() // adding additional delegating handlers to form a message handler chain
+            //    .ConfigurePrimaryHttpMessageHandler(b => new HttpClientHandler() { AllowAutoRedirect = false }) // configuring primary handler
+            //    .SetHandlerLifetime(TimeSpan.FromMinutes(30)); // changing the handler recycling interval
+        }
+    }
+}

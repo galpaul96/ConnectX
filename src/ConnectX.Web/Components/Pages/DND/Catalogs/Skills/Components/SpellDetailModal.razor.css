@@ -1,0 +1,253 @@
+.spell-modal-backdrop {
+    align-items: center;
+    background: rgb(7 6 8 / 78%);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: clamp(.6rem, 3vw, 2rem);
+    position: fixed;
+    z-index: 1100;
+}
+
+.spell-modal-dialog {
+    background: #171219;
+    border: 1px solid var(--app-border-strong);
+    border-radius: .65rem;
+    box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 55%);
+    display: flex;
+    flex-direction: column;
+    max-height: min(92vh, 920px);
+    max-width: 860px;
+    outline: none;
+    overflow: hidden;
+    width: 100%;
+}
+
+.spell-modal-dialog:focus-visible {
+    border-color: var(--app-copper);
+}
+
+.spell-modal-header {
+    align-items: flex-start;
+    border-bottom: 1px solid var(--app-border);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1.35rem clamp(1.2rem, 3vw, 2rem) 1.15rem;
+}
+
+.spell-modal-kicker {
+    color: var(--app-copper-light);
+    font-size: .68rem;
+    letter-spacing: .16em;
+    margin: 0 0 .45rem;
+    text-transform: uppercase;
+}
+
+.spell-modal-heading h2 {
+    color: var(--bs-emphasis-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.45rem, 4vw, 2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.spell-modal-close {
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--app-border-strong);
+    border-radius: .35rem;
+    color: var(--app-muted);
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: 1.4rem;
+    height: 2.25rem;
+    justify-content: center;
+    line-height: 1;
+    width: 2.25rem;
+}
+
+.spell-modal-close:hover,
+.spell-modal-close:focus-visible {
+    border-color: var(--app-copper);
+    color: var(--app-copper-light);
+    outline: none;
+}
+
+.spell-modal-body {
+    overflow: auto;
+    padding: clamp(1.1rem, 3vw, 1.8rem) clamp(1.2rem, 3vw, 2rem);
+}
+
+.spell-modal-body ::deep .spell-metadata-grid {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0 0 1.4rem;
+    overflow: hidden;
+}
+
+.spell-modal-body ::deep .spell-metadata-field {
+    background: #211a23;
+    min-width: 0;
+    padding: .85rem 1rem;
+}
+
+.spell-modal-body ::deep .spell-metadata-field dt {
+    color: var(--app-muted);
+    font-size: .66rem;
+    font-weight: 650;
+    letter-spacing: .1em;
+    margin: 0 0 .32rem;
+    text-transform: uppercase;
+}
+
+.spell-modal-body ::deep .spell-metadata-field dd {
+    color: var(--app-text);
+    font-size: .88rem;
+    line-height: 1.45;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.spell-modal-body ::deep .spell-detail-section {
+    border-top: 1px solid var(--app-border);
+    margin-top: 1.2rem;
+    padding-top: 1.15rem;
+}
+
+.spell-modal-body ::deep .spell-detail-section h3 {
+    color: var(--app-copper-light);
+    font-size: .68rem;
+    font-weight: 650;
+    letter-spacing: .14em;
+    margin: 0 0 .65rem;
+    text-transform: uppercase;
+}
+
+.spell-modal-body ::deep .spell-detail-section p {
+    color: #ded4ce;
+    font-size: .9rem;
+    line-height: 1.75;
+    margin: 0 0 .8rem;
+    max-width: 72ch;
+}
+
+.spell-modal-body ::deep .spell-detail-section p:last-child {
+    margin-bottom: 0;
+}
+
+.spell-modal-body ::deep .spell-detail-note {
+    align-items: flex-start;
+    background: rgb(184 125 80 / 8%);
+    border-left: 2px solid var(--app-copper);
+    color: #ddd0c6;
+    display: flex;
+    gap: .7rem;
+    margin: 1rem 0;
+    padding: .8rem 1rem;
+}
+
+.spell-modal-body ::deep .spell-detail-note p {
+    font-size: .83rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.spell-modal-body ::deep .spell-note-mark {
+    color: var(--app-copper-light);
+}
+
+.spell-modal-body ::deep .spell-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.spell-modal-body ::deep .spell-chip-list li {
+    background: #211a23;
+    border: 1px solid var(--app-border-strong);
+    border-radius: 2rem;
+    color: #ded4ce;
+    font-size: .75rem;
+    padding: .3rem .65rem;
+}
+
+.spell-detail-lists {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.spell-modal-footer {
+    align-items: center;
+    border-top: 1px solid var(--app-border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 1.5rem;
+    justify-content: space-between;
+    padding: .9rem clamp(1.2rem, 3vw, 2rem);
+}
+
+.spell-modal-footer ::deep .spell-source {
+    min-width: 0;
+}
+
+.spell-modal-footer ::deep .spell-source span {
+    color: var(--app-muted);
+    display: block;
+    font-size: .62rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.spell-modal-footer ::deep .spell-source p {
+    color: #d8cec7;
+    font-size: .76rem;
+    margin: .2rem 0 0;
+}
+
+.spell-modal-footer ::deep .spell-source-link {
+    color: var(--app-copper-light);
+    font-size: .78rem;
+    text-decoration: none;
+}
+
+.spell-modal-footer ::deep .spell-source-link:hover {
+    text-decoration: underline;
+}
+
+.spell-modal-body ::deep .spell-artwork {
+    margin: 0 0 1.2rem;
+    text-align: center;
+}
+
+.spell-modal-body ::deep .spell-artwork img {
+    border: 1px solid var(--app-border);
+    border-radius: .45rem;
+    max-height: 180px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 560px) {
+    .spell-modal-backdrop {
+        align-items: stretch;
+        padding: .4rem;
+    }
+
+    .spell-modal-dialog {
+        border-radius: .5rem;
+        max-height: 100%;
+    }
+
+    .spell-modal-body ::deep .spell-metadata-grid,
+    .spell-detail-lists {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,17 @@
+@if (Spell.AvailableFor.Count > 0)
+{
+    <section class="spell-detail-section" aria-labelledby="spell-classes-title">
+        <h3 id="spell-classes-title">Available for</h3>
+        <ul class="spell-chip-list" aria-label="Available classes">
+            @foreach (var spellClass in Spell.AvailableFor.Where(item => !string.IsNullOrWhiteSpace(item)))
+            {
+                <li>@spellClass</li>
+            }
+        </ul>
+    </section>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+}

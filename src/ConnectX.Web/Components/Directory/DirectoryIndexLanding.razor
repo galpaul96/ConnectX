@@ -1,0 +1,46 @@
+<PageTitle>@Title | ConnectX</PageTitle>
+
+<section class="directory-index-page" aria-labelledby="directory-index-title">
+    <nav class="directory-breadcrumb" aria-label="Breadcrumb">
+        <a href="@HubHref">@HubTitle</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">@Title</span>
+    </nav>
+
+    <header class="directory-index-header">
+        <p class="directory-eyebrow">@HubTitle index</p>
+        <div class="directory-index-title-row">
+            <span class="directory-index-mark" aria-hidden="true">@Index</span>
+            <h1 id="directory-index-title">@Title</h1>
+        </div>
+        <p class="directory-index-description">@Description</p>
+    </header>
+
+    <div class="directory-index-panel">
+        <span class="directory-index-status">Migration scaffold</span>
+        <h2>@Title index</h2>
+        <p>This section is ready for its migrated records, browsing tools, and detail views.</p>
+    </div>
+
+    <a class="directory-back-link" href="@HubHref">
+        <span aria-hidden="true">←</span> Back to @HubTitle
+    </a>
+</section>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Title { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string Description { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string Index { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string HubTitle { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string HubHref { get; set; } = string.Empty;
+
+}

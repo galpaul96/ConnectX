@@ -1,0 +1,473 @@
+html[data-bs-theme="dark"] {
+    color-scheme: dark;
+    --app-bg: #100d12;
+    --app-sidebar: #1b141d;
+    --app-sidebar-active: #30232d;
+    --app-topbar: #151118;
+    --app-surface: #1a151c;
+    --app-surface-raised: #241c26;
+    --app-border: #392f3a;
+    --app-border-strong: #554250;
+    --app-text: #f1e9e1;
+    --app-muted: #b3a6a1;
+    --app-copper: #b87d50;
+    --app-copper-light: #e2b285;
+    --bs-body-bg: var(--app-bg);
+    --bs-body-bg-rgb: 16, 13, 18;
+    --bs-body-color: var(--app-text);
+    --bs-body-color-rgb: 241, 233, 225;
+    --bs-emphasis-color: #fff8f0;
+    --bs-secondary-color: #b3a6a1;
+    --bs-secondary-bg: #2b222d;
+    --bs-tertiary-bg: #211a23;
+    --bs-primary: var(--app-copper);
+    --bs-primary-rgb: 184, 125, 80;
+    --bs-link-color: var(--app-copper-light);
+    --bs-link-hover-color: #f0cba7;
+    --bs-border-color: var(--app-border);
+    --bs-border-radius: .35rem;
+    --bs-border-radius-lg: .5rem;
+    --bs-focus-ring-color: rgb(226 178 133 / 30%);
+}
+
+html,
+body {
+    background: var(--app-bg);
+    color: var(--app-text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    min-height: 100%;
+}
+
+body {
+    font-size: .94rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+a {
+    text-underline-offset: .18em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--bs-emphasis-color);
+    letter-spacing: -.02em;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+}
+
+.btn {
+    --bs-btn-font-weight: 550;
+    border-radius: .3rem;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease;
+}
+
+.btn-primary {
+    --bs-btn-color: #1b120d;
+    --bs-btn-bg: var(--app-copper-light);
+    --bs-btn-border-color: var(--app-copper-light);
+    --bs-btn-hover-color: #170f0b;
+    --bs-btn-hover-bg: #efcba6;
+    --bs-btn-hover-border-color: #efcba6;
+    --bs-btn-active-color: #170f0b;
+    --bs-btn-active-bg: #d4a176;
+    --bs-btn-active-border-color: #d4a176;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--app-copper-light);
+    --bs-btn-border-color: var(--app-copper);
+    --bs-btn-hover-color: #1b120d;
+    --bs-btn-hover-bg: var(--app-copper-light);
+    --bs-btn-hover-border-color: var(--app-copper-light);
+    --bs-btn-active-color: #1b120d;
+    --bs-btn-active-bg: var(--app-copper-light);
+    --bs-btn-active-border-color: var(--app-copper-light);
+}
+
+.btn-lg {
+    font-size: .9rem;
+    letter-spacing: .01em;
+    padding: .78rem 1.05rem;
+}
+
+.form-control,
+.form-select {
+    background-color: var(--app-surface-raised);
+    border-color: var(--app-border-strong);
+    border-radius: .3rem;
+    color: var(--app-text);
+    min-height: 2.7rem;
+}
+
+.form-control::placeholder {
+    color: #95888f;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--app-surface-raised);
+    border-color: var(--app-copper);
+    box-shadow: 0 0 0 .2rem rgb(226 178 133 / 18%);
+    color: var(--app-text);
+}
+
+.form-floating > .form-control,
+.form-floating > .form-select {
+    min-height: 3.5rem;
+}
+
+.form-floating > label {
+    color: var(--app-muted);
+}
+
+.form-check-input {
+    background-color: var(--app-surface-raised);
+    border-color: var(--app-border-strong);
+}
+
+.form-check-input:checked {
+    background-color: var(--app-copper);
+    border-color: var(--app-copper);
+}
+
+.alert {
+    border-radius: .35rem;
+}
+
+.card,
+.modal-content {
+    background-color: var(--app-surface);
+    border-color: var(--app-border);
+    border-radius: var(--bs-border-radius-lg);
+    box-shadow: 0 .65rem 1.8rem rgb(0 0 0 / 18%);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--app-border);
+}
+
+.modal-backdrop.show {
+    opacity: .68;
+}
+
+.table {
+    --bs-table-bg: var(--app-surface);
+    --bs-table-color: var(--app-text);
+    --bs-table-striped-bg: #211a23;
+    --bs-table-striped-color: var(--app-text);
+    --bs-table-hover-bg: #2a202a;
+    --bs-table-hover-color: var(--app-text);
+    border-color: var(--app-border);
+}
+
+.table > :not(caption) > * > * {
+    padding: .82rem 1rem;
+}
+
+.table thead th {
+    background: #241b25;
+    color: var(--app-muted);
+    font-size: .72rem;
+    font-weight: 650;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.home-welcome {
+    margin: clamp(2rem, 10vh, 6rem) auto 0;
+    max-width: 760px;
+    width: 100%;
+}
+
+.home-welcome-eyebrow {
+    color: var(--app-copper-light);
+    font-size: .7rem;
+    font-weight: 650;
+    letter-spacing: .18em;
+    margin: 0 0 .6rem;
+    text-transform: uppercase;
+}
+
+.home-welcome h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    margin: 0;
+}
+
+.home-welcome-lead {
+    color: var(--app-muted);
+    font-size: 1.05rem;
+    margin: .75rem 0 0;
+}
+
+.home-welcome-panel {
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: var(--bs-border-radius-lg);
+    margin-top: 2rem;
+    padding: 1.35rem 1.5rem;
+}
+
+.home-welcome-panel h2 {
+    font-size: 1rem;
+    margin: 0 0 .35rem;
+}
+
+.home-welcome-panel p {
+    color: var(--app-muted);
+    font-size: .9rem;
+    margin: 0;
+}
+
+.auth-page {
+    margin-inline: auto;
+    max-width: 1040px;
+    width: 100%;
+}
+
+.auth-page-row {
+    align-items: stretch;
+}
+
+.auth-panel {
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: var(--bs-border-radius-lg);
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.auth-panel h2,
+.auth-panel h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+}
+
+.auth-panel hr,
+.account-panel hr {
+    border-color: var(--app-border-strong);
+    margin: 1.25rem 0;
+    opacity: 1;
+}
+
+.auth-panel .btn-lg {
+    font-size: 1rem;
+    padding: .75rem 1rem;
+}
+
+.auth-panel p {
+    margin-bottom: .55rem;
+}
+
+.account-panel {
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: var(--bs-border-radius-lg);
+    padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.account-panel > h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.account-panel .nav-pills .nav-link {
+    border-radius: .3rem;
+    color: #c4b7b0;
+    margin-bottom: .2rem;
+}
+
+.account-panel .nav-pills .nav-link.active {
+    background: #342631;
+    color: var(--app-copper-light);
+}
+
+.page-heading {
+    margin-bottom: 1.5rem;
+}
+
+.catalog-card {
+    border: 1px solid var(--app-border);
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 .2rem .8rem rgb(0 0 0 / 14%);
+    transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+
+.admin-page-surface {
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: var(--bs-border-radius-lg);
+    padding: 1.25rem;
+}
+
+.admin-user-grid {
+    display: grid;
+    gap: .75rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+}
+
+.admin-user-card {
+    align-items: stretch;
+    background: var(--app-surface-raised);
+    color: var(--app-text);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    min-height: 10.5rem;
+    padding: .85rem;
+    text-align: left;
+}
+
+.admin-user-card:hover,
+.admin-user-card:focus {
+    border-color: var(--app-copper);
+    box-shadow: 0 .5rem 1rem rgb(0 0 0 / 25%);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.admin-avatar {
+    align-items: center;
+    background: var(--app-sidebar-active);
+    border: 1px solid var(--app-border-strong);
+    border-radius: 50%;
+    color: var(--app-copper-light);
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: .8rem;
+    font-weight: 700;
+    height: 2.25rem;
+    justify-content: center;
+    width: 2.25rem;
+}
+
+.admin-avatar-lg {
+    font-size: 1rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.admin-user-card-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: .45rem;
+    min-width: 0;
+}
+
+.admin-user-card-title,
+.admin-user-card-subtitle {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.admin-user-card-title {
+    color: var(--bs-emphasis-color);
+    font-size: .92rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.admin-user-card-subtitle,
+.admin-user-card-meta {
+    color: var(--app-muted);
+    font-size: .76rem;
+    line-height: 1.25;
+}
+
+.admin-user-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+}
+
+.admin-user-card-badges {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin-top: auto;
+}
+
+.admin-role-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+.admin-role-card {
+    background: var(--app-surface-raised);
+    border: 1px solid var(--app-border);
+    border-radius: .5rem;
+    box-shadow: 0 .25rem .8rem rgb(0 0 0 / 14%);
+    min-width: 0;
+    padding: 1.1rem;
+}
+
+.admin-role-stats {
+    color: var(--app-muted);
+    display: flex;
+    font-size: .875rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.admin-role-stats strong {
+    color: var(--bs-emphasis-color);
+}
+
+h1:focus {
+    outline: none;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid var(--bs-success);
+}
+
+.invalid {
+    outline: 1px solid var(--bs-danger);
+}
+
+.validation-message {
+    color: var(--bs-danger);
+}
+
+.blazor-error-boundary {
+    background: var(--bs-danger);
+    border-radius: var(--bs-border-radius);
+    color: #fff;
+    padding: 1rem 1rem 1rem 3.5rem;
+    position: relative;
+}
+
+.blazor-error-boundary::before {
+    content: "!";
+    font-size: 1.5rem;
+    font-weight: 700;
+    left: 1.25rem;
+    position: absolute;
+    top: .55rem;
+}
+
+.darker-border-checkbox.form-check-input {
+    border-color: var(--app-border-strong);
+}
+

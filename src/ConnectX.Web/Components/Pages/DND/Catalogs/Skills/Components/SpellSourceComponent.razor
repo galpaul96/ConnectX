@@ -1,0 +1,12 @@
+@if (!string.IsNullOrWhiteSpace(Spell.Source))
+{
+    <div class="spell-source">
+        <span>Source</span>
+        <p>@Spell.Source</p>
+    </div>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+}

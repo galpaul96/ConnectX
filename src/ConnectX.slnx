@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="ConnectX.Domain/ConnectX.Domain.csproj" Id="68bc9d44-a4de-4aae-9701-5358554d9885" />
+  <Project Path="ConnectX.Ef/ConnectX.Ef.csproj" />
+  <Project Path="ConnectX.MongoDb/ConnectX.MongoDb.csproj" />
+  <Project Path="ConnectX.Services/ConnectX.Services.csproj" />
+  <Project Path="ConnectX.Web.AppHost/ConnectX.Web.AppHost.csproj" />
+  <Project Path="ConnectX.Web.ServiceDefaults/ConnectX.Web.ServiceDefaults.csproj" />
+  <Project Path="ConnectX.Web/ConnectX.Web.csproj" />
+</Solution>

@@ -1,0 +1,19 @@
+<dl class="spell-metadata-grid">
+    <SpellMetadataField Label="Level" Value="Spell.LevelLabel" />
+    <SpellMetadataField Label="Casting time" Value="Spell.CastingTime" />
+    <SpellMetadataField Label="Range / area" Value="Spell.RangeArea" />
+    <SpellMetadataField Label="Components" Value="ComponentSummary" />
+    <SpellMetadataField Label="Duration" Value="Spell.Duration" />
+    <SpellMetadataField Label="School" Value="Spell.School" />
+    <SpellMetadataField Label="Attack / save" Value="Spell.AttackSave" />
+    <SpellMetadataField Label="Damage / effect" Value="Spell.DamageEffect" />
+</dl>
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+
+    private string? ComponentSummary => string.IsNullOrWhiteSpace(Spell.MaterialDetail)
+        ? Spell.Components
+        : $"{Spell.Components} · {Spell.MaterialDetail}";
+}

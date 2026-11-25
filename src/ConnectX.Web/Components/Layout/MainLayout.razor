@@ -1,0 +1,55 @@
+@inherits LayoutComponentBase
+
+<div class="app-shell">
+    <input id="sidebar-toggle" class="sidebar-toggle-state" type="checkbox" aria-label="Toggle navigation" aria-controls="primary-nav" />
+
+    <aside class="app-sidebar" aria-label="Application navigation">
+        <a class="brand-lockup" href="" aria-label="ConnectX home">
+            <span class="brand-name">Connect<span class="brand-accent">X</span></span>
+            <span class="brand-caption">Application workspace</span>
+        </a>
+        <NavMenu />
+        <div class="sidebar-note">Your workspace and tools</div>
+    </aside>
+
+    <label class="sidebar-scrim" for="sidebar-toggle" aria-hidden="true"></label>
+
+    <div class="app-main">
+        <header class="topbar">
+            <label class="menu-toggle" for="sidebar-toggle">
+                <span class="menu-toggle-text">Menu</span>
+            </label>
+            <div class="topbar-context">
+                <span class="topbar-eyebrow">ConnectX</span>
+                <span class="topbar-divider" aria-hidden="true"></span>
+                <span class="topbar-section">Application workspace</span>
+            </div>
+            <div class="topbar-actions">
+                <AuthorizeView>
+                    <Authorized>
+                        <a class="topbar-account" href="Account/Manage">My account</a>
+                    </Authorized>
+                    <NotAuthorized>
+                        <a class="topbar-signin" href="Account/Login">Sign in</a>
+                        <a class="topbar-register" href="Account/Register">Create account</a>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </div>
+        </header>
+
+        <main class="main-content">
+            @Body
+        </main>
+
+        <footer class="app-footer">
+            <span>Connect<span class="brand-accent">X</span></span>
+            <span>Application workspace</span>
+        </footer>
+    </div>
+</div>
+
+<div id="blazor-error-ui">
+    Something went wrong. Please refresh the page or try again later.
+    <a href="" class="reload">Refresh</a>
+    <a class="dismiss">🗙</a>
+</div>

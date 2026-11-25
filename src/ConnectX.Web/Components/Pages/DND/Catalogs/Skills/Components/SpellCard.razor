@@ -1,0 +1,18 @@
+<button type="button" class="spell-card" @onclick="SelectSpell" aria-label="Open @Spell.Name, @Spell.LevelLabel spell details">
+    <span class="spell-card-mark" aria-hidden="true">✦</span>
+    <span class="spell-card-main">
+        <span class="spell-card-name">@Spell.Name</span>
+        <span class="spell-card-school">@(Spell.School ?? "Unclassified")</span>
+    </span>
+    <span class="spell-level-badge">@Spell.LevelLabel</span>
+</button>
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+
+    [Parameter]
+    public EventCallback<SpellCatalogEntry> OnSelect { get; set; }
+
+    private Task SelectSpell() => OnSelect.InvokeAsync(Spell);
+}

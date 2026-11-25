@@ -1,0 +1,78 @@
+.spell-card {
+    align-items: center;
+    background: linear-gradient(145deg, rgb(36 28 38 / 94%), rgb(26 21 28 / 98%));
+    border: 1px solid var(--app-border);
+    border-radius: .55rem;
+    color: var(--app-text);
+    cursor: pointer;
+    display: grid;
+    gap: .95rem;
+    grid-template-columns: 2.3rem minmax(0, 1fr) auto;
+    min-height: 6.1rem;
+    padding: 1rem 1.1rem;
+    text-align: left;
+    transition: border-color .16s ease, background .16s ease, transform .16s ease, box-shadow .16s ease;
+    width: 100%;
+}
+
+.spell-card:hover,
+.spell-card:focus-visible {
+    background: linear-gradient(145deg, #302330, #211a23);
+    border-color: var(--app-copper);
+    box-shadow: 0 .5rem 1.1rem rgb(0 0 0 / 22%);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.spell-card:focus-visible {
+    box-shadow: 0 0 0 .2rem rgb(226 178 133 / 20%), 0 .5rem 1.1rem rgb(0 0 0 / 22%);
+}
+
+.spell-card-mark {
+    align-items: center;
+    border: 1px solid var(--app-border-strong);
+    border-radius: 50%;
+    color: var(--app-copper-light);
+    display: inline-flex;
+    font-size: .9rem;
+    height: 2.2rem;
+    justify-content: center;
+    width: 2.2rem;
+}
+
+.spell-card-main {
+    display: flex;
+    flex-direction: column;
+    gap: .28rem;
+    min-width: 0;
+}
+
+.spell-card-name {
+    color: var(--bs-emphasis-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.spell-card-school {
+    color: var(--app-muted);
+    font-size: .74rem;
+}
+
+.spell-level-badge {
+    background: rgb(184 125 80 / 11%);
+    border: 1px solid rgb(184 125 80 / 42%);
+    border-radius: 2rem;
+    color: var(--app-copper-light);
+    font-size: .7rem;
+    letter-spacing: .025em;
+    padding: .28rem .58rem;
+    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spell-card {
+        transition: none;
+    }
+}

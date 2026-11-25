@@ -1,0 +1,15 @@
+@if (Spell.Description.Any(paragraph => !string.IsNullOrWhiteSpace(paragraph)))
+{
+    <section class="spell-detail-section" aria-labelledby="spell-description-title">
+        <h3 id="spell-description-title">Description</h3>
+        @foreach (var paragraph in Spell.Description.Where(paragraph => !string.IsNullOrWhiteSpace(paragraph)))
+        {
+            <p>@paragraph</p>
+        }
+    </section>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+}

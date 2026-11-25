@@ -1,0 +1,44 @@
+@page "/Error"
+@page "/not-found"
+@using Microsoft.AspNetCore.Diagnostics
+@inject ILogger<Error> Logger
+@inject NavigationManager NavigationManager
+
+<PageTitle>@(IsNotFound ? "Page not found" : "Error") | ConnectX</PageTitle>
+
+<section class="border rounded p-4">
+    @if (IsNotFound)
+    {
+        <h1 class="h3 mb-2">Page not found</h1>
+        <p class="text-body-secondary">That page may have moved, or the address may be incorrect.</p>
+        <a class="btn btn-outline-primary" href="/">Return to workspace</a>
+    }
+    else
+    {
+        <h1 class="h3 mb-2">Something went wrong.</h1>
+        <p class="text-body-secondary mb-0">We could not complete that request. Please try again later.</p>
+    }
+</section>
+
+@code {
+    [CascadingParameter]
+    private HttpContext? HttpContext { get; set; }
+
+    private bool IsNotFound =>
+        HttpContext?.Response.StatusCode == 404 ||
+        new Uri(NavigationManager.Uri).AbsolutePath.Equals("/not-found", StringComparison.OrdinalIgnoreCase);
+
+    protected override void OnInitialized()
+    {
+        var exceptionFeature = HttpContext?.Features.Get<IExceptionHandlerPathFeature>();
+
+        if (exceptionFeature?.Error is not null)
+        {
+            Logger.LogError(
+                exceptionFeature.Error,
+                "Unhandled request error on path {Path}. TraceIdentifier: {TraceIdentifier}",
+                exceptionFeature.Path,
+                HttpContext?.TraceIdentifier);
+        }
+    }
+}

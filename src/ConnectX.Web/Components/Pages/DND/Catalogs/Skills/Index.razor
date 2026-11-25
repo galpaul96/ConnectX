@@ -1,0 +1,183 @@
+@page "/dnd/catalogs/skills"
+@rendermode InteractiveServer
+
+<PageTitle>Skills &amp; Spells | ConnectX</PageTitle>
+
+<section class="spell-catalog-page" aria-labelledby="spell-catalog-title">
+    <nav class="spell-breadcrumb" aria-label="Breadcrumb">
+        <a href="/dnd/catalogs">Catalogs</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Skills &amp; Spells</span>
+    </nav>
+
+    <header class="spell-catalog-header">
+        <div>
+            <p class="spell-eyebrow">Reference library · preview</p>
+            <h1 id="spell-catalog-title">Skills &amp; Spells</h1>
+            <p class="spell-catalog-description">Browse spells by name, level, school, and class. This page uses preview entries; the spell JSON files will be connected later, and skill references can join when their data is available.</p>
+        </div>
+        <span class="spell-preview-badge">Sample entries</span>
+    </header>
+
+    <div class="spell-filter-panel" role="search" aria-label="Filter spell catalog">
+        <div class="spell-search-field">
+            <label for="spell-search">Search</label>
+            <input id="spell-search" class="form-control" type="search" placeholder="Name or description"
+                   @bind="searchTerm" @bind:event="oninput" @bind:after="ResetPage" />
+        </div>
+        <div class="spell-filter-field">
+            <label for="spell-level-filter">Level</label>
+            <select id="spell-level-filter" class="form-select" @bind="selectedLevel" @bind:after="ResetPage">
+                <option value="">All levels</option>
+                @foreach (var level in Levels)
+                {
+                    <option value="@level.Value">@level.Label</option>
+                }
+            </select>
+        </div>
+        <div class="spell-filter-field">
+            <label for="spell-school-filter">School</label>
+            <select id="spell-school-filter" class="form-select" @bind="selectedSchool" @bind:after="ResetPage">
+                <option value="">All schools</option>
+                @foreach (var school in Schools)
+                {
+                    <option value="@school">@school</option>
+                }
+            </select>
+        </div>
+        <div class="spell-filter-field">
+            <label for="spell-class-filter">Class</label>
+            <select id="spell-class-filter" class="form-select" @bind="selectedClass" @bind:after="ResetPage">
+                <option value="">All classes</option>
+                @foreach (var spellClass in Classes)
+                {
+                    <option value="@spellClass">@spellClass</option>
+                }
+            </select>
+        </div>
+        <div class="spell-toggle-filters">
+            <label class="spell-check-filter">
+                <input class="form-check-input" type="checkbox" @bind="ritualOnly" @bind:after="ResetPage" />
+                <span>Ritual</span>
+            </label>
+            <label class="spell-check-filter">
+                <input class="form-check-input" type="checkbox" @bind="concentrationOnly" @bind:after="ResetPage" />
+                <span>Concentration</span>
+            </label>
+        </div>
+        <button class="spell-reset-button" type="button" @onclick="ClearFilters">Clear filters</button>
+    </div>
+
+    <div class="spell-results-heading" aria-live="polite">
+        <h2>Spell index</h2>
+        <span>@FilteredSpellList.Count spells</span>
+    </div>
+
+    @if (PageSpells.Count > 0)
+    {
+        <div class="spell-card-grid">
+            @foreach (var spell in PageSpells)
+            {
+                <SpellCard @key="spell.Id" Spell="spell" OnSelect="OpenSpell" />
+            }
+        </div>
+        <nav class="spell-pagination" aria-label="Spell pages">
+            <span class="spell-pagination-summary">Showing @FirstVisible–@LastVisible of @FilteredSpellList.Count</span>
+            <div class="spell-pagination-controls">
+                <label for="spell-page-size">Per page</label>
+                <select id="spell-page-size" class="form-select form-select-sm" @bind="pageSize" @bind:after="ResetPage">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="48">48</option>
+                </select>
+                <button type="button" class="spell-page-button" @onclick="PreviousPage" disabled="@(currentPage <= 1)" aria-label="Previous page">‹</button>
+                <span class="spell-page-number">@currentPage / @TotalPages</span>
+                <button type="button" class="spell-page-button" @onclick="NextPage" disabled="@(currentPage >= TotalPages)" aria-label="Next page">›</button>
+            </div>
+        </nav>
+    }
+    else
+    {
+        <div class="spell-empty-state">
+            <span class="spell-empty-mark" aria-hidden="true">⌕</span>
+            <h2>No spells match these filters</h2>
+            <p>Try a different name or clear one or more filters.</p>
+            <button type="button" class="btn btn-outline-primary" @onclick="ClearFilters">Clear filters</button>
+        </div>
+    }
+</section>
+
+@if (selectedSpell is not null)
+{
+    <SpellDetailModal Spell="selectedSpell" OnClose="CloseSpell" />
+}
+
+@code {
+    private readonly IReadOnlyList<SpellCatalogEntry> spells = SpellCatalogPreviewData.Entries;
+    private string searchTerm = string.Empty;
+    private string selectedLevel = string.Empty;
+    private string selectedSchool = string.Empty;
+    private string selectedClass = string.Empty;
+    private bool ritualOnly;
+    private bool concentrationOnly;
+    private int pageSize = 12;
+    private int currentPage = 1;
+    private SpellCatalogEntry? selectedSpell;
+
+    private IEnumerable<SpellCatalogEntry> FilteredSpells => spells
+        .Where(spell => string.IsNullOrWhiteSpace(searchTerm) ||
+                        spell.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                        spell.SearchableDescription.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+        .Where(spell => string.IsNullOrWhiteSpace(selectedLevel) || spell.LevelValue.ToString() == selectedLevel)
+        .Where(spell => string.IsNullOrWhiteSpace(selectedSchool) || spell.School == selectedSchool)
+        .Where(spell => string.IsNullOrWhiteSpace(selectedClass) || spell.AvailableFor.Contains(selectedClass, StringComparer.OrdinalIgnoreCase))
+        .Where(spell => !ritualOnly || spell.IsRitual)
+        .Where(spell => !concentrationOnly || spell.IsConcentration)
+        .OrderBy(spell => spell.LevelValue)
+        .ThenBy(spell => spell.Name, StringComparer.OrdinalIgnoreCase);
+
+    private List<SpellCatalogEntry> PageSpells => FilteredSpells
+        .Skip((currentPage - 1) * pageSize)
+        .Take(pageSize)
+        .ToList();
+
+    private List<SpellCatalogEntry> FilteredSpellList => FilteredSpells.ToList();
+    private int TotalPages => Math.Max(1, (int)Math.Ceiling(FilteredSpellList.Count / (double)pageSize));
+    private int FirstVisible => FilteredSpellList.Count == 0 ? 0 : ((currentPage - 1) * pageSize) + 1;
+    private int LastVisible => Math.Min(currentPage * pageSize, FilteredSpellList.Count);
+
+    private IEnumerable<(string Value, string Label)> Levels => spells
+        .Select(spell => (Value: spell.LevelValue.ToString(), spell.LevelLabel))
+        .Distinct()
+        .OrderBy(level => int.Parse(level.Value))
+        .Select(level => (level.Value, level.LevelLabel));
+
+    private IEnumerable<string> Schools => spells
+        .Where(spell => !string.IsNullOrWhiteSpace(spell.School))
+        .Select(spell => spell.School!)
+        .Distinct(StringComparer.OrdinalIgnoreCase)
+        .OrderBy(school => school, StringComparer.OrdinalIgnoreCase);
+
+    private IEnumerable<string> Classes => spells
+        .SelectMany(spell => spell.AvailableFor)
+        .Distinct(StringComparer.OrdinalIgnoreCase)
+        .OrderBy(spellClass => spellClass, StringComparer.OrdinalIgnoreCase);
+
+    private void ResetPage() => currentPage = 1;
+
+    private void ClearFilters()
+    {
+        searchTerm = string.Empty;
+        selectedLevel = string.Empty;
+        selectedSchool = string.Empty;
+        selectedClass = string.Empty;
+        ritualOnly = false;
+        concentrationOnly = false;
+        currentPage = 1;
+    }
+
+    private void PreviousPage() => currentPage = Math.Max(1, currentPage - 1);
+    private void NextPage() => currentPage = Math.Min(TotalPages, currentPage + 1);
+    private void OpenSpell(SpellCatalogEntry spell) => selectedSpell = spell;
+    private void CloseSpell() => selectedSpell = null;
+}

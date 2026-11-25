@@ -1,0 +1,17 @@
+@if (Spell.SpellTags.Count > 0)
+{
+    <section class="spell-detail-section" aria-labelledby="spell-tags-title">
+        <h3 id="spell-tags-title">Tags</h3>
+        <ul class="spell-chip-list" aria-label="Spell tags">
+            @foreach (var tag in Spell.SpellTags.Where(tag => !string.IsNullOrWhiteSpace(tag)))
+            {
+                <li>@tag</li>
+            }
+        </ul>
+    </section>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+}

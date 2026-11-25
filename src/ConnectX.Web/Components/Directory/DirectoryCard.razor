@@ -1,0 +1,13 @@
+<a class="directory-card" href="@Entry.Href">
+    <span class="directory-card-index" aria-hidden="true">@Entry.Index</span>
+    <span class="directory-card-copy">
+        <span class="directory-card-title">@Entry.Title</span>
+        <span class="directory-card-description">@Entry.Description</span>
+    </span>
+    <span class="directory-card-arrow" aria-hidden="true">↗</span>
+</a>
+
+@code {
+    [Parameter, EditorRequired]
+    public DirectoryEntry Entry { get; set; } = default!;
+}

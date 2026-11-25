@@ -1,0 +1,92 @@
+.directory-card {
+    align-items: flex-start;
+    background: linear-gradient(145deg, rgb(36 28 38 / 90%), rgb(26 21 28 / 96%));
+    border: 1px solid var(--app-border);
+    border-radius: .55rem;
+    color: var(--app-text);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+    min-height: 8.4rem;
+    padding: 1.2rem 1.25rem;
+    text-decoration: none;
+    transition: border-color .16s ease, background-color .16s ease, transform .16s ease, box-shadow .16s ease;
+}
+
+.directory-card:hover,
+.directory-card:focus-visible {
+    background: linear-gradient(145deg, #302330, #211a23);
+    border-color: var(--app-copper);
+    box-shadow: 0 .6rem 1.4rem rgb(0 0 0 / 20%);
+    color: var(--app-text);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.directory-card:focus-visible {
+    box-shadow: 0 0 0 .2rem rgb(226 178 133 / 20%), 0 .6rem 1.4rem rgb(0 0 0 / 20%);
+}
+
+.directory-card-index {
+    align-items: center;
+    border: 1px solid var(--app-border-strong);
+    border-radius: .35rem;
+    color: var(--app-copper-light);
+    display: inline-flex;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: .78rem;
+    height: 2.35rem;
+    justify-content: center;
+    letter-spacing: .06em;
+    margin-top: .05rem;
+    width: 2.35rem;
+}
+
+.directory-card-copy {
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+    min-width: 0;
+}
+
+.directory-card-title {
+    color: var(--bs-emphasis-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+    line-height: 1.25;
+}
+
+.directory-card-description {
+    color: var(--app-muted);
+    font-size: .83rem;
+    line-height: 1.55;
+}
+
+.directory-card-arrow {
+    color: var(--app-copper);
+    font-size: 1.05rem;
+    line-height: 1;
+    margin-top: .25rem;
+    transition: color .16s ease, transform .16s ease;
+}
+
+.directory-card:hover .directory-card-arrow,
+.directory-card:focus-visible .directory-card-arrow {
+    color: var(--app-copper-light);
+    transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .directory-card,
+    .directory-card-arrow {
+        transition: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .directory-card {
+        gap: .8rem;
+        grid-template-columns: 2.2rem minmax(0, 1fr) auto;
+        padding: 1rem;
+    }
+}

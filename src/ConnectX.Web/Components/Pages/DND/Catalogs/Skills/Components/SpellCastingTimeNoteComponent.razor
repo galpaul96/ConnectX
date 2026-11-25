@@ -1,0 +1,12 @@
+@if (!string.IsNullOrWhiteSpace(Spell.CastingTimeNote))
+{
+    <aside class="spell-detail-note">
+        <span class="spell-note-mark" aria-hidden="true">✦</span>
+        <p>@Spell.CastingTimeNote</p>
+    </aside>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+}

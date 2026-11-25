@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "ConnectX.Web.AppHost/ConnectX.Web.AppHost.csproj"
+  }
+}

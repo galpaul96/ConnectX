@@ -3,7 +3,7 @@
 Generated from the EF Core migration files for the two database contexts in this solution:
 
 - `ConnectX.Web` Identity database: `src/WebServices/ConnectX.Web/Data/Migrations/20260523153424_InitialIdentitySchema.cs`
-- `ConnectX.Api` domain database: `src/ApiServices/ConnectX.Api.Ef/Migrations/20260523193657_InitialEntitiesConfiguration.cs`
+- `ConnectX.Api` domain database: `src/ApiServices/ConnectX.Api.Ef/Migrations/20260601190000_InitialClientModels.cs`
 
 Each Mermaid entity lists the table columns. `PK` marks primary key columns, `FK` marks foreign key columns, and the quoted suffix indicates whether the column is nullable in the migration.
 

@@ -1,0 +1,16 @@
+@if (SafeImageUrl is not null)
+{
+    <figure class="spell-artwork">
+        <img src="@SafeImageUrl" alt="@(Spell.Name + " artwork")" loading="lazy" />
+    </figure>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+
+    private string? SafeImageUrl => Uri.TryCreate(Spell.ImageUrl, UriKind.Absolute, out var uri) &&
+                                   (uri.Scheme == Uri.UriSchemeHttps || uri.Scheme == Uri.UriSchemeHttp)
+        ? uri.AbsoluteUri
+        : null;
+}

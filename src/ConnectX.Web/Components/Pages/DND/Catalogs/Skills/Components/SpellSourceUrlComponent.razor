@@ -1,0 +1,16 @@
+@if (SafeSourceUrl is not null)
+{
+    <a class="spell-source-link" href="@SafeSourceUrl" target="_blank" rel="noopener noreferrer">
+        Open source <span aria-hidden="true">↗</span>
+    </a>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public SpellCatalogEntry Spell { get; set; } = default!;
+
+    private string? SafeSourceUrl => Uri.TryCreate(Spell.SourceUrl, UriKind.Absolute, out var uri) &&
+                                    (uri.Scheme == Uri.UriSchemeHttps || uri.Scheme == Uri.UriSchemeHttp)
+        ? uri.AbsoluteUri
+        : null;
+}
