@@ -29,6 +29,8 @@ public class Program
         builder.Services.AddCascadingAuthenticationState();
         ConnectX.Ef.Configuration.ConfigureRepository(builder.Services, builder.Configuration);
         builder.Services.AddSpellServices();
+        builder.Services.AddItemServices();
+        builder.Services.AddScoped<ConnectX.Web.Components.Pages.DND.Catalogs.Items.ItemUploadService>();
         builder.Services.AddScoped<ConnectX.Web.Components.Pages.DND.Catalogs.Skills.SpellUploadService>();
         builder.Services.AddAuthorization();
         builder.Services.AddScoped<IdentityRedirectManager>();

@@ -1,7 +1,185 @@
 @page "/dnd/catalogs/items"
+@rendermode InteractiveServer
+@implements IDisposable
+@inject IItemService ItemService
+@inject ILogger<Index> Logger
+@inject ItemUploadService Upload
 
-<DndSectionLanding Title="Items"
-                       Description="Equipment, tools, treasure, and magic items."
-                       Index="08"
-                       HubTitle="Catalogs"
-                       HubHref="/dnd/catalogs" />
+<PageTitle>Items | ConnectX</PageTitle>
+<section class="item-catalog-page" aria-labelledby="item-catalog-title">
+    <nav class="item-breadcrumb" aria-label="Breadcrumb"><a href="/dnd/catalogs">Catalogs</a><span aria-hidden="true">/</span><span aria-current="page">Items</span></nav>
+    <header class="item-catalog-header">
+        <h1 id="item-catalog-title">Items</h1>
+        <span class="item-count" aria-live="polite">@(loading ? "Loading…" : $"{result.TotalCount} {(result.TotalCount == 1 ? "item" : "items")}")</span>
+        <ItemCreateButton OnCreate="OpenCreateAsync" />
+    </header>
+    @if (createdMessage is not null) { <p role="status">@createdMessage</p> }
+    @if (createError is not null) { <p role="alert">@createError</p> }
+    <div class="item-toolbar">
+        <div class="item-search" role="search" aria-label="Search items">
+            <label class="visually-hidden" for="item-search">Item name</label>
+            <input id="item-search" class="form-control" type="search" placeholder="Search by name" @bind="searchTerm" @bind:event="oninput" @onkeydown="SearchKeyAsync" />
+            <button class="item-control" type="button" @onclick="SearchAsync" disabled="@loading">Search</button>
+            @if (!string.IsNullOrEmpty(activeSearch))
+            {
+                <button class="item-clear" type="button" @onclick="ClearSearchAsync" disabled="@loading">Clear</button>
+            }
+        </div>
+        <div class="item-page-size">
+            <label for="item-page-size">Per page</label>
+            <select id="item-page-size" class="form-select form-select-sm" @bind="pageSize" @bind:after="ChangePageSizeAsync" disabled="@loading"><option value="12">12</option><option value="24">24</option><option value="48">48</option></select>
+        </div>
+    </div>
+    @if (listError is not null)
+    {
+        <div class="item-empty-state" role="alert"><p>@listError</p><button class="btn btn-outline-primary" @onclick="LoadPageAsync">Try again</button></div>
+    }
+    else if (loading)
+    {
+        <div class="item-empty-state" role="status">Loading items…</div>
+    }
+    else if (result.Items.Count == 0)
+    {
+        <div class="item-empty-state"><h2>No items found</h2><p>@(string.IsNullOrEmpty(activeSearch) ? "The item catalog is empty." : "Try a different item name.")</p></div>
+    }
+    else
+    {
+        <ul class="item-card-grid" aria-label="Items">
+            @foreach (var entry in result.Items)
+            {
+                <li @key="entry.Id"><ItemCard Entry="entry" OnSelect="OpenItemAsync" /></li>
+            }
+        </ul>
+    }
+    @if (result.TotalCount > 0 && listError is null)
+    {
+        <nav class="item-pagination" aria-label="Item pages">
+            <span class="item-pagination-summary">@FirstVisible–@LastVisible of @result.TotalCount</span>
+            <div class="item-pagination-controls">
+                <button type="button" class="item-control" @onclick="PreviousAsync" disabled="@(loading || result.PageNumber <= 1)" aria-label="Previous page">Previous</button>
+                <span class="item-page-number">@result.PageNumber / @result.TotalPages</span>
+                <button type="button" class="item-control" @onclick="NextAsync" disabled="@(loading || result.PageNumber >= result.TotalPages)" aria-label="Next page">Next</button>
+            </div>
+        </nav>
+    }
+</section>
+@if (modalOpen)
+{
+    <ItemDetailModal Item="selectedItem" Loading="@detailLoading" Error="@detailError" OnClose="CloseItem" OnRetry="RetryDetailAsync" />
+}
+
+<AuthorizeView Roles="DungeonMaster">
+    @if (createOpen)
+    {
+        <ItemUploadModal OnClose="CloseCreate" OnCreated="ItemCreatedAsync" />
+    }
+</AuthorizeView>
+
+@code {
+    private bool createOpen;
+    private string? createError;
+    private string? createdMessage;
+    private async Task OpenCreateAsync()
+    {
+        createError = null;
+        createdMessage = null;
+        try { await Upload.EnsureAuthorizedAsync(); createOpen = true; }
+        catch (UnauthorizedAccessException ex) { createError = ex.Message; }
+    }
+    private void CloseCreate() => createOpen = false;
+    private async Task ItemCreatedAsync(IReadOnlyList<Guid> ids)
+    {
+        createdMessage = $"{ids.Count} {(ids.Count == 1 ? "item created" : "items created")}.";
+        await ClearSearchAsync();
+    }
+
+    private ItemPageDto result = new([], 0, 1, 24);
+    private int pageSize = 24;
+    private int requestedPage = 1;
+    private string searchTerm = string.Empty;
+    private string activeSearch = string.Empty;
+    private bool loading = true;
+    private string? listError;
+    private ItemDto? selectedItem;
+    private Guid selectedId;
+    private bool modalOpen;
+    private bool detailLoading;
+    private string? detailError;
+    private CancellationTokenSource? listRequest;
+    private CancellationTokenSource? detailRequest;
+    private bool disposed;
+    private int FirstVisible => result.Items.Count == 0 ? 0 : (result.PageNumber - 1) * result.PageSize + 1;
+    private int LastVisible => result.Items.Count == 0 ? 0 : FirstVisible + result.Items.Count - 1;
+
+    protected override Task OnInitializedAsync() => LoadPageAsync();
+
+    private async Task LoadPageAsync()
+    {
+        listRequest?.Cancel();
+        using var request = new CancellationTokenSource();
+        listRequest = request;
+        loading = true;
+        listError = null;
+        try
+        {
+            var loaded = await ItemService.GetPageAsync(requestedPage, pageSize, activeSearch, request.Token);
+            if (!request.IsCancellationRequested && !disposed) { result = loaded; requestedPage = loaded.PageNumber; }
+        }
+        catch (OperationCanceledException) when (request.IsCancellationRequested) { }
+        catch (Exception ex)
+        {
+            if (!request.IsCancellationRequested && !disposed)
+            {
+                Logger.LogError(ex, "Could not load the item catalog");
+                listError = "Items could not be loaded. Please try again.";
+            }
+        }
+        finally
+        {
+            if (ReferenceEquals(listRequest, request)) { loading = false; listRequest = null; }
+        }
+    }
+    private Task SearchKeyAsync(KeyboardEventArgs args) => args.Key == "Enter" ? SearchAsync() : Task.CompletedTask;
+    private Task SearchAsync() { requestedPage = 1; activeSearch = searchTerm.Trim(); return LoadPageAsync(); }
+    private Task ClearSearchAsync() { searchTerm = string.Empty; return SearchAsync(); }
+    private Task ChangePageSizeAsync() { requestedPage = 1; return LoadPageAsync(); }
+    private Task PreviousAsync() { requestedPage = Math.Max(1, result.PageNumber - 1); return LoadPageAsync(); }
+    private Task NextAsync() { requestedPage = Math.Min(result.TotalPages, result.PageNumber + 1); return LoadPageAsync(); }
+
+    private async Task OpenItemAsync(Guid id)
+    {
+        detailRequest?.Cancel();
+        using var request = new CancellationTokenSource();
+        detailRequest = request;
+        selectedId = id;
+        selectedItem = null;
+        modalOpen = true;
+        detailLoading = true;
+        detailError = null;
+        try
+        {
+            var result = await ItemService.GetByIdAsync(id, request.Token);
+            if (!request.IsCancellationRequested && !disposed && modalOpen)
+            {
+                selectedItem = result;
+                if (result is null) detailError = "This item is no longer available.";
+            }
+        }
+        catch (OperationCanceledException) when (request.IsCancellationRequested) { }
+        catch (Exception ex)
+        {
+            if (!request.IsCancellationRequested && !disposed)
+            {
+                Logger.LogError(ex, "Could not load item {ItemId}", id);
+                detailError = "Item details could not be loaded. Please try again.";
+            }
+        }
+        finally
+        {
+            if (ReferenceEquals(detailRequest, request)) { detailLoading = false; detailRequest = null; }
+        }
+    }
+    private Task RetryDetailAsync() => OpenItemAsync(selectedId);
+    private void CloseItem() { detailRequest?.Cancel(); modalOpen = false; selectedItem = null; }
+    public void Dispose() { disposed = true; listRequest?.Cancel(); detailRequest?.Cancel(); }
+}

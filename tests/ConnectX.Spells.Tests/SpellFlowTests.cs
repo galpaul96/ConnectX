@@ -19,7 +19,7 @@ public class SpellFlowTests
         using var context = new EfContext(new DbContextOptionsBuilder<EfContext>()
             .UseNpgsql("Host=localhost;Database=model_only;Username=unused").Options);
         var model = context.Model;
-        Assert.Equal(new[] { "SpellComponents", "Spells" }, model.GetEntityTypes().Select(x => x.GetTableName()).Order().ToArray());
+        Assert.Equal(new[] { "ItemComponents", "Items", "SpellComponents", "Spells" }, model.GetEntityTypes().Select(x => x.GetTableName()).Order().ToArray());
         Assert.DoesNotContain(model.GetEntityTypes(), x => x.IsOwned());
         var component = model.FindEntityType(typeof(SpellComponent))!;
         Assert.Equal("jsonb", component.FindProperty(nameof(SpellComponent.Value))!.GetColumnType());

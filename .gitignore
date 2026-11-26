@@ -4,6 +4,9 @@ obj/
 out/
 artifacts/
 
+# Local catalog ingestion sources
+/ingest/
+
 # User-specific files
 *.user
 *.rsuser

@@ -1,0 +1,26 @@
+@if (Component is not null && ItemValue.HasContent(Component.Value))
+{
+    @if (Component.Type == "completeness")
+    {
+        var missing = ItemValue.Strings(ItemValue.Property(Component.Value, "missingDetails"));
+        @if (missing.Count > 0)
+        {
+            <section class="item-detail-section item-detail-note"><h3>Available information</h3><p>This source provides partial details.</p><ul>@foreach (var entry in missing) { <li>@entry</li> }</ul></section>
+        }
+    }
+    else
+    {
+        <section class="item-detail-section @(Component.Type == "description" ? "item-description" : null)">
+            <h3>@Component.Label</h3>
+            @if (Component.Type == "tables") { <ItemTables Value="Component.Value" /> }
+            else if (Component.Type is "description" or "usage" or "notices")
+            {
+                @foreach (var paragraph in ItemValue.Strings(Component.Value)) { <p>@paragraph</p> }
+            }
+            else { <ItemValueContent Value="Component.Value" /> }
+        </section>
+    }
+}
+@code {
+    [Parameter] public ItemComponentDto? Component { get; set; }
+}

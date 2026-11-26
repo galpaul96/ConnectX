@@ -1,0 +1,27 @@
+<button type="button" class="item-card @(ImageUrl is null ? "item-card-no-image" : null)" @onclick="SelectItem" aria-label="Open @Entry.Item.Name details">
+    @if (ImageUrl is not null)
+    {
+        <img class="item-card-image" src="@ImageUrl" alt="" width="48" height="48" loading="lazy" referrerpolicy="no-referrer" @onerror="HideImage" />
+    }
+    <span class="item-card-copy">
+        <span class="item-card-name">@Entry.Item.Name</span>
+        @if (!string.IsNullOrWhiteSpace(Entry.Item.ItemType)) { <span class="item-card-type">@Entry.Item.ItemType</span> }
+    </span>
+    @if (!string.IsNullOrWhiteSpace(Entry.Item.Cost))
+    {
+        <span class="item-card-cost" aria-label="Cost @Entry.Item.Cost">@Entry.Item.Cost</span>
+    }
+</button>
+@code {
+    [Parameter, EditorRequired] public ItemPageEntry Entry { get; set; } = default!;
+    [Parameter] public EventCallback<Guid> OnSelect { get; set; }
+    private bool imageFailed;
+    private string? previousImage;
+    private string? ImageUrl => imageFailed ? null : ItemValue.SafeUrl(Entry.Item.ImageUrl);
+    protected override void OnParametersSet()
+    {
+        if (previousImage != Entry.Item.ImageUrl) { imageFailed = false; previousImage = Entry.Item.ImageUrl; }
+    }
+    private void HideImage() => imageFailed = true;
+    private Task SelectItem() => OnSelect.InvokeAsync(Entry.Id);
+}

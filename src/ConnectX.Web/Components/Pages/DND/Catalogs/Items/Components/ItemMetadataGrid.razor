@@ -1,0 +1,9 @@
+<dl class="item-metadata-grid">
+    @foreach (var component in Components)
+    {
+        <div><dt>@component.Label</dt><dd><ItemValueContent Value="component.Value" /></dd></div>
+    }
+</dl>
+@code {
+    [Parameter] public IReadOnlyList<ItemComponentDto> Components { get; set; } = [];
+}

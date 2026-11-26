@@ -15,12 +15,19 @@ namespace ConnectX.Services
             return services;
         }
 
+        public static IServiceCollection AddItemServices(this IServiceCollection services)
+        {
+            services.AddScoped<IItemService, ItemsService>();
+            return services;
+        }
+
         public static void ConfigureServices(this IServiceCollection services,
             IConfiguration configuration)
         {
             services.ConfigureRepository(configuration);
             services.ConfigureMongoDb(configuration);
             services.AddSpellServices();
+            services.AddItemServices();
 
             services.AddAutoMapper(x =>
             {

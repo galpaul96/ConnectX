@@ -1,0 +1,6 @@
+<AuthorizeView Roles="DungeonMaster">
+    <button type="button" class="item-control item-create" @onclick="OnCreate">Create</button>
+</AuthorizeView>
+@code {
+    [Parameter] public EventCallback OnCreate { get; set; }
+}

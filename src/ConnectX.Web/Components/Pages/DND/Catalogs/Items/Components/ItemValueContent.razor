@@ -1,0 +1,30 @@
+@if (Value.ValueKind == JsonValueKind.Array)
+{
+    @if (Value.GetArrayLength() > 0)
+    {
+        <ul class="item-value-list">@foreach (var entry in Value.EnumerateArray()) { @if (ItemValue.HasContent(entry)) { <li><ItemValueContent Value="entry" /></li> } }</ul>
+    }
+}
+else if (Value.ValueKind == JsonValueKind.Object)
+{
+    @if (ItemValue.Text(ItemValue.Property(Value, "text")) is { Length: > 0 } text)
+    {
+        @if (ItemValue.Text(ItemValue.Property(Value, "label")) is { } label) { <strong>@label: </strong> }
+        <span>@text</span>
+    }
+    else
+    {
+        <dl class="item-object-fields">
+            @foreach (var property in Value.EnumerateObject().Where(x => !HiddenFields.Contains(x.Name) && ItemValue.HasContent(x.Value)))
+            {
+                <div><dt>@ItemValue.Label(property.Name)</dt><dd><ItemValueContent Value="property.Value" /></dd></div>
+            }
+        </dl>
+    }
+}
+else if (ItemValue.Text(Value) is { } scalar) { <span>@scalar</span> }
+else if (ItemValue.Flag(Value) is { } flag) { <span>@(flag ? "Yes" : "No")</span> }
+@code {
+    [Parameter] public JsonElement Value { get; set; }
+    private static readonly HashSet<string> HiddenFields = ["html", "sourceFile", "sourceRefs", "variantGroup", "headingPath"];
+}

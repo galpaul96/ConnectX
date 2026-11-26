@@ -1,0 +1,92 @@
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+@inject ConnectX.Web.Components.Pages.DND.Catalogs.Items.ItemUploadService Upload
+@inject ILogger<ItemUploadModal> Logger
+@using Microsoft.AspNetCore.Components.Forms
+
+<dialog @ref="dialog" class="item-upload-dialog" aria-labelledby="item-upload-title" aria-busy="@saving">
+    <header><h2 id="item-upload-title">Create items</h2><button type="button" class="upload-close" aria-label="Close item upload" disabled="@saving" @onclick="CloseAsync">Close</button></header>
+    <p id="item-upload-help">Upload JSON item files using the item catalog format. Up to 500 files, 1 MB each. Each file creates one item.</p>
+    <label for="item-upload-file">Item JSON files</label>
+    <InputFile id="item-upload-file" OnChange="SelectFiles" multiple accept=".json,application/json" disabled="@saving"
+        aria-invalid="@(error is not null ? "true" : "false")" aria-describedby='@(error is null ? "item-upload-help" : "item-upload-help item-upload-error")' />
+    @if (error is not null) { <p id="item-upload-error" class="upload-error" role="alert">@error</p> }
+    @if (batch.Items.Count > 0)
+    {
+        <p role="status" aria-live="polite">@Summary</p>
+        <ul class="upload-results" aria-label="Upload results">
+            @foreach (var item in batch.Items)
+            {
+                <li @key="item"><span class="upload-filename">@item.File.Name</span>
+                    <span class="@(item.Status == ItemUploadStatus.Failed ? "upload-error" : "upload-status")">@item.Status</span>
+                    @if (item.Error is not null) { <span class="upload-file-error">@item.Error</span> }
+                </li>
+            }
+        </ul>
+    }
+    <footer><button type="button" class="btn btn-outline-primary" disabled="@saving" @onclick="CloseAsync">@(batch.Items.Any(x => x.Status == ItemUploadStatus.Created) ? "Done" : "Cancel")</button>
+        <button type="button" class="btn btn-primary" disabled="@(saving || !batch.HasPending)" @onclick="CreateAsync">@(saving ? "Creating…" : "Create items")</button></footer>
+</dialog>
+
+@code {
+    private ElementReference dialog;
+    private IJSObjectReference? module;
+    private DotNetObjectReference<ItemUploadModal>? reference;
+    private readonly ItemUploadBatch batch = new();
+    private string Summary => $"{batch.Items.Count(x => x.Status == ItemUploadStatus.Created)} created · {batch.Items.Count(x => x.Status == ItemUploadStatus.Failed)} failed · {batch.Items.Count(x => x.Status is ItemUploadStatus.Pending or ItemUploadStatus.Uploading)} remaining";
+    private bool saving;
+    private string? error;
+    private readonly CancellationTokenSource lifetime = new();
+    [Parameter] public EventCallback OnClose { get; set; }
+    [Parameter] public EventCallback<IReadOnlyList<Guid>> OnCreated { get; set; }
+
+    private void SelectFiles(InputFileChangeEventArgs args)
+    {
+        if (saving) return;
+        error = null;
+        try
+        {
+            if (args.FileCount > ItemUploadBatch.MaximumFiles) { batch.Select([]); throw new ArgumentException("Choose at most 500 files at a time."); }
+            batch.Select(args.GetMultipleFiles(ItemUploadBatch.MaximumFiles));
+        }
+        catch (ArgumentException ex) { error = ex.Message; }
+    }
+    private async Task CreateAsync()
+    {
+        if (saving || !batch.HasPending) return;
+        saving = true;
+        error = null;
+        try
+        {
+            await batch.RunAsync(async (file, token) =>
+            {
+                await using var stream = file.OpenReadStream(ItemUploadReader.MaximumBytes, token);
+                return await Upload.AddAsync(stream, file.Name, file.Size, token);
+            }, () => InvokeAsync(StateHasChanged),
+                (ex, name) => Logger.LogError(ex, "Item upload failed for {FileName}", name), lifetime.Token);
+            var ids = batch.Items.Where(x => x.ItemId.HasValue).Select(x => x.ItemId!.Value).ToList();
+            if (ids.Count > 0) await OnCreated.InvokeAsync(ids);
+        }
+        catch (OperationCanceledException) when (lifetime.IsCancellationRequested) { }
+        finally { saving = false; }
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/itemDialog.js");
+        reference = DotNetObjectReference.Create(this);
+        await module.InvokeVoidAsync("open", dialog, reference);
+    }
+    [JSInvokable] public Task CloseAsync() => saving ? Task.CompletedTask : OnClose.InvokeAsync();
+    public async ValueTask DisposeAsync()
+    {
+        lifetime.Cancel();
+        if (module is not null)
+        {
+            try { await module.InvokeVoidAsync("close", dialog); await module.DisposeAsync(); }
+            catch (JSDisconnectedException) { }
+        }
+        reference?.Dispose();
+        lifetime.Dispose();
+    }
+}

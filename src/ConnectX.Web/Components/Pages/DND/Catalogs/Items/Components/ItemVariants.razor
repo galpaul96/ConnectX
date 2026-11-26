@@ -1,0 +1,24 @@
+<details class="item-variants">
+    <summary>@Component.Label</summary>
+    @foreach (var variant in ItemValue.Array(Component.Value))
+    {
+        var value = ItemValue.Property(variant, "value");
+        <section class="item-variant">
+            <h4>@SourceName(variant)</h4>
+            @if (Component.Type == "tablesVariant") { <ItemTables Value="value" /> }
+            else { <ItemValueContent Value="value" /> }
+        </section>
+    }
+</details>
+@code {
+    [Parameter, EditorRequired] public ItemComponentDto Component { get; set; } = default!;
+    [Parameter] public JsonElement? Sources { get; set; }
+    private string SourceName(JsonElement variant)
+    {
+        var group = ItemValue.Text(ItemValue.Property(variant, "variantGroup"));
+        foreach (var entry in ItemValue.Array(ItemValue.Property(Sources ?? default, "variantGroups")))
+            if (ItemValue.Text(ItemValue.Property(entry, "id")) == group)
+                return ItemValue.Text(ItemValue.Property(entry, "source")) ?? "Alternate source";
+        return "Alternate source";
+    }
+}

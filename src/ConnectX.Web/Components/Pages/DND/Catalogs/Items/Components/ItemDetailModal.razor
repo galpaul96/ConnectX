@@ -1,0 +1,98 @@
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+<dialog class="item-modal-backdrop" @ref="dialogElement" aria-labelledby="item-modal-title" aria-busy="@Loading">
+    <section class="item-modal-dialog">
+        <header class="item-modal-header">
+            <div class="item-modal-heading">
+                <p class="item-modal-kicker">Equipment reference</p>
+                <h2 id="item-modal-title">@(Item?.Name ?? "Item details")</h2>
+                @if (Text("itemType") is { } type) { <p class="item-subtitle">@type</p> }
+            </div>
+            <button type="button" class="item-modal-close" aria-label="Close item details" @onclick="CloseAsync">Close <kbd aria-hidden="true">Esc</kbd></button>
+        </header>
+        <div class="item-modal-scroll" tabindex="0" role="region" aria-label="Item information">
+            @if (Loading)
+            {
+                <div class="item-modal-state" role="status"><h3>Opening item</h3><p>Loading equipment details and rules…</p></div>
+            }
+            else if (Error is not null)
+            {
+                <div class="item-modal-state" role="alert"><h3>Unable to open this item</h3><p>@Error</p><button type="button" class="btn btn-outline-primary" @onclick="OnRetry">Try again</button></div>
+            }
+            else if (Item is not null)
+            {
+                <div class="item-modal-layout @(!HasFacts ? "item-modal-layout-single" : null)">
+                    @if (HasFacts)
+                    {
+                        <aside class="item-facts-panel" aria-labelledby="item-facts-title">
+                            <h3 id="item-facts-title" class="item-panel-title">At a glance</h3>
+                            @if (Facts.Count > 0) { <ItemMetadataGrid Components="Facts" /> }
+                            @if (Find("itemTags") is { } tags) { <ItemDetailSection Component="tags" /> }
+                        </aside>
+                    }
+                    <div class="item-rules-panel">
+                        @foreach (var component in Rules)
+                        {
+                            <ItemDetailSection @key="component.Type" Component="component" />
+                        }
+                        @if (Variants.Count > 0)
+                        {
+                            <section class="item-detail-section">
+                                <h3>Source variants</h3>
+                                <p class="item-variant-help">Alternate rules and values supplied by the source material.</p>
+                                @foreach (var component in Variants)
+                                {
+                                    <ItemVariants Component="component" Sources='@(Find("sourceMetadata")?.Value)'  />
+                                }
+                            </section>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+        @if (!Loading && Error is null && Item is not null && (Text("source") is not null || SourceUrl is not null))
+        {
+            <footer class="item-modal-footer"><span>@Text("source")</span>
+                @if (SourceUrl is not null) { <a href="@SourceUrl" target="_blank" rel="noopener noreferrer">View source <span class="visually-hidden">(opens in a new tab)</span></a> }
+            </footer>
+        }
+    </section>
+</dialog>
+
+@code {
+    [Parameter] public ItemDto? Item { get; set; }
+    [Parameter] public bool Loading { get; set; }
+    [Parameter] public string? Error { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+    [Parameter] public EventCallback OnRetry { get; set; }
+    private ElementReference dialogElement;
+    private IJSObjectReference? module;
+    private DotNetObjectReference<ItemDetailModal>? reference;
+    private static readonly HashSet<string> FactTypes = ["cost", "weight", "damage", "armorClass", "strengthRequirement", "stealth", "purchaseQuantity", "currencyValue"];
+    private static readonly HashSet<string> RuleTypes = ["description", "usage", "properties", "mastery", "toolDetails", "poison", "capacity", "contents", "vehicleStats", "vehicleParts", "tables", "notices", "aliases", "completeness"];
+    private bool HasFacts => Facts.Count > 0 || ItemValue.HasContent(Find("itemTags")?.Value ?? default);
+    private IReadOnlyList<ItemComponentDto> Facts => Item?.Components.Where(x => FactTypes.Contains(x.Type)).ToList() ?? [];
+    private IReadOnlyList<ItemComponentDto> Rules => Item?.Components.Where(x => RuleTypes.Contains(x.Type)).ToList() ?? [];
+    private IReadOnlyList<ItemComponentDto> Variants => Item?.Components.Where(x => x.Type.EndsWith("Variant", StringComparison.Ordinal)).ToList() ?? [];
+    private ItemComponentDto? Find(string type) => Item?.Components.FirstOrDefault(x => x.Type == type);
+    private string? Text(string type) => ItemValue.Text(Find(type)?.Value ?? default);
+    private string? SourceUrl => ItemValue.SafeUrl(Text("url"));
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/itemDialog.js");
+        reference = DotNetObjectReference.Create(this);
+        await module.InvokeVoidAsync("open", dialogElement, reference);
+    }
+    [JSInvokable] public Task CloseAsync() => OnClose.InvokeAsync();
+    public async ValueTask DisposeAsync()
+    {
+        if (module is not null)
+        {
+            try { await module.InvokeVoidAsync("close", dialogElement); await module.DisposeAsync(); }
+            catch (JSDisconnectedException) { }
+        }
+        reference?.Dispose();
+    }
+}

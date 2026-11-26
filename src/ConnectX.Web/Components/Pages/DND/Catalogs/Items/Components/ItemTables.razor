@@ -1,0 +1,28 @@
+@foreach (var table in ItemValue.Array(Value))
+{
+    <div class="item-table-wrap" tabindex="0" role="region" aria-label='@(ItemValue.Text(ItemValue.Property(table, "caption")) ?? "Item table")'>
+        <table>
+            @if (ItemValue.Text(ItemValue.Property(table, "caption")) is { } caption) { <caption>@caption</caption> }
+            @if (ItemValue.Strings(ItemValue.Property(table, "headers")) is { Count: > 0 } headers)
+            {
+                <thead><tr>@foreach (var heading in headers) { <th scope="col">@heading</th> }</tr></thead>
+            }
+            <tbody>
+                @foreach (var row in ItemValue.Array(ItemValue.Property(table, "rows")))
+                {
+                    <tr>@foreach (var cell in ItemValue.Array(ItemValue.Property(row, "cells")))
+                    {
+                        @if (ItemValue.Flag(ItemValue.Property(cell, "header")) == true)
+                        { <th colspan='@Span(cell, "colSpan")' rowspan='@Span(cell, "rowSpan")'>@ItemValue.Text(ItemValue.Property(cell, "text"))</th> }
+                        else { <td colspan='@Span(cell, "colSpan")' rowspan='@Span(cell, "rowSpan")'>@ItemValue.Text(ItemValue.Property(cell, "text"))</td> }
+                    }</tr>
+                }
+            </tbody>
+        </table>
+        @foreach (var note in ItemValue.Strings(ItemValue.Property(table, "notes"))) { <p>@note</p> }
+    </div>
+}
+@code {
+    [Parameter] public JsonElement Value { get; set; }
+    private static int Span(JsonElement cell, string key) => ItemValue.Property(cell, key).TryGetInt32Safe() is { } value ? Math.Clamp(value, 1, 100) : 1;
+}

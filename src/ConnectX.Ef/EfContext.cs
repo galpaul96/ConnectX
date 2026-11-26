@@ -10,6 +10,7 @@ namespace ConnectX.Ef
             : base(options) { }
 
         public DbSet<Spell> Spells => Set<Spell>();
+        public DbSet<ConnectX.Domain.Entities.DND.Items.Item> Items => Set<ConnectX.Domain.Entities.DND.Items.Item>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
