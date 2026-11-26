@@ -1,0 +1,166 @@
+{
+  "id": "2619159",
+  "slug": "telepathy",
+  "name": "Telepathy",
+  "storageFile": "telepathy.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "8",
+        "label": "8th"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>8</p></dd><dt>label</dt><dd><p>8th</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Unlimited",
+        "kind": "unlimited",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Unlimited</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a pair of linked silver rings",
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "24 Hours",
+        "kind": "timed",
+        "value": 24,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>24 Hours</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<p>Divination</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Communication",
+        "damageTypes": []
+      },
+      "html": "<p>Communication</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.",
+        "Until the spell ends, you and the target can instantly share words, images, sounds, and other sensory messages with each other through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature to understand the meaning of your words and any sensory messages you send to it.",
+        "* - (a pair of linked silver rings)"
+      ],
+      "html": "<div> <p>You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.</p> <p>Until the spell ends, you and the target can instantly share words, images, sounds, and other sensory messages with each other through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature to understand the meaning of your words and any sensory messages you send to it.</p> <span>* - (a pair of linked silver rings)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619159-telepathy",
+      "html": "<p>https://www.dndbeyond.com/spells/2619159-telepathy</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 8 Divination (Wizard)",
+        "Casting Time": "Action",
+        "Range": "Unlimited",
+        "Components": "V, S, M (a pair of linked silver rings)",
+        "Duration": "24 hours"
+      },
+      "html": "<p><em>Level 8 Divination (Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Unlimited</p> <p><strong>Components:</strong> V, S, M (a pair of linked silver rings)</p> <p><strong>Duration:</strong> 24 hours</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Telepathy - Spells - D&D Beyond-8bd3a619785008fc51c92b24b18652a94b47dc4420753af9dd7ea9345938fb11.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Telepathy - Spells - D&amp;D Beyond-8bd3a619785008fc51c92b24b18652a94b47dc4420753af9dd7ea9345938fb11.html</p></li></ul>"
+    }
+  ]
+}

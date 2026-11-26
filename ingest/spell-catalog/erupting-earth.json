@@ -1,0 +1,159 @@
+{
+  "id": "2380",
+  "slug": "erupting-earth",
+  "name": "Erupting Earth",
+  "storageFile": "erupting-earth.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft. (20 ft.)",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 20,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 120 ft. <span>(20 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a piece of obsidian",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Bludgeoning",
+        "damageTypes": [
+          "Bludgeoning"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Bludgeoning </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand.",
+        "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd.",
+        "* - (a piece of obsidian)"
+      ],
+      "html": "<div> <p>Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand.</p> <p><strong>At Higher Levels.</strong> <span>When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd.</span></p> <span>* - (a piece of obsidian)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage",
+        "Control"
+      ],
+      "html": "<ul><li><p>Damage</p></li><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Druid",
+        "Sorcerer",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Druid</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Elemental Evil Player's Companion, pg. 155",
+      "html": "<p>Elemental Evil Player&#x27;s Companion, pg. 155</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2380-erupting-earth",
+      "html": "<p>https://www.dndbeyond.com/spells/2380-erupting-earth</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    }
+  ]
+}

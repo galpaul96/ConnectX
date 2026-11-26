@@ -1,0 +1,189 @@
+{
+  "id": "2619103",
+  "slug": "dispel-magic",
+  "name": "Dispel Magic",
+  "storageFile": "dispel-magic.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft.",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 120 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell’s level). On a successful check, the spell ends.",
+        "Using a Higher-Level Spell Slot. You automatically end a spell on the target if the spell’s level is equal to or less than the level of the spell slot you use."
+      ],
+      "html": "<div> <p>Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell’s level). On a successful check, the spell ends.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> You automatically end a spell on the target if the spell’s level is equal to or less than the level of the spell slot you use.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control"
+      ],
+      "html": "<ul><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Cleric (Legacy)",
+        "Druid (Legacy)",
+        "Paladin (Legacy)",
+        "Ranger (Legacy)",
+        "Sorcerer (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Paladin",
+        "Ranger",
+        "Sorcerer",
+        "Warlock",
+        "Wizard",
+        "Artificer",
+        "Cleric - Arcana Domain (SCAG)",
+        "Paladin - Oath of Devotion",
+        "Sorcerer - Clockwork Sorcery",
+        "Illrigger - Architect of Ruin",
+        "Paladin - Oath of the Spelldrinker"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Cleric (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Paladin (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Bard</p></li><li><p>Cleric</p></li><li><p>Druid</p></li><li><p>Paladin</p></li><li><p>Ranger</p></li><li><p>Sorcerer</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li><li><p>Cleric - Arcana Domain (SCAG)</p></li><li><p>Paladin - Oath of Devotion</p></li><li><p>Sorcerer - Clockwork Sorcery</p></li><li><p>Illrigger - Architect of Ruin</p></li><li><p>Paladin - Oath of the Spelldrinker</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 265",
+      "html": "<p>Player’s Handbook, pg. 265</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619103-dispel-magic",
+      "html": "<p>https://www.dndbeyond.com/spells/2619103-dispel-magic</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Abjuration (Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "120 feet",
+        "Components": "V, S",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 3 Abjuration (Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 120 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Dispel Magic - Spells - D&D Beyond-be32b6ff668458addccf6fc75b5a194eda7d170cb671df4243508b98b8eeb58b.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Dispel Magic - Spells - D&amp;D Beyond-be32b6ff668458addccf6fc75b5a194eda7d170cb671df4243508b98b8eeb58b.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

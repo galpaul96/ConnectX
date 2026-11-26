@@ -1,0 +1,181 @@
+{
+  "id": "2618920",
+  "slug": "flame-strike",
+  "name": "Flame Strike",
+  "storageFile": "flame-strike.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<div> <div> Level </div> <div> 5th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft. (10 ft. *)",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 10,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 60 ft. <span>(10 ft. <i></i> *)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a pinch of sulfur",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Fire (...)",
+        "damageTypes": [
+          "Fire"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Fire (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "A vertical column of brilliant fire roars down from above. Each creature in a 10-foot-radius, 40-foot-high Cylinder centered on a point within range makes a Dexterity saving throw, taking 5d6 Fire damage and 5d6 Radiant damage on a failed save or half as much damage on a successful one.",
+        "Using a Higher-Level Spell Slot. The Fire damage and the Radiant damage increase by 1d6 for each spell slot level above 5.",
+        "* - (a pinch of sulfur)"
+      ],
+      "html": "<div> <p>A vertical column of brilliant fire roars down from above. Each creature in a 10-foot-radius, 40-foot-high <a>Cylinder</a> centered on a point within range makes a Dexterity saving throw, taking 5d6 Fire damage and 5d6 Radiant damage on a failed save or half as much damage on a successful one.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The Fire damage and the Radiant damage increase by 1d6 for each spell slot level above 5.</p> <span>* - (a pinch of sulfur)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage"
+      ],
+      "html": "<ul><li><p>Damage</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Cleric",
+        "Warlock (Legacy) - The Celestial (Legacy)",
+        "Cleric - Light Domain",
+        "Druid - Circle of Wildfire (TCoE)",
+        "Paladin - Oath of Devotion",
+        "Paladin - Oath of Castigation",
+        "Warlock - The Genie (TCoE)"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Cleric</p></li><li><p>Warlock (Legacy) - The Celestial (Legacy)</p></li><li><p>Cleric - Light Domain</p></li><li><p>Druid - Circle of Wildfire (TCoE)</p></li><li><p>Paladin - Oath of Devotion</p></li><li><p>Paladin - Oath of Castigation</p></li><li><p>Warlock - The Genie (TCoE)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 275",
+      "html": "<p>Player’s Handbook, pg. 275</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618920-flame-strike",
+      "html": "<p>https://www.dndbeyond.com/spells/2618920-flame-strike</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Evocation (Cleric)",
+        "Casting Time": "Action",
+        "Range": "60 feet",
+        "Components": "V, S, M (a pinch of sulfur)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 5 Evocation (Cleric)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 60 feet</p> <p><strong>Components:</strong> V, S, M (a pinch of sulfur)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Flame Strike - Spells - D&D Beyond-8efa9b51e3bc5f7470b48104ca4dce69c46618c623fd8efa2cea5f6c68970cd0.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Flame Strike - Spells - D&amp;D Beyond-8efa9b51e3bc5f7470b48104ca4dce69c46618c623fd8efa2cea5f6c68970cd0.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

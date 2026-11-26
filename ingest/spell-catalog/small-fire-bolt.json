@@ -1,0 +1,152 @@
+{
+  "id": "3369641",
+  "slug": "small-fire-bolt",
+  "name": "𝔰𝔪𝔞𝔩𝔩 𝔣𝔦𝔯𝔢 𝔟𝔬𝔩𝔱",
+  "storageFile": "small-fire-bolt.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "Cantrip",
+        "label": "Cantrip"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>Cantrip</p></dd><dt>label</dt><dd><p>Cantrip</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft.",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>60 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>Instantaneous</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<p>Evocation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "Ranged",
+        "kind": "attack",
+        "attackType": "ranged",
+        "ability": null
+      },
+      "html": "<p>Ranged</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Fire",
+        "damageTypes": [
+          "Fire"
+        ]
+      },
+      "html": "<p>Fire</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You hurl a SMALL mote of fire at a creature or an object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d6 Fire damage. If a SMALL flammable object is hit by this spell starts a SMALL fire.",
+        "Cantrip Upgrade. The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      ],
+      "html": "<p>You hurl a SMALL mote of fire at a creature or an object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d6 Fire damage. If a SMALL flammable object is hit by this spell starts a SMALL fire.</p> <p>Cantrip Upgrade. The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3369641-small-fire-bolt",
+      "html": "<p>https://www.dndbeyond.com/spells/3369641-small-fire-bolt</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/𝔰𝔪𝔞𝔩𝔩 𝔣𝔦𝔯𝔢 𝔟𝔬𝔩𝔱 - Spells - Homebrew - D&D Beyond-821752458e07096a83c380bf6172914913d3db2fcea9fe3ff4b5798b4594954f.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/𝔰𝔪𝔞𝔩𝔩 𝔣𝔦𝔯𝔢 𝔟𝔬𝔩𝔱 - Spells - Homebrew - D&amp;D Beyond-821752458e07096a83c380bf6172914913d3db2fcea9fe3ff4b5798b4594954f.html</p></li></ul>"
+    }
+  ]
+}

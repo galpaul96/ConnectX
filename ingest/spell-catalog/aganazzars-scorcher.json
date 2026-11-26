@@ -1,0 +1,164 @@
+{
+  "id": "2369",
+  "slug": "aganazzars-scorcher",
+  "name": "Aganazzar's Scorcher",
+  "storageFile": "aganazzars-scorcher.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft. (30 ft.)",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 30,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. <span>(30 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a red dragon's scale",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Fire",
+        "damageTypes": [
+          "Fire"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Fire </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "A line of roaring flame 30 feet long and 5 feet wide emanates from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 3d8 fire damage on a failed save, or half as much damage on a successful one.",
+        "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
+        "* - (a red dragon's scale)"
+      ],
+      "html": "<div> <p><span>A line of roaring flame 30 feet long and 5 feet wide emanates from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 3d8 fire damage on a failed save, or half as much damage on a successful one.</span></p> <p><b>At Higher Levels. </b>When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.</p> <span>* - (a red dragon's scale)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage"
+      ],
+      "html": "<ul><li><p>Damage</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Sorcerer",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Elemental Evil Player's Companion, pg. 150",
+      "html": "<p>Elemental Evil Player&#x27;s Companion, pg. 150</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2369-aganazzars-scorcher",
+      "html": "<p>https://www.dndbeyond.com/spells/2369-aganazzars-scorcher</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Aganazzar's Scorcher - Spells - D&D Beyond-068f03e3c728350554b0d414437dd86a01a9a6fe87dfe841ae79242ceb95eea8.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Aganazzar&#x27;s Scorcher - Spells - D&amp;D Beyond-068f03e3c728350554b0d414437dd86a01a9a6fe87dfe841ae79242ceb95eea8.html</p></li></ul>"
+    }
+  ]
+}

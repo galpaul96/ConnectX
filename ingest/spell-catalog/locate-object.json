@@ -1,0 +1,181 @@
+{
+  "id": "2619002",
+  "slug": "locate-object",
+  "name": "Locate Object",
+  "storageFile": "locate-object.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a forked twig",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 10 Minutes </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Detection",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Detection </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Describe or name an object that is familiar to you. You sense the direction to the object’s location if that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.",
+        "The spell can locate a specific object known to you if you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
+        "This spell can’t locate an object if any thickness of lead blocks a direct path between you and the object.",
+        "* - (a forked twig)"
+      ],
+      "html": "<div> <p>Describe or name an object that is familiar to you. You sense the direction to the object’s location if that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.</p> <p>The spell can locate a specific object known to you if you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.</p> <p>This spell can’t locate an object if any thickness of lead blocks a direct path between you and the object.</p> <span>* - (a forked twig)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Detection"
+      ],
+      "html": "<ul><li><p>Detection</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Cleric (Legacy)",
+        "Druid (Legacy)",
+        "Paladin (Legacy)",
+        "Ranger (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Paladin",
+        "Ranger",
+        "Wizard",
+        "Warlock - Lantern Patron (OTTG)"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Cleric (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Paladin (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Cleric</p></li><li><p>Druid</p></li><li><p>Paladin</p></li><li><p>Ranger</p></li><li><p>Wizard</p></li><li><p>Warlock - Lantern Patron (OTTG)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 293",
+      "html": "<p>Player’s Handbook, pg. 293</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619002-locate-object",
+      "html": "<p>https://www.dndbeyond.com/spells/2619002-locate-object</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Divination (Bard, Cleric, Druid, Paladin, Ranger, Wizard)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S, M (a forked twig)",
+        "Duration": "Concentration, up to 10 minutes"
+      },
+      "html": "<p><em>Level 2 Divination (Bard, Cleric, Druid, Paladin, Ranger, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (a forked twig)</p> <p><strong>Duration:</strong> Concentration, up to 10 minutes</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Locate Object - Spells - D&D Beyond-d50e92c4a8d0b22594bca19a884927cf0fa9bbaafbb408f21fa76c85f01ae2ca.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Locate Object - Spells - D&amp;D Beyond-d50e92c4a8d0b22594bca19a884927cf0fa9bbaafbb408f21fa76c85f01ae2ca.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

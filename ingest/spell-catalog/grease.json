@@ -1,0 +1,177 @@
+{
+  "id": "2618957",
+  "slug": "grease",
+  "name": "Grease",
+  "storageFile": "grease.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft. (10 ft.)",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 10,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 60 ft. <span>(10 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a bit of pork rind or butter",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<div> <div> School </div> <div> Conjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Prone",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Prone </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Nonflammable grease covers the ground in a 10-foot square centered on a point within range and turns it into Difficult Terrain for the duration.",
+        "When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or have the Prone condition. A creature that enters the area or ends its turn there must also succeed on that save or fall Prone.",
+        "* - (a bit of pork rind or butter)"
+      ],
+      "html": "<div> <p>Nonflammable grease covers the ground in a 10-foot square centered on a point within range and turns it into <a>Difficult Terrain</a> for the duration.</p> <p>When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or have the <a>Prone</a> condition. A creature that enters the area or ends its turn there must also succeed on that save or fall Prone.</p> <span>* - (a bit of pork rind or butter)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control"
+      ],
+      "html": "<ul><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Sorcerer",
+        "Wizard",
+        "Artificer"
+      ],
+      "html": "<ul><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 280",
+      "html": "<p>Player’s Handbook, pg. 280</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618957-grease",
+      "html": "<p>https://www.dndbeyond.com/spells/2618957-grease</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/708/conjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/708/conjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Conjuration (Sorcerer, Wizard)",
+        "Casting Time": "Action",
+        "Range": "60 feet",
+        "Components": "V, S, M (a bit of pork rind or butter)",
+        "Duration": "1 minute"
+      },
+      "html": "<p><em>Level 1 Conjuration (Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 60 feet</p> <p><strong>Components:</strong> V, S, M (a bit of pork rind or butter)</p> <p><strong>Duration:</strong> 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Grease - Spells - D&D Beyond-9725442aab8d66b125c5af45692917d15d5320b7ed3dc2d75ff0e9107284680f.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Grease - Spells - D&amp;D Beyond-9725442aab8d66b125c5af45692917d15d5320b7ed3dc2d75ff0e9107284680f.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

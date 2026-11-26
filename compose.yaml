@@ -17,6 +17,8 @@ services:
       ASPNETCORE_HTTP_PORTS: "8080"
       ConnectionStrings__web-identity: >-
         Host=postgres;Port=5432;Database=${POSTGRES_DB:-web-identity};Username=${POSTGRES_USER:-connectx};Password=${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      ConnectionStrings__api-db: >-
+        Host=postgres;Port=5432;Database=${CATALOG_DB:-api-db};Username=${POSTGRES_USER:-connectx};Password=${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
       ConnectionStrings__redis-cache: redis:6379
     ports:
       - "${WEB_HTTP_PORT:-8080}:8080"

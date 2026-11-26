@@ -1,0 +1,171 @@
+{
+  "id": "2618859",
+  "slug": "phantom-steed",
+  "name": "Phantom Steed",
+  "storageFile": "phantom-steed.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Minute Ritual",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": true
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Minute <i>Ritual</i> </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Illusion",
+      "html": "<div> <div> School </div> <div> Illusion </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Movement",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Movement </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "NIKKI DAWES Phantom Steed",
+        "A Large, quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature’s appearance, and it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed.",
+        "For the duration, you or a creature you choose can ride the steed. The steed uses the Riding Horse stat block (see appendix B), except it has a Speed of 100 feet and can travel 13 miles in an hour. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends early if the steed takes any damage."
+      ],
+      "html": "<figure><span>NIKKI DAWES</span> <figcaption>Phantom Steed</figcaption> </figure> <p>A Large, quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature’s appearance, and it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed.</p> <p>For the duration, you or a creature you choose can ride the steed. The steed uses the Riding Horse stat block (see appendix B), except it has a Speed of 100 feet and can travel 13 miles in an hour. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends early if the steed takes any damage.</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Movement"
+      ],
+      "html": "<ul><li><p>Movement</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Wizard (Legacy)",
+        "Wizard",
+        "Warlock - The Undead (VRGtR)",
+        "Illrigger - Architect of Ruin"
+      ],
+      "html": "<ul><li><p>Wizard (Legacy)</p></li><li><p>Wizard</p></li><li><p>Warlock - The Undead (VRGtR)</p></li><li><p>Illrigger - Architect of Ruin</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 304",
+      "html": "<p>Player’s Handbook, pg. 304</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618859-phantom-steed",
+      "html": "<p>https://www.dndbeyond.com/spells/2618859-phantom-steed</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/704/illusion.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/704/illusion.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Illusion (Wizard)",
+        "Casting Time": "1 minute or Ritual",
+        "Range": "30 feet",
+        "Components": "V, S",
+        "Duration": "1 hour"
+      },
+      "html": "<p><em>Level 3 Illusion (Wizard)</em></p><div> <p><strong>Casting Time:</strong> 1 minute or Ritual</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Phantom Steed - Spells - D&D Beyond-7d306bacb2e2f163f53ceaa83ea5f2e37f6713110f18a3d5027c9d50e74e276b.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Phantom Steed - Spells - D&amp;D Beyond-7d306bacb2e2f163f53ceaa83ea5f2e37f6713110f18a3d5027c9d50e74e276b.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

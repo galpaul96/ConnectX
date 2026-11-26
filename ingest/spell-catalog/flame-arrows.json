@@ -1,0 +1,158 @@
+{
+  "id": "2381",
+  "slug": "flame-arrows",
+  "name": "Flame Arrows",
+  "storageFile": "flame-arrows.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Touch",
+        "kind": "touch",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Touch </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Fire",
+        "damageTypes": [
+          "Fire"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Fire </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell’s magic ends on the piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver.",
+        "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd."
+      ],
+      "html": "<div> <p>You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell’s magic ends on the piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver.</p> <p><em><strong>At Higher Levels.</strong></em> When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage",
+        "Buff"
+      ],
+      "html": "<ul><li><p>Damage</p></li><li><p>Buff</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Ranger (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Druid",
+        "Ranger",
+        "Sorcerer",
+        "Wizard",
+        "Artificer"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Druid</p></li><li><p>Ranger</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Elemental Evil Player's Companion, pg. 156",
+      "html": "<p>Elemental Evil Player&#x27;s Companion, pg. 156</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2381-flame-arrows",
+      "html": "<p>https://www.dndbeyond.com/spells/2381-flame-arrows</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    }
+  ]
+}

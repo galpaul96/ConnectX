@@ -1,0 +1,182 @@
+{
+  "id": "2619134",
+  "slug": "moonbeam",
+  "name": "Moonbeam",
+  "storageFile": "moonbeam.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft. (5 ft. *)",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 5,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 120 ft. <span>(5 ft. <i></i> *)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a moonseed leaf",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CON Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CON"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>CON Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Radiant",
+        "damageTypes": [
+          "Radiant"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Radiant </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, Dim Light fills the Cylinder, and you can take a Magic action on later turns to move the Cylinder up to 60 feet.",
+        "When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is shape-shifted (as a result of the Polymorph spell, for example), it reverts to its true form and can’t shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell’s area moves into its space and when it enters the spell’s area or ends its turn there. A creature makes this save only once per turn.",
+        "Using a Higher-Level Spell Slot. The damage increases by 1d10 for each spell slot level above 2.",
+        "* - (a moonseed leaf)"
+      ],
+      "html": "<div> <p>A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high <a>Cylinder</a> centered on a point within range. Until the spell ends, <a>Dim Light</a> fills the Cylinder, and you can take a <a>Magic</a> action on later turns to move the Cylinder up to 60 feet.</p> <p>When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is <a>shape-shifted</a> (as a result of the <a>Polymorph</a> spell, for example), it reverts to its true form and can’t shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell’s area moves into its space and when it enters the spell’s area or ends its turn there. A creature makes this save only once per turn.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The damage increases by 1d10 for each spell slot level above 2.</p> <span>* - (a moonseed leaf)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage",
+        "Control"
+      ],
+      "html": "<ul><li><p>Damage</p></li><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Druid",
+        "Cleric - Twilight Domain (TCoE)",
+        "Paladin - Oath of the Watchers (TCoE)",
+        "Paladin - Oath of the Ancients",
+        "Cleric - Night Domain (HCS)",
+        "Cleric - Moon Domain (TCSR)"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Druid</p></li><li><p>Cleric - Twilight Domain (TCoE)</p></li><li><p>Paladin - Oath of the Watchers (TCoE)</p></li><li><p>Paladin - Oath of the Ancients</p></li><li><p>Cleric - Night Domain (HCS)</p></li><li><p>Cleric - Moon Domain (TCSR)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 300",
+      "html": "<p>Player’s Handbook, pg. 300</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619134-moonbeam",
+      "html": "<p>https://www.dndbeyond.com/spells/2619134-moonbeam</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Evocation (Druid)",
+        "Casting Time": "Action",
+        "Range": "120 feet",
+        "Components": "V, S, M (a moonseed leaf)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 2 Evocation (Druid)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 120 feet</p> <p><strong>Components:</strong> V, S, M (a moonseed leaf)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Moonbeam - Spells - D&D Beyond-ca6baf962209827009112acdbf5e9bea777313223259ac9074a1c34401fba35c.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Moonbeam - Spells - D&amp;D Beyond-ca6baf962209827009112acdbf5e9bea777313223259ac9074a1c34401fba35c.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

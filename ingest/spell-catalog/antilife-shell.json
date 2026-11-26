@@ -1,0 +1,176 @@
+{
+  "id": "2618856",
+  "slug": "antilife-shell",
+  "name": "Antilife Shell",
+  "storageFile": "antilife-shell.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<div> <div> Level </div> <div> 5th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self (10 ft. *)",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": {
+          "shape": null,
+          "value": 10,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self <span>(10 ft. <i></i> *)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "An aura extends from you in a 10-foot Emanation for the duration. The aura prevents creatures other than Constructs and Undead from passing or reaching through it. An affected creature can cast spells or make attacks with Ranged or Reach weapons through the barrier.",
+        "If you move so that an affected creature is forced to pass through the barrier, the spell ends."
+      ],
+      "html": "<div> <p>An aura extends from you in a 10-foot <a>Emanation</a> for the duration. The aura prevents creatures other than Constructs and Undead from passing or reaching through it. An affected creature can cast spells or make attacks with Ranged or Reach weapons through the barrier.</p> <p>If you move so that an affected creature is forced to pass through the barrier, the spell ends.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Warding"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Warding</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Druid",
+        "Cleric - Grave Domain (XGtE)",
+        "Cleric - Death Domain (DMG)",
+        "Warlock - The Undead (VRGtR)"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Druid</p></li><li><p>Cleric - Grave Domain (XGtE)</p></li><li><p>Cleric - Death Domain (DMG)</p></li><li><p>Warlock - The Undead (VRGtR)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 241",
+      "html": "<p>Player’s Handbook, pg. 241</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618856-antilife-shell",
+      "html": "<p>https://www.dndbeyond.com/spells/2618856-antilife-shell</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Abjuration (Druid)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S",
+        "Duration": "Concentration, up to 1 hour"
+      },
+      "html": "<p><em>Level 5 Abjuration (Druid)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Concentration, up to 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Antilife Shell - Spells - D&D Beyond-99f4e0453a0acb82f8264edc7bc7ec094e3991819db466019111ba2b2a177cae.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Antilife Shell - Spells - D&amp;D Beyond-99f4e0453a0acb82f8264edc7bc7ec094e3991819db466019111ba2b2a177cae.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

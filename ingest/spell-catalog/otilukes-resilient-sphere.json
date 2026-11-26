@@ -1,0 +1,176 @@
+{
+  "id": "2619128",
+  "slug": "otilukes-resilient-sphere",
+  "name": "Otiluke's Resilient Sphere",
+  "storageFile": "otilukes-resilient-sphere.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "4",
+        "label": "4th"
+      },
+      "html": "<div> <div> Level </div> <div> 4th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a glass sphere",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "A shimmering sphere encloses a Large or smaller creature or object within range. An unwilling creature must succeed on a Dexterity saving throw or be enclosed for the duration.",
+        "Nothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can’t be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.",
+        "The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can take an action to push against the sphere’s walls and thus roll the sphere at up to half the creature’s Speed. Similarly, the globe can be picked up and moved by other creatures.",
+        "A Disintegrate spell targeting the globe destroys it without harming anything inside.",
+        "* - (a glass sphere)"
+      ],
+      "html": "<div> <p>A shimmering sphere encloses a Large or smaller creature or object within range. An unwilling creature must succeed on a Dexterity saving throw or be enclosed for the duration.</p> <p>Nothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can’t be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.</p> <p>The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can take an action to push against the sphere’s walls and thus roll the sphere at up to half the creature’s Speed. Similarly, the globe can be picked up and moved by other creatures.</p> <p>A <a>Disintegrate</a> spell targeting the globe destroys it without harming anything inside.</p> <span>* - (a glass sphere)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Warding"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Warding</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Wizard",
+        "Artificer",
+        "Cleric - Peace Domain (TCoE)",
+        "Paladin - Oath of Redemption (XGtE)"
+      ],
+      "html": "<ul><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li><li><p>Cleric - Peace Domain (TCoE)</p></li><li><p>Paladin - Oath of Redemption (XGtE)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 303",
+      "html": "<p>Player’s Handbook, pg. 303</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619128-otilukes-resilient-sphere",
+      "html": "<p>https://www.dndbeyond.com/spells/2619128-otilukes-resilient-sphere</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 4 Abjuration (Wizard)",
+        "Casting Time": "Action",
+        "Range": "30 feet",
+        "Components": "V, S, M (a glass sphere)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 4 Abjuration (Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a glass sphere)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Otiluke's Resilient Sphere - Spells - D&D Beyond-421058bfae83505575d86f2c2a43edc48a8c4be0ab6cb20b68724d815a142f53.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Otiluke&#x27;s Resilient Sphere - Spells - D&amp;D Beyond-421058bfae83505575d86f2c2a43edc48a8c4be0ab6cb20b68724d815a142f53.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

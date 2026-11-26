@@ -1,18 +1,27 @@
-<button type="button" class="spell-card" @onclick="SelectSpell" aria-label="Open @Spell.Name, @Spell.LevelLabel spell details">
-    <span class="spell-card-mark" aria-hidden="true">✦</span>
-    <span class="spell-card-main">
-        <span class="spell-card-name">@Spell.Name</span>
-        <span class="spell-card-school">@(Spell.School ?? "Unclassified")</span>
+<button type="button" class="spell-card @(ImageUrl is null ? "spell-card-no-image" : null)" @onclick="SelectSpell" aria-label="Open @Entry.Spell.Name details">
+    @if (ImageUrl is not null)
+    {
+        <img class="spell-card-image" src="@ImageUrl" alt="" width="48" height="48" loading="lazy" referrerpolicy="no-referrer" @onerror="HideImage" />
+    }
+    <span class="spell-card-copy">
+        <span class="spell-card-name">@Entry.Spell.Name</span>
+        @if (!string.IsNullOrWhiteSpace(Entry.Spell.School)) { <span class="spell-card-school">@Entry.Spell.School</span> }
     </span>
-    <span class="spell-level-badge">@Spell.LevelLabel</span>
+    @if (!string.IsNullOrWhiteSpace(Entry.Spell.Level))
+    {
+        <span class="spell-card-level" aria-label="Level @Entry.Spell.Level">@Entry.Spell.Level</span>
+    }
 </button>
-
 @code {
-    [Parameter, EditorRequired]
-    public SpellCatalogEntry Spell { get; set; } = default!;
-
-    [Parameter]
-    public EventCallback<SpellCatalogEntry> OnSelect { get; set; }
-
-    private Task SelectSpell() => OnSelect.InvokeAsync(Spell);
+    [Parameter, EditorRequired] public SpellPageEntry Entry { get; set; } = default!;
+    [Parameter] public EventCallback<Guid> OnSelect { get; set; }
+    private bool imageFailed;
+    private string? previousImage;
+    private string? ImageUrl => imageFailed ? null : SpellValue.SafeUrl(Entry.Spell.ImageUrl);
+    protected override void OnParametersSet()
+    {
+        if (previousImage != Entry.Spell.ImageUrl) { imageFailed = false; previousImage = Entry.Spell.ImageUrl; }
+    }
+    private void HideImage() => imageFailed = true;
+    private Task SelectSpell() => OnSelect.InvokeAsync(Entry.Id);
 }

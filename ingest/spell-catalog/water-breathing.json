@@ -1,0 +1,178 @@
+{
+  "id": "2619205",
+  "slug": "water-breathing",
+  "name": "Water Breathing",
+  "storageFile": "water-breathing.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action Ritual",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": true
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action <i>Ritual</i> </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a short reed",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "24 Hours",
+        "kind": "timed",
+        "value": 24,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 24 Hours </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Buff",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Buff </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.",
+        "* - (a short reed)"
+      ],
+      "html": "<div> <p>This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.</p> <span>* - (a short reed)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Buff"
+      ],
+      "html": "<ul><li><p>Buff</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Ranger (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Druid",
+        "Ranger",
+        "Sorcerer",
+        "Wizard",
+        "Artificer",
+        "Druid - Circle of the Sea",
+        "Paladin - Oath of the River (OTTG)"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Druid</p></li><li><p>Ranger</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li><li><p>Druid - Circle of the Sea</p></li><li><p>Paladin - Oath of the River (OTTG)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 340",
+      "html": "<p>Player’s Handbook, pg. 340</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619205-water-breathing",
+      "html": "<p>https://www.dndbeyond.com/spells/2619205-water-breathing</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Transmutation (Druid, Ranger, Sorcerer, Wizard)",
+        "Casting Time": "Action or Ritual",
+        "Range": "30 feet",
+        "Components": "V, S, M (a short reed)",
+        "Duration": "24 hours"
+      },
+      "html": "<p><em>Level 3 Transmutation (Druid, Ranger, Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action or Ritual</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a short reed)</p> <p><strong>Duration:</strong> 24 hours</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Water Breathing - Spells - D&D Beyond-fcddf948b50e38e20eb8423ff987d38349e7b6c953657c28a17564e040fa5b9f.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Water Breathing - Spells - D&amp;D Beyond-fcddf948b50e38e20eb8423ff987d38349e7b6c953657c28a17564e040fa5b9f.html</p></li></ul>"
+    }
+  ]
+}

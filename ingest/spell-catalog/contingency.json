@@ -1,0 +1,171 @@
+{
+  "id": "2619053",
+  "slug": "contingency",
+  "name": "Contingency",
+  "storageFile": "contingency.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "6",
+        "label": "6th"
+      },
+      "html": "<div> <div> Level </div> <div> 6th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 10 Minutes </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a gem-encrusted statuette of yourself worth 1,500+ GP",
+          "consumed": false,
+          "costGp": 1500,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "10 Days",
+        "kind": "timed",
+        "value": 10,
+        "unit": "day",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 10 Days </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Utility",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Utility </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Choose a spell of level 5 or lower that you can cast, that has a casting time of an action, and that can target you. You cast that spell—called the contingent spell—as part of casting Contingency, expending spell slots for both, but the contingent spell doesn’t come into effect. Instead, it takes effect when a certain trigger occurs. You describe that trigger when you cast the two spells. For example, a Contingency cast with Water Breathing might stipulate that Water Breathing comes into effect when you are engulfed in water or a similar liquid.",
+        "The contingent spell takes effect immediately after the trigger occurs for the first time, whether or not you want it to, and then Contingency ends.",
+        "The contingent spell takes effect only on you, even if it can normally target others. You can use only one Contingency spell at a time. If you cast this spell again, the effect of another Contingency spell on you ends. Also, Contingency ends on you if its material component is ever not on your person.",
+        "* - (a gem-encrusted statuette of yourself worth 1,500+ GP)"
+      ],
+      "html": "<div> <p>Choose a spell of level 5 or lower that you can cast, that has a casting time of an action, and that can target you. You cast that spell—called the contingent spell—as part of casting <em>Contingency</em>, expending spell slots for both, but the contingent spell doesn’t come into effect. Instead, it takes effect when a certain trigger occurs. You describe that trigger when you cast the two spells. For example, a <em>Contingency</em> cast with <a>Water Breathing</a> might stipulate that <em>Water Breathing</em> comes into effect when you are engulfed in water or a similar liquid.</p> <p>The contingent spell takes effect immediately after the trigger occurs for the first time, whether or not you want it to, and then <em>Contingency</em> ends.</p> <p>The contingent spell takes effect only on you, even if it can normally target others. You can use only one <em>Contingency</em> spell at a time. If you cast this spell again, the effect of another <em>Contingency</em> spell on you ends. Also, <em>Contingency</em> ends on you if its material component is ever not on your person.</p> <span>* - (a gem-encrusted statuette of yourself worth 1,500+ GP)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Utility"
+      ],
+      "html": "<ul><li><p>Utility</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Wizard (Legacy)",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Wizard (Legacy)</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 256",
+      "html": "<p>Player’s Handbook, pg. 256</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619053-contingency",
+      "html": "<p>https://www.dndbeyond.com/spells/2619053-contingency</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 6 Abjuration (Wizard)",
+        "Casting Time": "10 minutes",
+        "Range": "Self",
+        "Components": "V, S, M (a gem-encrusted statuette of yourself worth 1,500+ GP)",
+        "Duration": "10 days"
+      },
+      "html": "<p><em>Level 6 Abjuration (Wizard)</em></p><div> <p><strong>Casting Time:</strong> 10 minutes</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (a gem-encrusted statuette of yourself worth 1,500+ GP)</p> <p><strong>Duration:</strong> 10 days</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Contingency - Spells - D&D Beyond-481705e04673d0b3401063577b01bedae238d0d5e7eafe45ff148596ce9b3021.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Contingency - Spells - D&amp;D Beyond-481705e04673d0b3401063577b01bedae238d0d5e7eafe45ff148596ce9b3021.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

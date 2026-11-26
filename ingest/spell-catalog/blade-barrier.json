@@ -1,0 +1,171 @@
+{
+  "id": "2618929",
+  "slug": "blade-barrier",
+  "name": "Blade Barrier",
+  "storageFile": "blade-barrier.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "6",
+        "label": "6th"
+      },
+      "html": "<div> <div> Level </div> <div> 6th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "90 ft.",
+        "kind": "distance",
+        "distanceValue": 90,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 90 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 10 Minutes </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Force",
+        "damageTypes": [
+          "Force"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Force </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You create a wall of whirling blades made of magical energy. The wall appears within range and lasts for the duration. You make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides Three-Quarters Cover, and its space is Difficult Terrain.",
+        "Any creature in the wall’s space makes a Dexterity saving throw, taking 6d10 Force damage on a failed save or half as much damage on a successful one. A creature also makes that save if it enters the wall’s space or ends it turn there. A creature makes that save only once per turn."
+      ],
+      "html": "<div> <p>You create a wall of whirling blades made of magical energy. The wall appears within range and lasts for the duration. You make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides <a>Three-Quarters Cover</a>, and its space is <a>Difficult Terrain</a>.</p> <p>Any creature in the wall’s space makes a Dexterity saving throw, taking 6d10 Force damage on a failed save or half as much damage on a successful one. A creature also makes that save if it enters the wall’s space or ends it turn there. A creature makes that save only once per turn.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage",
+        "Control"
+      ],
+      "html": "<ul><li><p>Damage</p></li><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Cleric"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Cleric</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 247",
+      "html": "<p>Player’s Handbook, pg. 247</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618929-blade-barrier",
+      "html": "<p>https://www.dndbeyond.com/spells/2618929-blade-barrier</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 6 Evocation (Cleric)",
+        "Casting Time": "Action",
+        "Range": "90 feet",
+        "Components": "V, S",
+        "Duration": "Concentration, up to 10 minutes"
+      },
+      "html": "<p><em>Level 6 Evocation (Cleric)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 90 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Concentration, up to 10 minutes</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Blade Barrier - Spells - D&D Beyond-e437263235766c0af54a5886801452e76141d0039332460c6446a9247e36587c.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Blade Barrier - Spells - D&amp;D Beyond-e437263235766c0af54a5886801452e76141d0039332460c6446a9247e36587c.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

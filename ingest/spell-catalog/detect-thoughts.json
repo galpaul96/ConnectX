@@ -1,0 +1,181 @@
+{
+  "id": "2619099",
+  "slug": "detect-thoughts",
+  "name": "Detect Thoughts",
+  "storageFile": "detect-thoughts.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "1 Copper Piece",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>WIS Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Detection (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Detection (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.",
+        "Sense Thoughts. You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.",
+        "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+        "Read Thoughts. Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.",
+        "As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an Intelligence (Arcana) check against your spell save DC, ending the spell on a success.",
+        "* - (1 Copper Piece)"
+      ],
+      "html": "<div> <p>You activate one of the effects below. Until the spell ends, you can activate either effect as a <a>Magic</a> action on your later turns.</p> <p><strong><em>Sense Thoughts.</em></strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p> <p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p> <p><strong><em>Read Thoughts.</em></strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p> <p>As a <a>Magic</a> action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an Intelligence (<a>Arcana</a>) check against your spell save DC, ending the spell on a success.</p> <span>* - (1 Copper Piece)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Social",
+        "Detection"
+      ],
+      "html": "<ul><li><p>Social</p></li><li><p>Detection</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Sorcerer",
+        "Wizard",
+        "Sorcerer - Aberrant Sorcery",
+        "Warlock - Great Old One Patron",
+        "Warlock - Great Fool Patron",
+        "Illrigger - Architect of Ruin"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Sorcerer - Aberrant Sorcery</p></li><li><p>Warlock - Great Old One Patron</p></li><li><p>Warlock - Great Fool Patron</p></li><li><p>Illrigger - Architect of Ruin</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 262",
+      "html": "<p>Player’s Handbook, pg. 262</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619099-detect-thoughts",
+      "html": "<p>https://www.dndbeyond.com/spells/2619099-detect-thoughts</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Divination (Bard, Sorcerer, Wizard)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S, M (1 Copper Piece)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 2 Divination (Bard, Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (1 Copper Piece)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Detect Thoughts - Spells - D&D Beyond-21b390e56907e429984e1f1ba25b7f85c15aa29bd50ee79d33fd9065ba55a6e6.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Detect Thoughts - Spells - D&amp;D Beyond-21b390e56907e429984e1f1ba25b7f85c15aa29bd50ee79d33fd9065ba55a6e6.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

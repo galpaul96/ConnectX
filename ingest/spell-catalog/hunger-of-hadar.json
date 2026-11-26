@@ -1,0 +1,173 @@
+{
+  "id": "2619162",
+  "slug": "hunger-of-hadar",
+  "name": "Hunger of Hadar",
+  "storageFile": "hunger-of-hadar.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>3</p></dd><dt>label</dt><dd><p>3rd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "150 ft. (20 ft. *)",
+        "kind": "distance",
+        "distanceValue": 150,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 20,
+          "unit": "ft"
+        }
+      },
+      "html": "<p>150 ft. (20 ft. *)</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a pickled tentacle",
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Minute</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<p>Conjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<p>DEX Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Cold (...)",
+        "damageTypes": [
+          "Cold"
+        ]
+      },
+      "html": "<p>Cold (...)</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You open a gateway to the Far Realm, a region infested with unspeakable horrors. A 20-foot-radius Sphere of Darkness appears, centered on a point within range and lasting for the duration. The Sphere is Difficult Terrain, and it is filled with strange whispers and slurping noises, which can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within it have the Blinded condition.",
+        "Any creature that starts its turn in the area takes 2d6 Cold damage. Any creature that ends its turn there must succeed on a Dexterity saving throw or take 2d6 Acid damage from otherworldly tentacles.",
+        "Using a Higher-Level Spell Slot. The Cold or Acid damage (your choice) increases by 1d6 for each spell slot level above 3.",
+        "* - (a pickled tentacle)"
+      ],
+      "html": "<div> <p>You open a gateway to the Far Realm, a region infested with unspeakable horrors. A 20-foot-radius Sphere of Darkness appears, centered on a point within range and lasting for the duration. The Sphere is Difficult Terrain, and it is filled with strange whispers and slurping noises, which can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within it have the Blinded condition.</p> <p>Any creature that starts its turn in the area takes 2d6 Cold damage. Any creature that ends its turn there must succeed on a Dexterity saving throw or take 2d6 Acid damage from otherworldly tentacles.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The Cold or Acid damage (your choice) increases by 1d6 for each spell slot level above 3.</p> <span>* - (a pickled tentacle)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Warlock"
+      ],
+      "html": "<ul><li><p>Warlock</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619162-hunger-of-hadar",
+      "html": "<p>https://www.dndbeyond.com/spells/2619162-hunger-of-hadar</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Conjuration (Warlock)",
+        "Casting Time": "Action",
+        "Range": "150 feet",
+        "Components": "V, S, M (a pickled tentacle)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 3 Conjuration (Warlock)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 150 feet</p> <p><strong>Components:</strong> V, S, M (a pickled tentacle)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Hunger of Hadar - Spells - D&D Beyond-cf1e3a832a5a045c00985e6d1faefd3869b4527df7312f5e08f6724afe26906f.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Hunger of Hadar - Spells - D&amp;D Beyond-cf1e3a832a5a045c00985e6d1faefd3869b4527df7312f5e08f6724afe26906f.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

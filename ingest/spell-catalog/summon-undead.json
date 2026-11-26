@@ -1,0 +1,194 @@
+{
+  "id": "2619119",
+  "slug": "summon-undead",
+  "name": "Summon Undead",
+  "storageFile": "summon-undead.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>3</p></dd><dt>label</dt><dd><p>3rd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "90 ft.",
+        "kind": "distance",
+        "distanceValue": 90,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>90 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a gilded skull worth 300+ GP",
+          "consumed": null,
+          "costGp": 300,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Hour</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Necromancy",
+      "html": "<p>Necromancy</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Summoning",
+        "damageTypes": []
+      },
+      "html": "<p>Summoning</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the Undead Spirit stat block. When you cast the spell, choose the creature’s form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.",
+        "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.",
+        "Using a Higher-Level Spell Slot. Use the spell slot’s level for the spell’s level in the stat block.",
+        "Undead Spirit",
+        "Medium Undead, Neutral",
+        "AC 11 + the spell’s level",
+        "HP 30 (Ghostly and Putrid only) or 20 (Skeletal only) + 10 for each spell level above 3",
+        "Speed 30 ft.; Fly 40 ft. (hover; Ghostly only)",
+        "Mod Save",
+        "STR 12 +1 +1",
+        "DEX 16 +3 +3",
+        "CON 15 +2 +2",
+        "Mod Save",
+        "INT 4 −3 −3",
+        "WIS 10 +0 +0",
+        "CHA 9 −1 −1",
+        "Immunities Necrotic, Poison; Exhaustion, Frightened, Paralyzed, Poisoned",
+        "Senses Darkvision 60 ft.; Passive Perception 10",
+        "Languages Understands the languages you know",
+        "CR None (XP 0; PB equals your Proficiency Bonus)",
+        "Traits",
+        "Festering Aura (Putrid Only). Constitution Saving Throw: DC equals your spell save DC, any creature (other than you) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+        "Incorporeal Passage (Ghostly Only). The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+        "Actions",
+        "Multiattack. The spirit makes a number of attacks equal to half this spell’s level (round down).",
+        "Deathly Touch (Ghostly Only). Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + the spell’s level Necrotic damage, and the target has the Frightened condition until the end of its next turn.",
+        "Grave Bolt (Skeletal Only). Ranged Attack Roll: Bonus equals your spell attack modifier, range 150 ft. Hit: 2d4 + 3 + the spell’s level Necrotic damage.",
+        "Rotting Claw (Putrid Only). Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d6 + 3 + the spell’s level Slashing damage. If the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
+        "* - (a gilded skull worth 300+ GP)"
+      ],
+      "html": "<div> <p>You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the <strong>Undead Spirit</strong> stat block. When you cast the spell, choose the creature’s form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.</p> <p>The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> Use the spell slot’s level for the spell’s level in the stat block.</p> <div> <h4>Undead Spirit</h4> <p>Medium Undead, Neutral</p> <p><strong>AC</strong> 11 + the spell’s level</p> <p><strong>HP</strong> 30 (Ghostly and Putrid only) or 20 (Skeletal only) + 10 for each spell level above 3</p> <p><strong>Speed</strong> 30 ft.; Fly 40 ft. (hover; Ghostly only)</p> <div> <table> <thead> <tr> <th> </th> <th> </th> <th>Mod</th> <th>Save</th> </tr> </thead> <tbody> <tr> <th>STR</th> <td>12</td> <td>+1</td> <td>+1</td> </tr> <tr> <th>DEX</th> <td>16</td> <td>+3</td> <td>+3</td> </tr> <tr> <th>CON</th> <td>15</td> <td>+2</td> <td>+2</td> </tr> </tbody> </table> <table> <thead> <tr> <th> </th> <th> </th> <th>Mod</th> <th>Save</th> </tr> </thead> <tbody> <tr> <th>INT</th> <td>4</td> <td>−3</td> <td>−3</td> </tr> <tr> <th>WIS</th> <td>10</td> <td>+0</td> <td>+0</td> </tr> <tr> <th>CHA</th> <td>9</td> <td>−1</td> <td>−1</td> </tr> </tbody> </table> </div> <p><strong>Immunities</strong> Necrotic, Poison; Exhaustion, Frightened, Paralyzed, Poisoned</p> <p><strong>Senses</strong> Darkvision 60 ft.; Passive Perception 10</p> <p><strong>Languages</strong> Understands the languages you know</p> <p><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</p> <p>Traits</p> <p><strong><em>Festering Aura (Putrid Only).</em></strong> <em>Constitution Saving Throw:</em> DC equals your spell save DC, any creature (other than you) that starts its turn within a 5-foot Emanation originating from the spirit. <em>Failure:</em> The creature has the Poisoned condition until the start of its next turn.</p> <p><strong><em>Incorporeal Passage (Ghostly Only).</em></strong> The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.</p> <p>Actions</p> <p><strong><em>Multiattack.</em></strong> The spirit makes a number of attacks equal to half this spell’s level (round down).</p> <p><strong><em>Deathly Touch (Ghostly Only).</em></strong> <em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d8 + 3 + the spell’s level Necrotic damage, and the target has the Frightened condition until the end of its next turn.</p> <p><strong><em>Grave Bolt (Skeletal Only).</em></strong> <em>Ranged Attack Roll:</em> Bonus equals your spell attack modifier, range 150 ft. <em>Hit:</em> 2d4 + 3 + the spell’s level Necrotic damage.</p> <p><strong><em>Rotting Claw (Putrid Only).</em></strong> <em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d6 + 3 + the spell’s level Slashing damage. If the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.</p> </div> <span>* - (a gilded skull worth 300+ GP)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619119-summon-undead",
+      "html": "<p>https://www.dndbeyond.com/spells/2619119-summon-undead</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Necromancy (Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "90 feet",
+        "Components": "V, S, M (a gilded skull worth 300+ GP)",
+        "Duration": "Concentration, up to 1 hour"
+      },
+      "html": "<p><em>Level 3 Necromancy (Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 90 feet</p> <p><strong>Components:</strong> V, S, M (a gilded skull worth 300+ GP)</p> <p><strong>Duration:</strong> Concentration, up to 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Summon Undead - Spells - D&D Beyond-85c4fdfc8904a403697aa08f2ec6954080b9f7555e62ce0e270137c1309eb72e.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Summon Undead - Spells - D&amp;D Beyond-85c4fdfc8904a403697aa08f2ec6954080b9f7555e62ce0e270137c1309eb72e.html</p></li></ul>"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "2619056",
+  "slug": "crown-of-madness",
+  "name": "Crown of Madness",
+  "storageFile": "crown-of-madness.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>2</p></dd><dt>label</dt><dd><p>2nd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft.",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>120 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Minute</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Enchantment",
+      "html": "<p>Enchantment</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<p>WIS Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Charmed",
+        "damageTypes": []
+      },
+      "html": "<p>Charmed</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "One creature that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The creature succeeds automatically if it isn’t Humanoid.",
+        "A spectral crown appears on the Charmed target's head, and it must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if no creature is within its reach. The target repeats the save at the end of each of its turns, ending the spell on itself on a success.",
+        "On your later turns, you must take the Magic action to maintain control of the target, or the spell ends."
+      ],
+      "html": "<p>One creature that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The creature succeeds automatically if it isn’t Humanoid.</p> <p>A spectral crown appears on the Charmed target's head, and it must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if no creature is within its reach. The target repeats the save at the end of each of its turns, ending the spell on itself on a success.</p> <p>On your later turns, you must take the Magic action to maintain control of the target, or the spell ends.</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619056-crown-of-madness",
+      "html": "<p>https://www.dndbeyond.com/spells/2619056-crown-of-madness</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Enchantment (Bard, Sorcerer, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "120 feet",
+        "Components": "V, S",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 2 Enchantment (Bard, Sorcerer, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 120 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Crown of Madness - Spells - D&D Beyond-40fa23815c7338d3a5eeb8f7f8885b605effa92c95308be9d18a669e2b996aab.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Crown of Madness - Spells - D&amp;D Beyond-40fa23815c7338d3a5eeb8f7f8885b605effa92c95308be9d18a669e2b996aab.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

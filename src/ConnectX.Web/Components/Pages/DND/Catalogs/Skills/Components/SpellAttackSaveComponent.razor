@@ -1,0 +1,8 @@
+@inherits SpellComponentView
+@if (!string.IsNullOrWhiteSpace(Text("text")))
+{
+    <div class="spell-metadata-field spell-slot-attack"><dt>Attack / save</dt><dd>@Text("text")
+        @if (!string.IsNullOrWhiteSpace(Text("attackType"))) { <p class="spell-detail-extra">Attack: @Text("attackType")</p> }
+        @if (!string.IsNullOrWhiteSpace(Text("ability"))) { <p class="spell-detail-extra">Ability: @Text("ability")</p> }
+    </dd></div>
+}

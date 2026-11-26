@@ -1,0 +1,153 @@
+{
+  "id": "3185007",
+  "slug": "guiding-wrap-v2",
+  "name": "🧣 guiding wrap (v2)",
+  "storageFile": "guiding-wrap-v2.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>1</p></dd><dt>label</dt><dd><p>1st</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Reaction *",
+        "kind": "reaction",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Reaction *</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>30 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, M **",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": true,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, M **</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>Instantaneous</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<p>Abjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "",
+        "damageTypes": []
+      },
+      "html": "",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Your scarf snaps outward, redirecting force.",
+        "When you or an ally within 30 feet takes damage, you can use your reaction to cast this spell and reduce the triggering damage by 1d10 + your Wisdom modifier. If this reduces the damage to 0, you may move the protected creature up to 10 ft in a straight line without provoking opportunity attacks.",
+        "At Higher Levels:",
+        "Increase the damage reduction by 1d10 per slot above 1st.",
+        "* - when you or an ally within 30 ft takes damage ** - (a scarf which must be worn)"
+      ],
+      "html": "<div> <p>Your scarf snaps outward, redirecting force.</p> <p>When you or an ally within 30 feet takes damage, you can use your reaction to cast this spell and reduce the triggering damage by <strong>1d10 + your Wisdom modifier</strong>. If this reduces the damage to 0, you may <strong>move the protected creature up to 10 ft in a straight line</strong> without provoking opportunity attacks.</p> <p><strong>At Higher Levels:</strong><br> Increase the damage reduction by <strong>1d10</strong> per slot above 1st.</p> <span>* - when you or an ally within 30 ft takes damage</span> <span>** - (a scarf which must be worn)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3185007-guiding-wrap-v2",
+      "html": "<p>https://www.dndbeyond.com/spells/3185007-guiding-wrap-v2</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/🧣 guiding wrap (v2) - Spells - Homebrew - D&D Beyond-5c89be84322fcfad488cc9c2c3a4afc53a4f332c98f54655e24685f2da400da7.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/🧣 guiding wrap (v2) - Spells - Homebrew - D&amp;D Beyond-5c89be84322fcfad488cc9c2c3a4afc53a4f332c98f54655e24685f2da400da7.html</p></li></ul>"
+    }
+  ]
+}

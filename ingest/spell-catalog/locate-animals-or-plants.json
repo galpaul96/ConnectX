@@ -1,0 +1,173 @@
+{
+  "id": "2619000",
+  "slug": "locate-animals-or-plants",
+  "name": "Locate Animals or Plants",
+  "storageFile": "locate-animals-or-plants.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action Ritual",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": true
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action <i>Ritual</i> </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "fur from a bloodhound",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Detection",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Detection </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.",
+        "* - (fur from a bloodhound)"
+      ],
+      "html": "<div> <p>Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.</p> <span>* - (fur from a bloodhound)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Detection"
+      ],
+      "html": "<ul><li><p>Detection</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Druid (Legacy)",
+        "Ranger (Legacy)",
+        "Bard",
+        "Druid",
+        "Ranger",
+        "Cleric (Legacy) - Hunt Domain"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Bard</p></li><li><p>Druid</p></li><li><p>Ranger</p></li><li><p>Cleric (Legacy) - Hunt Domain</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 292",
+      "html": "<p>Player’s Handbook, pg. 292</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619000-locate-animals-or-plants",
+      "html": "<p>https://www.dndbeyond.com/spells/2619000-locate-animals-or-plants</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Divination (Bard, Druid, Ranger)",
+        "Casting Time": "Action or Ritual",
+        "Range": "Self",
+        "Components": "V, S, M (fur from a bloodhound)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 2 Divination (Bard, Druid, Ranger)</em></p><div> <p><strong>Casting Time:</strong> Action or Ritual</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (fur from a bloodhound)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Locate Animals or Plants - Spells - D&D Beyond-0f2b15a7dc39fc2891623cf66c215e9bb61543bb91c44295f07673c9d41ddcf0.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Locate Animals or Plants - Spells - D&amp;D Beyond-0f2b15a7dc39fc2891623cf66c215e9bb61543bb91c44295f07673c9d41ddcf0.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

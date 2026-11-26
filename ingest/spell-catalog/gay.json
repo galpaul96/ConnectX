@@ -1,0 +1,162 @@
+{
+  "id": "3408241",
+  "slug": "gay",
+  "name": "🌈 GAY",
+  "storageFile": "gay.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>2</p></dd><dt>label</dt><dd><p>2nd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>30 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "3 Rounds",
+        "kind": "timed",
+        "value": 3,
+        "unit": "round",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>3 Rounds</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<p>Transmutation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<p>WIS Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "",
+        "damageTypes": []
+      },
+      "html": "",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "### Spell Description",
+        "You point dramatically at a creature and unleash a dazzling rainbow explosion. Glitter fills the air, fabulous music plays from nowhere, and your target becomes overwhelmed by magical flamboyance.",
+        "### Spell Effects",
+        "The target must make a Wisdom Saving Throw (DC 13).",
+        "On a Failed Save:",
+        "Fabulous Transformation: The target's clothing transforms into an outrageously fabulous outfit.",
+        "Sashay Away: The target must spend its next turn dramatically strutting 15 feet in a direction of your choice.",
+        "Distracting Aura: Enemies within 10 feet of the target suffer −2 to attack rolls because of the overwhelming fabulousness.",
+        "Slay: Once during the spell, the target shouts \"SLAAAAY!\" dealing 1d6 psychic damage to everyone within 5 feet. (to the Dm's Discretion)",
+        "On a Successful Save: The target resists the enchantment but is covered in glitter for 24 hours.",
+        "Each level Higher allows the caster to pick an additional Target",
+        "Special Ability: THE GAY AGENDA",
+        "If three creatures are affected by Gay simultaneously, they automatically form a synchronized dance troupe. All enemies who witness their performance must succeed on a DC 13 Wisdom saving throw or lose their next action applauding.",
+        "(Targets may decided they like this and wish to stay this way. Since its a choice to be gay)"
+      ],
+      "html": "<div>### Spell Description</div> <div>You point dramatically at a creature and unleash a dazzling rainbow explosion. Glitter fills the air, fabulous music plays from nowhere, and your target becomes overwhelmed by magical flamboyance.</div> <div>### Spell Effects</div> <div>The target must make a Wisdom Saving Throw (DC 13).</div> <div>On a Failed Save:</div> <ul> <li>Fabulous Transformation: The target's clothing transforms into an outrageously fabulous outfit.</li> <li>Sashay Away: The target must spend its next turn dramatically strutting 15 feet in a direction of your choice.</li> <li>Distracting Aura: Enemies within 10 feet of the target suffer −2 to attack rolls because of the overwhelming fabulousness.</li> <li>Slay: Once during the spell, the target shouts \"SLAAAAY!\" dealing 1d6 psychic damage to everyone within 5 feet. (to the Dm's Discretion)</li> </ul> <div>On a Successful Save: The target resists the enchantment but is covered in glitter for 24 hours.</div> <div>Each level Higher allows the caster to pick an additional Target</div> <div>Special Ability: THE GAY AGENDA</div> <div>If three creatures are affected by Gay simultaneously, they automatically form a synchronized dance troupe. All enemies who witness their performance must succeed on a DC 13 Wisdom saving throw or lose their next action applauding.</div> <div>(Targets may decided they like this and wish to stay this way. Since its a choice to be gay)</div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3408241-gay",
+      "html": "<p>https://www.dndbeyond.com/spells/3408241-gay</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/🌈 GAY - Spells - Homebrew - D&D Beyond-f03cf0fa3ddef7eaab31c38c1adc0fd9a999eecf60303714692a49dbc44caebb.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/🌈 GAY - Spells - Homebrew - D&amp;D Beyond-f03cf0fa3ddef7eaab31c38c1adc0fd9a999eecf60303714692a49dbc44caebb.html</p></li></ul>"
+    }
+  ]
+}

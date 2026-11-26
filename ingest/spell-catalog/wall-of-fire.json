@@ -1,0 +1,183 @@
+{
+  "id": "2619107",
+  "slug": "wall-of-fire",
+  "name": "Wall of Fire",
+  "storageFile": "wall-of-fire.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "4",
+        "label": "4th"
+      },
+      "html": "<div> <div> Level </div> <div> 4th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft.",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 120 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a piece of charcoal",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Fire",
+        "damageTypes": [
+          "Fire"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Fire </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.",
+        "When the wall appears, each creature in its area makes a Dexterity saving throw, taking 5d8 Fire damage on a failed save or half as much damage on a successful one.",
+        "One side of the wall, selected by you when you cast this spell, deals 5d8 Fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.",
+        "Using a Higher-Level Spell Slot. The damage increases by 1d8 for each spell slot level above 4.",
+        "* - (a piece of charcoal)"
+      ],
+      "html": "<div> <p>You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.</p> <p>When the wall appears, each creature in its area makes a Dexterity saving throw, taking 5d8 Fire damage on a failed save or half as much damage on a successful one.</p> <p>One side of the wall, selected by you when you cast this spell, deals 5d8 Fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The damage increases by 1d8 for each spell slot level above 4.</p> <span>* - (a piece of charcoal)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage",
+        "Control"
+      ],
+      "html": "<ul><li><p>Damage</p></li><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Druid",
+        "Sorcerer",
+        "Wizard",
+        "Warlock (Legacy) - The Celestial (Legacy)",
+        "Cleric - Light Domain",
+        "Cleric - Forge Domain (XGtE)",
+        "Warlock - Celestial Patron",
+        "Warlock - Fiend Patron"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Druid</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Warlock (Legacy) - The Celestial (Legacy)</p></li><li><p>Cleric - Light Domain</p></li><li><p>Cleric - Forge Domain (XGtE)</p></li><li><p>Warlock - Celestial Patron</p></li><li><p>Warlock - Fiend Patron</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 338",
+      "html": "<p>Player’s Handbook, pg. 338</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619107-wall-of-fire",
+      "html": "<p>https://www.dndbeyond.com/spells/2619107-wall-of-fire</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 4 Evocation (Druid, Sorcerer, Wizard)",
+        "Casting Time": "Action",
+        "Range": "120 feet",
+        "Components": "V, S, M (a piece of charcoal)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 4 Evocation (Druid, Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 120 feet</p> <p><strong>Components:</strong> V, S, M (a piece of charcoal)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Wall of Fire - Spells - D&D Beyond-39991bb12314c650dfb0bc9c4ada2419ea13e1b9abafc614c559758425484c86.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Wall of Fire - Spells - D&amp;D Beyond-39991bb12314c650dfb0bc9c4ada2419ea13e1b9abafc614c559758425484c86.html</p></li></ul>"
+    }
+  ]
+}

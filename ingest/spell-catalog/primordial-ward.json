@@ -1,0 +1,148 @@
+{
+  "id": "2395",
+  "slug": "primordial-ward",
+  "name": "Primordial Ward",
+  "storageFile": "primordial-ward.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "6",
+        "label": "6th"
+      },
+      "html": "<div> <div> Level </div> <div> 6th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Warding",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Warding </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You have resistance to acid, cold, fire, lightning, and thunder damage for the spell’s duration.",
+        "When you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage.",
+        "If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends."
+      ],
+      "html": "<div> <p>You have resistance to acid, cold, fire, lightning, and thunder damage for the spell’s duration.</p> <p>When you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage.</p> <p>If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Warding"
+      ],
+      "html": "<ul><li><p>Warding</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Druid"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Druid</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Elemental Evil Player's Companion, pg. 163",
+      "html": "<p>Elemental Evil Player&#x27;s Companion, pg. 163</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2395-primordial-ward",
+      "html": "<p>https://www.dndbeyond.com/spells/2395-primordial-ward</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    }
+  ]
+}

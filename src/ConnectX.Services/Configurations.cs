@@ -1,6 +1,7 @@
 using AutoMapper;
 using ConnectX.Ef;
 using ConnectX.MongoDb;
+using ConnectX.Services.DND.Catalogs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,12 +9,18 @@ namespace ConnectX.Services
 {
     public static class Configurations
     {
+        public static IServiceCollection AddSpellServices(this IServiceCollection services)
+        {
+            services.AddScoped<ISpellService, SpellService>();
+            return services;
+        }
+
         public static void ConfigureServices(this IServiceCollection services,
             IConfiguration configuration)
         {
             services.ConfigureRepository(configuration);
             services.ConfigureMongoDb(configuration);
-            services.AddScoped<CatalogsService>();
+            services.AddSpellServices();
 
             services.AddAutoMapper(x =>
             {

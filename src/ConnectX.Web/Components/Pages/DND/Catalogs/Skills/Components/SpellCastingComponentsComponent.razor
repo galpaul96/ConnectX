@@ -1,0 +1,17 @@
+@inherits SpellComponentView
+@if (!string.IsNullOrWhiteSpace(Text("text")))
+{
+    <div class="spell-metadata-field spell-slot-components"><dt>Components</dt><dd>
+        @Text("text")
+        @{ var material = SpellValue.Property(Value, "material"); }
+        @if (SpellValue.Flag(SpellValue.Property(material, "required")) == true)
+        {
+            @if (SpellValue.Text(SpellValue.Property(material, "description")) is { Length: > 0 } description)
+            { <p class="spell-detail-extra">Material: @description</p> }
+            @if (SpellValue.Flag(SpellValue.Property(material, "consumed")) is bool consumed)
+            { <p class="spell-detail-extra">Consumed: @(consumed ? "Yes" : "No")</p> }
+            @if (SpellValue.Text(SpellValue.Property(material, "costGp")) is { } cost)
+            { <p class="spell-detail-extra">Cost: @cost GP@(SpellValue.Flag(SpellValue.Property(material, "costIsMinimum")) == true ? " minimum" : "")</p> }
+        }
+    </dd></div>
+}

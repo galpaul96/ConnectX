@@ -1,0 +1,173 @@
+{
+  "id": "2619096",
+  "slug": "dispel-evil-and-good",
+  "name": "Dispel Evil and Good",
+  "storageFile": "dispel-evil-and-good.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<div> <div> Level </div> <div> 5th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "powdered silver and iron",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CHA Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CHA"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>CHA Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Charmed (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Charmed (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions.",
+        "Break Enchantment. As a Magic action, you touch a creature that is possessed by or has the Charmed or Frightened condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures.",
+        "Dismissal. As a Magic action, you target one creature you can see within 5 feet of you that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn’t there already. If they aren’t on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild.",
+        "* - (powdered silver and iron)"
+      ],
+      "html": "<div> <p>For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions.</p> <p><strong><em>Break Enchantment.</em></strong> As a <a>Magic</a> action, you touch a creature that is possessed by or has the <a>Charmed</a> or <a>Frightened</a> condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures.</p> <p><strong><em>Dismissal.</em></strong> As a <a>Magic</a> action, you target one creature you can see within 5 feet of you that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn’t there already. If they aren’t on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild.</p> <span>* - (powdered silver and iron)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Debuff"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Debuff</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Paladin (Legacy)",
+        "Cleric",
+        "Paladin"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Paladin (Legacy)</p></li><li><p>Cleric</p></li><li><p>Paladin</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 263",
+      "html": "<p>Player’s Handbook, pg. 263</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619096-dispel-evil-and-good",
+      "html": "<p>https://www.dndbeyond.com/spells/2619096-dispel-evil-and-good</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Abjuration (Cleric, Paladin)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S, M (powdered silver and iron)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 5 Abjuration (Cleric, Paladin)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (powdered silver and iron)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Dispel Evil and Good - Spells - D&D Beyond-6f814a19c441ee312da04c273992c6c0fcd9e57043c80d8bc73ad5801c8a52a9.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Dispel Evil and Good - Spells - D&amp;D Beyond-6f814a19c441ee312da04c273992c6c0fcd9e57043c80d8bc73ad5801c8a52a9.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

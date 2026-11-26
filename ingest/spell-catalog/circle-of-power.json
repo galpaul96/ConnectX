@@ -1,0 +1,170 @@
+{
+  "id": "2618970",
+  "slug": "circle-of-power",
+  "name": "Circle of Power",
+  "storageFile": "circle-of-power.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>5</p></dd><dt>label</dt><dd><p>5th</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self (30 ft. )",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": {
+          "shape": null,
+          "value": 30,
+          "unit": "ft"
+        }
+      },
+      "html": "<p>Self (30 ft. )</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 10 Minutes</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<p>Abjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Buff (...)",
+        "damageTypes": []
+      },
+      "html": "<p>Buff (...)</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Advantage on saving throws against spells and other magical effects. When an affected creature makes a saving throw against a spell or magical effect that allows a save to take only half damage, it takes no damage if it succeeds on the save."
+      ],
+      "html": "<p>An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Advantage on saving throws against spells and other magical effects. When an affected creature makes a saving throw against a spell or magical effect that allows a save to take only half damage, it takes no damage if it succeeds on the save.</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric",
+        "Paladin",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Cleric</p></li><li><p>Paladin</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618970-circle-of-power",
+      "html": "<p>https://www.dndbeyond.com/spells/2618970-circle-of-power</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Abjuration (Cleric, Paladin, Wizard)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V",
+        "Duration": "Concentration, up to 10 minutes"
+      },
+      "html": "<p><em>Level 5 Abjuration (Cleric, Paladin, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V</p> <p><strong>Duration:</strong> Concentration, up to 10 minutes</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Circle of Power - Spells - D&D Beyond-e30e1c804ec307580e646d8089ad19c40d815ef70f4c6bda208076b7082e43d3.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Circle of Power - Spells - D&amp;D Beyond-e30e1c804ec307580e646d8089ad19c40d815ef70f4c6bda208076b7082e43d3.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

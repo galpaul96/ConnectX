@@ -1,0 +1,175 @@
+{
+  "id": "2619072",
+  "slug": "counterspell",
+  "name": "Counterspell",
+  "storageFile": "counterspell.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Reaction *",
+        "kind": "reaction",
+        "value": 1,
+        "unit": "action",
+        "trigger": "which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components",
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Reaction * </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft.",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 60 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "S",
+        "verbal": false,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CON Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CON"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>CON Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Negation",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Negation </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn’t expended.",
+        "* - which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components"
+      ],
+      "html": "<div> <p>You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn’t expended.</p> <span>* - which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "* - which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components",
+      "html": "<p>* - which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components</p>",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Negation"
+      ],
+      "html": "<ul><li><p>Negation</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Sorcerer (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Sorcerer",
+        "Warlock",
+        "Wizard",
+        "Paladin - Oath of Redemption (XGtE)",
+        "Paladin - Oath of the Watchers (TCoE)",
+        "Paladin - Oath of Castigation"
+      ],
+      "html": "<ul><li><p>Sorcerer (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Sorcerer</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li><li><p>Paladin - Oath of Redemption (XGtE)</p></li><li><p>Paladin - Oath of the Watchers (TCoE)</p></li><li><p>Paladin - Oath of Castigation</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 258",
+      "html": "<p>Player’s Handbook, pg. 258</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619072-counterspell",
+      "html": "<p>https://www.dndbeyond.com/spells/2619072-counterspell</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Abjuration (Sorcerer, Warlock, Wizard)",
+        "Casting Time": "Reaction, which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components",
+        "Range": "60 feet",
+        "Components": "S",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 3 Abjuration (Sorcerer, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Reaction, which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components</p> <p><strong>Range:</strong> 60 feet</p> <p><strong>Components:</strong> S</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Counterspell - Spells - D&D Beyond-e045ed7be9bdf905f6fcd7d2db25a0c5cea5a27bd2a25172c3f0c54add4ac32b.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Counterspell - Spells - D&amp;D Beyond-e045ed7be9bdf905f6fcd7d2db25a0c5cea5a27bd2a25172c3f0c54add4ac32b.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

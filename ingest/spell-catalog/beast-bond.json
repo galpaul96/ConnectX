@@ -1,0 +1,158 @@
+{
+  "id": "2370",
+  "slug": "beast-bond",
+  "name": "Beast Bond",
+  "storageFile": "beast-bond.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Touch",
+        "kind": "touch",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Touch </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a bit of fur wrapped in a cloth",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 10 Minutes </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Buff (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Buff (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast’s Intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
+        "* - (a bit of fur wrapped in a cloth)"
+      ],
+      "html": "<div> <p>You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast’s Intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.</p> <span>* - (a bit of fur wrapped in a cloth)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Communication",
+        "Buff"
+      ],
+      "html": "<ul><li><p>Communication</p></li><li><p>Buff</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Ranger (Legacy)",
+        "Druid",
+        "Ranger"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Druid</p></li><li><p>Ranger</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Elemental Evil Player's Companion, pg. 150",
+      "html": "<p>Elemental Evil Player&#x27;s Companion, pg. 150</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2370-beast-bond",
+      "html": "<p>https://www.dndbeyond.com/spells/2370-beast-bond</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Beast Bond - Spells - D&D Beyond-a3639104e565e5198493f28b368357e59f04dd162ff6b5ae50ae220bc9afe42b.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Beast Bond - Spells - D&amp;D Beyond-a3639104e565e5198493f28b368357e59f04dd162ff6b5ae50ae220bc9afe42b.html</p></li></ul>"
+    }
+  ]
+}

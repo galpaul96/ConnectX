@@ -1,0 +1,187 @@
+{
+  "id": "2618872",
+  "slug": "fear",
+  "name": "Fear",
+  "storageFile": "fear.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self (30 ft.)",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": {
+          "shape": null,
+          "value": 30,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self <span>(30 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a white feather",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Illusion",
+      "html": "<div> <div> School </div> <div> Illusion </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>WIS Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Frightened",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Frightened </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Each creature in a 30-foot Cone must succeed on a Wisdom saving throw or drop whatever it is holding and have the Frightened condition for the duration.",
+        "A Frightened creature takes the Dash action and moves away from you by the safest route on each of its turns unless there is nowhere to move. If the creature ends its turn in a space where it doesn’t have line of sight to you, the creature makes a Wisdom saving throw. On a successful save, the spell ends on that creature.",
+        "* - (a white feather)"
+      ],
+      "html": "<div> <p>Each creature in a 30-foot <a>Cone</a> must succeed on a Wisdom saving throw or drop whatever it is holding and have the <a>Frightened</a> condition for the duration.</p> <p>A Frightened creature takes the <a>Dash</a> action and moves away from you by the safest route on each of its turns unless there is nowhere to move. If the creature ends its turn in a space where it doesn’t have line of sight to you, the creature makes a Wisdom saving throw. On a successful save, the spell ends on that creature.</p> <span>* - (a white feather)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Debuff"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Debuff</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Sorcerer (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Sorcerer",
+        "Warlock",
+        "Wizard",
+        "Paladin - Oath of Conquest (XGtE)",
+        "Ranger - Gloom Stalker",
+        "Ranger - Grim Harbinger",
+        "Sorcerer - Draconic Sorcery",
+        "Illrigger - Architect of Ruin",
+        "Cleric - Shadow Domain (BoET)",
+        "Druid - Circle of Shadows (BoET)"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li><li><p>Paladin - Oath of Conquest (XGtE)</p></li><li><p>Ranger - Gloom Stalker</p></li><li><p>Ranger - Grim Harbinger</p></li><li><p>Sorcerer - Draconic Sorcery</p></li><li><p>Illrigger - Architect of Ruin</p></li><li><p>Cleric - Shadow Domain (BoET)</p></li><li><p>Druid - Circle of Shadows (BoET)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 271",
+      "html": "<p>Player’s Handbook, pg. 271</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618872-fear",
+      "html": "<p>https://www.dndbeyond.com/spells/2618872-fear</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/704/illusion.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/704/illusion.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Illusion (Bard, Sorcerer, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S, M (a white feather)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 3 Illusion (Bard, Sorcerer, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (a white feather)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Fear - Spells - D&D Beyond-f8eac658d5c5b9f58c8cce5cbda48bf0cdc6b06f81432f49dba9cf02fe1fa8a4.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Fear - Spells - D&amp;D Beyond-f8eac658d5c5b9f58c8cce5cbda48bf0cdc6b06f81432f49dba9cf02fe1fa8a4.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

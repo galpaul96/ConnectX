@@ -1,0 +1,179 @@
+{
+  "id": "2619131",
+  "slug": "mislead",
+  "name": "Mislead",
+  "storageFile": "mislead.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<div> <div> Level </div> <div> 5th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "S",
+        "verbal": false,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Illusion",
+      "html": "<div> <div> School </div> <div> Illusion </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Invisible",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Invisible </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You gain the Invisible condition at the same time that an illusory double of you appears where you are standing. The double lasts for the duration, but the invisibility ends immediately after you make an attack roll, deal damage, or cast a spell.",
+        "As a Magic action, you can move the illusory double up to twice your Speed and make it gesture, speak, and behave in whatever way you choose. It is intangible and invulnerable.",
+        "You can see through its eyes and hear through its ears as if you were located where it is."
+      ],
+      "html": "<div> <p>You gain the <a>Invisible</a> condition at the same time that an illusory double of you appears where you are standing. The double lasts for the duration, but the invisibility ends immediately after you make an attack roll, deal damage, or cast a spell.</p> <p>As a <a>Magic</a> action, you can move the illusory double up to twice your Speed and make it gesture, speak, and behave in whatever way you choose. It is intangible and invulnerable.</p> <p>You can see through its eyes and hear through its ears as if you were located where it is.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Deception"
+      ],
+      "html": "<ul><li><p>Deception</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Warlock",
+        "Wizard",
+        "Warlock (Legacy) - The Many",
+        "Cleric - Twilight Domain (TCoE)",
+        "Druid - Circle of the Hive (HGtMH1)",
+        "Ranger - Fey Wanderer",
+        "Warlock - The Predator (HWT)",
+        "Warlock - The Many"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li><li><p>Warlock (Legacy) - The Many</p></li><li><p>Cleric - Twilight Domain (TCoE)</p></li><li><p>Druid - Circle of the Hive (HGtMH1)</p></li><li><p>Ranger - Fey Wanderer</p></li><li><p>Warlock - The Predator (HWT)</p></li><li><p>Warlock - The Many</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 299",
+      "html": "<p>Player’s Handbook, pg. 299</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619131-mislead",
+      "html": "<p>https://www.dndbeyond.com/spells/2619131-mislead</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/704/illusion.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/704/illusion.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Illusion (Bard, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "S",
+        "Duration": "Concentration, up to 1 hour"
+      },
+      "html": "<p><em>Level 5 Illusion (Bard, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> S</p> <p><strong>Duration:</strong> Concentration, up to 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Mislead - Spells - D&D Beyond-efd9edb0d970939b049bd79afd0f0cab94bae2d344fac00e38537437a42a77c4.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Mislead - Spells - D&amp;D Beyond-efd9edb0d970939b049bd79afd0f0cab94bae2d344fac00e38537437a42a77c4.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

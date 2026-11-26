@@ -2,6 +2,7 @@ using ConnectX.Web.Components;
 using ConnectX.Web.Components.Admin;
 using ConnectX.Web.Components.Account;
 using ConnectX.Web.Data;
+using ConnectX.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,9 +22,14 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddRazorComponents()
-            .AddInteractiveServerComponents();
+            .AddInteractiveServerComponents()
+            // Allow metadata for a multi-file selection; file streams retain their own 1 MB limit.
+            .AddHubOptions(options => options.MaximumReceiveMessageSize = 1024 * 1024);
 
         builder.Services.AddCascadingAuthenticationState();
+        ConnectX.Ef.Configuration.ConfigureRepository(builder.Services, builder.Configuration);
+        builder.Services.AddSpellServices();
+        builder.Services.AddScoped<ConnectX.Web.Components.Pages.DND.Catalogs.Skills.SpellUploadService>();
         builder.Services.AddAuthorization();
         builder.Services.AddScoped<IdentityRedirectManager>();
         builder.Services.AddScoped<IdentityUserAccessor>();

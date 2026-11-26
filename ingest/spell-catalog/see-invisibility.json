@@ -1,0 +1,179 @@
+{
+  "id": "2619011",
+  "slug": "see-invisibility",
+  "name": "See Invisibility",
+  "storageFile": "see-invisibility.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a pinch of talc",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Detection",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Detection </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "For the duration, you see creatures and objects that have the Invisible condition as if they were visible, and you can see into the Ethereal Plane. Creatures and objects there appear ghostly.",
+        "* - (a pinch of talc)"
+      ],
+      "html": "<div> <p>For the duration, you see creatures and objects that have the <a>Invisible</a> condition as if they were visible, and you can see into the Ethereal Plane. Creatures and objects there appear ghostly.</p> <span>* - (a pinch of talc)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Detection"
+      ],
+      "html": "<ul><li><p>Detection</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Bard",
+        "Sorcerer",
+        "Wizard",
+        "Artificer",
+        "Warlock (Legacy) - The Many",
+        "Cleric - Light Domain",
+        "Cleric - Twilight Domain (TCoE)",
+        "Paladin - Oath of the Watchers (TCoE)",
+        "Warlock - The Many"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li><li><p>Warlock (Legacy) - The Many</p></li><li><p>Cleric - Light Domain</p></li><li><p>Cleric - Twilight Domain (TCoE)</p></li><li><p>Paladin - Oath of the Watchers (TCoE)</p></li><li><p>Warlock - The Many</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 314",
+      "html": "<p>Player’s Handbook, pg. 314</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619011-see-invisibility",
+      "html": "<p>https://www.dndbeyond.com/spells/2619011-see-invisibility</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Divination (Bard, Sorcerer, Wizard)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S, M (a pinch of talc)",
+        "Duration": "1 hour"
+      },
+      "html": "<p><em>Level 2 Divination (Bard, Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (a pinch of talc)</p> <p><strong>Duration:</strong> 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/See Invisibility - Spells - D&D Beyond-c929eabae4e1440a459a5ffcddd61de91bdb71073b2f985b7f5a3793252937ce.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/See Invisibility - Spells - D&amp;D Beyond-c929eabae4e1440a459a5ffcddd61de91bdb71073b2f985b7f5a3793252937ce.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "id": "2618974",
+  "slug": "cloud-of-daggers",
+  "name": "Cloud of Daggers",
+  "storageFile": "cloud-of-daggers.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>2</p></dd><dt>label</dt><dd><p>2nd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft. (5 ft. )",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 5,
+          "unit": "ft"
+        }
+      },
+      "html": "<p>60 ft. (5 ft. )</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a sliver of glass",
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Minute</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<p>Conjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Slashing",
+        "damageTypes": [
+          "Slashing"
+        ]
+      },
+      "html": "<p>Slashing</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You conjure spinning daggers in a 5-foot Cube centered on a point within range. Each creature in that area takes 4d4 Slashing damage. A creature also takes this damage if it enters the Cube or ends its turn there or if the Cube moves into its space. A creature takes this damage only once per turn.",
+        "On your later turns, you can take a Magic action to teleport the Cube up to 30 feet.",
+        "Using a Higher-Level Spell Slot. The damage increases by 2d4 for each spell slot level above 2.",
+        "* - (a sliver of glass)"
+      ],
+      "html": "<div> <p>You conjure spinning daggers in a 5-foot Cube centered on a point within range. Each creature in that area takes 4d4 Slashing damage. A creature also takes this damage if it enters the Cube or ends its turn there or if the Cube moves into its space. A creature takes this damage only once per turn.</p> <p>On your later turns, you can take a Magic action to teleport the Cube up to 30 feet.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The damage increases by 2d4 for each spell slot level above 2.</p> <span>* - (a sliver of glass)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618974-cloud-of-daggers",
+      "html": "<p>https://www.dndbeyond.com/spells/2618974-cloud-of-daggers</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Conjuration (Bard, Sorcerer, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "60 feet",
+        "Components": "V, S, M (a sliver of glass)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 2 Conjuration (Bard, Sorcerer, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 60 feet</p> <p><strong>Components:</strong> V, S, M (a sliver of glass)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Cloud of Daggers - Spells - D&D Beyond-ae0a00c5dad2fd93d392b091a9b322977cf1e5dbe018659a2c106f87cc64ecfe.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Cloud of Daggers - Spells - D&amp;D Beyond-ae0a00c5dad2fd93d392b091a9b322977cf1e5dbe018659a2c106f87cc64ecfe.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

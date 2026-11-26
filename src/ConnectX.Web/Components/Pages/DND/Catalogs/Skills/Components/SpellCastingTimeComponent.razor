@@ -1,0 +1,9 @@
+@inherits SpellComponentView
+@if (!string.IsNullOrWhiteSpace(Text("text")))
+{
+    <div class="spell-metadata-field spell-slot-casting"><dt>Casting time</dt><dd>
+        @Text("text")
+        @if (Flag("ritual") == true) { <span class="spell-detail-badge">Ritual</span> }
+        @if (!string.IsNullOrWhiteSpace(Text("trigger"))) { <p class="spell-detail-extra">Trigger: @Text("trigger")</p> }
+    </dd></div>
+}

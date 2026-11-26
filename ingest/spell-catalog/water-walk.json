@@ -1,0 +1,178 @@
+{
+  "id": "2619207",
+  "slug": "water-walk",
+  "name": "Water Walk",
+  "storageFile": "water-walk.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action Ritual",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": true
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action <i>Ritual</i> </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a piece of cork",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Movement",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Movement </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures of your choice within range gain this ability for the duration.",
+        "An affected target must take a Bonus Action to pass from the liquid’s surface into the liquid itself and vice versa, but if the target falls into the liquid, the target passes through the surface into the liquid below.",
+        "* - (a piece of cork)"
+      ],
+      "html": "<div> <p>This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures of your choice within range gain this ability for the duration.</p> <p>An affected target must take a Bonus Action to pass from the liquid’s surface into the liquid itself and vice versa, but if the target falls into the liquid, the target passes through the surface into the liquid below.</p> <span>* - (a piece of cork)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Movement"
+      ],
+      "html": "<ul><li><p>Movement</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Druid (Legacy)",
+        "Ranger (Legacy)",
+        "Sorcerer (Legacy)",
+        "Artificer (Legacy)",
+        "Cleric",
+        "Druid",
+        "Ranger",
+        "Sorcerer",
+        "Artificer",
+        "Paladin - Oath of the River (OTTG)"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Cleric</p></li><li><p>Druid</p></li><li><p>Ranger</p></li><li><p>Sorcerer</p></li><li><p>Artificer</p></li><li><p>Paladin - Oath of the River (OTTG)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 340",
+      "html": "<p>Player’s Handbook, pg. 340</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619207-water-walk",
+      "html": "<p>https://www.dndbeyond.com/spells/2619207-water-walk</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Transmutation (Cleric, Druid, Ranger, Sorcerer)",
+        "Casting Time": "Action or Ritual",
+        "Range": "30 feet",
+        "Components": "V, S, M (a piece of cork)",
+        "Duration": "1 hour"
+      },
+      "html": "<p><em>Level 3 Transmutation (Cleric, Druid, Ranger, Sorcerer)</em></p><div> <p><strong>Casting Time:</strong> Action or Ritual</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a piece of cork)</p> <p><strong>Duration:</strong> 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Water Walk - Spells - D&D Beyond-cff950ab1bdf92f756cbf677b44273ee6f7ad33a34a62dfa0c8b6ea7b1707e3e.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Water Walk - Spells - D&amp;D Beyond-cff950ab1bdf92f756cbf677b44273ee6f7ad33a34a62dfa0c8b6ea7b1707e3e.html</p></li></ul>"
+    }
+  ]
+}

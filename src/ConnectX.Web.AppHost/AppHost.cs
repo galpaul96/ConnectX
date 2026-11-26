@@ -8,6 +8,7 @@ var postgres = builder.AddPostgres("pgsql")
     .WithDataVolume("connectx-postgres-data");
 
 var idDb = postgres.AddDatabase("web-identity");
+var catalogDb = postgres.AddDatabase("api-db");
 
 builder.AddProject<Projects.ConnectX_Web>("connectx-web")
     .WithExternalHttpEndpoints()
@@ -15,6 +16,8 @@ builder.AddProject<Projects.ConnectX_Web>("connectx-web")
     .WithReference(cache)
     .WaitFor(cache)
     .WithReference(idDb)
-    .WaitFor(idDb);
+    .WaitFor(idDb)
+    .WithReference(catalogDb)
+    .WaitFor(catalogDb);
 
 builder.Build().Run();

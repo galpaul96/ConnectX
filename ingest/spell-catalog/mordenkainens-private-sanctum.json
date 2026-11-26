@@ -1,0 +1,180 @@
+{
+  "id": "2619114",
+  "slug": "mordenkainens-private-sanctum",
+  "name": "Mordenkainen's Private Sanctum",
+  "storageFile": "mordenkainens-private-sanctum.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "4",
+        "label": "4th"
+      },
+      "html": "<div> <div> Level </div> <div> 4th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 10 Minutes </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft. (*)",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 120 ft. <span>(<i></i>*)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a thin sheet of lead",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "24 Hours",
+        "kind": "timed",
+        "value": 24,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 24 Hours </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Abjuration",
+      "html": "<div> <div> School </div> <div> Abjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You make an area within range magically secure. The area is a Cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration.",
+        "When you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties:",
+        "Sound can’t pass through the barrier at the edge of the warded area.",
+        "The barrier of the warded area appears dark and foggy, preventing vision (including Darkvision) through it.",
+        "Sensors created by Divination spells can’t appear inside the protected area or pass through the barrier at its perimeter.",
+        "Creatures in the area can’t be targeted by Divination spells.",
+        "Nothing can teleport into or out of the warded area.",
+        "Planar travel is blocked within the warded area.",
+        "Casting this spell on the same spot every day for 365 days makes the spell last until dispelled.",
+        "Using a Higher-Level Spell Slot. You can increase the size of the Cube by 100 feet for each spell slot level above 4.",
+        "* - (a thin sheet of lead)"
+      ],
+      "html": "<div> <p>You make an area within range magically secure. The area is a <a>Cube</a> that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration.</p> <p>When you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties:</p> <ul> <li>Sound can’t pass through the barrier at the edge of the warded area.</li> <li>The barrier of the warded area appears dark and foggy, preventing vision (including <a>Darkvision</a>) through it.</li> <li>Sensors created by Divination spells can’t appear inside the protected area or pass through the barrier at its perimeter.</li> <li>Creatures in the area can’t be targeted by Divination spells.</li> <li>Nothing can teleport into or out of the warded area.</li> <li>Planar travel is blocked within the warded area.</li> </ul> <p>Casting this spell on the same spot every day for 365 days makes the spell last until dispelled.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> You can increase the size of the Cube by 100 feet for each spell slot level above 4.</p> <span>* - (a thin sheet of lead)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Warding"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Warding</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Wizard",
+        "Artificer"
+      ],
+      "html": "<ul><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 301",
+      "html": "<p>Player’s Handbook, pg. 301</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619114-mordenkainens-private-sanctum",
+      "html": "<p>https://www.dndbeyond.com/spells/2619114-mordenkainens-private-sanctum</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/707/abjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/707/abjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 4 Abjuration (Wizard)",
+        "Casting Time": "10 minutes",
+        "Range": "120 feet",
+        "Components": "V, S, M (a thin sheet of lead)",
+        "Duration": "24 hours"
+      },
+      "html": "<p><em>Level 4 Abjuration (Wizard)</em></p><div> <p><strong>Casting Time:</strong> 10 minutes</p> <p><strong>Range:</strong> 120 feet</p> <p><strong>Components:</strong> V, S, M (a thin sheet of lead)</p> <p><strong>Duration:</strong> 24 hours</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Mordenkainen's Private Sanctum - Spells - D&D Beyond-cb2a3acb6afc7c838bb9f99c58d6ba2f3a1f29091b3b845c30b208e96aa891ce.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Mordenkainen&#x27;s Private Sanctum - Spells - D&amp;D Beyond-cb2a3acb6afc7c838bb9f99c58d6ba2f3a1f29091b3b845c30b208e96aa891ce.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

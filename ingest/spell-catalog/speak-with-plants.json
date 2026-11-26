@@ -1,0 +1,175 @@
+{
+  "id": "2619069",
+  "slug": "speak-with-plants",
+  "name": "Speak with Plants",
+  "storageFile": "speak-with-plants.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 10 Minutes </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Communication (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Communication (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You imbue plants in an immobile 30-foot Emanation with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands. You can question plants about events in the spell’s area within the past day, gaining information about creatures that have passed, weather, and other circumstances.",
+        "You can also turn Difficult Terrain caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into Difficult Terrain that lasts for the duration.",
+        "The spell doesn’t enable plants to uproot themselves and move about, but they can move their branches, tendrils, and stalks for you.",
+        "If a Plant creature is in the area, you can communicate with it as if you shared a common language."
+      ],
+      "html": "<div> <p>You imbue plants in an immobile 30-foot <a>Emanation</a> with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands. You can question plants about events in the spell’s area within the past day, gaining information about creatures that have passed, weather, and other circumstances.</p> <p>You can also turn <a>Difficult Terrain</a> caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into Difficult Terrain that lasts for the duration.</p> <p>The spell doesn’t enable plants to uproot themselves and move about, but they can move their branches, tendrils, and stalks for you.</p> <p>If a Plant creature is in the area, you can communicate with it as if you shared a common language.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Communication",
+        "Social"
+      ],
+      "html": "<ul><li><p>Communication</p></li><li><p>Social</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Druid (Legacy)",
+        "Ranger (Legacy)",
+        "Bard",
+        "Druid",
+        "Ranger"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Bard</p></li><li><p>Druid</p></li><li><p>Ranger</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 318",
+      "html": "<p>Player’s Handbook, pg. 318</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619069-speak-with-plants",
+      "html": "<p>https://www.dndbeyond.com/spells/2619069-speak-with-plants</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Transmutation (Bard, Druid, Ranger)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S",
+        "Duration": "10 minutes"
+      },
+      "html": "<p><em>Level 3 Transmutation (Bard, Druid, Ranger)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> 10 minutes</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Speak with Plants - Spells - D&D Beyond-5da89ef831e10ba1aef2d06b4617efcb219f5f4aa144432e825335f4b0a6cfd2.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Speak with Plants - Spells - D&amp;D Beyond-5da89ef831e10ba1aef2d06b4617efcb219f5f4aa144432e825335f4b0a6cfd2.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+@inherits SpellComponentView
+@if (!string.IsNullOrWhiteSpace(Text("text")))
+{
+    <div class="spell-metadata-field spell-slot-range"><dt>Range / area</dt><dd>@Text("text")
+        @if (SpellValue.Property(Value, "area") is var area && area.ValueKind == JsonValueKind.Object)
+        {
+            <p class="spell-detail-extra">Area: @SpellValue.Text(SpellValue.Property(area, "value")) @SpellValue.Text(SpellValue.Property(area, "unit")) @SpellValue.Text(SpellValue.Property(area, "shape"))</p>
+        }
+    </dd></div>
+}

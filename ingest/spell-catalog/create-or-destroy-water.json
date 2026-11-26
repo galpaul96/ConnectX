@@ -1,0 +1,178 @@
+{
+  "id": "2619074",
+  "slug": "create-or-destroy-water",
+  "name": "Create or Destroy Water",
+  "storageFile": "create-or-destroy-water.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft. (30 ft.)",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 30,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. <span>(30 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a mix of water and sand",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Creation",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Creation </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You do one of the following:",
+        "Create Water. You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot Cube within range, extinguishing exposed flames there.",
+        "Destroy Water. You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot Cube within range.",
+        "Using a Higher-Level Spell Slot. You create or destroy 10 additional gallons of water, or the size of the Cube increases by 5 feet, for each spell slot level above 1.",
+        "* - (a mix of water and sand)"
+      ],
+      "html": "<div> <p>You do one of the following:</p> <p><strong>Create Water.</strong> You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot <a>Cube</a> within range, extinguishing exposed flames there.</p> <p><strong>Destroy Water.</strong> You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot Cube within range.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> You create or destroy 10 additional gallons of water, or the size of the Cube increases by 5 feet, for each spell slot level above 1.</p> <span>* - (a mix of water and sand)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Creation"
+      ],
+      "html": "<ul><li><p>Creation</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Cleric",
+        "Druid",
+        "Warlock - The Fathomless (TCoE)",
+        "Paladin - Oath of the Open Sea (TCSR)"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Cleric</p></li><li><p>Druid</p></li><li><p>Warlock - The Fathomless (TCoE)</p></li><li><p>Paladin - Oath of the Open Sea (TCSR)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 258",
+      "html": "<p>Player’s Handbook, pg. 258</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619074-create-or-destroy-water",
+      "html": "<p>https://www.dndbeyond.com/spells/2619074-create-or-destroy-water</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Transmutation (Cleric, Druid)",
+        "Casting Time": "Action",
+        "Range": "30 feet",
+        "Components": "V, S, M (a mix of water and sand)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 1 Transmutation (Cleric, Druid)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a mix of water and sand)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Create or Destroy Water - Spells - D&D Beyond-c6199873e6f1c07f12d1aaa75dd3636a24a11c558beef03c1a3571adb211b61c.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Create or Destroy Water - Spells - D&amp;D Beyond-c6199873e6f1c07f12d1aaa75dd3636a24a11c558beef03c1a3571adb211b61c.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

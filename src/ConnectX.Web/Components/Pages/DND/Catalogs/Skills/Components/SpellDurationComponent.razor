@@ -1,0 +1,9 @@
+@inherits SpellComponentView
+@if (!string.IsNullOrWhiteSpace(Text("text")))
+{
+    <div class="spell-metadata-field spell-slot-duration"><dt>Duration</dt><dd>
+        @Text("text")
+        @if (Flag("concentration") == true) { <span class="spell-detail-badge">Concentration</span> }
+        @if (!string.IsNullOrWhiteSpace(Text("endCondition"))) { <p class="spell-detail-extra">Ends: @Text("endCondition")</p> }
+    </dd></div>
+}

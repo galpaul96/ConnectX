@@ -1,0 +1,177 @@
+{
+  "id": "2618978",
+  "slug": "color-spray",
+  "name": "Color Spray",
+  "storageFile": "color-spray.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self (15 ft.)",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": {
+          "shape": null,
+          "value": 15,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self <span>(15 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a pinch of colorful sand",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Illusion",
+      "html": "<div> <div> School </div> <div> Illusion </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CON Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CON"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>CON Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Blinded",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Blinded </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You launch a dazzling array of flashing, colorful light. Each creature in a 15-foot Cone originating from you must succeed on a Constitution saving throw or have the Blinded condition until the end of your next turn.",
+        "* - (a pinch of colorful sand)"
+      ],
+      "html": "<div> <p>You launch a dazzling array of flashing, colorful light. Each creature in a 15-foot <a>Cone</a> originating from you must succeed on a Constitution saving throw or have the <a>Blinded</a> condition until the end of your next turn.</p> <span>* - (a pinch of colorful sand)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control"
+      ],
+      "html": "<ul><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Sorcerer",
+        "Wizard",
+        "Illrigger - Architect of Ruin"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Illrigger - Architect of Ruin</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 251",
+      "html": "<p>Player’s Handbook, pg. 251</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618978-color-spray",
+      "html": "<p>https://www.dndbeyond.com/spells/2618978-color-spray</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/704/illusion.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/704/illusion.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Illusion (Bard, Sorcerer, Wizard)",
+        "Casting Time": "Action",
+        "Range": "Self",
+        "Components": "V, S, M (a pinch of colorful sand)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 1 Illusion (Bard, Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (a pinch of colorful sand)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Color Spray - Spells - D&D Beyond-47d1ff7109b36ef8e8015ad4d4756ffe631dea295cff4b20a987f6a4bf3061a7.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Color Spray - Spells - D&amp;D Beyond-47d1ff7109b36ef8e8015ad4d4756ffe631dea295cff4b20a987f6a4bf3061a7.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-using ConnectX.Domain.Entities.Catalogs.Spells;
+using ConnectX.Domain.Entities.DND.Catalogs.Spells;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System.Reflection;
@@ -9,7 +9,7 @@ namespace ConnectX.Ef
         public EfContext(DbContextOptions<EfContext> options)
             : base(options) { }
 
-        public DbSet<Spell> Spells;
+        public DbSet<Spell> Spells => Set<Spell>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

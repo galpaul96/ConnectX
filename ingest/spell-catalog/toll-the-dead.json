@@ -1,0 +1,169 @@
+{
+  "id": "2619188",
+  "slug": "toll-the-dead",
+  "name": "Toll the Dead",
+  "storageFile": "toll-the-dead.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "Cantrip",
+        "label": "Cantrip"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>Cantrip</p></dd><dt>label</dt><dd><p>Cantrip</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft.",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>60 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>Instantaneous</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Necromancy",
+      "html": "<p>Necromancy</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<p>WIS Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Necrotic",
+        "damageTypes": [
+          "Necrotic"
+        ]
+      },
+      "html": "<p>Necrotic</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You point at one creature you can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take 1d8 Necrotic damage. If the target is missing any of its Hit Points, it instead takes 1d12 Necrotic damage.",
+        "Cantrip Upgrade. The damage increases by one die when you reach levels 5 (2d8 or 2d12), 11 (3d8 or 3d12), and 17 (4d8 or 4d12)."
+      ],
+      "html": "<p>You point at one creature you can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take 1d8 Necrotic damage. If the target is missing any of its Hit Points, it instead takes 1d12 Necrotic damage.</p> <p>Cantrip Upgrade. The damage increases by one die when you reach levels 5 (2d8 or 2d12), 11 (3d8 or 3d12), and 17 (4d8 or 4d12).</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric",
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Cleric</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619188-toll-the-dead",
+      "html": "<p>https://www.dndbeyond.com/spells/2619188-toll-the-dead</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Necromancy Cantrip (Cleric, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "60 feet",
+        "Components": "V, S",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Necromancy Cantrip (Cleric, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 60 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Toll the Dead - Spells - D&D Beyond-00867765a1f52ed1dfa4d6b2013247c15c41b2f26908e883229f80b2f885dad0.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Toll the Dead - Spells - D&amp;D Beyond-00867765a1f52ed1dfa4d6b2013247c15c41b2f26908e883229f80b2f885dad0.html</p></li></ul>"
+    }
+  ]
+}

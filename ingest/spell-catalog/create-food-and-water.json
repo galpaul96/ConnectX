@@ -1,0 +1,175 @@
+{
+  "id": "2619073",
+  "slug": "create-food-and-water",
+  "name": "Create Food and Water",
+  "storageFile": "create-food-and-water.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<div> <div> School </div> <div> Conjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Creation",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Creation </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You create 45 pounds of food and 30 gallons of fresh water on the ground or in containers within range—both useful in fending off the hazards of malnutrition and dehydration. The food is bland but nourishing and looks like a food of your choice, and the water is clean. The food spoils after 24 hours if uneaten."
+      ],
+      "html": "<div> <p>You create 45 pounds of food and 30 gallons of fresh water on the ground or in containers within range—both useful in fending off the hazards of <a>malnutrition</a> and <a>dehydration</a>. The food is bland but nourishing and looks like a food of your choice, and the water is clean. The food spoils after 24 hours if uneaten.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Creation"
+      ],
+      "html": "<ul><li><p>Creation</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Paladin (Legacy)",
+        "Artificer (Legacy)",
+        "Cleric",
+        "Paladin",
+        "Artificer",
+        "Paladin - Oath of the Harvest (HGtMH1)",
+        "Paladin - Oath of Revelry",
+        "Warlock - The Genie (TCoE)",
+        "Cleric - Festus Domain"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Paladin (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Cleric</p></li><li><p>Paladin</p></li><li><p>Artificer</p></li><li><p>Paladin - Oath of the Harvest (HGtMH1)</p></li><li><p>Paladin - Oath of Revelry</p></li><li><p>Warlock - The Genie (TCoE)</p></li><li><p>Cleric - Festus Domain</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 258",
+      "html": "<p>Player’s Handbook, pg. 258</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619073-create-food-and-water",
+      "html": "<p>https://www.dndbeyond.com/spells/2619073-create-food-and-water</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/708/conjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/708/conjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Conjuration (Cleric, Paladin)",
+        "Casting Time": "Action",
+        "Range": "30 feet",
+        "Components": "V, S",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 3 Conjuration (Cleric, Paladin)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Create Food and Water - Spells - D&D Beyond-67c7894eaa3b63f764a0b9b9c2244eaf20a57dcef2c766666ae24d678e7949be.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Create Food and Water - Spells - D&amp;D Beyond-67c7894eaa3b63f764a0b9b9c2244eaf20a57dcef2c766666ae24d678e7949be.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

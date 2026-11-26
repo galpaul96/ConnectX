@@ -1,0 +1,161 @@
+{
+  "id": "2391",
+  "slug": "magic-stone",
+  "name": "Magic Stone",
+  "storageFile": "magic-stone.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "Cantrip",
+        "label": "Cantrip"
+      },
+      "html": "<div> <div> Level </div> <div> Cantrip </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Bonus Action",
+        "kind": "bonus_action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Bonus Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Touch",
+        "kind": "touch",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Touch </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "Ranged",
+        "kind": "attack",
+        "attackType": "ranged",
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>Ranged</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Bludgeoning",
+        "damageTypes": [
+          "Bludgeoning"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Bludgeoning </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You touch one to three pebbles and imbue them with magic. You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a sling. If thrown, it has a range of 60 feet. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier, not the attacker’s, to the attack roll. On a hit, the target takes bludgeoning damage equal to 1d6 + your spellcasting ability modifier. Hit or miss, the spell then ends on the stone.",
+        "If you cast this spell again, the spell ends early on any pebbles still affected by it."
+      ],
+      "html": "<div> <p>You touch one to three pebbles and imbue them with magic. You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a sling. If thrown, it has a range of 60 feet. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier, not the attacker’s, to the attack roll. On a hit, the target takes bludgeoning damage equal to 1d6 + your spellcasting ability modifier. Hit or miss, the spell then ends on the stone.</p> <p>If you cast this spell again, the spell ends early on any pebbles still affected by it.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage"
+      ],
+      "html": "<ul><li><p>Damage</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Warlock (Legacy)",
+        "Artificer (Legacy)",
+        "Druid",
+        "Warlock",
+        "Artificer"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Druid</p></li><li><p>Warlock</p></li><li><p>Artificer</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Elemental Evil Player's Companion, pg. 160",
+      "html": "<p>Elemental Evil Player&#x27;s Companion, pg. 160</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2391-magic-stone",
+      "html": "<p>https://www.dndbeyond.com/spells/2391-magic-stone</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Magic Stone - Spells - D&D Beyond-80646ad69afb44ba261de358464defa3a19a0d720b9ba457f92f4b6326a2165d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Magic Stone - Spells - D&amp;D Beyond-80646ad69afb44ba261de358464defa3a19a0d720b9ba457f92f4b6326a2165d.html</p></li></ul>"
+    }
+  ]
+}

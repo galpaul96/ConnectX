@@ -1,0 +1,184 @@
+{
+  "id": "3033813",
+  "slug": "arrow-of-the-veilwood",
+  "name": "🏹 Arrow of the Veilwood",
+  "storageFile": "arrow-of-the-veilwood.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "4",
+        "label": "4th"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>4</p></dd><dt>label</dt><dd><p>4th</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self 15 ft. ( )",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Self 15 ft. ( )</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Round",
+        "kind": "timed",
+        "value": 1,
+        "unit": "round",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Round</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<p>Conjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<p>WIS Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Bludgeoning",
+        "damageTypes": [
+          "Bludgeoning"
+        ]
+      },
+      "html": "<p>Bludgeoning</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "🏹 Arrow of the Veilwood",
+        "4th-level conjuration (Veilwood Archery)",
+        "Casting Time: 1 action",
+        "Range: Self (15-foot line)",
+        "Components: V, S, M (a carved Veilwood feather and a drop of moonlit dew)",
+        "Duration: 1 round",
+        "Saving Throw: Wisdom save",
+        "Damage Type: Force",
+        "Classes: Veilwood Ranger, VeilWood Druid, Veilwood Sorcerer, Veilwood Rogue (Veilwood lineage or subclass)",
+        "🌿 Description:",
+        "You conjure a spectral arrow forged from the ancient magic of the Veilwood, infused with the will of the forest and the precision of elven archery. The arrow launches in a straight line 15 feet long and 5 feet wide, piercing through enemies and echoing with the whisper of leaves.",
+        "Each creature in the line must make a Wisdom saving throw. On a failed save, the creature takes 6d8 force damage and is pushed 10 feet away from you as if struck by a gust of ethereal wind. On a successful save, the creature takes half damage and is not pushed.",
+        "If the arrow passes through a space occupied by natural foliage, it leaves behind a shimmering trail of Veilwood energy. Until the start of your next turn, allies who move through this trail gain advantage on Dexterity saving throws and +10 feet of movement speed.",
+        "🌙 At Higher Levels",
+        "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+        "🧝‍♂️ Lore",
+        "The Arrow of the Veilwood is a sacred technique taught only to those who have earned the trust of the forest spirits. Tharion Veyrhalas, last Warden of the Moonshade Glade, was said to have crafted this spell after meditating beneath the Whispering Tree for seven nights. It is not merely a weapon—it is the forest’s judgment.",
+        "🔼 Scaling at Higher Levels",
+        "To keep the spell relevant as you level up, here’s how it scales:",
+        "Damage Increase:",
+        "When cast using a spell slot of 5th level or higher, the spell deals +1d8 force damage per slot level above 4th.",
+        "Spell Slot Level Damage",
+        "4th 6d8",
+        "5th 7d8",
+        "6th 8d8",
+        "7th 9d8",
+        "8th 10d8",
+        "9th 11d8",
+        "Optional Add-on (Homebrew Flavor):",
+        "At 6th level or higher, you could add:",
+        "Disadvantage on next attack roll for targets hit",
+        "Trail lasts 2 rounds instead of 1",
+        "These are optional, but they can add more Veilwood mystique and strategic value.",
+        "* - (A carved Veilwood feather and a drop of moonlit dew)"
+      ],
+      "html": "<div> <p> </p><p><span><strong>🏹 Arrow of the Veilwood</strong></span></p> <p><strong>4th-level conjuration (Veilwood Archery)</strong><br> <strong>Casting Time:</strong> 1 action<br> <strong>Range:</strong> Self (15-foot line)<br> <strong>Components:</strong> V, S, M (a carved Veilwood feather and a drop of moonlit dew)<br> <strong>Duration:</strong> 1 round<br> <strong>Saving Throw:</strong> Wisdom save<br> <strong>Damage Type:</strong> Force<br> <strong>Classes:</strong> Veilwood Ranger, VeilWood Druid, Veilwood Sorcerer, Veilwood Rogue (Veilwood lineage or subclass)<br><br><span><strong>🌿 Description:</strong></span><br><br>You conjure a spectral arrow forged from the ancient magic of the Veilwood, infused with the will of the forest and the precision of elven archery. The arrow launches in a straight line 15 feet long and 5 feet wide, piercing through enemies and echoing with the whisper of leaves.<br>Each creature in the line must make a Wisdom saving throw. On a failed save, the creature takes 6d8 force damage and is pushed 10 feet away from you as if struck by a gust of ethereal wind. On a successful save, the creature takes half damage and is not pushed.<br>If the arrow passes through a space occupied by natural foliage, it leaves behind a shimmering trail of Veilwood energy. Until the start of your next turn, allies who move through this trail gain advantage on Dexterity saving throws and +10 feet of movement speed.<br><br><span><strong>🌙 At Higher Levels</strong></span><br><br>When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.<br><br><span><strong>🧝‍♂️ Lore<br></strong></span><br>The Arrow of the Veilwood is a sacred technique taught only to those who have earned the trust of the forest spirits. Tharion Veyrhalas, last Warden of the Moonshade Glade, was said to have crafted this spell after meditating beneath the Whispering Tree for seven nights. It is not merely a weapon—it is the forest’s judgment.<br><br></p> <hr> <h2>🔼 Scaling at Higher Levels</h2> <p>To keep the spell relevant as you level up, here’s how it scales:</p> <ul> <li> <p><strong>Damage Increase:</strong><br> When cast using a spell slot of <strong>5th level or higher</strong>, the spell deals <strong>+1d8 force damage</strong> per slot level above 4th.</p> <table> <thead> <tr> <th>Spell Slot Level</th> <th>Damage</th> </tr> </thead> <tbody> <tr> <td>4th</td> <td>6d8</td> </tr> <tr> <td>5th</td> <td>7d8</td> </tr> <tr> <td>6th</td> <td>8d8</td> </tr> <tr> <td>7th</td> <td>9d8</td> </tr> <tr> <td>8th</td> <td>10d8</td> </tr> <tr> <td>9th</td> <td>11d8</td> </tr> </tbody> </table> </li> <li> <p><strong>Optional Add-on (Homebrew Flavor):</strong><br> At <strong>6th level or higher</strong>, you could add:</p> <ul> <li><strong>Disadvantage on next attack roll</strong> for targets hit</li> <li><strong>Trail lasts 2 rounds instead of 1</strong></li> </ul> </li> </ul> <p>These are optional, but they can add more Veilwood mystique and strategic value.</p> <hr> <p> </p> <p><br><br></p> <p> </p> <p> </p> <span>* - (A carved Veilwood feather and a drop of moonlit dew)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3033813-arrow-of-the-veilwood",
+      "html": "<p>https://www.dndbeyond.com/spells/3033813-arrow-of-the-veilwood</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/🏹 Arrow of the Veilwood - Spells - Homebrew - D&D Beyond-9b33ec0b534cad81b817bb2aa8b38c624808430808ad0f6d1d3303a47a33f092.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/🏹 Arrow of the Veilwood - Spells - Homebrew - D&amp;D Beyond-9b33ec0b534cad81b817bb2aa8b38c624808430808ad0f6d1d3303a47a33f092.html</p></li></ul>"
+    }
+  ]
+}

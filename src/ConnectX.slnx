@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="../tests/ConnectX.Spells.Tests/ConnectX.Spells.Tests.csproj" />
   <Project Path="ConnectX.Domain/ConnectX.Domain.csproj" Id="68bc9d44-a4de-4aae-9701-5358554d9885" />
   <Project Path="ConnectX.Ef/ConnectX.Ef.csproj" />
   <Project Path="ConnectX.MongoDb/ConnectX.MongoDb.csproj" />

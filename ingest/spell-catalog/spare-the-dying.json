@@ -1,0 +1,173 @@
+{
+  "id": "2619067",
+  "slug": "spare-the-dying",
+  "name": "Spare the Dying",
+  "storageFile": "spare-the-dying.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "Cantrip",
+        "label": "Cantrip"
+      },
+      "html": "<div> <div> Level </div> <div> Cantrip </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "15 ft.",
+        "kind": "distance",
+        "distanceValue": 15,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 15 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Necromancy",
+      "html": "<div> <div> School </div> <div> Necromancy </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Healing",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Healing </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Choose a creature within range that has 0 Hit Points and isn’t dead. The creature becomes Stable.",
+        "Cantrip Upgrade. The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet)."
+      ],
+      "html": "<div> <p>Choose a creature within range that has 0 Hit Points and isn’t <a>dead</a>. The creature becomes <a>Stable</a>.</p> <p><strong><em>Cantrip Upgrade.</em></strong> The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet).</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Healing"
+      ],
+      "html": "<ul><li><p>Healing</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Druid (Legacy)",
+        "Artificer (Legacy)",
+        "Cleric",
+        "Druid",
+        "Artificer",
+        "Fighter - Bonesmith"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Cleric</p></li><li><p>Druid</p></li><li><p>Artificer</p></li><li><p>Fighter - Bonesmith</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 318",
+      "html": "<p>Player’s Handbook, pg. 318</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619067-spare-the-dying",
+      "html": "<p>https://www.dndbeyond.com/spells/2619067-spare-the-dying</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/720/necromancy.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/720/necromancy.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Necromancy Cantrip (Cleric, Druid)",
+        "Casting Time": "Action",
+        "Range": "15 feet",
+        "Components": "V, S",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Necromancy Cantrip (Cleric, Druid)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 15 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spare the Dying - Spells - D&D Beyond-805d896df997d237f287e7058cf5edebb170dda9095d7ebde135312e54ef3e25.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spare the Dying - Spells - D&amp;D Beyond-805d896df997d237f287e7058cf5edebb170dda9095d7ebde135312e54ef3e25.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

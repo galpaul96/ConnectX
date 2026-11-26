@@ -1,0 +1,164 @@
+{
+  "id": "2407",
+  "slug": "warding-wind",
+  "name": "Warding Wind",
+  "storageFile": "warding-wind.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self (10 ft.)",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": {
+          "shape": null,
+          "value": 10,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self <span>(10 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 10 Minutes </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Deafened",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Deafened </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell’s duration.",
+        "The wind has the following effects:",
+        "It deafens you and other creatures in its area.",
+        "It extinguishes unprotected flames in its area that are torch-sized or smaller.",
+        "It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
+        "The area is difficult terrain for creatures other than you.",
+        "The attack rolls of ranged weapon attacks have disadvantage if the attacks pass in or out of the wind."
+      ],
+      "html": "<div> <p>A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell’s duration.</p> <p>The wind has the following effects:</p> <ul> <li>It deafens you and other creatures in its area.</li> <li>It extinguishes unprotected flames in its area that are torch-sized or smaller.</li> <li>It hedges out vapor, gas, and fog that can be dispersed by strong wind.</li> <li>The area is difficult terrain for creatures other than you.</li> <li>The attack rolls of ranged weapon attacks have disadvantage if the attacks pass in or out of the wind.</li> </ul> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Debuff",
+        "Warding"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Debuff</p></li><li><p>Warding</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Druid (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Druid",
+        "Sorcerer",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Druid</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Elemental Evil Player's Companion, pg. 170",
+      "html": "<p>Elemental Evil Player&#x27;s Companion, pg. 170</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2407-warding-wind",
+      "html": "<p>https://www.dndbeyond.com/spells/2407-warding-wind</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    }
+  ]
+}

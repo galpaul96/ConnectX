@@ -1,0 +1,153 @@
+{
+  "id": "3217612",
+  "slug": "domain-expansion-donkey-enlargement",
+  "name": "𝓓𝓸𝓶𝓪𝓲𝓷 𝓔𝔁𝓹𝓪𝓷𝓼𝓲𝓸𝓷: 𝓓𝓸𝓷𝓴𝓮𝔂 𝓔𝓷𝓵𝓪𝓻𝓰𝓮𝓶𝓮𝓷𝓽 🫏",
+  "storageFile": "domain-expansion-donkey-enlargement.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "9",
+        "label": "9th"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>9</p></dd><dt>label</dt><dd><p>9th</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "100 ft. ( *)",
+        "kind": "distance",
+        "distanceValue": 100,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>100 ft. ( *)</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>Instantaneous</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<p>Conjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<p>DEX Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Bludgeoning (...)",
+        "damageTypes": [
+          "Bludgeoning"
+        ]
+      },
+      "html": "<p>Bludgeoning (...)</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "A sphere of energy extends about 100 feet covering every terrain. Any creature inside the sphere is unable to see out of it, and any creature outside may not see in. Inside the sphere ENORMOUS donkey plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 20d6 thunder damage and 20d6 bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one massive donkey is affected only once.",
+        "The spell damages objects in the area caught in the sphere. A creature may use its movement to escape the sphere. However upon removing themselves from the sphere the creature must make a Dexterity saving throw (DC = 16) or take 5d12 emotional damage (Force damage)",
+        "* - (A small tuft of donkey fur)"
+      ],
+      "html": "<div> <p>A sphere of energy extends about 100 feet covering every terrain. Any creature inside the sphere is unable to see out of it, and any creature outside may not see in. Inside the sphere ENORMOUS donkey plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 20d6 thunder damage and 20d6 bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one massive donkey is affected only once.</p> <p>The spell damages objects in the area caught in the sphere. A creature may use its movement to escape the sphere. However upon removing themselves from the sphere the creature must make a Dexterity saving throw (DC = 16) or take 5d12 emotional damage (Force damage)</p> <span>* - (A small tuft of donkey fur)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3217612-domain-expansion-donkey-enlargement",
+      "html": "<p>https://www.dndbeyond.com/spells/3217612-domain-expansion-donkey-enlargement</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/𝓓𝓸𝓶𝓪𝓲𝓷 𝓔𝔁𝓹𝓪𝓷𝓼𝓲𝓸𝓷- 𝓓𝓸𝓷𝓴𝓮𝔂 𝓔𝓷𝓵𝓪𝓻𝓰𝓮𝓶𝓮𝓷𝓽 🫏 - Spells - Homebrew - D&D Beyond-a7b89658c50b67a93889489bcc8a1fd70c80c9058188689ff72b463b464651ed.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/𝓓𝓸𝓶𝓪𝓲𝓷 𝓔𝔁𝓹𝓪𝓷𝓼𝓲𝓸𝓷- 𝓓𝓸𝓷𝓴𝓮𝔂 𝓔𝓷𝓵𝓪𝓻𝓰𝓮𝓶𝓮𝓷𝓽 🫏 - Spells - Homebrew - D&amp;D Beyond-a7b89658c50b67a93889489bcc8a1fd70c80c9058188689ff72b463b464651ed.html</p></li></ul>"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "id": "2619075",
+  "slug": "spike-growth",
+  "name": "Spike Growth",
+  "storageFile": "spike-growth.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "150 ft. (20 ft.)",
+        "kind": "distance",
+        "distanceValue": 150,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 20,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 150 ft. <span>(20 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "seven thorns",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 10 Minutes </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "The ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes Difficult Terrain for the duration. When a creature moves into or within the area, it takes 2d4 Piercing damage for every 5 feet it travels.",
+        "The transformation of the ground is camouflaged to look natural. Any creature that can’t see the area when the spell is cast must take a Search action and succeed on a Wisdom (Perception or Survival) check against your spell save DC to recognize the terrain as hazardous before entering it.",
+        "* - (seven thorns)"
+      ],
+      "html": "<div> <p>The ground in a 20-foot-radius <a>Sphere</a> centered on a point within range sprouts hard spikes and thorns. The area becomes <a>Difficult Terrain</a> for the duration. When a creature moves into or within the area, it takes 2d4 Piercing damage for every 5 feet it travels.</p> <p>The transformation of the ground is camouflaged to look natural. Any creature that can’t see the area when the spell is cast must take a <a>Search</a> action and succeed on a Wisdom (<a>Perception</a> or <a>Survival</a>) check against your spell save DC to recognize the terrain as hazardous before entering it.</p> <span>* - (seven thorns)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage",
+        "Control"
+      ],
+      "html": "<ul><li><p>Damage</p></li><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid (Legacy)",
+        "Ranger (Legacy)",
+        "Druid",
+        "Ranger",
+        "Cleric - Nature Domain (PHB)",
+        "Warlock - The Genie (TCoE)",
+        "Warlock - Horned King Patron"
+      ],
+      "html": "<ul><li><p>Druid (Legacy)</p></li><li><p>Ranger (Legacy)</p></li><li><p>Druid</p></li><li><p>Ranger</p></li><li><p>Cleric - Nature Domain (PHB)</p></li><li><p>Warlock - The Genie (TCoE)</p></li><li><p>Warlock - Horned King Patron</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 318",
+      "html": "<p>Player’s Handbook, pg. 318</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619075-spike-growth",
+      "html": "<p>https://www.dndbeyond.com/spells/2619075-spike-growth</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Transmutation (Druid, Ranger)",
+        "Casting Time": "Action",
+        "Range": "150 feet",
+        "Components": "V, S, M (seven thorns)",
+        "Duration": "Concentration, up to 10 minutes"
+      },
+      "html": "<p><em>Level 2 Transmutation (Druid, Ranger)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 150 feet</p> <p><strong>Components:</strong> V, S, M (seven thorns)</p> <p><strong>Duration:</strong> Concentration, up to 10 minutes</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Spike Growth - Spells - D&D Beyond-4535ea8c545225d1f3e92ddc0a2db576b61af65ef2979430d6c1f199261decbd.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Spike Growth - Spells - D&amp;D Beyond-4535ea8c545225d1f3e92ddc0a2db576b61af65ef2979430d6c1f199261decbd.html</p></li></ul>"
+    }
+  ]
+}

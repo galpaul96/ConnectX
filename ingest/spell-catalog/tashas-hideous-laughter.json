@@ -1,0 +1,178 @@
+{
+  "id": "2619132",
+  "slug": "tashas-hideous-laughter",
+  "name": "Tasha's Hideous Laughter",
+  "storageFile": "tashas-hideous-laughter.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a tart and a feather",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Enchantment",
+      "html": "<div> <div> School </div> <div> Enchantment </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>WIS Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Prone (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Prone (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the Prone and Incapacitated conditions for the duration. During that time, it laughs uncontrollably if it’s capable of laughter, and it can’t end the Prone condition on itself.",
+        "At the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends.",
+        "Using a Higher-Level Spell Slot. You can target one additional creature for each spell slot level above 1.",
+        "* - (a tart and a feather)"
+      ],
+      "html": "<div> <p>One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the <a>Prone</a> and <a>Incapacitated</a> conditions for the duration. During that time, it laughs uncontrollably if it’s capable of laughter, and it can’t end the Prone condition on itself.</p> <p>At the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> You can target one additional creature for each spell slot level above 1.</p> <span>* - (a tart and a feather)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Debuff"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Debuff</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Warlock",
+        "Wizard",
+        "Paladin - Oath of Revelry",
+        "Warlock - Great Old One Patron",
+        "Warlock - Great Fool Patron"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li><li><p>Paladin - Oath of Revelry</p></li><li><p>Warlock - Great Old One Patron</p></li><li><p>Warlock - Great Fool Patron</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 331",
+      "html": "<p>Player’s Handbook, pg. 331</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619132-tashas-hideous-laughter",
+      "html": "<p>https://www.dndbeyond.com/spells/2619132-tashas-hideous-laughter</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/702/enchantment.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/702/enchantment.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Enchantment (Bard, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "30 feet",
+        "Components": "V, S, M (a tart and a feather)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 1 Enchantment (Bard, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a tart and a feather)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Tasha's Hideous Laughter - Spells - D&D Beyond-508e5aa91d6ebe7ec6458421bf45019f6d5734f24eac17636088e09bbe271c05.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Tasha&#x27;s Hideous Laughter - Spells - D&amp;D Beyond-508e5aa91d6ebe7ec6458421bf45019f6d5734f24eac17636088e09bbe271c05.html</p></li></ul>"
+    }
+  ]
+}

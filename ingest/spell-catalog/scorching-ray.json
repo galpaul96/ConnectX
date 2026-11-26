@@ -1,0 +1,179 @@
+{
+  "id": "2619005",
+  "slug": "scorching-ray",
+  "name": "Scorching Ray",
+  "storageFile": "scorching-ray.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft.",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 120 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "Ranged",
+        "kind": "attack",
+        "attackType": "ranged",
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>Ranged</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Fire",
+        "damageTypes": [
+          "Fire"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Fire </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You hurl three fiery rays. You can hurl them at one target within range or at several. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 Fire damage.",
+        "Using a Higher-Level Spell Slot. You create one additional ray for each spell slot level above 2."
+      ],
+      "html": "<div> <p>You hurl three fiery rays. You can hurl them at one target within range or at several. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 Fire damage.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> You create one additional ray for each spell slot level above 2.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage"
+      ],
+      "html": "<ul><li><p>Damage</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Sorcerer",
+        "Wizard",
+        "Warlock (Legacy) - The Many",
+        "Cleric - Light Domain",
+        "Druid - Circle of Wildfire (TCoE)",
+        "Warlock - The Genie (TCoE)",
+        "Warlock - Fiend Patron",
+        "Illrigger - Architect of Ruin",
+        "Warlock - The Many"
+      ],
+      "html": "<ul><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Warlock (Legacy) - The Many</p></li><li><p>Cleric - Light Domain</p></li><li><p>Druid - Circle of Wildfire (TCoE)</p></li><li><p>Warlock - The Genie (TCoE)</p></li><li><p>Warlock - Fiend Patron</p></li><li><p>Illrigger - Architect of Ruin</p></li><li><p>Warlock - The Many</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 314",
+      "html": "<p>Player’s Handbook, pg. 314</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619005-scorching-ray",
+      "html": "<p>https://www.dndbeyond.com/spells/2619005-scorching-ray</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Evocation (Sorcerer, Wizard)",
+        "Casting Time": "Action",
+        "Range": "120 feet",
+        "Components": "V, S",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 2 Evocation (Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 120 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Scorching Ray - Spells - D&D Beyond-127f906b1f6cd3e3ccefe014f410d381b3c56ef74655136f0a1130022075c4a0.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Scorching Ray - Spells - D&amp;D Beyond-127f906b1f6cd3e3ccefe014f410d381b3c56ef74655136f0a1130022075c4a0.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

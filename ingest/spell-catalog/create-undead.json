@@ -1,0 +1,177 @@
+{
+  "id": "2619076",
+  "slug": "create-undead",
+  "name": "Create Undead",
+  "storageFile": "create-undead.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "6",
+        "label": "6th"
+      },
+      "html": "<div> <div> Level </div> <div> 6th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Minute </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "10 ft.",
+        "kind": "distance",
+        "distanceValue": 10,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 10 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "one 150+ GP black onyx stone for each corpse",
+          "consumed": false,
+          "costGp": 150,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Necromancy",
+      "html": "<div> <div> School </div> <div> Necromancy </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You can cast this spell only at night. Choose up to three corpses of Medium or Small Humanoids within range. Each one becomes a Ghoul under your control (see the Monster Manual for its stat block).",
+        "As a Bonus Action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to them). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a particular place. If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow the order until its task is complete.",
+        "The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell rather than animating new ones.",
+        "Using a Higher-Level Spell Slot. If you use a level 7 spell slot, you can animate or reassert control over four Ghouls. If you use a level 8 spell slot, you can animate or reassert control over five Ghouls or two Ghasts or Wights. If you use a level 9 spell slot, you can animate or reassert control over six Ghouls, three Ghasts or Wights, or two Mummies. See the Monster Manual for these stat blocks.",
+        "* - (one 150+ GP black onyx stone for each corpse)"
+      ],
+      "html": "<div> <p>You can cast this spell only at night. Choose up to three corpses of Medium or Small Humanoids within range. Each one becomes a <a>Ghoul</a> under your control (see the <a>Monster Manual</a> for its stat block).</p> <p>As a Bonus Action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to them). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a particular place. If you issue no commands, the creature takes the <a>Dodge</a> action and moves only to avoid harm. Once given an order, the creature continues to follow the order until its task is complete.</p> <p>The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell rather than animating new ones.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> If you use a level 7 spell slot, you can animate or reassert control over four <a>Ghouls</a>. If you use a level 8 spell slot, you can animate or reassert control over five <a>Ghouls</a> or two <a>Ghasts</a> or <a>Wights</a>. If you use a level 9 spell slot, you can animate or reassert control over six <a>Ghouls</a>, three <a>Ghasts</a> or <a>Wights</a>, or two <a>Mummies</a>. See the <a>Monster Manual</a> for these stat blocks.</p> <span>* - (one 150+ GP black onyx stone for each corpse)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Creation",
+        "Control"
+      ],
+      "html": "<ul><li><p>Creation</p></li><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Cleric (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Cleric",
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Cleric (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Cleric</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 258",
+      "html": "<p>Player’s Handbook, pg. 258</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619076-create-undead",
+      "html": "<p>https://www.dndbeyond.com/spells/2619076-create-undead</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/720/necromancy.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/720/necromancy.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 6 Necromancy (Cleric, Warlock, Wizard)",
+        "Casting Time": "1 minute",
+        "Range": "10 feet",
+        "Components": "V, S, M (one 150+ GP black onyx stone for each corpse)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 6 Necromancy (Cleric, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> 1 minute</p> <p><strong>Range:</strong> 10 feet</p> <p><strong>Components:</strong> V, S, M (one 150+ GP black onyx stone for each corpse)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Create Undead - Spells - D&D Beyond-4448cefdb560ecc1001728a22b93af02fc1e88a8b6f801c858ed07dd3404d8da.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Create Undead - Spells - D&amp;D Beyond-4448cefdb560ecc1001728a22b93af02fc1e88a8b6f801c858ed07dd3404d8da.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

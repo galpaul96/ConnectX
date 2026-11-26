@@ -1,0 +1,180 @@
+{
+  "id": "2618969",
+  "slug": "circle-of-death",
+  "name": "Circle of Death",
+  "storageFile": "circle-of-death.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "6",
+        "label": "6th"
+      },
+      "html": "<div> <div> Level </div> <div> 6th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "150 ft. (60 ft.)",
+        "kind": "distance",
+        "distanceValue": 150,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 60,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 150 ft. <span>(60 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "the powder of a crushed black pearl worth 500+ GP",
+          "consumed": false,
+          "costGp": 500,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Necromancy",
+      "html": "<div> <div> School </div> <div> Necromancy </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CON Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CON"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>CON Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Necrotic",
+        "damageTypes": [
+          "Necrotic"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Necrotic </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Negative energy ripples out in a 60-foot-radius Sphere from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one.",
+        "Using a Higher-Level Spell Slot. The damage increases by 2d8 for each spell slot level above 6.",
+        "* - (the powder of a crushed black pearl worth 500+ GP)"
+      ],
+      "html": "<div> <p>Negative energy ripples out in a 60-foot-radius <a>Sphere</a> from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The damage increases by 2d8 for each spell slot level above 6.</p> <span>* - (the powder of a crushed black pearl worth 500+ GP)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage"
+      ],
+      "html": "<ul><li><p>Damage</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Sorcerer (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Sorcerer (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Sorcerer</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 250",
+      "html": "<p>Player’s Handbook, pg. 250</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618969-circle-of-death",
+      "html": "<p>https://www.dndbeyond.com/spells/2618969-circle-of-death</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/720/necromancy.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/720/necromancy.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 6 Necromancy (Sorcerer, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "150 feet",
+        "Components": "V, S, M (the powder of a crushed black pearl worth 500+ GP)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 6 Necromancy (Sorcerer, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 150 feet</p> <p><strong>Components:</strong> V, S, M (the powder of a crushed black pearl worth 500+ GP)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Circle of Death - Spells - D&D Beyond-24ea971eecfd9223aa5edcc79bfd3ee0895daa0449496ca29f02ab1f84172d24.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Circle of Death - Spells - D&amp;D Beyond-24ea971eecfd9223aa5edcc79bfd3ee0895daa0449496ca29f02ab1f84172d24.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

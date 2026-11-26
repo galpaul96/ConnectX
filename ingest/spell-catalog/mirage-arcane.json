@@ -1,0 +1,178 @@
+{
+  "id": "2619040",
+  "slug": "mirage-arcane",
+  "name": "Mirage Arcane",
+  "storageFile": "mirage-arcane.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "7",
+        "label": "7th"
+      },
+      "html": "<div> <div> Level </div> <div> 7th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 10 Minutes </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Sight (1 mile)",
+        "kind": "sight",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": {
+          "shape": null,
+          "value": 1,
+          "unit": "mile"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> Sight <span>(1 mile <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "10 Days",
+        "kind": "timed",
+        "value": 10,
+        "unit": "day",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 10 Days </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Illusion",
+      "html": "<div> <div> School </div> <div> Illusion </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other rough or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.",
+        "Similarly, you can alter the appearance of structures or add them where none are present. The spell doesn’t disguise, conceal, or add creatures.",
+        "The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into Difficult Terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell’s area disappears immediately.",
+        "Creatures with Truesight can see through the illusion to the terrain’s true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion’s presence, the creature can still physically interact with the illusion."
+      ],
+      "html": "<div> <p>You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other rough or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.</p> <p>Similarly, you can alter the appearance of structures or add them where none are present. The spell doesn’t disguise, conceal, or add creatures.</p> <p>The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into <a>Difficult Terrain</a> (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell’s area disappears immediately.</p> <p>Creatures with <a>Truesight</a> can see through the illusion to the terrain’s true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion’s presence, the creature can still physically interact with the illusion.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control"
+      ],
+      "html": "<ul><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Druid (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Druid",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Druid</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 299",
+      "html": "<p>Player’s Handbook, pg. 299</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619040-mirage-arcane",
+      "html": "<p>https://www.dndbeyond.com/spells/2619040-mirage-arcane</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/704/illusion.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/704/illusion.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 7 Illusion (Bard, Druid, Wizard)",
+        "Casting Time": "10 minutes",
+        "Range": "Sight",
+        "Components": "V, S",
+        "Duration": "10 days"
+      },
+      "html": "<p><em>Level 7 Illusion (Bard, Druid, Wizard)</em></p><div> <p><strong>Casting Time:</strong> 10 minutes</p> <p><strong>Range:</strong> Sight</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> 10 days</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Mirage Arcane - Spells - D&D Beyond-47ff4c95da394f1e62b55afe8a01da3c849689b93f3cac96bd513bf7745c8969.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Mirage Arcane - Spells - D&amp;D Beyond-47ff4c95da394f1e62b55afe8a01da3c849689b93f3cac96bd513bf7745c8969.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

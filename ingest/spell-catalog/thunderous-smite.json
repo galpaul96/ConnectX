@@ -1,0 +1,168 @@
+{
+  "id": "2619182",
+  "slug": "thunderous-smite",
+  "name": "Thunderous Smite",
+  "storageFile": "thunderous-smite.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>1</p></dd><dt>label</dt><dd><p>1st</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Bonus Action *",
+        "kind": "bonus_action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Bonus Action *</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Self</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>Instantaneous</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<p>Evocation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "STR Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "STR"
+      },
+      "html": "<p>STR Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Thunder",
+        "damageTypes": [
+          "Thunder"
+        ]
+      },
+      "html": "<p>Thunder</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Your strike rings with thunder that is audible within 300 feet of you, and the target takes an extra 2d6 Thunder damage from the attack. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and have the Prone condition.",
+        "Using a Higher-Level Spell Slot. The damage increases by 1d6 for each spell slot level above 1.",
+        "* - which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike"
+      ],
+      "html": "<div> <p>Your strike rings with thunder that is audible within 300 feet of you, and the target takes an extra 2d6 Thunder damage from the attack. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and have the Prone condition.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The damage increases by 1d6 for each spell slot level above 1.</p> <span>* - which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Paladin"
+      ],
+      "html": "<ul><li><p>Paladin</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619182-thunderous-smite",
+      "html": "<p>https://www.dndbeyond.com/spells/2619182-thunderous-smite</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Evocation (Paladin)",
+        "Casting Time": "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
+        "Range": "Self",
+        "Components": "V",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 1 Evocation (Paladin)</em></p><div> <p><strong>Casting Time:</strong> Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Thunderous Smite - Spells - D&D Beyond-73c6250f1810c3337bca5e229c0dac3e0a5642e868ff1fe9ff3df541474a0b76.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Thunderous Smite - Spells - D&amp;D Beyond-73c6250f1810c3337bca5e229c0dac3e0a5642e868ff1fe9ff3df541474a0b76.html</p></li></ul>"
+    }
+  ]
+}

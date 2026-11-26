@@ -1,0 +1,161 @@
+{
+  "id": "2014",
+  "slug": "black-tentacles",
+  "name": "Black Tentacles",
+  "storageFile": "black-tentacles.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "4",
+        "label": "4th"
+      },
+      "html": "<div> <div> Level </div> <div> 4th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "90 ft. (20 ft.)",
+        "kind": "distance",
+        "distanceValue": 90,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 20,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 90 ft. <span>(20 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a piece of tentacle from a giant octopus or a giant squid",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<div> <div> School </div> <div> Conjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>DEX Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Bludgeoning",
+        "damageTypes": [
+          "Bludgeoning"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Bludgeoning </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain.",
+        "When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage.",
+        "A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+        "* - (a piece of tentacle from a giant octopus or a giant squid)"
+      ],
+      "html": "<div> <p>Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain.</p> <p>When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be <a>restrained</a> by the tentacles until the spell ends. A creature that starts its turn in the area and is already <a>restrained</a> by the tentacles takes 3d6 bludgeoning damage.</p> <p>A creature <a>restrained</a> by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.</p> <span>* - (a piece of tentacle from a giant octopus or a giant squid)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Damage",
+        "Control"
+      ],
+      "html": "<ul><li><p>Damage</p></li><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Wizard (Legacy)",
+        "Cleric (Legacy) - Shadow Domain",
+        "Druid (Legacy) - Circle of Shadows",
+        "Warlock (Legacy) - The Great Old One (Legacy)",
+        "Warlock (Legacy) - The Many",
+        "Warlock (Legacy) - The Parasite",
+        "Warlock - The Many"
+      ],
+      "html": "<ul><li><p>Wizard (Legacy)</p></li><li><p>Cleric (Legacy) - Shadow Domain</p></li><li><p>Druid (Legacy) - Circle of Shadows</p></li><li><p>Warlock (Legacy) - The Great Old One (Legacy)</p></li><li><p>Warlock (Legacy) - The Many</p></li><li><p>Warlock (Legacy) - The Parasite</p></li><li><p>Warlock - The Many</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Basic Rules (2014)",
+      "html": "<p>Basic Rules (2014)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2014-black-tentacles",
+      "html": "<p>https://www.dndbeyond.com/spells/2014-black-tentacles</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/708/conjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/708/conjuration.png</p>",
+      "type": "imageUrl"
+    }
+  ]
+}

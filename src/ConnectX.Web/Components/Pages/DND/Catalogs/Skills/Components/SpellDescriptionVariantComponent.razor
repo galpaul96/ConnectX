@@ -1,0 +1,15 @@
+@inherits SpellComponentView
+@{ var variants = Value.ValueKind == JsonValueKind.Array
+    ? Value.EnumerateArray().Where(x => !string.IsNullOrWhiteSpace(SpellValue.Text(SpellValue.Property(x, "text")))).ToList() : []; }
+@if (variants.Count > 0)
+{
+    <section class="spell-detail-section spell-description"><h3>Alternate source descriptions</h3>
+        @for (var i = 0; i < variants.Count; i++)
+        {
+            <details><summary>Source variant @(i + 1)</summary>
+                @foreach (var paragraph in SpellValue.Text(SpellValue.Property(variants[i], "text"))!.Split('\n', StringSplitOptions.RemoveEmptyEntries))
+                { <p>@paragraph</p> }
+            </details>
+        }
+    </section>
+}

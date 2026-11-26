@@ -1,0 +1,92 @@
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+@inject ConnectX.Web.Components.Pages.DND.Catalogs.Skills.SpellUploadService Upload
+@inject ILogger<SpellUploadModal> Logger
+@using Microsoft.AspNetCore.Components.Forms
+
+<dialog @ref="dialog" class="spell-upload-dialog" aria-labelledby="spell-upload-title" aria-busy="@saving">
+    <header><h2 id="spell-upload-title">Create spells</h2><button type="button" class="upload-close" aria-label="Close spell upload" disabled="@saving" @onclick="CloseAsync">Close</button></header>
+    <p id="spell-upload-help">Upload JSON spell files using the spell catalog format. Up to 500 files, 1 MB each. Each file creates one spell.</p>
+    <label for="spell-upload-file">Spell JSON files</label>
+    <InputFile id="spell-upload-file" OnChange="SelectFiles" multiple accept=".json,application/json" disabled="@saving"
+        aria-invalid="@(error is not null ? "true" : "false")" aria-describedby='@(error is null ? "spell-upload-help" : "spell-upload-help spell-upload-error")' />
+    @if (error is not null) { <p id="spell-upload-error" class="upload-error" role="alert">@error</p> }
+    @if (batch.Items.Count > 0)
+    {
+        <p role="status" aria-live="polite">@Summary</p>
+        <ul class="upload-results" aria-label="Upload results">
+            @foreach (var item in batch.Items)
+            {
+                <li @key="item"><span class="upload-filename">@item.File.Name</span>
+                    <span class="@(item.Status == SpellUploadStatus.Failed ? "upload-error" : "upload-status")">@item.Status</span>
+                    @if (item.Error is not null) { <span class="upload-file-error">@item.Error</span> }
+                </li>
+            }
+        </ul>
+    }
+    <footer><button type="button" class="btn btn-outline-primary" disabled="@saving" @onclick="CloseAsync">@(batch.Items.Any(x => x.Status == SpellUploadStatus.Created) ? "Done" : "Cancel")</button>
+        <button type="button" class="btn btn-primary" disabled="@(saving || !batch.HasPending)" @onclick="CreateAsync">@(saving ? "Creating…" : "Create spells")</button></footer>
+</dialog>
+
+@code {
+    private ElementReference dialog;
+    private IJSObjectReference? module;
+    private DotNetObjectReference<SpellUploadModal>? reference;
+    private readonly SpellUploadBatch batch = new();
+    private string Summary => $"{batch.Items.Count(x => x.Status == SpellUploadStatus.Created)} created · {batch.Items.Count(x => x.Status == SpellUploadStatus.Failed)} failed · {batch.Items.Count(x => x.Status is SpellUploadStatus.Pending or SpellUploadStatus.Uploading)} remaining";
+    private bool saving;
+    private string? error;
+    private readonly CancellationTokenSource lifetime = new();
+    [Parameter] public EventCallback OnClose { get; set; }
+    [Parameter] public EventCallback<IReadOnlyList<Guid>> OnCreated { get; set; }
+
+    private void SelectFiles(InputFileChangeEventArgs args)
+    {
+        if (saving) return;
+        error = null;
+        try
+        {
+            if (args.FileCount > SpellUploadBatch.MaximumFiles) { batch.Select([]); throw new ArgumentException("Choose at most 500 files at a time."); }
+            batch.Select(args.GetMultipleFiles(SpellUploadBatch.MaximumFiles));
+        }
+        catch (ArgumentException ex) { error = ex.Message; }
+    }
+    private async Task CreateAsync()
+    {
+        if (saving || !batch.HasPending) return;
+        saving = true;
+        error = null;
+        try
+        {
+            await batch.RunAsync(async (file, token) =>
+            {
+                await using var stream = file.OpenReadStream(SpellUploadReader.MaximumBytes, token);
+                return await Upload.AddAsync(stream, file.Name, file.Size, token);
+            }, () => InvokeAsync(StateHasChanged),
+                (ex, name) => Logger.LogError(ex, "Spell upload failed for {FileName}", name), lifetime.Token);
+            var ids = batch.Items.Where(x => x.SpellId.HasValue).Select(x => x.SpellId!.Value).ToList();
+            if (ids.Count > 0) await OnCreated.InvokeAsync(ids);
+        }
+        catch (OperationCanceledException) when (lifetime.IsCancellationRequested) { }
+        finally { saving = false; }
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/spellDialog.js");
+        reference = DotNetObjectReference.Create(this);
+        await module.InvokeVoidAsync("open", dialog, reference);
+    }
+    [JSInvokable] public Task CloseAsync() => saving ? Task.CompletedTask : OnClose.InvokeAsync();
+    public async ValueTask DisposeAsync()
+    {
+        lifetime.Cancel();
+        if (module is not null)
+        {
+            try { await module.InvokeVoidAsync("close", dialog); await module.DisposeAsync(); }
+            catch (JSDisconnectedException) { }
+        }
+        reference?.Dispose();
+        lifetime.Dispose();
+    }
+}

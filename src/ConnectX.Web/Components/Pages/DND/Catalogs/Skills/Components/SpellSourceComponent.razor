@@ -1,12 +1,5 @@
-@if (!string.IsNullOrWhiteSpace(Spell.Source))
+@inherits SpellComponentView
+@if (!string.IsNullOrWhiteSpace(Text()))
 {
-    <div class="spell-source">
-        <span>Source</span>
-        <p>@Spell.Source</p>
-    </div>
-}
-
-@code {
-    [Parameter, EditorRequired]
-    public SpellCatalogEntry Spell { get; set; } = default!;
+    <section class="spell-detail-section"><h3>Source</h3><p>@Text()</p></section>
 }

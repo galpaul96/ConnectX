@@ -1,17 +1,9 @@
-@if (Spell.AvailableFor.Count > 0)
+@inherits SpellComponentView
+@if (Strings.Count > 0)
 {
-    <section class="spell-detail-section" aria-labelledby="spell-classes-title">
-        <h3 id="spell-classes-title">Available for</h3>
-        <ul class="spell-chip-list" aria-label="Available classes">
-            @foreach (var spellClass in Spell.AvailableFor.Where(item => !string.IsNullOrWhiteSpace(item)))
-            {
-                <li>@spellClass</li>
-            }
+    <section class="spell-detail-section"><h3>Available for</h3>
+        <ul class="spell-chip-list" aria-label="Available for">
+            @foreach (var item in Strings) { <li>@item</li> }
         </ul>
     </section>
-}
-
-@code {
-    [Parameter, EditorRequired]
-    public SpellCatalogEntry Spell { get; set; } = default!;
 }

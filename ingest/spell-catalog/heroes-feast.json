@@ -1,0 +1,179 @@
+{
+  "id": "2618983",
+  "slug": "heroes-feast",
+  "name": "Heroes' Feast",
+  "storageFile": "heroes-feast.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "6",
+        "label": "6th"
+      },
+      "html": "<div> <div> Level </div> <div> 6th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 10 Minutes </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self (10 ft.)",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": {
+          "shape": null,
+          "value": 10,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self <span>(10 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a gem-encrusted bowl worth 1,000+ GP, which the spell consumes",
+          "consumed": true,
+          "costGp": 1000,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<div> <div> School </div> <div> Conjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Poisoned (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Poisoned (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You conjure a feast that appears on a surface in an unoccupied 10-foot Cube next to you. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don’t set in until this hour is over. Up to twelve creatures can partake of the feast.",
+        "A creature that partakes gains several benefits, which last for 24 hours. The creature has Resistance to Poison damage, and it has Immunity to the Frightened and Poisoned conditions. Its Hit Point maximum also increases by 2d10, and it gains the same number of Hit Points.",
+        "* - (a gem-encrusted bowl worth 1,000+ GP, which the spell consumes)"
+      ],
+      "html": "<div> <p>You conjure a feast that appears on a surface in an unoccupied 10-foot <a>Cube</a> next to you. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don’t set in until this hour is over. Up to twelve creatures can partake of the feast.</p> <p>A creature that partakes gains several benefits, which last for 24 hours. The creature has Resistance to Poison damage, and it has Immunity to the <a>Frightened</a> and <a>Poisoned</a> conditions. Its Hit Point maximum also increases by 2d10, and it gains the same number of Hit Points.</p> <span>* - (a gem-encrusted bowl worth 1,000+ GP, which the spell consumes)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Buff",
+        "Social"
+      ],
+      "html": "<ul><li><p>Buff</p></li><li><p>Social</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Cleric (Legacy)",
+        "Druid (Legacy)",
+        "Bard",
+        "Cleric",
+        "Druid"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Cleric (Legacy)</p></li><li><p>Druid (Legacy)</p></li><li><p>Bard</p></li><li><p>Cleric</p></li><li><p>Druid</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 284",
+      "html": "<p>Player’s Handbook, pg. 284</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618983-heroes-feast",
+      "html": "<p>https://www.dndbeyond.com/spells/2618983-heroes-feast</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/708/conjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/708/conjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 6 Conjuration (Bard, Cleric, Druid)",
+        "Casting Time": "10 minutes",
+        "Range": "Self",
+        "Components": "V, S, M (a gem-encrusted bowl worth 1,000+ GP, which the spell consumes)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 6 Conjuration (Bard, Cleric, Druid)</em></p><div> <p><strong>Casting Time:</strong> 10 minutes</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (a gem-encrusted bowl worth 1,000+ GP, which the spell consumes)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Heroes' Feast - Spells - D&D Beyond-00f62501ebb607bd667d6afb42a5799b1630285c400181cd16b01dd2c6826d22.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Heroes&#x27; Feast - Spells - D&amp;D Beyond-00f62501ebb607bd667d6afb42a5799b1630285c400181cd16b01dd2c6826d22.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

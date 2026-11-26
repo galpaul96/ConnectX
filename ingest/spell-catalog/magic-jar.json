@@ -1,0 +1,175 @@
+{
+  "id": "2619021",
+  "slug": "magic-jar",
+  "name": "Magic Jar",
+  "storageFile": "magic-jar.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "6",
+        "label": "6th"
+      },
+      "html": "<div> <div> Level </div> <div> 6th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Minute </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a gem, crystal, or reliquary worth 500+ GP",
+          "consumed": false,
+          "costGp": 500,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Until Dispelled",
+        "kind": "until_dispelled",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": "Until Dispelled"
+      },
+      "html": "<div> <div>Duration</div> <div> Until Dispelled </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Necromancy",
+      "html": "<div> <div> School </div> <div> Necromancy </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CHA Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CHA"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>CHA Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Control",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Control </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell’s Material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container’s space. You can’t move or take Reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a Humanoid’s body.",
+        "You can attempt to possess any Humanoid within 100 feet of you that you can see (creatures warded by a Protection from Evil and Good or Magic Circle spell can’t be possessed). The target makes a Charisma saving throw. On a failed save, your soul enters the target’s body, and the target’s soul becomes trapped in the container. On a successful save, the target resists your efforts to possess it, and you can’t attempt to possess it again for 24 hours.",
+        "Once you possess a creature’s body, you control it. Your Hit Points, Hit Point Dice, Strength, Dexterity, Constitution, Speed, and senses are replaced by the creature’s. You otherwise keep your game statistics.",
+        "Meanwhile, the possessed creature’s soul can perceive from the container using its own senses, but it can’t move and it is Incapacitated.",
+        "While possessing a body, you can take a Magic action to return from the host body to the container if it is within 100 feet of you, returning the host creature’s soul to its body. If the host body dies while you’re in it, the creature dies, and you make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.",
+        "If the container is destroyed or the spell ends, your soul returns to your body. If your body is more than 100 feet away from you or if your body is dead, you die. If another creature’s soul is in the container when it is destroyed, the creature’s soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.",
+        "When the spell ends, the container is destroyed.",
+        "* - (a gem, crystal, or reliquary worth 500+ GP)"
+      ],
+      "html": "<div> <p>Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell’s Material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container’s space. You can’t move or take Reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a Humanoid’s body.</p> <p>You can attempt to possess any Humanoid within 100 feet of you that you can see (creatures warded by a <a>Protection from Evil and Good</a> or <a>Magic Circle</a> spell can’t be <a>possessed</a>). The target makes a Charisma saving throw. On a failed save, your soul enters the target’s body, and the target’s soul becomes trapped in the container. On a successful save, the target resists your efforts to possess it, and you can’t attempt to possess it again for 24 hours.</p> <p>Once you possess a creature’s body, you control it. Your Hit Points, Hit Point Dice, Strength, Dexterity, Constitution, Speed, and senses are replaced by the creature’s. You otherwise keep your game statistics.</p> <p>Meanwhile, the possessed creature’s soul can perceive from the container using its own senses, but it can’t move and it is <a>Incapacitated</a>.</p> <p>While possessing a body, you can take a <a>Magic</a> action to return from the host body to the container if it is within 100 feet of you, returning the host creature’s soul to its body. If the host body dies while you’re in it, the creature dies, and you make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.</p> <p>If the container is destroyed or the spell ends, your soul returns to your body. If your body is more than 100 feet away from you or if your body is dead, you die. If another creature’s soul is in the container when it is destroyed, the creature’s soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.</p> <p>When the spell ends, the container is destroyed.</p> <span>* - (a gem, crystal, or reliquary worth 500+ GP)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control"
+      ],
+      "html": "<ul><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Wizard (Legacy)",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Wizard (Legacy)</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 294",
+      "html": "<p>Player’s Handbook, pg. 294</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619021-magic-jar",
+      "html": "<p>https://www.dndbeyond.com/spells/2619021-magic-jar</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/720/necromancy.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/720/necromancy.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 6 Necromancy (Wizard)",
+        "Casting Time": "1 minute",
+        "Range": "Self",
+        "Components": "V, S, M (a gem, crystal, or reliquary worth 500+ GP)",
+        "Duration": "Until dispelled"
+      },
+      "html": "<p><em>Level 6 Necromancy (Wizard)</em></p><div> <p><strong>Casting Time:</strong> 1 minute</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (a gem, crystal, or reliquary worth 500+ GP)</p> <p><strong>Duration:</strong> Until dispelled</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Magic Jar - Spells - D&D Beyond-ed06aea993a8f07fba927e636d91915552b354f2293eb2eccfc30e38c9d42522.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Magic Jar - Spells - D&amp;D Beyond-ed06aea993a8f07fba927e636d91915552b354f2293eb2eccfc30e38c9d42522.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

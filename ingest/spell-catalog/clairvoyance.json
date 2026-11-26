@@ -1,0 +1,181 @@
+{
+  "id": "2618972",
+  "slug": "clairvoyance",
+  "name": "Clairvoyance",
+  "storageFile": "clairvoyance.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<div> <div> Level </div> <div> 3rd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 10 Minutes </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "1 mile",
+        "kind": "distance",
+        "distanceValue": 1,
+        "distanceUnit": "mile",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 1 mile </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a focus worth 100+ GP, either a jeweled horn for hearing or a glass eye for seeing",
+          "consumed": false,
+          "costGp": 100,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 10 Minutes </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Detection (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Detection (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You create an Invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The intangible, invulnerable sensor remains in place for the duration.",
+        "When you cast the spell, choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As a Bonus Action, you can switch between seeing and hearing.",
+        "A creature that sees the sensor (such as a creature benefiting from See Invisibility or Truesight) sees a luminous orb about the size of your fist.",
+        "* - (a focus worth 100+ GP, either a jeweled horn for hearing or a glass eye for seeing)"
+      ],
+      "html": "<div> <p>You create an <a>Invisible</a> sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The intangible, invulnerable sensor remains in place for the duration.</p> <p>When you cast the spell, choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As a Bonus Action, you can switch between seeing and hearing.</p> <p>A creature that sees the sensor (such as a creature benefiting from <a>See Invisibility</a> or <a>Truesight</a>) sees a luminous orb about the size of your fist.</p> <span>* - (a focus worth 100+ GP, either a jeweled horn for hearing or a glass eye for seeing)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Scrying",
+        "Detection",
+        "Utility"
+      ],
+      "html": "<ul><li><p>Scrying</p></li><li><p>Detection</p></li><li><p>Utility</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Cleric (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Cleric",
+        "Sorcerer",
+        "Wizard",
+        "Warlock - Great Old One Patron",
+        "Warlock - Great Fool Patron"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Cleric (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Cleric</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Warlock - Great Old One Patron</p></li><li><p>Warlock - Great Fool Patron</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 250",
+      "html": "<p>Player’s Handbook, pg. 250</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618972-clairvoyance",
+      "html": "<p>https://www.dndbeyond.com/spells/2618972-clairvoyance</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Divination (Bard, Cleric, Sorcerer, Wizard)",
+        "Casting Time": "10 minutes",
+        "Range": "1 mile",
+        "Components": "V, S, M (a focus worth 100+ GP, either a jeweled horn for hearing or a glass eye for seeing)",
+        "Duration": "Concentration, up to 10 minutes"
+      },
+      "html": "<p><em>Level 3 Divination (Bard, Cleric, Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> 10 minutes</p> <p><strong>Range:</strong> 1 mile</p> <p><strong>Components:</strong> V, S, M (a focus worth 100+ GP, either a jeweled horn for hearing or a glass eye for seeing)</p> <p><strong>Duration:</strong> Concentration, up to 10 minutes</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Clairvoyance - Spells - D&D Beyond-da88c93c2f99c15d67609df8f7efda23b8f3ade3256273cbf7cb7b948ab27c3a.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Clairvoyance - Spells - D&amp;D Beyond-da88c93c2f99c15d67609df8f7efda23b8f3ade3256273cbf7cb7b948ab27c3a.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

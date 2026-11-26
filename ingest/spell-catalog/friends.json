@@ -1,0 +1,169 @@
+{
+  "id": "2618924",
+  "slug": "friends",
+  "name": "Friends",
+  "storageFile": "friends.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "Cantrip",
+        "label": "Cantrip"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>Cantrip</p></dd><dt>label</dt><dd><p>Cantrip</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "10 ft.",
+        "kind": "distance",
+        "distanceValue": 10,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>10 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "S, M *",
+        "verbal": false,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "some makeup",
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Minute</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Enchantment",
+      "html": "<p>Enchantment</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<p>WIS Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Buff (...)",
+        "damageTypes": []
+      },
+      "html": "<p>Buff (...)</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You magically emanate a sense of friendship toward one creature you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target succeeds automatically if it isn’t a Humanoid, if you’re fighting it, or if you have cast this spell on it within the past 24 hours.",
+        "The spell ends early if the target takes damage or if you make an attack roll, deal damage, or force anyone to make a saving throw. When the spell ends, the target knows it was Charmed by you.",
+        "* - (some makeup)"
+      ],
+      "html": "<div> <p>You magically emanate a sense of friendship toward one creature you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target succeeds automatically if it isn’t a Humanoid, if you’re fighting it, or if you have cast this spell on it within the past 24 hours.</p> <p>The spell ends early if the target takes damage or if you make an attack roll, deal damage, or force anyone to make a saving throw. When the spell ends, the target knows it was Charmed by you.</p> <span>* - (some makeup)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618924-friends",
+      "html": "<p>https://www.dndbeyond.com/spells/2618924-friends</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Enchantment Cantrip (Bard, Sorcerer, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "10 feet",
+        "Components": "S, M (some makeup)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Enchantment Cantrip (Bard, Sorcerer, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 10 feet</p> <p><strong>Components:</strong> S, M (some makeup)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Friends - Spells - D&D Beyond-28345141041597a1dac6f5670b37cbf65b14b658d3192fd79f38da798fb252ae.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Friends - Spells - D&amp;D Beyond-28345141041597a1dac6f5670b37cbf65b14b658d3192fd79f38da798fb252ae.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

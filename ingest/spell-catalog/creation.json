@@ -1,0 +1,187 @@
+{
+  "id": "2619077",
+  "slug": "creation",
+  "name": "Creation",
+  "storageFile": "creation.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<div> <div> Level </div> <div> 5th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Minute </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft. (5 ft.)",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 5,
+          "unit": "ft"
+        }
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. <span>(5 ft. <i></i>)</span> </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a paintbrush",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Special",
+        "kind": "special",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Special </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Illusion",
+      "html": "<div> <div> School </div> <div> Illusion </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Creation",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Creation </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You pull wisps of shadow material from the Shadowfell to create an object within range. It is either an object of vegetable matter (soft goods, rope, wood, and the like) or mineral matter (stone, crystal, metal, and the like). The object must be no larger than a 5-foot Cube, and the object must be of a form and material that you have seen.",
+        "The spell’s duration depends on the object’s material, as shown in the Materials table. If the object is composed of multiple materials, use the shortest duration. Using any object created by this spell as another spell’s Material component causes the other spell to fail.",
+        "Materials",
+        "Material Duration",
+        "Vegetable matter 24 hours",
+        "Stone or crystal 12 hours",
+        "Precious metals 1 hour",
+        "Gems 10 minutes",
+        "Adamantine or mithral 1 minute",
+        "Using a Higher-Level Spell Slot. The Cube increases by 5 feet for each spell slot level above 5.",
+        "* - (a paintbrush)"
+      ],
+      "html": "<div> <p>You pull wisps of shadow material from the Shadowfell to create an object within range. It is either an object of vegetable matter (soft goods, rope, wood, and the like) or mineral matter (stone, crystal, metal, and the like). The object must be no larger than a 5-foot <a>Cube</a>, and the object must be of a form and material that you have seen.</p> <p>The spell’s duration depends on the object’s material, as shown in the Materials table. If the object is composed of multiple materials, use the shortest duration. Using any object created by this spell as another spell’s Material component causes the other spell to fail.</p> <table><caption> <h4>Materials</h4> </caption> <thead> <tr> <th>Material</th> <th>Duration</th> </tr> </thead> <tbody> <tr> <td>Vegetable matter</td> <td>24 hours</td> </tr> <tr> <td>Stone or crystal</td> <td>12 hours</td> </tr> <tr> <td>Precious metals</td> <td>1 hour</td> </tr> <tr> <td>Gems</td> <td>10 minutes</td> </tr> <tr> <td>Adamantine or mithral</td> <td>1 minute</td> </tr> </tbody> </table> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The Cube increases by 5 feet for each spell slot level above 5.</p> <span>* - (a paintbrush)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Creation"
+      ],
+      "html": "<ul><li><p>Creation</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Sorcerer",
+        "Wizard",
+        "Artificer",
+        "Cleric - Forge Domain (XGtE)",
+        "Warlock - The Genie (TCoE)"
+      ],
+      "html": "<ul><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li><li><p>Cleric - Forge Domain (XGtE)</p></li><li><p>Warlock - The Genie (TCoE)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 259",
+      "html": "<p>Player’s Handbook, pg. 259</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619077-creation",
+      "html": "<p>https://www.dndbeyond.com/spells/2619077-creation</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/704/illusion.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/704/illusion.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Illusion (Sorcerer, Wizard)",
+        "Casting Time": "1 minute",
+        "Range": "30 feet",
+        "Components": "V, S, M (a paintbrush)",
+        "Duration": "Special"
+      },
+      "html": "<p><em>Level 5 Illusion (Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> 1 minute</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a paintbrush)</p> <p><strong>Duration:</strong> Special</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Creation - Spells - D&D Beyond-6b5453c8d21e5fe22162f03398e0b7829cf209fe30ec6ae325f9047fcc79b233.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Creation - Spells - D&amp;D Beyond-6b5453c8d21e5fe22162f03398e0b7829cf209fe30ec6ae325f9047fcc79b233.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

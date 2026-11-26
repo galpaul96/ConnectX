@@ -1,183 +1,185 @@
 @page "/dnd/catalogs/skills"
 @rendermode InteractiveServer
+@implements IDisposable
+@inject ISpellService SpellService
+@inject ILogger<Index> Logger
+@inject SpellUploadService Upload
 
-<PageTitle>Skills &amp; Spells | ConnectX</PageTitle>
-
+<PageTitle>Spells | ConnectX</PageTitle>
 <section class="spell-catalog-page" aria-labelledby="spell-catalog-title">
-    <nav class="spell-breadcrumb" aria-label="Breadcrumb">
-        <a href="/dnd/catalogs">Catalogs</a>
-        <span aria-hidden="true">/</span>
-        <span aria-current="page">Skills &amp; Spells</span>
-    </nav>
-
+    <nav class="spell-breadcrumb" aria-label="Breadcrumb"><a href="/dnd/catalogs">Catalogs</a><span aria-hidden="true">/</span><span aria-current="page">Spells</span></nav>
     <header class="spell-catalog-header">
-        <div>
-            <p class="spell-eyebrow">Reference library · preview</p>
-            <h1 id="spell-catalog-title">Skills &amp; Spells</h1>
-            <p class="spell-catalog-description">Browse spells by name, level, school, and class. This page uses preview entries; the spell JSON files will be connected later, and skill references can join when their data is available.</p>
-        </div>
-        <span class="spell-preview-badge">Sample entries</span>
+        <h1 id="spell-catalog-title">Spells</h1>
+        <span class="spell-count" aria-live="polite">@(loading ? "Loading…" : $"{result.TotalCount} {(result.TotalCount == 1 ? "spell" : "spells")}")</span>
+        <SpellCreateButton OnCreate="OpenCreateAsync" />
     </header>
-
-    <div class="spell-filter-panel" role="search" aria-label="Filter spell catalog">
-        <div class="spell-search-field">
-            <label for="spell-search">Search</label>
-            <input id="spell-search" class="form-control" type="search" placeholder="Name or description"
-                   @bind="searchTerm" @bind:event="oninput" @bind:after="ResetPage" />
-        </div>
-        <div class="spell-filter-field">
-            <label for="spell-level-filter">Level</label>
-            <select id="spell-level-filter" class="form-select" @bind="selectedLevel" @bind:after="ResetPage">
-                <option value="">All levels</option>
-                @foreach (var level in Levels)
-                {
-                    <option value="@level.Value">@level.Label</option>
-                }
-            </select>
-        </div>
-        <div class="spell-filter-field">
-            <label for="spell-school-filter">School</label>
-            <select id="spell-school-filter" class="form-select" @bind="selectedSchool" @bind:after="ResetPage">
-                <option value="">All schools</option>
-                @foreach (var school in Schools)
-                {
-                    <option value="@school">@school</option>
-                }
-            </select>
-        </div>
-        <div class="spell-filter-field">
-            <label for="spell-class-filter">Class</label>
-            <select id="spell-class-filter" class="form-select" @bind="selectedClass" @bind:after="ResetPage">
-                <option value="">All classes</option>
-                @foreach (var spellClass in Classes)
-                {
-                    <option value="@spellClass">@spellClass</option>
-                }
-            </select>
-        </div>
-        <div class="spell-toggle-filters">
-            <label class="spell-check-filter">
-                <input class="form-check-input" type="checkbox" @bind="ritualOnly" @bind:after="ResetPage" />
-                <span>Ritual</span>
-            </label>
-            <label class="spell-check-filter">
-                <input class="form-check-input" type="checkbox" @bind="concentrationOnly" @bind:after="ResetPage" />
-                <span>Concentration</span>
-            </label>
-        </div>
-        <button class="spell-reset-button" type="button" @onclick="ClearFilters">Clear filters</button>
-    </div>
-
-    <div class="spell-results-heading" aria-live="polite">
-        <h2>Spell index</h2>
-        <span>@FilteredSpellList.Count spells</span>
-    </div>
-
-    @if (PageSpells.Count > 0)
-    {
-        <div class="spell-card-grid">
-            @foreach (var spell in PageSpells)
+    @if (createdMessage is not null) { <p role="status">@createdMessage</p> }
+    @if (createError is not null) { <p role="alert">@createError</p> }
+    <div class="spell-toolbar">
+        <div class="spell-search" role="search" aria-label="Search spells">
+            <label class="visually-hidden" for="spell-search">Spell name</label>
+            <input id="spell-search" class="form-control" type="search" placeholder="Search by name" @bind="searchTerm" @bind:event="oninput" @onkeydown="SearchKeyAsync" />
+            <button class="spell-control" type="button" @onclick="SearchAsync" disabled="@loading">Search</button>
+            @if (!string.IsNullOrEmpty(activeSearch))
             {
-                <SpellCard @key="spell.Id" Spell="spell" OnSelect="OpenSpell" />
+                <button class="spell-clear" type="button" @onclick="ClearSearchAsync" disabled="@loading">Clear</button>
             }
         </div>
-        <nav class="spell-pagination" aria-label="Spell pages">
-            <span class="spell-pagination-summary">Showing @FirstVisible–@LastVisible of @FilteredSpellList.Count</span>
-            <div class="spell-pagination-controls">
-                <label for="spell-page-size">Per page</label>
-                <select id="spell-page-size" class="form-select form-select-sm" @bind="pageSize" @bind:after="ResetPage">
-                    <option value="12">12</option>
-                    <option value="24">24</option>
-                    <option value="48">48</option>
-                </select>
-                <button type="button" class="spell-page-button" @onclick="PreviousPage" disabled="@(currentPage <= 1)" aria-label="Previous page">‹</button>
-                <span class="spell-page-number">@currentPage / @TotalPages</span>
-                <button type="button" class="spell-page-button" @onclick="NextPage" disabled="@(currentPage >= TotalPages)" aria-label="Next page">›</button>
-            </div>
-        </nav>
+        <div class="spell-page-size">
+            <label for="spell-page-size">Per page</label>
+            <select id="spell-page-size" class="form-select form-select-sm" @bind="pageSize" @bind:after="ChangePageSizeAsync" disabled="@loading"><option value="12">12</option><option value="24">24</option><option value="48">48</option></select>
+        </div>
+    </div>
+    @if (listError is not null)
+    {
+        <div class="spell-empty-state" role="alert"><p>@listError</p><button class="btn btn-outline-primary" @onclick="LoadPageAsync">Try again</button></div>
+    }
+    else if (loading)
+    {
+        <div class="spell-empty-state" role="status">Loading spells…</div>
+    }
+    else if (result.Items.Count == 0)
+    {
+        <div class="spell-empty-state"><h2>No spells found</h2><p>@(string.IsNullOrEmpty(activeSearch) ? "The spell catalog is empty." : "Try a different spell name.")</p></div>
     }
     else
     {
-        <div class="spell-empty-state">
-            <span class="spell-empty-mark" aria-hidden="true">⌕</span>
-            <h2>No spells match these filters</h2>
-            <p>Try a different name or clear one or more filters.</p>
-            <button type="button" class="btn btn-outline-primary" @onclick="ClearFilters">Clear filters</button>
-        </div>
+        <ul class="spell-card-grid" aria-label="Spells">
+            @foreach (var entry in result.Items)
+            {
+                <li @key="entry.Id"><SpellCard Entry="entry" OnSelect="OpenSpellAsync" /></li>
+            }
+        </ul>
+    }
+    @if (result.TotalCount > 0 && listError is null)
+    {
+        <nav class="spell-pagination" aria-label="Spell pages">
+            <span class="spell-pagination-summary">@FirstVisible–@LastVisible of @result.TotalCount</span>
+            <div class="spell-pagination-controls">
+                <button type="button" class="spell-control" @onclick="PreviousAsync" disabled="@(loading || result.PageNumber <= 1)" aria-label="Previous page">Previous</button>
+                <span class="spell-page-number">@result.PageNumber / @result.TotalPages</span>
+                <button type="button" class="spell-control" @onclick="NextAsync" disabled="@(loading || result.PageNumber >= result.TotalPages)" aria-label="Next page">Next</button>
+            </div>
+        </nav>
     }
 </section>
-
-@if (selectedSpell is not null)
+@if (modalOpen)
 {
-    <SpellDetailModal Spell="selectedSpell" OnClose="CloseSpell" />
+    <SpellDetailModal Spell="selectedSpell" Loading="@detailLoading" Error="@detailError" OnClose="CloseSpell" OnRetry="RetryDetailAsync" />
 }
 
-@code {
-    private readonly IReadOnlyList<SpellCatalogEntry> spells = SpellCatalogPreviewData.Entries;
-    private string searchTerm = string.Empty;
-    private string selectedLevel = string.Empty;
-    private string selectedSchool = string.Empty;
-    private string selectedClass = string.Empty;
-    private bool ritualOnly;
-    private bool concentrationOnly;
-    private int pageSize = 12;
-    private int currentPage = 1;
-    private SpellCatalogEntry? selectedSpell;
-
-    private IEnumerable<SpellCatalogEntry> FilteredSpells => spells
-        .Where(spell => string.IsNullOrWhiteSpace(searchTerm) ||
-                        spell.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
-                        spell.SearchableDescription.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
-        .Where(spell => string.IsNullOrWhiteSpace(selectedLevel) || spell.LevelValue.ToString() == selectedLevel)
-        .Where(spell => string.IsNullOrWhiteSpace(selectedSchool) || spell.School == selectedSchool)
-        .Where(spell => string.IsNullOrWhiteSpace(selectedClass) || spell.AvailableFor.Contains(selectedClass, StringComparer.OrdinalIgnoreCase))
-        .Where(spell => !ritualOnly || spell.IsRitual)
-        .Where(spell => !concentrationOnly || spell.IsConcentration)
-        .OrderBy(spell => spell.LevelValue)
-        .ThenBy(spell => spell.Name, StringComparer.OrdinalIgnoreCase);
-
-    private List<SpellCatalogEntry> PageSpells => FilteredSpells
-        .Skip((currentPage - 1) * pageSize)
-        .Take(pageSize)
-        .ToList();
-
-    private List<SpellCatalogEntry> FilteredSpellList => FilteredSpells.ToList();
-    private int TotalPages => Math.Max(1, (int)Math.Ceiling(FilteredSpellList.Count / (double)pageSize));
-    private int FirstVisible => FilteredSpellList.Count == 0 ? 0 : ((currentPage - 1) * pageSize) + 1;
-    private int LastVisible => Math.Min(currentPage * pageSize, FilteredSpellList.Count);
-
-    private IEnumerable<(string Value, string Label)> Levels => spells
-        .Select(spell => (Value: spell.LevelValue.ToString(), spell.LevelLabel))
-        .Distinct()
-        .OrderBy(level => int.Parse(level.Value))
-        .Select(level => (level.Value, level.LevelLabel));
-
-    private IEnumerable<string> Schools => spells
-        .Where(spell => !string.IsNullOrWhiteSpace(spell.School))
-        .Select(spell => spell.School!)
-        .Distinct(StringComparer.OrdinalIgnoreCase)
-        .OrderBy(school => school, StringComparer.OrdinalIgnoreCase);
-
-    private IEnumerable<string> Classes => spells
-        .SelectMany(spell => spell.AvailableFor)
-        .Distinct(StringComparer.OrdinalIgnoreCase)
-        .OrderBy(spellClass => spellClass, StringComparer.OrdinalIgnoreCase);
-
-    private void ResetPage() => currentPage = 1;
-
-    private void ClearFilters()
+<AuthorizeView Roles="DungeonMaster">
+    @if (createOpen)
     {
-        searchTerm = string.Empty;
-        selectedLevel = string.Empty;
-        selectedSchool = string.Empty;
-        selectedClass = string.Empty;
-        ritualOnly = false;
-        concentrationOnly = false;
-        currentPage = 1;
+        <SpellUploadModal OnClose="CloseCreate" OnCreated="SpellCreatedAsync" />
+    }
+</AuthorizeView>
+
+@code {
+    private bool createOpen;
+    private string? createError;
+    private string? createdMessage;
+    private async Task OpenCreateAsync()
+    {
+        createError = null;
+        createdMessage = null;
+        try { await Upload.EnsureAuthorizedAsync(); createOpen = true; }
+        catch (UnauthorizedAccessException ex) { createError = ex.Message; }
+    }
+    private void CloseCreate() => createOpen = false;
+    private async Task SpellCreatedAsync(IReadOnlyList<Guid> ids)
+    {
+        createdMessage = $"{ids.Count} {(ids.Count == 1 ? "spell created" : "spells created")}.";
+        await ClearSearchAsync();
     }
 
-    private void PreviousPage() => currentPage = Math.Max(1, currentPage - 1);
-    private void NextPage() => currentPage = Math.Min(TotalPages, currentPage + 1);
-    private void OpenSpell(SpellCatalogEntry spell) => selectedSpell = spell;
-    private void CloseSpell() => selectedSpell = null;
+    private SpellPageDto result = new([], 0, 1, 24);
+    private int pageSize = 24;
+    private int requestedPage = 1;
+    private string searchTerm = string.Empty;
+    private string activeSearch = string.Empty;
+    private bool loading = true;
+    private string? listError;
+    private SpellDto? selectedSpell;
+    private Guid selectedId;
+    private bool modalOpen;
+    private bool detailLoading;
+    private string? detailError;
+    private CancellationTokenSource? listRequest;
+    private CancellationTokenSource? detailRequest;
+    private bool disposed;
+    private int FirstVisible => result.Items.Count == 0 ? 0 : (result.PageNumber - 1) * result.PageSize + 1;
+    private int LastVisible => result.Items.Count == 0 ? 0 : FirstVisible + result.Items.Count - 1;
+
+    protected override Task OnInitializedAsync() => LoadPageAsync();
+
+    private async Task LoadPageAsync()
+    {
+        listRequest?.Cancel();
+        using var request = new CancellationTokenSource();
+        listRequest = request;
+        loading = true;
+        listError = null;
+        try
+        {
+            var loaded = await SpellService.GetPageAsync(requestedPage, pageSize, activeSearch, request.Token);
+            if (!request.IsCancellationRequested && !disposed) { result = loaded; requestedPage = loaded.PageNumber; }
+        }
+        catch (OperationCanceledException) when (request.IsCancellationRequested) { }
+        catch (Exception ex)
+        {
+            if (!request.IsCancellationRequested && !disposed)
+            {
+                Logger.LogError(ex, "Could not load the spell catalog");
+                listError = "Spells could not be loaded. Please try again.";
+            }
+        }
+        finally
+        {
+            if (ReferenceEquals(listRequest, request)) { loading = false; listRequest = null; }
+        }
+    }
+    private Task SearchKeyAsync(KeyboardEventArgs args) => args.Key == "Enter" ? SearchAsync() : Task.CompletedTask;
+    private Task SearchAsync() { requestedPage = 1; activeSearch = searchTerm.Trim(); return LoadPageAsync(); }
+    private Task ClearSearchAsync() { searchTerm = string.Empty; return SearchAsync(); }
+    private Task ChangePageSizeAsync() { requestedPage = 1; return LoadPageAsync(); }
+    private Task PreviousAsync() { requestedPage = Math.Max(1, result.PageNumber - 1); return LoadPageAsync(); }
+    private Task NextAsync() { requestedPage = Math.Min(result.TotalPages, result.PageNumber + 1); return LoadPageAsync(); }
+
+    private async Task OpenSpellAsync(Guid id)
+    {
+        detailRequest?.Cancel();
+        using var request = new CancellationTokenSource();
+        detailRequest = request;
+        selectedId = id;
+        selectedSpell = null;
+        modalOpen = true;
+        detailLoading = true;
+        detailError = null;
+        try
+        {
+            var result = await SpellService.GetByIdAsync(id, request.Token);
+            if (!request.IsCancellationRequested && !disposed && modalOpen)
+            {
+                selectedSpell = result;
+                if (result is null) detailError = "This spell is no longer available.";
+            }
+        }
+        catch (OperationCanceledException) when (request.IsCancellationRequested) { }
+        catch (Exception ex)
+        {
+            if (!request.IsCancellationRequested && !disposed)
+            {
+                Logger.LogError(ex, "Could not load spell {SpellId}", id);
+                detailError = "Spell details could not be loaded. Please try again.";
+            }
+        }
+        finally
+        {
+            if (ReferenceEquals(detailRequest, request)) { detailLoading = false; detailRequest = null; }
+        }
+    }
+    private Task RetryDetailAsync() => OpenSpellAsync(selectedId);
+    private void CloseSpell() { detailRequest?.Cancel(); modalOpen = false; selectedSpell = null; }
+    public void Dispose() { disposed = true; listRequest?.Cancel(); detailRequest?.Cancel(); }
 }

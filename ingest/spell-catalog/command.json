@@ -1,0 +1,185 @@
+{
+  "id": "2618985",
+  "slug": "command",
+  "name": "Command",
+  "storageFile": "command.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft.",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 60 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Enchantment",
+      "html": "<div> <div> School </div> <div> Enchantment </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>WIS Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Prone",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Prone </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. Choose the command from these options:",
+        "Approach. The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.",
+        "Drop. The target drops whatever it is holding and then ends its turn.",
+        "Flee. The target spends its turn moving away from you by the fastest available means.",
+        "Grovel. The target has the Prone condition and then ends its turn.",
+        "Halt. On its turn, the target doesn’t move and takes no action or Bonus Action.",
+        "Using a Higher-Level Spell Slot. You can affect one additional creature for each spell slot level above 1."
+      ],
+      "html": "<div> <p>You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. Choose the command from these options:</p> <p><strong>Approach.</strong> The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.</p> <p><strong>Drop.</strong> The target drops whatever it is holding and then ends its turn.</p> <p><strong>Flee.</strong> The target spends its turn moving away from you by the fastest available means.</p> <p><strong>Grovel.</strong> The target has the <a>Prone</a> condition and then ends its turn.</p> <p><strong>Halt.</strong> On its turn, the target doesn’t move and takes no action or Bonus Action.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> You can affect one additional creature for each spell slot level above 1.</p> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control"
+      ],
+      "html": "<ul><li><p>Control</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Cleric (Legacy)",
+        "Paladin (Legacy)",
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Cleric - Order Domain (TCoE)",
+        "Cleric - Knowledge Domain (Legacy)",
+        "Paladin - Oath of Conquest (XGtE)",
+        "Paladin - Oath of the Crown (SCAG)",
+        "Sorcerer - Draconic Sorcery",
+        "Warlock - Fiend Patron",
+        "Illrigger - Architect of Ruin",
+        "Cleric - Keeper Domain (BoET)"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Cleric (Legacy)</p></li><li><p>Paladin (Legacy)</p></li><li><p>Bard</p></li><li><p>Cleric</p></li><li><p>Paladin</p></li><li><p>Cleric - Order Domain (TCoE)</p></li><li><p>Cleric - Knowledge Domain (Legacy)</p></li><li><p>Paladin - Oath of Conquest (XGtE)</p></li><li><p>Paladin - Oath of the Crown (SCAG)</p></li><li><p>Sorcerer - Draconic Sorcery</p></li><li><p>Warlock - Fiend Patron</p></li><li><p>Illrigger - Architect of Ruin</p></li><li><p>Cleric - Keeper Domain (BoET)</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 251",
+      "html": "<p>Player’s Handbook, pg. 251</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618985-command",
+      "html": "<p>https://www.dndbeyond.com/spells/2618985-command</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/702/enchantment.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/702/enchantment.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Enchantment (Bard, Cleric, Paladin)",
+        "Casting Time": "Action",
+        "Range": "60 feet",
+        "Components": "V",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 1 Enchantment (Bard, Cleric, Paladin)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 60 feet</p> <p><strong>Components:</strong> V</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Command - Spells - D&D Beyond-1487db88b3f9974d813b7dbc7f58eb3bb0fec119c7d04728af715869c1563788.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Command - Spells - D&amp;D Beyond-1487db88b3f9974d813b7dbc7f58eb3bb0fec119c7d04728af715869c1563788.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

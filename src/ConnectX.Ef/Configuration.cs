@@ -20,12 +20,12 @@ namespace ConnectX.Ef
             options =>
                 options.UseNpgsql(
                     connectionString,
-                   x => x.MigrationsAssembly("Blazor.Api.Ef"))
+                   x => x.MigrationsAssembly(typeof(EfContext).Assembly.GetName().Name))
                 );
 
             var sw = Stopwatch.StartNew();
             Console.WriteLine("Deploying database...");
-            var dbContext = new EfContextFactory().CreateDbContext([connectionString]);
+            using var dbContext = new EfContextFactory().CreateDbContext([connectionString]);
             dbContext.Database.SetCommandTimeout(TimeSpan.FromMinutes(30));
             dbContext.Database.Migrate();
             Console.WriteLine($"Deployment done in {sw.Elapsed}");

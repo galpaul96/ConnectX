@@ -1,0 +1,155 @@
+{
+  "id": "3178279",
+  "slug": "living-sling",
+  "name": "🧣 living sling",
+  "storageFile": "living-sling.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>2</p></dd><dt>label</dt><dd><p>2nd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Bonus Action",
+        "kind": "bonus_action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Bonus Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Self</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, M *",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": true,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Round",
+        "kind": "timed",
+        "value": 1,
+        "unit": "round",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>1 Round</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<p>Transmutation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "",
+        "damageTypes": []
+      },
+      "html": "",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Your living scarf coils tight and snaps outward, hurling you through the battlefield with violent precision.",
+        "Until the end of your turn, you gain the following benefits:",
+        "You may move up to 30 feet in any direction, including vertically. This movement must be in a straight line and does not provoke opportunity attacks. If the movement ends with you being at least 10 feet off the ground, you do not fall until the end of your next turn and when you do, you do not take fall damage",
+        "You can move through the space of creatures during this movement (they are not treated as difficult terrain), but must end your movement in an unoccupied space.",
+        "If you end this movement adjacent to a creature, you may make one melee weapon attack against that creature as part of the same bonus action. On a hit, the attack deals an extra 1d6 damage and is thedered.",
+        "Additionally, if you passed within 5 feet of at least one creature during this movement, you gain advantage on the attack made as part of this spell.",
+        "* - (A scarf which must be worn)"
+      ],
+      "html": "<div> <p>Your living scarf coils tight and snaps outward, hurling you through the battlefield with violent precision.</p> <p>Until the end of your turn, you gain the following benefits:</p> <ul> <li> <p>You may move up to <strong>30 feet</strong> in any direction, including vertically. This movement must be in a <strong>straight line</strong> and does not provoke opportunity attacks. If the movement ends with you being at least 10 feet off the ground, you do not fall until the end of your next turn and when you do, you do not take fall damage</p> </li> <li> <p>You can move through the space of creatures during this movement (they are not treated as difficult terrain), but must end your movement in an unoccupied space.</p> </li> <li> <p>If you end this movement adjacent to a creature, you may make <strong>one melee weapon attack</strong> against that creature as part of the same bonus action. On a hit, the attack deals <strong>an extra 1d6 damage and is thedered</strong>.</p> </li> </ul> <p>Additionally, if you passed within <strong>5 feet of at least one creature</strong> during this movement, you gain <strong>advantage on the attack</strong> made as part of this spell.</p> <span>* - (A scarf which must be worn)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3178279-living-sling",
+      "html": "<p>https://www.dndbeyond.com/spells/3178279-living-sling</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/🧣 living sling - Spells - Homebrew - D&D Beyond-10d46c84b5c57d48e37b526e36b9fd9820e72ae8f460aa10bb1b6c64ceb21cf3.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/🧣 living sling - Spells - Homebrew - D&amp;D Beyond-10d46c84b5c57d48e37b526e36b9fd9820e72ae8f460aa10bb1b6c64ceb21cf3.html</p></li></ul>"
+    }
+  ]
+}

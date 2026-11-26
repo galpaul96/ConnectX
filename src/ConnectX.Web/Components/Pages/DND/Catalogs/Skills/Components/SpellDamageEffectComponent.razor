@@ -1,0 +1,9 @@
+@inherits SpellComponentView
+@{ var types = SpellValue.Strings(SpellValue.Property(Value, "damageTypes")); }
+@if (!string.IsNullOrWhiteSpace(Text("text")) || types.Count > 0)
+{
+    <div class="spell-metadata-field spell-slot-damage"><dt>Damage / effect</dt><dd>@Text("text")
+        @if (types.Count > 0 && string.Join(", ", types) != Text("text"))
+        { <p class="spell-detail-extra">Damage types: @string.Join(", ", types)</p> }
+    </dd></div>
+}

@@ -1,12 +1,14 @@
 @if (!string.IsNullOrWhiteSpace(Value))
 {
-    <div class="spell-metadata-field">
+    <div class="spell-metadata-field @CssClass">
         <dt>@Label</dt>
         <dd>@Value</dd>
     </div>
 }
 
 @code {
+    [Parameter] public string? CssClass { get; set; }
+
     [Parameter, EditorRequired]
     public string Label { get; set; } = string.Empty;
 

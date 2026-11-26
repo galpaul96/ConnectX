@@ -1,0 +1,175 @@
+{
+  "id": "2618874",
+  "slug": "feather-fall",
+  "name": "Feather Fall",
+  "storageFile": "feather-fall.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Reaction *",
+        "kind": "reaction",
+        "value": 1,
+        "unit": "action",
+        "trigger": "which you take when you or a creature you can see within 60 feet of you falls",
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Reaction * </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "60 ft.",
+        "kind": "distance",
+        "distanceValue": 60,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 60 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, M **",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": true,
+          "description": "** - (a small feather or piece of down)",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, M **</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Exploration (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Exploration (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature.",
+        "* - which you take when you or a creature you can see within 60 feet of you falls ** - (a small feather or piece of down)"
+      ],
+      "html": "<div> <p>Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature.</p> <span>* - which you take when you or a creature you can see within 60 feet of you falls</span> <span>** - (a small feather or piece of down)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "* - which you take when you or a creature you can see within 60 feet of you falls",
+      "html": "<p>* - which you take when you or a creature you can see within 60 feet of you falls</p>",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Utility",
+        "Exploration"
+      ],
+      "html": "<ul><li><p>Utility</p></li><li><p>Exploration</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Sorcerer (Legacy)",
+        "Wizard (Legacy)",
+        "Artificer (Legacy)",
+        "Bard",
+        "Sorcerer",
+        "Wizard",
+        "Artificer"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Sorcerer (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Artificer (Legacy)</p></li><li><p>Bard</p></li><li><p>Sorcerer</p></li><li><p>Wizard</p></li><li><p>Artificer</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 271",
+      "html": "<p>Player’s Handbook, pg. 271</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618874-feather-fall",
+      "html": "<p>https://www.dndbeyond.com/spells/2618874-feather-fall</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Transmutation (Bard, Sorcerer, Wizard)",
+        "Casting Time": "Reaction, which you take when you or a creature you can see within 60 feet of you falls",
+        "Range": "60 feet",
+        "Components": "V, M (a small feather or piece of down)",
+        "Duration": "1 minute"
+      },
+      "html": "<p><em>Level 1 Transmutation (Bard, Sorcerer, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Reaction, which you take when you or a creature you can see within 60 feet of you falls</p> <p><strong>Range:</strong> 60 feet</p> <p><strong>Components:</strong> V, M (a small feather or piece of down)</p> <p><strong>Duration:</strong> 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Feather Fall - Spells - D&D Beyond-7fc109e914861cd6b79bbd058a373abb29767570914af9a665b62fad38983377.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Feather Fall - Spells - D&amp;D Beyond-7fc109e914861cd6b79bbd058a373abb29767570914af9a665b62fad38983377.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

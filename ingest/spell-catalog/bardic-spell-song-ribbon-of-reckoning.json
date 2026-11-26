@@ -1,0 +1,156 @@
+{
+  "id": "3056809",
+  "slug": "bardic-spell-song-ribbon-of-reckoning",
+  "name": "🎶 Bardic Spell Song: Ribbon of Reckoning",
+  "storageFile": "bardic-spell-song-ribbon-of-reckoning.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>3</p></dd><dt>label</dt><dd><p>3rd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>30 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Minute</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<p>Conjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<p>DEX Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Restrained",
+        "damageTypes": []
+      },
+      "html": "<p>Restrained</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "✨ Description:",
+        "Selena unfurls a vibrant ribbon mid-performance, twirling it in hypnotic arcs as she sings a fierce, rhythmic chant. The ribbon lashes out like a serpent of light, conjuring a spectral whip that targets up to two enemies. Each must make a Dexterity saving throw (DC 16) or be restrained by the magical ribbon. While restrained, they take 1d8 psychic damage at the start of each of their turns as the rhythm pulses through them.",
+        "If Selena maintains concentration while moving, the ribbon follows her acrobatic path, dragging restrained foes with her in a dazzling aerial display.",
+        "Twist and turn, the ribbon flies,",
+        "Binding hearts and blinding eyes.",
+        "Dance with me or face the sting—",
+        "My reckoning comes on silken wing.",
+        "* - (a knotted ribbon from a past performance)"
+      ],
+      "html": "<div> <h3>✨ Description:</h3> <p>Selena unfurls a vibrant ribbon mid-performance, twirling it in hypnotic arcs as she sings a fierce, rhythmic chant. The ribbon lashes out like a serpent of light, conjuring a spectral whip that targets up to two enemies. Each must make a Dexterity saving throw (DC 16) or be restrained by the magical ribbon. While restrained, they take 1d8 psychic damage at the start of each of their turns as the rhythm pulses through them.</p> <p>If Selena maintains concentration while moving, the ribbon follows her acrobatic path, dragging restrained foes with her in a dazzling aerial display.</p> <p>Twist and turn, the ribbon flies, <br>Binding hearts and blinding eyes. <br>Dance with me or face the sting— <br>My reckoning comes on silken wing.</p> <span>* - (a knotted ribbon from a past performance)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3056809-bardic-spell-song-ribbon-of-reckoning",
+      "html": "<p>https://www.dndbeyond.com/spells/3056809-bardic-spell-song-ribbon-of-reckoning</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/🎶 Bardic Spell Song- Ribbon of Reckoning - Spells - Homebrew - D&D Beyond-6aa77911dc3910036830cb152581c40c353b6d4e989d381a2e36676b1af3c035.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/🎶 Bardic Spell Song- Ribbon of Reckoning - Spells - Homebrew - D&amp;D Beyond-6aa77911dc3910036830cb152581c40c353b6d4e989d381a2e36676b1af3c035.html</p></li></ul>"
+    }
+  ]
+}

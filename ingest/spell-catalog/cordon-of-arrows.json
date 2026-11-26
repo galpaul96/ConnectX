@@ -1,0 +1,169 @@
+{
+  "id": "2619055",
+  "slug": "cordon-of-arrows",
+  "name": "Cordon of Arrows",
+  "storageFile": "cordon-of-arrows.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>2</p></dd><dt>label</dt><dd><p>2nd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Touch",
+        "kind": "touch",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Touch</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "an ornamental braid",
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "8 Hours",
+        "kind": "timed",
+        "value": 8,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>8 Hours</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<p>Transmutation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<p>DEX Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Piercing",
+        "damageTypes": [
+          "Piercing"
+        ]
+      },
+      "html": "<p>Piercing</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You touch up to four nonmagical Arrows or Bolts and plant them in the ground in your space. Until the spell ends, the ammunition can’t be physically uprooted, and whenever a creature other than you enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 2d4 Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground.",
+        "When you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
+        "Using a Higher-Level Spell Slot. The amount of ammunition that can be affected increases by two for each spell slot level above 2.",
+        "* - (four or more arrows or bolts)"
+      ],
+      "html": "<div> <p>You touch up to four nonmagical Arrows or Bolts and plant them in the ground in your space. Until the spell ends, the ammunition can’t be physically uprooted, and whenever a creature other than you enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 2d4 Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground.</p> <p>When you cast this spell, you can designate any creatures you choose, and the spell ignores them.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The amount of ammunition that can be affected increases by two for each spell slot level above 2.</p> <span>* - (four or more arrows or bolts)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Ranger"
+      ],
+      "html": "<ul><li><p>Ranger</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619055-cordon-of-arrows",
+      "html": "<p>https://www.dndbeyond.com/spells/2619055-cordon-of-arrows</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Transmutation (Ranger)",
+        "Casting Time": "Action",
+        "Range": "Touch",
+        "Components": "V, S, M (an ornamental braid)",
+        "Duration": "8 hours"
+      },
+      "html": "<p><em>Level 2 Transmutation (Ranger)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> Touch</p> <p><strong>Components:</strong> V, S, M (an ornamental braid)</p> <p><strong>Duration:</strong> 8 hours</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Cordon of Arrows - Spells - D&D Beyond-1feb18bedff23ba0991013eb31c114cfbbc1287af032948d800c02e80ac292c9.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Cordon of Arrows - Spells - D&amp;D Beyond-1feb18bedff23ba0991013eb31c114cfbbc1287af032948d800c02e80ac292c9.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

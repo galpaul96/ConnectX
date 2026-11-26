@@ -16,9 +16,20 @@ namespace ConnectX.Ef
         public async Task<T> AddAsync<T>(T entity) where T : Audit
         {
             entity.CreatedDate = DateTime.UtcNow;
-            var result = await _context.Set<T>().AddAsync(entity);
-            await _context.SaveChangesAsync();
-            return result.Entity;
+            var previous = _context.ChangeTracker.Entries().Select(x => x.Entity).ToHashSet(ReferenceEqualityComparer.Instance);
+            try
+            {
+                var result = await _context.Set<T>().AddAsync(entity);
+                await _context.SaveChangesAsync();
+                return result.Entity;
+            }
+            catch
+            {
+                // A rejected insert must not poison subsequent upload attempts in this scope.
+                foreach (var entry in _context.ChangeTracker.Entries().Where(x => !previous.Contains(x.Entity)).ToList())
+                    entry.State = EntityState.Detached;
+                throw;
+            }
         }
 
         public async Task<T> GetByIdAsync<T>(Guid id, params Expression<Func<T, object>>[] predicates) where T : Audit

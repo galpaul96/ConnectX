@@ -1,0 +1,1192 @@
+{
+  "extractedAt": "2026-05-04T20:25:09.917Z",
+  "input": "C:\\Users\\Paul\\Documents\\Repos\\DnD\\dndbeyond-spell-links.txt",
+  "outputDir": "C:\\Users\\Paul\\Documents\\Repos\\DnD\\spells",
+  "totalInputLinks": 935,
+  "totalLinks": 935,
+  "limit": null,
+  "randomLimit": null,
+  "delayMs": 1000,
+  "retryCount": 3,
+  "written": 701,
+  "skippedRedirect": 234,
+  "skippedNon200": 0,
+  "skippedMissingDetails": 0,
+  "failed": 0,
+  "redirects": [
+    {
+      "url": "https://www.dndbeyond.com/spells/1585025-air-bubble",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/spelljammer-adventures-in-space"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078516-alustriels-mooncloak",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2158656-antagonize",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00109"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618865-arcane-gate",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2358-arcane-gate",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618831-arcane-vigor",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618870-armor-of-agathys",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2310-armor-of-agathys",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618871-arms-of-hadar",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2311-arms-of-hadar",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1183862-ashardalons-stride",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/fizbans-treasury-of-dragons"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2342-aura-of-life",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618888-aura-of-purity",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2343-aura-of-purity",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618891-aura-of-vitality",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2333-aura-of-vitality",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078517-backlash",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618904-banishing-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2351-banishing-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618914-beast-sense",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2325-beast-sense",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2352-bigbys-hand",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078515-blade-of-disaster",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/654072-blade-of-disaster",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/icewind-dale-rime-of-the-frostmaiden"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618931-blade-ward",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2307-blade-ward",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618936-blinding-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2334-blinding-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2410-booming-blade",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00013"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1239802-borrowed-knowledge",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/strixhaven-a-curriculum-of-chaos"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078514-cacophonic-shield",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14754-catnap",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14758-cause-fear",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14760-ceremony",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14761-chaos-bolt",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14763-charm-monster",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2312-chromatic-orb",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618970-circle-of-power",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2353-circle-of-power",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618974-cloud-of-daggers",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2327-cloud-of-daggers",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618990-compelled-duel",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2313-compelled-duel",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619045-conjure-barrage",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2335-conjure-barrage",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078513-conjure-constructs",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619050-conjure-volley",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2354-conjure-volley",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619055-cordon-of-arrows",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2328-cordon-of-arrows",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14765-create-homunculus",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/654073-create-magen",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/icewind-dale-rime-of-the-frostmaiden"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1585026-create-spelljamming-helm",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/spelljammer-adventures-in-space"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619056-crown-of-madness",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2329-crown-of-madness",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14827-crown-of-stars",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619057-crusaders-mantle",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2336-crusaders-mantle",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14830-danse-macabre",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14831-dawn",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078531-death-armor",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078530-deryans-helpful-homunculi",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619089-destructive-wave",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2355-destructive-wave",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078529-dirge",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2314-dissonant-whispers",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/188092-distort-value",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/acquisitions-incorporated"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078528-doomtide",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1183863-draconic-transformation",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/fizbans-treasury-of-dragons"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14832-dragons-breath",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2359-drawmijs-instant-summons",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/717915-dream-of-the-blue-veil",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14834-druid-grove",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619164-elemental-weapon",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2337-elemental-weapon",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078527-elminsters-effulgent-spheres",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078526-elminsters-elusion",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/83532-encode-thoughts",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/guildmasters-guide-to-ravnica"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14836-enemies-abound",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14869-enervation",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2315-ensnaring-strike",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2344-evards-black-tentacles",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14870-far-step",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/188104-fast-friends",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/acquisitions-incorporated"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618873-feign-death",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2338-feign-death",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14871-find-greater-steed",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1183864-fizbans-platinum-shield",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/fizbans-treasury-of-dragons"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/92691-flock-of-familiars",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00040"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618835-fount-of-moonlight",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618924-friends",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2308-friends",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/654074-frost-fingers",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/icewind-dale-rime-of-the-frostmaiden"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/92692-galders-speedy-courier",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00040"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/92693-galders-tower",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00040"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2119578-gate-seal",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/planescape-adventures-in-the-multiverse"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/188118-gift-of-gab",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/acquisitions-incorporated"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618955-grasping-vine",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2345-grasping-vine",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2411-green-flame-blade",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00013"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14872-guardian-of-nature",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618975-hail-of-thorns",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2316-hail-of-thorns",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14873-healing-spirit",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2317-hex",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078525-holy-star-of-mystra",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14874-holy-weapon",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3107729-homunculus-servant",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/5147000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619162-hunger-of-hadar",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2339-hunger-of-hadar",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14876-illusory-dragon",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/188121-incite-greed",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/acquisitions-incorporated"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14877-infernal-calling",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14878-infestation",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/718549-intellect-fortress",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14879-invulnerability",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618836-jallarzis-storm-of-radiance",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/188126-jims-glowing-coin",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/acquisitions-incorporated"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/188129-jims-magic-missile",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/acquisitions-incorporated"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1239803-kinetic-jaunt",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/strixhaven-a-curriculum-of-chaos"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078524-laerals-silver-lance",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2346-leomunds-secret-chest",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2340-leomunds-tiny-hut",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14880-life-transference",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618997-lightning-arrow",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2341-lightning-arrow",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2412-lightning-lure",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00013"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14881-maddening-darkness",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14882-mass-polymorph",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2330-melfs-acid-arrow",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14883-mental-prison",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14474-mighty-fortress",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619037-mind-sliver",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/718568-mind-sliver",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14482-mind-spike",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2347-mordenkainens-faithful-hound",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2362-mordenkainens-magnificent-mansion",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2348-mordenkainens-private-sanctum",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/188142-motivational-speech",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/acquisitions-incorporated"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1183865-nathairs-mischief",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/fizbans-treasury-of-dragons"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14519-negative-energy-flood",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2331-nystuls-magic-aura",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2360-otilukes-freezing-sphere",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2349-otilukes-resilient-sphere",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2332-phantasmal-force",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618837-power-word-fortify",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2366-power-word-heal",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14520-power-word-pain",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14558-primal-savagery",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14592-psychic-scream",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2356-rarys-telepathic-bond",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1183866-raulothims-psychic-lance",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/fizbans-treasury-of-dragons"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2318-ray-of-sickness",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1183867-rimes-binding-ice",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/fizbans-treasury-of-dragons"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14593-scatter",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2319-searing-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14595-shadow-blade",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14596-shadow-of-moil",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14597-sickening-radiance",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1239804-silvery-barbs",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/strixhaven-a-curriculum-of-chaos"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078523-simbuls-synostodweomer",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14599-skill-empowerment",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14600-snare",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078522-songals-elemental-suffusion",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14601-soul-cage",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078521-spellfire-flare",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078520-spellfire-storm",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2158657-spirit-of-death",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00109"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/718581-spirit-shroud",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2158658-spray-of-cards",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00109"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619084-staggering-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2350-staggering-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619087-steel-wind-strike",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14602-steel-wind-strike",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619105-summon-aberration",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/718613-summon-aberration",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619106-summon-beast",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/721187-summon-beast",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619108-summon-celestial",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/721194-summon-celestial",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619111-summon-construct",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/721195-summon-construct",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1183868-summon-draconic-spirit",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/fizbans-treasury-of-dragons"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619113-summon-elemental",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/721199-summon-elemental",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619115-summon-fey",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/721204-summon-fey",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619117-summon-fiend",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/719934-summon-fiend",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14603-summon-greater-demon",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14604-summon-lesser-demons",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/719948-summon-shadowspawn",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619119-summon-undead",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/719951-summon-undead",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619125-swift-quiver",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2357-swift-quiver",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2413-sword-burst",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/SRC-00013"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078519-sylunes-viper",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619129-synaptic-static",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14605-synaptic-static",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618841-tashas-bubbling-cauldron",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/719953-tashas-caustic-brew",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2320-tashas-hideous-laughter",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/719959-tashas-mind-whip",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/719961-tashas-otherworldly-guise",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/tashas-cauldron-of-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619159-telepathy",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2364-telepathy",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14606-temple-of-the-gods",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2321-tensers-floating-disk",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14612-tensers-transformation",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619176-thorn-whip",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2309-thorn-whip",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14613-thunder-step",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619179-thunderclap",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619182-thunderous-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2322-thunderous-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14614-tiny-servant",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619188-toll-the-dead",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14615-toll-the-dead",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2365-tsunami",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1239805-vortex-warp",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/strixhaven-a-curriculum-of-chaos"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14616-wall-of-light",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/3078518-wardaway",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/BB-ForgottenRealms-25/4712000?pid=D4712000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2119579-warp-sense",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/planescape-adventures-in-the-multiverse"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619215-witch-bolt",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2323-witch-bolt",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/1239806-wither-and-bloom",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/strixhaven-a-curriculum-of-chaos"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619217-word-of-radiance",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14618-word-of-radiance",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14619-wrath-of-nature",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2619220-wrathful-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2324-wrathful-smite",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/players-handbook"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/2618842-yolandes-regal-presence",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/3709000"
+    },
+    {
+      "url": "https://www.dndbeyond.com/spells/14622-zephyr-strike",
+      "status": 303,
+      "location": "https://marketplace.dndbeyond.com/category/xanathars-guide-to-everything"
+    }
+  ],
+  "non200": [],
+  "missingDetails": [],
+  "failures": [],
+  "completedAt": "2026-05-04T20:46:45.100Z"
+}

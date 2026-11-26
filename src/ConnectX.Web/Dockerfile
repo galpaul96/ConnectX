@@ -8,6 +8,10 @@ WORKDIR /src
 
 COPY ["ConnectX.Web/ConnectX.Web.csproj", "ConnectX.Web/"]
 COPY ["ConnectX.Web.ServiceDefaults/ConnectX.Web.ServiceDefaults.csproj", "ConnectX.Web.ServiceDefaults/"]
+COPY ["ConnectX.Services/ConnectX.Services.csproj", "ConnectX.Services/"]
+COPY ["ConnectX.Domain/ConnectX.Domain.csproj", "ConnectX.Domain/"]
+COPY ["ConnectX.Ef/ConnectX.Ef.csproj", "ConnectX.Ef/"]
+COPY ["ConnectX.MongoDb/ConnectX.MongoDb.csproj", "ConnectX.MongoDb/"]
 RUN dotnet restore "ConnectX.Web/ConnectX.Web.csproj"
 
 COPY . .

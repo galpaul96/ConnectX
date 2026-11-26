@@ -1,0 +1,193 @@
+{
+  "id": "2619113",
+  "slug": "summon-elemental",
+  "name": "Summon Elemental",
+  "storageFile": "summon-elemental.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "4",
+        "label": "4th"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>4</p></dd><dt>label</dt><dd><p>4th</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "90 ft.",
+        "kind": "distance",
+        "distanceValue": 90,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<p>90 ft.</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP",
+          "consumed": null,
+          "costGp": 400,
+          "costIsMinimum": true
+        }
+      },
+      "html": "<p>V, S, M *</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<p>Concentration 1 Hour</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<p>Conjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Summoning",
+        "damageTypes": []
+      },
+      "html": "<p>Summoning</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You call forth an Elemental spirit. It manifests in an unoccupied space that you can see within range and uses the Elemental Spirit stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.",
+        "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.",
+        "Using a Higher-Level Spell Slot. Use the spell slot’s level for the spell’s level in the stat block.",
+        "Elemental Spirit",
+        "Medium Elemental, Neutral",
+        "AC 11 + the spell’s level",
+        "HP 50 + 10 for each spell level above 4",
+        "Speed 40 ft.; Burrow 40 ft. (Earth only); Fly 40 ft. (hover; Air only); Swim 40 ft. (Water only)",
+        "Mod Save",
+        "STR 18 +4 +4",
+        "DEX 15 +2 +2",
+        "CON 17 +3 +3",
+        "Mod Save",
+        "INT 4 –3 –3",
+        "WIS 10 +0 +0",
+        "CHA 16 +3 +3",
+        "Resistances Acid (Water only), Lightning and Thunder (Air only), Piercing and Slashing (Earth only)",
+        "Immunities Fire (Fire only), Poison; Exhaustion, Paralyzed, Petrified, Poisoned",
+        "Senses Darkvision 60 ft.; Passive Perception 10",
+        "Languages Primordial, understands the languages you know",
+        "CR None (XP 0; PB equals your Proficiency Bonus)",
+        "Traits",
+        "Amorphous Form (Air, Fire, and Water Only). The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain.",
+        "Actions",
+        "Multiattack. The spirit makes a number of Slam attacks equal to half this spell’s level (round down).",
+        "Slam. Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 4 + the spell’s level Bludgeoning (Earth only), Cold (Water only), Lightning (Air only), or Fire (Fire only) damage.",
+        "* - (air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP)"
+      ],
+      "html": "<div> <p>You call forth an Elemental spirit. It manifests in an unoccupied space that you can see within range and uses the <strong>Elemental Spirit</strong> stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.</p> <p>The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> Use the spell slot’s level for the spell’s level in the stat block.</p> <div> <h4>Elemental Spirit</h4> <p>Medium Elemental, Neutral</p> <p><strong>AC</strong> 11 + the spell’s level</p> <p><strong>HP</strong> 50 + 10 for each spell level above 4</p> <p><strong>Speed</strong> 40 ft.; Burrow 40 ft. (Earth only); Fly 40 ft. (hover; Air only); Swim 40 ft. (Water only)</p> <div> <table> <thead> <tr> <th> </th> <th> </th> <th>Mod</th> <th>Save</th> </tr> </thead> <tbody> <tr> <th>STR</th> <td>18</td> <td>+4</td> <td>+4</td> </tr> <tr> <th>DEX</th> <td>15</td> <td>+2</td> <td>+2</td> </tr> <tr> <th>CON</th> <td>17</td> <td>+3</td> <td>+3</td> </tr> </tbody> </table> <table> <thead> <tr> <th> </th> <th> </th> <th>Mod</th> <th>Save</th> </tr> </thead> <tbody> <tr> <th>INT</th> <td>4</td> <td>–3</td> <td>–3</td> </tr> <tr> <th>WIS</th> <td>10</td> <td>+0</td> <td>+0</td> </tr> <tr> <th>CHA</th> <td>16</td> <td>+3</td> <td>+3</td> </tr> </tbody> </table> </div> <p><strong>Resistances</strong> Acid (Water only), Lightning and Thunder (Air only), Piercing and Slashing (Earth only)</p> <p><strong>Immunities</strong> Fire (Fire only), Poison; Exhaustion, Paralyzed, Petrified, Poisoned</p> <p><strong>Senses</strong> Darkvision 60 ft.; Passive Perception 10</p> <p><strong>Languages</strong> Primordial, understands the languages you know</p> <p><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</p> <p>Traits</p> <p><strong><em>Amorphous Form (Air, Fire, and Water Only).</em></strong> The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain.</p> <p>Actions</p> <p><strong><em>Multiattack.</em></strong> The spirit makes a number of Slam attacks equal to half this spell’s level (round down).</p> <p><strong><em>Slam.</em></strong> <em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d10 + 4 + the spell’s level Bludgeoning (Earth only), Cold (Water only), Lightning (Air only), or Fire (Fire only) damage.</p> </div> <span>* - (air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Druid",
+        "Ranger",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Druid</p></li><li><p>Ranger</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619113-summon-elemental",
+      "html": "<p>https://www.dndbeyond.com/spells/2619113-summon-elemental</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 4 Conjuration (Druid, Ranger, Wizard)",
+        "Casting Time": "Action",
+        "Range": "90 feet",
+        "Components": "V, S, M (air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP)",
+        "Duration": "Concentration, up to 1 hour"
+      },
+      "html": "<p><em>Level 4 Conjuration (Druid, Ranger, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 90 feet</p> <p><strong>Components:</strong> V, S, M (air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP)</p> <p><strong>Duration:</strong> Concentration, up to 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/Summon Elemental - Spells - D&D Beyond-861df66af26e7ca95165a07f79133ca55310826032e471b4d2a4cafa830b6904.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/Summon Elemental - Spells - D&amp;D Beyond-861df66af26e7ca95165a07f79133ca55310826032e471b4d2a4cafa830b6904.html</p></li></ul>"
+    }
+  ]
+}

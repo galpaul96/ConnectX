@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ConnectX.Web.ServiceDefaults\ConnectX.Web.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\ConnectX.Services\ConnectX.Services.csproj" />
   </ItemGroup>
 
 </Project>

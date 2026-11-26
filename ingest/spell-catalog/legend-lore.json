@@ -1,0 +1,179 @@
+{
+  "id": "2619010",
+  "slug": "legend-lore",
+  "name": "Legend Lore",
+  "storageFile": "legend-lore.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<div> <div> Level </div> <div> 5th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 10 Minutes </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each",
+          "consumed": true,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Utility",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Utility </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Name or describe a famous person, place, or object. The spell brings to your mind a brief summary of the significant lore about that famous thing, as described by the DM.",
+        "The lore might consist of important details, amusing revelations, or even secret lore that has never been widely known. The more information you already know about the thing, the more precise and detailed the information you receive is. That information is accurate but might be couched in figurative language or poetry, as determined by the DM.",
+        "If the famous thing you chose isn’t actually famous, you hear sad musical notes played on a trombone, and the spell fails.",
+        "* - (incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each)"
+      ],
+      "html": "<div> <p>Name or describe a famous person, place, or object. The spell brings to your mind a brief summary of the significant lore about that famous thing, as described by the DM.</p> <p>The lore might consist of important details, amusing revelations, or even secret lore that has never been widely known. The more information you already know about the thing, the more precise and detailed the information you receive is. That information is accurate but might be couched in figurative language or poetry, as determined by the DM.</p> <p>If the famous thing you chose isn’t actually famous, you hear sad musical notes played on a trombone, and the spell fails.</p> <span>* - (incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Utility"
+      ],
+      "html": "<ul><li><p>Utility</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Cleric (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Cleric",
+        "Wizard",
+        "Cleric - Knowledge Domain (Legacy)",
+        "Paladin - Oath of Glory",
+        "Sorcerer - Draconic Sorcery",
+        "Warlock - The Undying (SCAG)",
+        "Warlock - Future You Patron"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Cleric (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Cleric</p></li><li><p>Wizard</p></li><li><p>Cleric - Knowledge Domain (Legacy)</p></li><li><p>Paladin - Oath of Glory</p></li><li><p>Sorcerer - Draconic Sorcery</p></li><li><p>Warlock - The Undying (SCAG)</p></li><li><p>Warlock - Future You Patron</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 290",
+      "html": "<p>Player’s Handbook, pg. 290</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619010-legend-lore",
+      "html": "<p>https://www.dndbeyond.com/spells/2619010-legend-lore</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Divination (Bard, Cleric, Wizard)",
+        "Casting Time": "10 minutes",
+        "Range": "Self",
+        "Components": "V, S, M (incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each)",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 5 Divination (Bard, Cleric, Wizard)</em></p><div> <p><strong>Casting Time:</strong> 10 minutes</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V, S, M (incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each)</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Legend Lore - Spells - D&D Beyond-5eb3ecadcb5ff2cccdc586ceb6d8364b9c19f0660a93922fd7bedac8a1e40c76.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Legend Lore - Spells - D&amp;D Beyond-5eb3ecadcb5ff2cccdc586ceb6d8364b9c19f0660a93922fd7bedac8a1e40c76.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

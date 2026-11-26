@@ -1,0 +1,6 @@
+<AuthorizeView Roles="DungeonMaster">
+    <button type="button" class="spell-control spell-create" @onclick="OnCreate">Create spell</button>
+</AuthorizeView>
+@code {
+    [Parameter] public EventCallback OnCreate { get; set; }
+}

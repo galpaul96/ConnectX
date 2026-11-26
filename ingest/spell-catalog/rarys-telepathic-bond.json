@@ -1,0 +1,179 @@
+{
+  "id": "2618925",
+  "slug": "rarys-telepathic-bond",
+  "name": "Rary's Telepathic Bond",
+  "storageFile": "rarys-telepathic-bond.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "5",
+        "label": "5th"
+      },
+      "html": "<div> <div> Level </div> <div> 5th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action Ritual",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": true
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action <i>Ritual</i> </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "two eggs",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Divination",
+      "html": "<div> <div> School </div> <div> Divination </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Communication",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Communication </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can’t communicate in any languages aren’t affected by this spell.",
+        "Until the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can’t extend to other planes of existence.",
+        "* - (two eggs)"
+      ],
+      "html": "<div> <p>You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can’t communicate in any languages aren’t affected by this spell.</p> <p>Until the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can’t extend to other planes of existence.</p> <span>* - (two eggs)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Communication"
+      ],
+      "html": "<ul><li><p>Communication</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Wizard",
+        "Warlock (Legacy) - The Many",
+        "Cleric - Peace Domain (TCoE)",
+        "Paladin - Oath of Revelry",
+        "Sorcerer - Aberrant Sorcery",
+        "Warlock - Future You Patron",
+        "Cleric - Keeper Domain (BoET)",
+        "Cleric - Community Domain (HCS)",
+        "Warlock - The Many"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Wizard</p></li><li><p>Warlock (Legacy) - The Many</p></li><li><p>Cleric - Peace Domain (TCoE)</p></li><li><p>Paladin - Oath of Revelry</p></li><li><p>Sorcerer - Aberrant Sorcery</p></li><li><p>Warlock - Future You Patron</p></li><li><p>Cleric - Keeper Domain (BoET)</p></li><li><p>Cleric - Community Domain (HCS)</p></li><li><p>Warlock - The Many</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 311",
+      "html": "<p>Player’s Handbook, pg. 311</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618925-rarys-telepathic-bond",
+      "html": "<p>https://www.dndbeyond.com/spells/2618925-rarys-telepathic-bond</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/709/divination.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/709/divination.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 5 Divination (Bard, Wizard)",
+        "Casting Time": "Action or Ritual",
+        "Range": "30 feet",
+        "Components": "V, S, M (two eggs)",
+        "Duration": "1 hour"
+      },
+      "html": "<p><em>Level 5 Divination (Bard, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action or Ritual</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (two eggs)</p> <p><strong>Duration:</strong> 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Rary's Telepathic Bond - Spells - D&D Beyond-7384431902a268077455939471c8b5cf2002959099dac0509b94130e84824852.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Rary&#x27;s Telepathic Bond - Spells - D&amp;D Beyond-7384431902a268077455939471c8b5cf2002959099dac0509b94130e84824852.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

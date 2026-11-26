@@ -1,0 +1,196 @@
+{
+  "id": "2618879",
+  "slug": "find-steed",
+  "name": "Find Steed",
+  "storageFile": "find-steed.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "2",
+        "label": "2nd"
+      },
+      "html": "<div> <div> Level </div> <div> 2nd </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<div> <div> School </div> <div> Conjuration </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Summoning",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Summoning </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You summon an otherworldly being that appears as a loyal steed in an unoccupied space of your choice within range. This creature uses the Otherworldly Steed stat block. If you already have a steed from this spell, the steed is replaced by the new one.",
+        "The steed resembles a Large, rideable animal of your choice, such as a horse, a camel, a dire wolf, or an elk. Whenever you cast the spell, choose the steed’s creature type—Celestial, Fey, or Fiend—which determines certain traits in the stat block.",
+        "Combat. The steed is an ally to you and your allies. In combat, it shares your Initiative count, and it functions as a controlled mount while you ride it (as defined in the rules on mounted combat). If you have the Incapacitated condition, the steed takes its turn immediately after yours and acts independently, focusing on protecting you.",
+        "Disappearance of the Steed. The steed disappears if it drops to 0 Hit Points or if you die. When it disappears, it leaves behind anything it was wearing or carrying. If you cast this spell again, you decide whether you summon the steed that disappeared or a different one.",
+        "Using a Higher-Level Spell Slot. Use the spell slot’s level for the spell’s level in the stat block.",
+        "Otherworldly Steed",
+        "Large Celestial, Fey, or Fiend (Your Choice), Neutral",
+        "AC 10 + 1 per spell level",
+        "HP 5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell’s level)",
+        "Speed 60 ft., Fly 60 ft. (requires level 4+ spell)",
+        "Mod Save",
+        "STR 18 +4 +4",
+        "DEX 12 +1 +1",
+        "CON 14 +2 +2",
+        "Mod Save",
+        "INT 6 −2 −2",
+        "WIS 12 +1 +1",
+        "CHA 8 −1 −1",
+        "Senses Passive Perception 11",
+        "Languages Telepathy 1 mile (works only with you)",
+        "CR None (XP 0; PB equals your Proficiency Bonus)",
+        "Traits",
+        "Life Bond. When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you’re within 5 feet of it.",
+        "Actions",
+        "Otherworldly Slam. Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 plus the spell’s level of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage.",
+        "Bonus Actions",
+        "Fell Glare (Fiend Only; Recharges after a Long Rest). Wisdom Saving Throw: DC equals your spell save DC, one creature within 60 feet the steed can see. Failure: The target has the Frightened condition until the end of your next turn.",
+        "Fey Step (Fey Only; Recharges after a Long Rest). The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself.",
+        "Healing Touch (Celestial Only; Recharges after a Long Rest). One creature within 5 feet of the steed regains a number of Hit Points equal to 2d8 plus the spell’s level."
+      ],
+      "html": "<div> <p>You summon an otherworldly being that appears as a loyal steed in an unoccupied space of your choice within range. This creature uses the <strong>Otherworldly Steed</strong> stat block. If you already have a steed from this spell, the steed is replaced by the new one.</p> <p>The steed resembles a Large, rideable animal of your choice, such as a horse, a camel, a dire wolf, or an elk. Whenever you cast the spell, choose the steed’s creature type—Celestial, Fey, or Fiend—which determines certain traits in the stat block.</p> <p><strong><em>Combat.</em></strong> The steed is an ally to you and your allies. In combat, it shares your Initiative count, and it functions as a controlled mount while you ride it (as defined in the rules on mounted combat). If you have the <a>Incapacitated</a> condition, the steed takes its turn immediately after yours and acts independently, focusing on protecting you.</p> <p><strong><em>Disappearance of the Steed.</em></strong> The steed disappears if it drops to 0 Hit Points or if you die. When it disappears, it leaves behind anything it was wearing or carrying. If you cast this spell again, you decide whether you summon the steed that disappeared or a different one.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> Use the spell slot’s level for the spell’s level in the stat block.</p> <div> <h4>Otherworldly Steed</h4> <p>Large Celestial, Fey, or Fiend (Your Choice), Neutral</p> <p><strong>AC</strong> 10 + 1 per spell level</p> <p><strong>HP</strong> 5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell’s level)</p> <p><strong>Speed</strong> 60 ft., Fly 60 ft. (requires level 4+ spell)</p> <div> <table> <thead> <tr> <th> </th> <th> </th> <th>Mod</th> <th>Save</th> </tr> </thead> <tbody> <tr> <th>STR</th> <td>18</td> <td>+4</td> <td>+4</td> </tr> <tr> <th>DEX</th> <td>12</td> <td>+1</td> <td>+1</td> </tr> <tr> <th>CON</th> <td>14</td> <td>+2</td> <td>+2</td> </tr> </tbody> </table> <table> <thead> <tr> <th> </th> <th> </th> <th>Mod</th> <th>Save</th> </tr> </thead> <tbody> <tr> <th>INT</th> <td>6</td> <td>−2</td> <td>−2</td> </tr> <tr> <th>WIS</th> <td>12</td> <td>+1</td> <td>+1</td> </tr> <tr> <th>CHA</th> <td>8</td> <td>−1</td> <td>−1</td> </tr> </tbody> </table> </div> <p><strong>Senses</strong> Passive Perception 11</p> <p><strong>Languages</strong> Telepathy 1 mile (works only with you)</p> <p><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</p> <p>Traits</p> <p><strong><em>Life Bond.</em></strong> When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you’re within 5 feet of it.</p> <p>Actions</p> <p><strong><em>Otherworldly Slam.</em></strong> <em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d8 plus the spell’s level of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage.</p> <p>Bonus Actions</p> <p><strong><em>Fell Glare (Fiend Only; Recharges after a Long Rest).</em></strong> <em>Wisdom Saving Throw:</em> DC equals your spell save DC, one creature within 60 feet the steed can see. <em>Failure:</em> The target has the <a>Frightened</a> condition until the end of your next turn.</p> <p><strong><em>Fey Step (Fey Only; Recharges after a Long Rest).</em></strong> The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself.</p> <p><strong><em>Healing Touch (Celestial Only; Recharges after a Long Rest).</em></strong> One creature within 5 feet of the steed regains a number of Hit Points equal to 2d8 plus the spell’s level.</p> </div> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Summoning"
+      ],
+      "html": "<ul><li><p>Summoning</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Paladin (Legacy)",
+        "Paladin",
+        "Rogue - Highway Rider"
+      ],
+      "html": "<ul><li><p>Paladin (Legacy)</p></li><li><p>Paladin</p></li><li><p>Rogue - Highway Rider</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 272",
+      "html": "<p>Player’s Handbook, pg. 272</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618879-find-steed",
+      "html": "<p>https://www.dndbeyond.com/spells/2618879-find-steed</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/708/conjuration.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/708/conjuration.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 2 Conjuration (Paladin)",
+        "Casting Time": "Action",
+        "Range": "30 feet",
+        "Components": "V, S",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 2 Conjuration (Paladin)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Find Steed - Spells - D&D Beyond-d78c45a32b4188a3592dd802f89351e5f8a1df97fdd55f531169dc9b96898197.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Find Steed - Spells - D&amp;D Beyond-d78c45a32b4188a3592dd802f89351e5f8a1df97fdd55f531169dc9b96898197.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

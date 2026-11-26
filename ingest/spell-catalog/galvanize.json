@@ -1,0 +1,149 @@
+{
+  "id": "3287123",
+  "slug": "galvanize",
+  "name": "🔩 Galvanize",
+  "storageFile": "galvanize.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "Cantrip",
+        "label": "Cantrip"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>Cantrip</p></dd><dt>label</dt><dd><p>Cantrip</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Bonus Action",
+        "kind": "bonus_action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Bonus Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Touch",
+        "kind": "touch",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Touch</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "None",
+        "verbal": false,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>None</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "10 Minutes",
+        "kind": "timed",
+        "value": 10,
+        "unit": "minute",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>10 Minutes</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<p>Evocation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "",
+        "damageTypes": []
+      },
+      "html": "",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You touch a creature coating it in a magic layer of zinc. Make a melee spell attack. On hit deal 1d4 lightning damage, and the creature takes 1d8 extra lightning damage if they take lightning damage for the duration of the spell. On a miss the creature is unaffected. The spells effect can be ended early by the affected creature taking acid damage. Only one creature can be galvanized at a time."
+      ],
+      "html": "<p>You touch a creature coating it in a magic layer of zinc. Make a melee spell attack. On hit deal 1d4 lightning damage, and the creature takes 1d8 extra lightning damage if they take lightning damage for the duration of the spell. On a miss the creature is unaffected. The spells effect can be ended early by the affected creature taking acid damage. Only one creature can be galvanized at a time.</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3287123-galvanize",
+      "html": "<p>https://www.dndbeyond.com/spells/3287123-galvanize</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/🔩 Galvanize - Spells - Homebrew - D&D Beyond-a7456f5fc829e6567697d185569fc1c629b50c9c4520478b1d11692ac208e747.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/🔩 Galvanize - Spells - Homebrew - D&amp;D Beyond-a7456f5fc829e6567697d185569fc1c629b50c9c4520478b1d11692ac208e747.html</p></li></ul>"
+    }
+  ]
+}

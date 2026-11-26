@@ -1,0 +1,168 @@
+{
+  "id": "2618936",
+  "slug": "blinding-smite",
+  "name": "Blinding Smite",
+  "storageFile": "blinding-smite.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>3</p></dd><dt>label</dt><dd><p>3rd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Bonus Action *",
+        "kind": "bonus_action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Bonus Action *</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Self</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>1 Minute</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<p>Evocation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CON Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CON"
+      },
+      "html": "<p>CON Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Radiant",
+        "damageTypes": [
+          "Radiant"
+        ]
+      },
+      "html": "<p>Radiant</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "The target hit by the strike takes an extra 3d8 Radiant damage from the attack, and the target has the Blinded condition until the spell ends. At the end of each of its turns, the Blinded target makes a Constitution saving throw, ending the spell on itself on a success.",
+        "Using a Higher-Level Spell Slot. The extra damage increases by 1d8 for each spell slot level above 3.",
+        "* - which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike"
+      ],
+      "html": "<div> <p>The target hit by the strike takes an extra 3d8 Radiant damage from the attack, and the target has the Blinded condition until the spell ends. At the end of each of its turns, the Blinded target makes a Constitution saving throw, ending the spell on itself on a success.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> The extra damage increases by 1d8 for each spell slot level above 3.</p> <span>* - which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Paladin"
+      ],
+      "html": "<ul><li><p>Paladin</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook (2024)",
+      "html": "<p>Player’s Handbook (2024)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618936-blinding-smite",
+      "html": "<p>https://www.dndbeyond.com/spells/2618936-blinding-smite</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 3 Evocation (Paladin)",
+        "Casting Time": "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike",
+        "Range": "Self",
+        "Components": "V",
+        "Duration": "1 minute"
+      },
+      "html": "<p><em>Level 3 Evocation (Paladin)</em></p><div> <p><strong>Casting Time:</strong> Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V</p> <p><strong>Duration:</strong> 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Blinding Smite - Spells - D&D Beyond-502600ebd3e5ebdfb7c4f29c75c4ef23f8dcebabeea6aa1bb66f027d05b7f325.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Blinding Smite - Spells - D&amp;D Beyond-502600ebd3e5ebdfb7c4f29c75c4ef23f8dcebabeea6aa1bb66f027d05b7f325.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

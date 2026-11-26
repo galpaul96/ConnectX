@@ -1,0 +1,169 @@
+{
+  "id": "2618833",
+  "slug": "divine-smite",
+  "name": "Divine Smite",
+  "storageFile": "divine-smite.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Bonus Action *",
+        "kind": "bonus_action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Bonus Action * </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Self",
+        "kind": "self",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> Self </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V",
+        "verbal": true,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> Instantaneous </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<div> <div> School </div> <div> Evocation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <span>None</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Radiant",
+        "damageTypes": [
+          "Radiant"
+        ]
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> <i></i> Radiant </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "The target takes an extra 2d8 Radiant damage from the attack. The damage increases by 1d8 if the target is a Fiend or an Undead.",
+        "Using a Higher-Level Spell Slot. The damage increases by 1d8 for each spell slot level above 1.",
+        "* - Which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike"
+      ],
+      "html": "<div> <p>The target takes an extra 2d8 Radiant damage from the attack. The damage increases by 1d8 if the target is a Fiend or an Undead.</p> <p><em><strong>Using a Higher-Level Spell Slot.</strong></em> The damage increases by 1d8 for each spell slot level above 1.</p> <span>* - Which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "* - Which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
+      "html": "<p>* - Which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike</p>",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Paladin (Legacy)",
+        "Paladin"
+      ],
+      "html": "<ul><li><p>Paladin (Legacy)</p></li><li><p>Paladin</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 265",
+      "html": "<p>Player’s Handbook, pg. 265</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618833-divine-smite",
+      "html": "<p>https://www.dndbeyond.com/spells/2618833-divine-smite</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/703/evocation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/703/evocation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Evocation (Paladin)",
+        "Casting Time": "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
+        "Range": "Self",
+        "Components": "V",
+        "Duration": "Instantaneous"
+      },
+      "html": "<p><em>Level 1 Evocation (Paladin)</em></p><div> <p><strong>Casting Time:</strong> Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike</p> <p><strong>Range:</strong> Self</p> <p><strong>Components:</strong> V</p> <p><strong>Duration:</strong> Instantaneous</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Divine Smite - Spells - D&D Beyond-244ae56ba0f5f1fd881501568ea63b1fcd02909c529b06d2d25add06b5b37ab3.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Divine Smite - Spells - D&amp;D Beyond-244ae56ba0f5f1fd881501568ea63b1fcd02909c529b06d2d25add06b5b37ab3.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

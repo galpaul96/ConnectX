@@ -1,0 +1,182 @@
+{
+  "id": "2618900",
+  "slug": "bane",
+  "name": "Bane",
+  "storageFile": "bane.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "1",
+        "label": "1st"
+      },
+      "html": "<div> <div> Level </div> <div> 1st </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a drop of blood",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Minute",
+        "kind": "timed",
+        "value": 1,
+        "unit": "minute",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Minute </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Enchantment",
+      "html": "<div> <div> School </div> <div> Enchantment </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "CHA Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "CHA"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>CHA Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Debuff",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Debuff </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Up to three creatures of your choice that you can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save.",
+        "Using a Higher-Level Spell Slot. You can target one additional creature for each spell slot level above 1.",
+        "* - (a drop of blood)"
+      ],
+      "html": "<div> <p>Up to three creatures of your choice that you can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save.</p> <p><strong><em>Using a Higher-Level Spell Slot.</em></strong> You can target one additional creature for each spell slot level above 1.</p> <span>* - (a drop of blood)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Debuff"
+      ],
+      "html": "<ul><li><p>Debuff</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Cleric (Legacy)",
+        "Warlock (Legacy)",
+        "Bard",
+        "Cleric",
+        "Warlock",
+        "Cleric - Grave Domain (XGtE)",
+        "Paladin - Oath of Vengeance",
+        "Ranger - Grim Harbinger",
+        "Warlock - The Undead (VRGtR)",
+        "Warlock - Horned King Patron",
+        "Illrigger - Architect of Ruin",
+        "Cleric - Shadow Domain (BoET)",
+        "Druid - Circle of Shadows (BoET)",
+        "Paladin - Oath of the Spelldrinker"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Cleric (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Bard</p></li><li><p>Cleric</p></li><li><p>Warlock</p></li><li><p>Cleric - Grave Domain (XGtE)</p></li><li><p>Paladin - Oath of Vengeance</p></li><li><p>Ranger - Grim Harbinger</p></li><li><p>Warlock - The Undead (VRGtR)</p></li><li><p>Warlock - Horned King Patron</p></li><li><p>Illrigger - Architect of Ruin</p></li><li><p>Cleric - Shadow Domain (BoET)</p></li><li><p>Druid - Circle of Shadows (BoET)</p></li><li><p>Paladin - Oath of the Spelldrinker</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 245",
+      "html": "<p>Player’s Handbook, pg. 245</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2618900-bane",
+      "html": "<p>https://www.dndbeyond.com/spells/2618900-bane</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/702/enchantment.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/702/enchantment.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 1 Enchantment (Bard, Cleric, Warlock)",
+        "Casting Time": "Action",
+        "Range": "30 feet",
+        "Components": "V, S, M (a drop of blood)",
+        "Duration": "Concentration, up to 1 minute"
+      },
+      "html": "<p><em>Level 1 Enchantment (Bard, Cleric, Warlock)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a drop of blood)</p> <p><strong>Duration:</strong> Concentration, up to 1 minute</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Bane - Spells - D&D Beyond-b2196af79644436707169aaee9a332edb363f6a416f3a886dc81610eaa5cc31c.html",
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Bane - Spells - D&amp;D Beyond-b2196af79644436707169aaee9a332edb363f6a416f3a886dc81610eaa5cc31c.html</p></li><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li></ul>"
+    }
+  ]
+}

@@ -1,17 +1,9 @@
-@if (Spell.SpellTags.Count > 0)
+@inherits SpellComponentView
+@if (Strings.Count > 0)
 {
-    <section class="spell-detail-section" aria-labelledby="spell-tags-title">
-        <h3 id="spell-tags-title">Tags</h3>
+    <section class="spell-detail-section"><h3>Spell tags</h3>
         <ul class="spell-chip-list" aria-label="Spell tags">
-            @foreach (var tag in Spell.SpellTags.Where(tag => !string.IsNullOrWhiteSpace(tag)))
-            {
-                <li>@tag</li>
-            }
+            @foreach (var item in Strings) { <li>@item</li> }
         </ul>
     </section>
-}
-
-@code {
-    [Parameter, EditorRequired]
-    public SpellCatalogEntry Spell { get; set; } = default!;
 }

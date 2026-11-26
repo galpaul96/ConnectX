@@ -1,16 +1,7 @@
-@if (SafeSourceUrl is not null)
+@inherits SpellComponentView
+@if (SpellValue.SafeUrl(Text()) is { } url)
 {
-    <a class="spell-source-link" href="@SafeSourceUrl" target="_blank" rel="noopener noreferrer">
-        Open source <span aria-hidden="true">↗</span>
-    </a>
-}
-
-@code {
-    [Parameter, EditorRequired]
-    public SpellCatalogEntry Spell { get; set; } = default!;
-
-    private string? SafeSourceUrl => Uri.TryCreate(Spell.SourceUrl, UriKind.Absolute, out var uri) &&
-                                    (uri.Scheme == Uri.UriSchemeHttps || uri.Scheme == Uri.UriSchemeHttp)
-        ? uri.AbsoluteUri
-        : null;
+    <section class="spell-detail-section"><h3>Original source</h3>
+        <a class="spell-source-link" href="@url" target="_blank" rel="noopener noreferrer">View source ↗</a>
+    </section>
 }

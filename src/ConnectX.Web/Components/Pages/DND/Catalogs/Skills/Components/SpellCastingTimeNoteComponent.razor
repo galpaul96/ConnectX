@@ -1,12 +1,5 @@
-@if (!string.IsNullOrWhiteSpace(Spell.CastingTimeNote))
+@inherits SpellComponentView
+@if (!string.IsNullOrWhiteSpace(Text()))
 {
-    <aside class="spell-detail-note">
-        <span class="spell-note-mark" aria-hidden="true">✦</span>
-        <p>@Spell.CastingTimeNote</p>
-    </aside>
-}
-
-@code {
-    [Parameter, EditorRequired]
-    public SpellCatalogEntry Spell { get; set; } = default!;
+    <section class="spell-detail-section spell-detail-note"><h3>Casting note</h3><p>@Text()</p></section>
 }

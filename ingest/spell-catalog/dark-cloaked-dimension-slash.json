@@ -1,0 +1,160 @@
+{
+  "id": "3097095",
+  "slug": "dark-cloaked-dimension-slash",
+  "name": "🜂 Dark Cloaked Dimension Slash 🜂",
+  "storageFile": "dark-cloaked-dimension-slash.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "3",
+        "label": "3rd"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>3</p></dd><dt>label</dt><dd><p>3rd</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "120 ft. (125 ft. *)",
+        "kind": "distance",
+        "distanceValue": 120,
+        "distanceUnit": "ft",
+        "area": {
+          "shape": null,
+          "value": 125,
+          "unit": "ft"
+        }
+      },
+      "html": "<p>120 ft. (125 ft. *)</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>V, S</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>Instantaneous</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Conjuration",
+      "html": "<p>Conjuration</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "DEX Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "DEX"
+      },
+      "html": "<p>DEX Save</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Force (...)",
+        "damageTypes": [
+          "Force"
+        ]
+      },
+      "html": "<p>Force (...)</p>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Once per short rest, you swing a slash that cuts space itself.",
+        "Create a 120-foot line, 5 feet wide:",
+        "Each creature in the line takes 12d10 force damage",
+        "Magical barriers, walls, and constructs are automatically cut apart",
+        "Teleportation and extradimensional effects in the line instantly fail",
+        "This slash can hit creatures behind walls — the slash literally the 3rd dimension."
+      ],
+      "html": "<p>Once per short rest, you swing a slash that cuts space itself.</p> <p>Create a 120-foot line, 5 feet wide:</p> <p>Each creature in the line takes 12d10 force damage</p> <p>Magical barriers, walls, and constructs are automatically cut apart</p> <p>Teleportation and extradimensional effects in the line instantly fail</p> <p>This slash can hit creatures behind walls — the slash literally the 3rd dimension.</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3097095-dark-cloaked-dimension-slash",
+      "html": "<p>https://www.dndbeyond.com/spells/3097095-dark-cloaked-dimension-slash</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/🜂 Dark Cloaked Dimension Slash 🜂 - Spells - Homebrew - D&D Beyond-6c0c6edb6ee1d166230da288d93a0df1a267d8fd86b5286c127a536a52f8067a.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/🜂 Dark Cloaked Dimension Slash 🜂 - Spells - Homebrew - D&amp;D Beyond-6c0c6edb6ee1d166230da288d93a0df1a267d8fd86b5286c127a536a52f8067a.html</p></li></ul>"
+    }
+  ]
+}

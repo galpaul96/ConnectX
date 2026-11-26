@@ -1,57 +1,112 @@
-@if (Spell is not null)
-{
-    <div class="spell-modal-backdrop" @onclick="CloseAsync">
-        <section class="spell-modal-dialog" role="dialog" aria-modal="true"
-                 aria-labelledby="spell-modal-title" tabindex="-1"
-                 @ref="dialogElement" @onclick:stopPropagation="true" @onkeydown="HandleKeyDown">
-            <header class="spell-modal-header">
-                <div class="spell-modal-heading">
-                    <p class="spell-modal-kicker">@Spell.LevelLabel spell@(string.IsNullOrWhiteSpace(Spell.School) ? string.Empty : $" · {Spell.School}")</p>
-                    <h2 id="spell-modal-title">@Spell.Name</h2>
-                </div>
-                <button type="button" class="spell-modal-close" aria-label="Close spell details" @onclick="CloseAsync">×</button>
-            </header>
+@implements IAsyncDisposable
+@inject IJSRuntime JS
 
-            <div class="spell-modal-body">
-                <SpellImageComponent Spell="Spell" />
-                <SpellMetadataGrid Spell="Spell" />
-                <SpellCastingTimeNoteComponent Spell="Spell" />
-                <SpellDescriptionComponent Spell="Spell" />
-                <div class="spell-detail-lists">
-                    <SpellTagsComponent Spell="Spell" />
-                    <SpellAvailableForComponent Spell="Spell" />
+<dialog class="spell-modal-backdrop" @ref="dialogElement" aria-labelledby="spell-modal-title" aria-busy="@Loading">
+    <section class="spell-modal-dialog">
+        <header class="spell-modal-header">
+            <div class="spell-modal-identity">
+                @if (Spell is not null)
+                {
+                    <SpellImageComponent Component='@Find("imageUrl")' />
+                }
+                <div class="spell-modal-heading">
+                    <p class="spell-modal-kicker">Spell reference</p>
+                    <h2 id="spell-modal-title">@(Spell?.Name ?? "Spell details")</h2>
+                    @if (HasHeaderFacts)
+                    {
+                        <dl class="spell-heading-facts">
+                            <SpellLevelComponent Component='@Find("level")' />
+                            <SpellSchoolComponent Component='@Find("school")' />
+                        </dl>
+                    }
                 </div>
             </div>
+            <button type="button" class="spell-modal-close" aria-label="Close spell details" @onclick="CloseAsync">
+                Close <kbd aria-hidden="true">Esc</kbd>
+            </button>
+        </header>
 
-            <footer class="spell-modal-footer">
-                <SpellSourceComponent Spell="Spell" />
-                <SpellSourceUrlComponent Spell="Spell" />
+        <div class="spell-modal-scroll" tabindex="0" role="region" aria-label="Spell information">
+            @if (Loading)
+            {
+                <div class="spell-modal-state" role="status"><p class="spell-state-title">Opening spell</p><p>Loading its casting details and rules…</p></div>
+            }
+            else if (Error is not null)
+            {
+                <div class="spell-modal-state" role="alert">
+                    <h3>Unable to open this spell</h3><p>@Error</p>
+                    <button type="button" class="btn btn-outline-primary" @onclick="OnRetry">Try again</button>
+                </div>
+            }
+            else if (Spell is not null)
+            {
+                <div class="spell-modal-layout @(HasCastingDetails ? null : "spell-modal-layout-single")">
+                    @if (HasCastingDetails)
+                    {
+                    <aside class="spell-casting-panel" aria-labelledby="spell-casting-title">
+                        <h3 id="spell-casting-title" class="spell-panel-title">Casting details</h3>
+                        <SpellMetadataGrid Spell="Spell" />
+                        <SpellCastingTimeNoteComponent Component='@Find("castingTimeBlurb")' />
+                        <SpellTagsComponent Component='@Find("spellTags")' />
+                    </aside>
+                    }
+                    <div class="spell-rules-panel">
+                        <SpellDescriptionComponent Component='@Find("description")' />
+                        <SpellDescriptionVariantComponent Component='@Find("descriptionVariant")' />
+                        <SpellAvailableForComponent Component='@Find("availableFor")' />
+                    </div>
+                </div>
+            }
+        </div>
+
+        @if (!Loading && Error is null && Spell is not null && HasSource)
+        {
+            <footer class="spell-modal-footer" aria-label="Spell source">
+                <SpellSourceComponent Component='@Find("source")' />
+                <SpellSourceUrlComponent Component='@Find("url")' />
             </footer>
-        </section>
-    </div>
-}
+        }
+    </section>
+</dialog>
 
 @code {
     private ElementReference dialogElement;
-    private string? focusedSpellId;
-
-    [Parameter, EditorRequired]
-    public SpellCatalogEntry? Spell { get; set; }
-
-    [Parameter]
-    public EventCallback OnClose { get; set; }
+    private IJSObjectReference? module;
+    private DotNetObjectReference<SpellDetailModal>? reference;
+    [Parameter] public SpellDto? Spell { get; set; }
+    [Parameter] public bool Loading { get; set; }
+    [Parameter] public string? Error { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+    [Parameter] public EventCallback OnRetry { get; set; }
+    private bool HasHeaderFacts => HasText("level", "label") || HasText("level", "levelNumber") || HasText("school");
+    private bool HasCastingDetails => new[] { "castingTime", "rangeArea", "components", "duration", "attackSave", "damageEffect" }
+        .Any(type => HasText(type, "text")) || HasText("castingTimeBlurb") ||
+        SpellValue.Strings(Find("spellTags")?.Value ?? default).Count > 0 ||
+        SpellValue.Strings(SpellValue.Property(Find("damageEffect")?.Value ?? default, "damageTypes")).Count > 0;
+    private bool HasText(string type, string? property = null)
+    {
+        var value = Find(type)?.Value ?? default;
+        return !string.IsNullOrWhiteSpace(SpellValue.Text(property is null ? value : SpellValue.Property(value, property)));
+    }
+    private bool HasSource => !string.IsNullOrWhiteSpace(SpellValue.Text(Find("source")?.Value ?? default)) ||
+        SpellValue.SafeUrl(SpellValue.Text(Find("url")?.Value ?? default)) is not null;
+    private SpellComponentDto? Find(string type) => Spell?.Components.FirstOrDefault(x => x.Type == type);
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (Spell is not null && Spell.Id != focusedSpellId)
-        {
-            focusedSpellId = Spell.Id;
-            await dialogElement.FocusAsync();
-        }
+        if (!firstRender) return;
+        module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/spellDialog.js");
+        reference = DotNetObjectReference.Create(this);
+        await module.InvokeVoidAsync("open", dialogElement, reference);
     }
-
-    private Task HandleKeyDown(KeyboardEventArgs args) =>
-        args.Key == "Escape" ? CloseAsync() : Task.CompletedTask;
-
-    private Task CloseAsync() => OnClose.InvokeAsync();
+    [JSInvokable] public Task CloseAsync() => OnClose.InvokeAsync();
+    public async ValueTask DisposeAsync()
+    {
+        if (module is not null)
+        {
+            try { await module.InvokeVoidAsync("close", dialogElement); await module.DisposeAsync(); }
+            catch (JSDisconnectedException) { }
+        }
+        reference?.Dispose();
+    }
 }

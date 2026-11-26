@@ -1,0 +1,182 @@
+{
+  "id": "2619198",
+  "slug": "true-polymorph",
+  "name": "True Polymorph",
+  "storageFile": "true-polymorph.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "9",
+        "label": "9th"
+      },
+      "html": "<div> <div> Level </div> <div> 9th </div> </div>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<div> <div> Casting Time </div> <div> 1 Action </div> </div>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "30 ft.",
+        "kind": "distance",
+        "distanceValue": 30,
+        "distanceUnit": "ft",
+        "area": null
+      },
+      "html": "<div> <div> Range/Area </div> <div> 30 ft. </div> </div>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "V, S, M *",
+        "verbal": true,
+        "somatic": true,
+        "material": {
+          "required": true,
+          "description": "a drop of mercury, a dollop of gum arabic, and a wisp of smoke",
+          "consumed": false,
+          "costGp": null
+        }
+      },
+      "html": "<div> <div> Components </div> <div> <span>V, S, M *</span> </div> </div>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Concentration 1 Hour",
+        "kind": "timed",
+        "value": 1,
+        "unit": "hour",
+        "concentration": true,
+        "endCondition": null
+      },
+      "html": "<div> <div>Duration</div> <div> <i>Concentration</i> 1 Hour </div> </div>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Transmutation",
+      "html": "<div> <div> School </div> <div> Transmutation </div> </div>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "WIS Save",
+        "kind": "save",
+        "attackType": null,
+        "ability": "WIS"
+      },
+      "html": "<div> <div> Attack/Save </div> <div> <i></i> <span>WIS Save</span> </div> </div>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "Buff (...)",
+        "damageTypes": []
+      },
+      "html": "<div> <div> Damage/Effect </div> <div> Buff (...) </div> </div>",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "Choose one creature or nonmagical object that you can see within range. The creature shape-shifts into a different creature or a nonmagical object, or the object shape-shifts into a creature (the object must be neither worn nor carried). The transformation lasts for the duration or until the target dies or is destroyed, but if you maintain Concentration on this spell for the full duration, the spell lasts until dispelled.",
+        "An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn’t affected by this spell.",
+        "Creature into Creature. If you turn a creature into another kind of creature, the new form can be any kind you choose that has a Challenge Rating equal to or less than the target’s Challenge Rating or level. The target’s game statistics are replaced by the stat block of the new form, but it retains its Hit Points, Hit Point Dice, alignment, and personality.",
+        "The target gains a number of Temporary Hit Points equal to the Hit Points of the new form. These Temporary Hit Points vanish if any remain when the spell ends.",
+        "The target is limited in the actions it can perform by the anatomy of its new form, and it can’t speak or cast spells.",
+        "The target’s gear melds into the new form. The creature can’t use or otherwise benefit from any of that equipment.",
+        "Object into Creature. You can turn an object into any kind of creature, as long as the creature’s size is no larger than the object’s size and the creature has a Challenge Rating of 9 or lower. The creature is Friendly to you and your allies. In combat, it takes its turns immediately after yours, and it obeys your commands.",
+        "If the spell lasts more than an hour, you no longer control the creature. It might remain Friendly to you, depending on how you have treated it.",
+        "Creature into Object. If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form, as long as the object’s size is no larger than the creature’s size. The creature’s statistics become those of the object, and the creature has no memory of time spent in this form after the spell ends and it returns to normal.",
+        "* - (a drop of mercury, a dollop of gum arabic, and a wisp of smoke)"
+      ],
+      "html": "<div> <p>Choose one creature or nonmagical object that you can see within range. The creature <a>shape-shifts</a> into a different creature or a nonmagical object, or the object shape-shifts into a creature (the object must be neither worn nor carried). The transformation lasts for the duration or until the target dies or is destroyed, but if you maintain Concentration on this spell for the full duration, the spell lasts until dispelled.</p> <p>An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn’t affected by this spell.</p> <p><strong><em>Creature into Creature.</em></strong> If you turn a creature into another kind of creature, the new form can be any kind you choose that has a Challenge Rating equal to or less than the target’s Challenge Rating or level. The target’s game statistics are replaced by the stat block of the new form, but it retains its Hit Points, Hit Point Dice, alignment, and personality.</p> <p>The target gains a number of <a>Temporary Hit Points</a> equal to the Hit Points of the new form. These Temporary Hit Points vanish if any remain when the spell ends.</p> <p>The target is limited in the actions it can perform by the anatomy of its new form, and it can’t speak or cast spells.</p> <p>The target’s gear melds into the new form. The creature can’t use or otherwise benefit from any of that equipment.</p> <p><strong><em>Object into Creature.</em></strong> You can turn an object into any kind of creature, as long as the creature’s size is no larger than the object’s size and the creature has a Challenge Rating of 9 or lower. The creature is <a>Friendly</a> to you and your allies. In combat, it takes its turns immediately after yours, and it obeys your commands.</p> <p>If the spell lasts more than an hour, you no longer control the creature. It might remain Friendly to you, depending on how you have treated it.</p> <p><strong><em>Creature into Object.</em></strong> If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form, as long as the object’s size is no larger than the creature’s size. The creature’s statistics become those of the object, and the creature has no memory of time spent in this form after the spell ends and it returns to normal.</p> <span>* - (a drop of mercury, a dollop of gum arabic, and a wisp of smoke)</span> </div>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [
+        "Control",
+        "Buff",
+        "Shapechanging"
+      ],
+      "html": "<ul><li><p>Control</p></li><li><p>Buff</p></li><li><p>Shapechanging</p></li></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [
+        "Bard (Legacy)",
+        "Warlock (Legacy)",
+        "Wizard (Legacy)",
+        "Bard",
+        "Warlock",
+        "Wizard"
+      ],
+      "html": "<ul><li><p>Bard (Legacy)</p></li><li><p>Warlock (Legacy)</p></li><li><p>Wizard (Legacy)</p></li><li><p>Bard</p></li><li><p>Warlock</p></li><li><p>Wizard</p></li></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Player’s Handbook, pg. 335",
+      "html": "<p>Player’s Handbook, pg. 335</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/2619198-true-polymorph",
+      "html": "<p>https://www.dndbeyond.com/spells/2619198-true-polymorph</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "https://www.dndbeyond.com/attachments/2/722/transmutation.png",
+      "html": "<p>https://www.dndbeyond.com/attachments/2/722/transmutation.png</p>",
+      "type": "imageUrl"
+    },
+    {
+      "type": "bookMetadata",
+      "label": "Handbook casting details",
+      "value": {
+        "classification": "Level 9 Transmutation (Bard, Warlock, Wizard)",
+        "Casting Time": "Action",
+        "Range": "30 feet",
+        "Components": "V, S, M (a drop of mercury, a dollop of gum arabic, and a wisp of smoke)",
+        "Duration": "Concentration, up to 1 hour"
+      },
+      "html": "<p><em>Level 9 Transmutation (Bard, Warlock, Wizard)</em></p><div> <p><strong>Casting Time:</strong> Action</p> <p><strong>Range:</strong> 30 feet</p> <p><strong>Components:</strong> V, S, M (a drop of mercury, a dollop of gum arabic, and a wisp of smoke)</p> <p><strong>Duration:</strong> Concentration, up to 1 hour</p> </div>"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons & Dragons - Sources - D&D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html",
+        "crawl-output-cleaned/Spells/True Polymorph - Spells - D&D Beyond-e13acde4ac9781194b37b1e6c8f447a1697288e74eec095ae16756b7b8401107.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/Spell Descriptions - Player’s Handbook - Dungeons &amp; Dragons - Sources - D&amp;D Beyond-432ec14ac61b5cb441ea32c8fe83008741532aa8bfc5aad0e2626f107eb0628d.html</p></li><li><p>crawl-output-cleaned/Spells/True Polymorph - Spells - D&amp;D Beyond-e13acde4ac9781194b37b1e6c8f447a1697288e74eec095ae16756b7b8401107.html</p></li></ul>"
+    }
+  ]
+}

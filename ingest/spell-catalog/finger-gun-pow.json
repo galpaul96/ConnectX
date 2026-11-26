@@ -1,0 +1,150 @@
+{
+  "id": "3220917",
+  "slug": "finger-gun-pow",
+  "name": "👉 Finger Gun \"Pow!\"",
+  "storageFile": "finger-gun-pow.json",
+  "components": [
+    {
+      "label": "Level",
+      "value": {
+        "levelNumber": "7",
+        "label": "7th"
+      },
+      "html": "<dl><dt>levelNumber</dt><dd><p>7</p></dd><dt>label</dt><dd><p>7th</p></dd></dl>",
+      "type": "level"
+    },
+    {
+      "label": "Casting Time",
+      "value": {
+        "text": "1 Action",
+        "kind": "action",
+        "value": 1,
+        "unit": "action",
+        "trigger": null,
+        "ritual": false
+      },
+      "html": "<p>1 Action</p>",
+      "type": "castingTime"
+    },
+    {
+      "label": "Range/Area",
+      "value": {
+        "text": "Sight",
+        "kind": "sight",
+        "distanceValue": null,
+        "distanceUnit": null,
+        "area": null
+      },
+      "html": "<p>Sight</p>",
+      "type": "rangeArea"
+    },
+    {
+      "label": "Components",
+      "value": {
+        "text": "None",
+        "verbal": false,
+        "somatic": false,
+        "material": {
+          "required": false,
+          "description": null,
+          "consumed": null,
+          "costGp": null
+        }
+      },
+      "html": "<p>None</p>",
+      "type": "components"
+    },
+    {
+      "label": "Duration",
+      "value": {
+        "text": "Instantaneous",
+        "kind": "instantaneous",
+        "value": null,
+        "unit": null,
+        "concentration": false,
+        "endCondition": null
+      },
+      "html": "<p>Instantaneous</p>",
+      "type": "duration"
+    },
+    {
+      "label": "School",
+      "value": "Evocation",
+      "html": "<p>Evocation</p>",
+      "type": "school"
+    },
+    {
+      "label": "Attack/Save",
+      "value": {
+        "text": "None",
+        "kind": "none",
+        "attackType": null,
+        "ability": null
+      },
+      "html": "<p>None</p>",
+      "type": "attackSave"
+    },
+    {
+      "label": "Damage/Effect",
+      "value": {
+        "text": "",
+        "damageTypes": []
+      },
+      "html": "",
+      "type": "damageEffect"
+    },
+    {
+      "label": "Description",
+      "value": [
+        "You put your hand into a menacing finger gun and pretend to load and cock it before aiming it at one creature you can see. If that creature's hit point maximum is under 350 points, it must make a constitution saving throw with disadvantage or drop to their knees and fall to 0 hit points as a hole is blown through them with a finger gun of all things.",
+        "\"You messed with the wrong gunslinger, boy.\" *Insta kills red dragons with finger gun*"
+      ],
+      "html": "<p>You put your hand into a menacing finger gun and pretend to load and cock it before aiming it at one creature you can see. If that creature's hit point maximum is under 350 points, it must make a constitution saving throw with disadvantage or drop to their knees and fall to 0 hit points as a hole is blown through them with a finger gun of all things.</p> <p>\"You messed with the wrong gunslinger, boy.\" *Insta kills red dragons with finger gun*</p>",
+      "type": "description"
+    },
+    {
+      "label": "Casting Time Note",
+      "value": "",
+      "html": "",
+      "type": "castingTimeBlurb"
+    },
+    {
+      "label": "Spell Tags",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "spellTags"
+    },
+    {
+      "label": "Available For",
+      "value": [],
+      "html": "<ul></ul>",
+      "type": "availableFor"
+    },
+    {
+      "label": "Source",
+      "value": "Homebrew (D&D Beyond)",
+      "html": "<p>Homebrew (D&amp;D Beyond)</p>",
+      "type": "source"
+    },
+    {
+      "label": "Source URL",
+      "value": "https://www.dndbeyond.com/spells/3220917-finger-gun-pow",
+      "html": "<p>https://www.dndbeyond.com/spells/3220917-finger-gun-pow</p>",
+      "type": "url"
+    },
+    {
+      "label": "Image",
+      "value": "",
+      "html": "",
+      "type": "imageUrl"
+    },
+    {
+      "type": "sourceFiles",
+      "label": "Source files",
+      "value": [
+        "crawl-output-cleaned/Spells/👉 Finger Gun -Pow!- - Spells - Homebrew - D&D Beyond-ab7fe35a0954ab433352ed3f72df21adcdbb015a4e1c3a5f454feb96dfca99e1.html"
+      ],
+      "html": "<ul><li><p>crawl-output-cleaned/Spells/👉 Finger Gun -Pow!- - Spells - Homebrew - D&amp;D Beyond-ab7fe35a0954ab433352ed3f72df21adcdbb015a4e1c3a5f454feb96dfca99e1.html</p></li></ul>"
+    }
+  ]
+}
