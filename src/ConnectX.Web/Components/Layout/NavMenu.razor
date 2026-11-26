@@ -7,10 +7,8 @@
         <span class="nav-group-label">Workspace</span>
         <NavLink class="nav-link" href="dnd">DND</NavLink>
         <div class="nav-subgroup" aria-label="DND sections">
-            @foreach (var entry in DirectoryEntries.Dnd)
-            {
-                <NavLink @key="entry.Href" class="nav-link" href="@entry.Href.TrimStart('/')">@entry.Title</NavLink>
-            }
+            <NavLink class="nav-link" href="dnd/catalogs">Catalogs</NavLink>
+            <NavLink class="nav-link" href="dnd/codex">Codex</NavLink>
         </div>
     </div>
 

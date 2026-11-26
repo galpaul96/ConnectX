@@ -1,8 +1,67 @@
 @page "/dnd"
+@rendermode InteractiveServer
 
 <PageTitle>DND | ConnectX</PageTitle>
 
-<DirectoryHub Eyebrow="Campaign workspace"
-              Title="DND"
-              Description="Explore the current campaign tools. New DND pages can be added here as they are implemented."
-              Entries="DirectoryEntries.Dnd" />
+<section class="dnd-hub" aria-labelledby="hub-title">
+    <header>
+        <p class="hub-eyebrow">Campaign workspace</p>
+        <h1 id="hub-title">DND</h1>
+        <p class="hub-description">Explore reference material and tools for your next campaign.</p>
+    </header>
+
+    <div class="hub-search" role="search" aria-label="Find a DND section">
+        <label for="hub-search">Find a section</label>
+        <input @ref="searchInput" id="hub-search" class="form-control" type="search"
+               placeholder="Search DND sections" @bind="searchTerm" @bind:event="oninput" />
+    </div>
+
+    @{ var visibleSections = FilteredSections; }
+    <p class="hub-count" role="status" aria-atomic="true">@visibleSections.Count of @Sections.Count sections</p>
+    <div class="hub-grid">
+        @foreach (var entry in visibleSections)
+        {
+            <a class="hub-card" href="@entry.Href" @key="entry.Href">
+                <span class="hub-card-number" aria-hidden="true">@entry.Index</span>
+                <h2>@entry.Title</h2>
+                <p>@entry.Description</p>
+                <span class="hub-card-action">Explore section <span aria-hidden="true">→</span></span>
+            </a>
+        }
+    </div>
+    @if (visibleSections.Count == 0)
+    {
+        <div class="hub-empty">
+            <h2>No matching sections</h2>
+            <p>Try another title or keyword.</p>
+            <button type="button" class="btn btn-outline-primary" @onclick="ClearSearch">Clear search</button>
+        </div>
+    }
+</section>
+
+@code {
+    private string searchTerm = string.Empty;
+    private ElementReference searchInput;
+    private static readonly IReadOnlyList<(string Title, string Description, string Href, string Index)> Sections =
+    [
+        ("Catalogs", "Browse rules, character options, spells, and equipment.", "/dnd/catalogs", "01"),
+        ("Codex", "Organize characters, people, and quests for your campaigns.", "/dnd/codex", "02")
+    ];
+
+    private List<(string Title, string Description, string Href, string Index)> FilteredSections
+    {
+        get
+        {
+            var query = searchTerm.Trim();
+            return Sections.Where(entry =>
+                entry.Title.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                entry.Description.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+    }
+
+    private async Task ClearSearch()
+    {
+        searchTerm = string.Empty;
+        await searchInput.FocusAsync();
+    }
+}
