@@ -1,29 +1,21 @@
 @inherits LayoutComponentBase
 
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="app-shell">
-    <input id="sidebar-toggle" class="sidebar-toggle-state" type="checkbox" aria-label="Toggle navigation" aria-controls="primary-nav" />
-
     <aside class="app-sidebar" aria-label="Application navigation">
-        <a class="brand-lockup" href="" aria-label="ConnectX home">
+        <a class="brand-lockup" href="/dnd" aria-label="ConnectX D&amp;D overview">
             <span class="brand-name">Connect<span class="brand-accent">X</span></span>
-            <span class="brand-caption">Application workspace</span>
         </a>
+        <button class="sidebar-close" type="button">Close menu</button>
         <NavMenu />
-        <div class="sidebar-note">Your workspace and tools</div>
     </aside>
 
-    <label class="sidebar-scrim" for="sidebar-toggle" aria-hidden="true"></label>
+    <button class="sidebar-scrim" type="button" tabindex="-1" aria-label="Close navigation"></button>
 
     <div class="app-main">
         <header class="topbar">
-            <label class="menu-toggle" for="sidebar-toggle">
-                <span class="menu-toggle-text">Menu</span>
-            </label>
-            <div class="topbar-context">
-                <span class="topbar-eyebrow">ConnectX</span>
-                <span class="topbar-divider" aria-hidden="true"></span>
-                <span class="topbar-section">Application workspace</span>
-            </div>
+            <button id="sidebar-toggle" class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
+            <a class="topbar-home" href="/dnd">D&amp;D</a>
             <div class="topbar-actions">
                 <AuthorizeView>
                     <Authorized>
@@ -37,14 +29,9 @@
             </div>
         </header>
 
-        <main class="main-content">
+        <main id="main-content" class="main-content">
             @Body
         </main>
-
-        <footer class="app-footer">
-            <span>Connect<span class="brand-accent">X</span></span>
-            <span>Application workspace</span>
-        </footer>
     </div>
 </div>
 

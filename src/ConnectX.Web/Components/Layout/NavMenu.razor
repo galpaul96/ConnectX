@@ -4,21 +4,18 @@
 
 <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
     <div class="nav-group">
-        <span class="nav-group-label">Workspace</span>
-        <NavLink class="nav-link" href="dnd">DND</NavLink>
-        <div class="nav-subgroup" aria-label="DND sections">
-            <NavLink class="nav-link" href="dnd/catalogs">Catalogs</NavLink>
-            <NavLink class="nav-link" href="dnd/codex">Codex</NavLink>
+        <span class="nav-group-label">D&amp;D</span>
+        <NavLink class="nav-link nav-section-link" href="dnd" Match="NavLinkMatch.All">Overview</NavLink>
+        <NavLink class="nav-link nav-section-link" href="dnd/catalogs" Match="NavLinkMatch.All">Catalogs</NavLink>
+        <div class="nav-subgroup" aria-label="Catalog shortcuts">
+            <NavLink class="nav-link" href="dnd/catalogs/skills" Match="NavLinkMatch.All">Spells</NavLink>
+            <NavLink class="nav-link" href="dnd/catalogs/items" Match="NavLinkMatch.All">Items</NavLink>
         </div>
+        <NavLink class="nav-link nav-section-link" href="dnd/codex">Codex</NavLink>
     </div>
 
     <AuthorizeView>
         <Authorized Context="authenticatedContext">
-            <div class="nav-group">
-                <span class="nav-group-label">Personal</span>
-                <NavLink class="nav-link" href="Account/Manage">Account management</NavLink>
-            </div>
-
             <AuthorizeView Roles="Admin">
                 <Authorized>
                     <div class="nav-group">

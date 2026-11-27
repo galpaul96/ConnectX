@@ -1,99 +1,39 @@
 @page "/dnd/catalogs"
-@rendermode InteractiveServer
 
 <PageTitle>Catalogs | ConnectX</PageTitle>
 
 <section class="catalog-hub" aria-labelledby="catalog-title">
     <nav class="catalog-breadcrumb" aria-label="Breadcrumb">
-        <a href="/dnd">DND</a>
-        <span aria-hidden="true">/</span>
-        <span aria-current="page">Catalogs</span>
+        <a href="/dnd">D&amp;D</a><span aria-hidden="true">/</span><span aria-current="page">Catalogs</span>
     </nav>
 
     <header class="catalog-header">
-        <p class="catalog-eyebrow">Reference library</p>
         <h1 id="catalog-title">Catalogs</h1>
-        <p class="catalog-intro">Explore character options, spells, creatures, and equipment for your next adventure.</p>
     </header>
 
-    <div class="catalog-toolbar" role="search" aria-label="Find a catalog section">
-        <div class="catalog-search-field">
-            <label for="catalog-search">Find a section</label>
-            <input @ref="searchInput" id="catalog-search" class="form-control" type="search"
-                   placeholder="Search classes, spells, items…" aria-describedby="catalog-search-help"
-                   @bind="searchTerm" @bind:event="oninput" />
-            <p id="catalog-search-help">Search section names and descriptions.</p>
-        </div>
-        @if (searchTerm.Length > 0)
-        {
-            <button class="catalog-clear" type="button" @onclick="ClearSearch">Clear search</button>
-        }
-    </div>
-
-    @{ var visibleSections = FilteredSections; }
-    <div class="catalog-results">
-        <h2>Explore the library</h2>
-        <p role="status" aria-atomic="true">@visibleSections.Count of @Sections.Count sections</p>
-    </div>
-    <p class="catalog-availability">Sample previews are available to browse. Coming-soon sections currently contain an overview.</p>
-
-    <div class="catalog-grid">
-        @foreach (var entry in visibleSections)
-        {
-            <a class="catalog-section-card @(entry.IsPreview ? "catalog-section-card-preview" : null)" href="@entry.Href" @key="entry.Href">
-                <div class="catalog-card-meta">
-                    <span class="catalog-card-number" aria-hidden="true">@entry.Index</span>
-                    <span class="catalog-card-status">@(entry.IsPreview ? "Sample preview" : "Coming soon")</span>
-                </div>
-                <h3>@entry.Title</h3>
-                <p>@entry.Description</p>
-                <span class="catalog-card-action">Explore section <span aria-hidden="true">→</span></span>
+    <section class="catalog-group" aria-labelledby="available-title">
+        <h2 id="available-title">Available</h2>
+        <nav class="catalog-featured" aria-label="Available catalogs">
+            <a class="catalog-feature" href="/dnd/catalogs/skills">
+                <div><h3>Spells</h3><small>Search spells and casting details</small></div>
+                <span aria-hidden="true">→</span>
             </a>
-        }
-    </div>
+            <a class="catalog-feature" href="/dnd/catalogs/items">
+                <div><h3>Items</h3><small>Search equipment and treasure</small></div>
+                <span aria-hidden="true">→</span>
+            </a>
+        </nav>
+    </section>
 
-    @if (visibleSections.Count == 0)
-    {
-        <div class="catalog-empty">
-            <h3>No sections found</h3>
-            <p>No section matches “@searchTerm.Trim()”. Try another section name or clear your search.</p>
-            <button class="btn btn-outline-primary" type="button" @onclick="ClearSearch">Clear search</button>
-        </div>
-    }
+    <section class="catalog-group" aria-labelledby="upcoming-title">
+        <h2 id="upcoming-title">Coming soon</h2>
+        <nav class="catalog-list" aria-label="Upcoming catalogs">
+            <a href="/dnd/catalogs/classes">Classes <span aria-hidden="true">→</span></a>
+            <a href="/dnd/catalogs/subclasses">Subclasses <span aria-hidden="true">→</span></a>
+            <a href="/dnd/catalogs/species">Species <span aria-hidden="true">→</span></a>
+            <a href="/dnd/catalogs/backgrounds">Backgrounds <span aria-hidden="true">→</span></a>
+            <a href="/dnd/catalogs/feats">Feats <span aria-hidden="true">→</span></a>
+            <a href="/dnd/catalogs/stat-blocks">Stat Blocks <span aria-hidden="true">→</span></a>
+        </nav>
+    </section>
 </section>
-
-@code {
-    private string searchTerm = string.Empty;
-    private ElementReference searchInput;
-
-    private static readonly IReadOnlyList<CatalogSection> Sections =
-    [
-        new("Classes", "Explore class features, roles, and progression.", "/dnd/catalogs/classes", "01"),
-        new("Subclasses", "Find specializations and paths for each class.", "/dnd/catalogs/subclasses", "02"),
-        new("Species", "Discover playable peoples and their traits.", "/dnd/catalogs/species", "03"),
-        new("Backgrounds", "Choose origins, proficiencies, and starting features.", "/dnd/catalogs/backgrounds", "04"),
-        new("Skills & Spells", "Browse spell details, casting requirements, and effects.", "/dnd/catalogs/skills", "05", true),
-        new("Feats", "Explore character benefits and their prerequisites.", "/dnd/catalogs/feats", "06"),
-        new("Stat Blocks", "Find creatures, NPCs, and their game statistics.", "/dnd/catalogs/stat-blocks", "07"),
-        new("Items", "Explore equipment, tools, treasure, and magic items.", "/dnd/catalogs/items", "08")
-    ];
-
-    private List<CatalogSection> FilteredSections
-    {
-        get
-        {
-            var query = searchTerm.Trim();
-            return Sections.Where(entry =>
-                entry.Title.Contains(query, StringComparison.OrdinalIgnoreCase) ||
-                entry.Description.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
-        }
-    }
-
-    private async Task ClearSearch()
-    {
-        searchTerm = string.Empty;
-        await searchInput.FocusAsync();
-    }
-
-    private sealed record CatalogSection(string Title, string Description, string Href, string Index, bool IsPreview = false);
-}

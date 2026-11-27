@@ -38,6 +38,94 @@ body {
     min-height: 100%;
 }
 
+.dnd-hub {
+    margin-inline: auto;
+    max-width: 1080px;
+}
+
+.hub-breadcrumb {
+    color: var(--app-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+}
+
+.hub-breadcrumb a { color: var(--app-copper-light); }
+
+.hub-header { margin-bottom: 1.5rem; }
+
+.hub-header h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin: 0;
+}
+
+.hub-header p {
+    color: var(--app-muted);
+    margin: .3rem 0 0;
+}
+
+.hub-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+
+.hub-card {
+    align-items: center;
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: .5rem;
+    color: var(--app-text);
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    min-height: 8rem;
+    min-width: 0;
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+}
+
+.hub-card-content { min-width: 0; }
+
+.hub-card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    margin: 0;
+    text-wrap: balance;
+}
+
+.hub-card-content > span {
+    color: var(--app-muted);
+    display: block;
+    font-size: .9rem;
+    margin-top: .45rem;
+}
+
+.hub-card-arrow {
+    color: var(--app-copper-light);
+    flex: 0 0 auto;
+    font-size: 1.25rem;
+}
+
+@media (hover: hover) {
+    .hub-card:hover {
+        background: var(--app-surface-raised);
+        border-color: var(--app-copper);
+        color: var(--app-text);
+    }
+}
+
+.dnd-hub :is(a, button):focus-visible {
+    outline: 2px solid var(--app-copper-light);
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    body.navigation-open { overflow: hidden; }
+}
+
 body {
     font-size: .94rem;
     line-height: 1.6;

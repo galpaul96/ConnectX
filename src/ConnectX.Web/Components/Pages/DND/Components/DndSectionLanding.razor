@@ -2,40 +2,22 @@
 
 <section class="dnd-index-page" aria-labelledby="dnd-index-title">
     <nav class="dnd-breadcrumb" aria-label="Breadcrumb">
+        <a href="/dnd">D&amp;D</a>
+        <span aria-hidden="true">/</span>
         <a href="@HubHref">@HubTitle</a>
         <span aria-hidden="true">/</span>
         <span aria-current="page">@Title</span>
     </nav>
 
     <header class="dnd-index-header">
-        <p class="dnd-eyebrow">@HubTitle index</p>
-        <div class="dnd-index-title-row">
-            <span class="dnd-index-mark" aria-hidden="true">@Index</span>
-            <h1 id="dnd-index-title">@Title</h1>
-        </div>
-        <p class="dnd-index-description">@Description</p>
+        <h1 id="dnd-index-title">@Title</h1>
+        <p>Coming soon</p>
     </header>
-
-    <div class="dnd-index-panel">
-        <span class="dnd-index-status">Coming soon</span>
-        <h2>@Title index</h2>
-        <p>This section is being prepared. Check back for records, browsing tools, and detail views.</p>
-    </div>
-
-    <a class="dnd-back-link" href="@HubHref">
-        <span aria-hidden="true">←</span> Back to @HubTitle
-    </a>
 </section>
 
 @code {
     [Parameter, EditorRequired]
     public string Title { get; set; } = string.Empty;
-
-    [Parameter, EditorRequired]
-    public string Description { get; set; } = string.Empty;
-
-    [Parameter, EditorRequired]
-    public string Index { get; set; } = string.Empty;
 
     [Parameter, EditorRequired]
     public string HubTitle { get; set; } = string.Empty;
